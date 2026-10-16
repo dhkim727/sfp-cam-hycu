@@ -1,0 +1,9 @@
+*/*
+!/Makefile
+!/common.mk
+!*/Makefile
+!*/src/
+!*/tcl/
+!*/sim/
+*.xpr
+*.xml
