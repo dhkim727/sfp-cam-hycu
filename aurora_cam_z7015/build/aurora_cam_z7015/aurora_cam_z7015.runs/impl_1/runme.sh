@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/impl_1'
+HD_PWD='/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -38,7 +38,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log aurora_cam_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source aurora_cam_wrapper.tcl -notrace
 
 

@@ -59,4 +59,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_
 # IP: bd/aurora_cam/ip/aurora_cam_clk_wiz_0_0/aurora_cam_clk_wiz_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_clk_wiz_0_0 || ORIG_REF_NAME==aurora_cam_clk_wiz_0_0} -quiet] -quiet
 
-# XDC: /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/aurora_cam_ooc.xdc
+# XDC: /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/aurora_cam_ooc.xdc

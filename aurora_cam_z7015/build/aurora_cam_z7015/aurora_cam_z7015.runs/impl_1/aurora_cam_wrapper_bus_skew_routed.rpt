@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Sat Oct 24 17:33:11 2026
+| Date         : Sat Oct 24 21:38:08 2026
 | Host         : dhkim-home running 64-bit Ubuntu 24.04.5 LTS
 | Command      : report_bus_skew -warn_on_violation -file aurora_cam_wrapper_bus_skew_routed.rpt -pb aurora_cam_wrapper_bus_skew_routed.pb -rpx aurora_cam_wrapper_bus_skew_routed.rpx
 | Design       : aurora_cam_wrapper
@@ -46,7 +46,7 @@ Id  Position  From                            To                              Co
           {aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
           {aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
           {aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow             10.000       0.726      9.274
+                                                                              Slow             10.000       0.881      9.119
 2   95        [get_cells [list {aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
           {aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
           {aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[11]} \
@@ -71,19 +71,19 @@ Id  Position  From                            To                              Co
           {aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
           {aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
           {aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow             10.000       0.753      9.247
+                                                                              Slow             10.000       0.706      9.294
 3   101       [get_cells [list {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[7]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[8]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[9]}]]
                                               [get_cells [list {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow             10.000       0.843      9.157
+                                                                              Slow             10.000       0.664      9.336
 4   103       [get_cells [list {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[5]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[7]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[8]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[9]}]]
                                               [get_cells [list {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} {aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
-                                                                              Slow             10.000       0.731      9.269
+                                                                              Slow             10.000       0.665      9.335
 5   109       [get_cells [list {aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[0]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[1]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[2]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[3]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[4]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[5]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[6]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[7]}]]
                                               [get_cells [list {aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][0]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][1]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][2]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][3]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][4]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][5]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][6]} {aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][7]}]]
-                                                                              Slow             12.800       0.616     12.184
+                                                                              Slow             12.800       0.605     12.195
 6   111       [get_cells [list {aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[0]} {aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[1]} {aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[2]} {aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[3]} {aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[4]} {aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[5]} {aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[6]} {aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[7]}]]
                                               [get_cells [list {aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][0]} {aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][1]} {aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][2]} {aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][3]} {aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][4]} {aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][5]} {aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][6]} {aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][7]}]]
-                                                                              Slow             12.800       0.650     12.150
+                                                                              Slow             12.800       0.649     12.151
 7   113       [get_cells [list {aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[0]} \
           {aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[10]} \
           {aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[11]} \
@@ -147,19 +147,19 @@ Id  Position  From                            To                              Co
           {aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[7]} \
           {aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[8]} \
           {aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[9]}]]
-                                                                              Slow             40.000       0.996     39.004
+                                                                              Slow             40.000       0.823     39.177
 8   147       [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[3]}]]
                                               [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[3]}]]
-                                                                              Slow             16.000       0.591     15.409
+                                                                              Slow             16.000       0.907     15.093
 9   149       [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]}]]
                                               [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]}]]
-                                                                              Slow             16.000       0.605     15.395
+                                                                              Slow             16.000       0.482     15.518
 10  152       [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[3]}]]
                                               [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[3]}]]
-                                                                              Slow             16.000       0.461     15.539
+                                                                              Slow             16.000       0.485     15.515
 11  154       [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]}]]
                                               [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]}]]
-                                                                              Slow             16.000       0.539     15.461
+                                                                              Slow             16.000       0.614     15.386
 
 
 2. Bus Skew Report Per Constraint
@@ -195,25 +195,25 @@ Endpoints: 12
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_fpga_0            clkout0               aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
-                                                                            aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/D
-                                                                                                            Slow         0.726      9.274
+                                                                            aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                                                                                                            Slow         0.881      9.119
 
 
-Slack (MET) :             9.274ns  (requirement - actual skew)
+Slack (MET) :             9.119ns  (requirement - actual skew)
   Endpoint Source:        aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
   Endpoint Destination:   aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
                             (rising edge-triggered cell FDRE clocked by clkout0)
-  Reference Source:       aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[10]/C
+  Reference Source:       aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
-  Reference Destination:  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/D
+  Reference Destination:  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
                             (rising edge-triggered cell FDRE clocked by clkout0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            10.000ns
-  Endpoint Relative Delay:   -2.031ns
-  Reference Relative Delay:  -3.517ns
+  Endpoint Relative Delay:   -1.893ns
+  Reference Relative Delay:  -3.534ns
   Relative CRPR:              0.760ns
-  Actual Bus Skew:            0.726ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Actual Bus Skew:            0.881ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -223,16 +223,16 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  aurora_cam_i/ps7/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.992     0.992    aurora_cam_i/ps7/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     1.077 r  aurora_cam_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=7873, routed)        1.455     2.532    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X24Y6          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
+                         net (fo=7873, routed)        1.456     2.533    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X25Y4          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X24Y6          FDRE (Prop_fdre_C_Q)         0.348     2.880 r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]/Q
-                         net (fo=1, routed)           0.489     3.369    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[5]
-    SLICE_X24Y7          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+    SLICE_X25Y4          FDRE (Prop_fdre_C_Q)         0.348     2.881 r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]/Q
+                         net (fo=1, routed)           0.629     3.510    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[5]
+    SLICE_X24Y3          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clkout0 rise edge)    0.000     0.000 r  
-    GTPE2_CHANNEL_X0Y0   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
+    GTPE2_CHANNEL_X0Y1   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
                          net (fo=1, routed)           0.944     0.944    aurora_cam_i/aurora_0/inst/clock_module_i/txoutclk_out
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.077     1.021 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkin1_buf/O
                          net (fo=1, routed)           1.479     2.499    aurora_cam_i/aurora_0/inst/clock_module_i/clkin1
@@ -241,14 +241,14 @@ Endpoint path:
                          net (fo=1, routed)           1.665     4.238    aurora_cam_i/aurora_0/inst/clock_module_i/clkout0
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077     4.315 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkout0_buf/O
                          net (fo=2111, routed)        1.296     5.610    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X24Y7          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C
+    SLICE_X24Y3          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C
                          clock pessimism              0.000     5.610    
-    SLICE_X24Y7          FDRE (Setup_fdre_C_D)       -0.210     5.400    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]
+    SLICE_X24Y3          FDRE (Setup_fdre_C_D)       -0.207     5.403    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]
   -------------------------------------------------------------------
-                         data arrival                           3.369    
-                         clock arrival                          5.400    
+                         data arrival                           3.510    
+                         clock arrival                          5.403    
   -------------------------------------------------------------------
-                         relative delay                        -2.031    
+                         relative delay                        -1.893    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -259,15 +259,15 @@ Reference path:
                          net (fo=1, routed)           0.899     0.899    aurora_cam_i/ps7/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     0.976 r  aurora_cam_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
                          net (fo=7873, routed)        1.300     2.275    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X22Y6          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[10]/C
+    SLICE_X23Y4          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X22Y6          FDRE (Prop_fdre_C_Q)         0.347     2.622 r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[10]/Q
-                         net (fo=1, routed)           0.289     2.912    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[10]
-    SLICE_X22Y7          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/D
+    SLICE_X23Y4          FDRE (Prop_fdre_C_Q)         0.304     2.579 r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]/Q
+                         net (fo=1, routed)           0.316     2.896    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[6]
+    SLICE_X22Y4          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clkout0 rise edge)    0.000     0.000 r  
-    GTPE2_CHANNEL_X0Y0   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
+    GTPE2_CHANNEL_X0Y1   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
                          net (fo=1, routed)           1.038     1.038    aurora_cam_i/aurora_0/inst/clock_module_i/txoutclk_out
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.085     1.123 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkin1_buf/O
                          net (fo=1, routed)           1.661     2.784    aurora_cam_i/aurora_0/inst/clock_module_i/clkin1
@@ -275,15 +275,15 @@ Reference path:
                                                       0.077     2.861 r  aurora_cam_i/aurora_0/inst/clock_module_i/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.835     4.696    aurora_cam_i/aurora_0/inst/clock_module_i/clkout0
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085     4.781 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkout0_buf/O
-                         net (fo=2111, routed)        1.461     6.242    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X22Y7          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/C
-                         clock pessimism              0.000     6.242    
-    SLICE_X22Y7          FDRE (Hold_fdre_C_D)         0.187     6.429    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]
+                         net (fo=2111, routed)        1.462     6.243    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X22Y4          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C
+                         clock pessimism              0.000     6.243    
+    SLICE_X22Y4          FDRE (Hold_fdre_C_D)         0.187     6.430    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]
   -------------------------------------------------------------------
-                         data arrival                           2.912    
-                         clock arrival                          6.429    
+                         data arrival                           2.896    
+                         clock arrival                          6.430    
   -------------------------------------------------------------------
-                         relative delay                        -3.517    
+                         relative delay                        -3.534    
 
 
 
@@ -316,15 +316,15 @@ Endpoints: 12
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-clkout0               clk_fpga_0            aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]/D
+clkout0               clk_fpga_0            aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
                                                                             aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
-                                                                                                            Slow         0.753      9.247
+                                                                                                            Slow         0.706      9.294
 
 
-Slack (MET) :             9.247ns  (requirement - actual skew)
-  Endpoint Source:        aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[11]/C
+Slack (MET) :             9.294ns  (requirement - actual skew)
+  Endpoint Source:        aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by clkout0)
-  Endpoint Destination:   aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]/D
+  Endpoint Destination:   aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
   Reference Source:       aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clkout0)
@@ -332,16 +332,16 @@ Slack (MET) :             9.247ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            10.000ns
-  Endpoint Relative Delay:    5.024ns
-  Reference Relative Delay:   3.511ns
-  Relative CRPR:              0.760ns
-  Actual Bus Skew:            0.753ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:    5.075ns
+  Reference Relative Delay:   3.537ns
+  Relative CRPR:              0.832ns
+  Actual Bus Skew:            0.706ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clkout0 rise edge)    0.000     0.000 r  
-    GTPE2_CHANNEL_X0Y0   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
+    GTPE2_CHANNEL_X0Y1   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
                          net (fo=1, routed)           1.038     1.038    aurora_cam_i/aurora_0/inst/clock_module_i/txoutclk_out
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.085     1.123 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkin1_buf/O
                          net (fo=1, routed)           1.661     2.784    aurora_cam_i/aurora_0/inst/clock_module_i/clkin1
@@ -349,12 +349,12 @@ Endpoint path:
                                                       0.077     2.861 r  aurora_cam_i/aurora_0/inst/clock_module_i/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.835     4.696    aurora_cam_i/aurora_0/inst/clock_module_i/clkout0
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085     4.781 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkout0_buf/O
-                         net (fo=2111, routed)        1.460     6.241    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X12Y12         FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[11]/C
+                         net (fo=2111, routed)        1.453     6.234    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X26Y10         FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X12Y12         FDRE (Prop_fdre_C_Q)         0.398     6.639 r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[11]/Q
-                         net (fo=1, routed)           0.461     7.100    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[11]
-    SLICE_X13Y12         FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]/D
+    SLICE_X26Y10         FDRE (Prop_fdre_C_Q)         0.433     6.667 r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.603     7.270    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[2]
+    SLICE_X27Y10         FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -362,21 +362,21 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  aurora_cam_i/ps7/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.899     0.899    aurora_cam_i/ps7/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     0.976 r  aurora_cam_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=7873, routed)        1.301     2.276    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X13Y12         FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]/C
-                         clock pessimism              0.000     2.276    
-    SLICE_X13Y12         FDRE (Setup_fdre_C_D)       -0.200     2.076    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]
+                         net (fo=7873, routed)        1.294     2.269    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X27Y10         FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism              0.000     2.269    
+    SLICE_X27Y10         FDRE (Setup_fdre_C_D)       -0.075     2.194    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
   -------------------------------------------------------------------
-                         data arrival                           7.100    
-                         clock arrival                          2.076    
+                         data arrival                           7.270    
+                         clock arrival                          2.194    
   -------------------------------------------------------------------
-                         relative delay                         5.024    
+                         relative delay                         5.075    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clkout0 rise edge)    0.000     0.000 r  
-    GTPE2_CHANNEL_X0Y0   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
+    GTPE2_CHANNEL_X0Y1   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
                          net (fo=1, routed)           0.944     0.944    aurora_cam_i/aurora_0/inst/clock_module_i/txoutclk_out
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.077     1.021 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkin1_buf/O
                          net (fo=1, routed)           1.479     2.499    aurora_cam_i/aurora_0/inst/clock_module_i/clkin1
@@ -384,12 +384,12 @@ Reference path:
                                                       0.073     2.572 r  aurora_cam_i/aurora_0/inst/clock_module_i/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.665     4.238    aurora_cam_i/aurora_0/inst/clock_module_i/clkout0
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077     4.315 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkout0_buf/O
-                         net (fo=2111, routed)        1.303     5.617    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X17Y5          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+                         net (fo=2111, routed)        1.295     5.609    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X24Y8          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X17Y5          FDRE (Prop_fdre_C_Q)         0.304     5.921 r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.316     6.238    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[0]
-    SLICE_X16Y5          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+    SLICE_X24Y8          FDRE (Prop_fdre_C_Q)         0.304     5.913 r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.291     6.204    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[0]
+    SLICE_X24Y9          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -397,15 +397,15 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  aurora_cam_i/ps7/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.992     0.992    aurora_cam_i/ps7/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     1.077 r  aurora_cam_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=7873, routed)        1.463     2.540    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X16Y5          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism              0.000     2.540    
-    SLICE_X16Y5          FDRE (Hold_fdre_C_D)         0.187     2.727    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+                         net (fo=7873, routed)        1.454     2.531    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X24Y9          FDRE                                         r  aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism              0.000     2.531    
+    SLICE_X24Y9          FDRE (Hold_fdre_C_D)         0.136     2.667    aurora_cam_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
   -------------------------------------------------------------------
-                         data arrival                           6.238    
-                         clock arrival                          2.727    
+                         data arrival                           6.204    
+                         clock arrival                          2.667    
   -------------------------------------------------------------------
-                         relative delay                         3.511    
+                         relative delay                         3.537    
 
 
 
@@ -416,32 +416,32 @@ Endpoints: 10
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-clkout0               clk_fpga_0            aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
-                                                                            aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
-                                                                                                            Slow         0.843      9.157
+clkout0               clk_fpga_0            aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+                                                                            aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                                                            Slow         0.664      9.336
 
 
-Slack (MET) :             9.157ns  (requirement - actual skew)
-  Endpoint Source:        aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
+Slack (MET) :             9.336ns  (requirement - actual skew)
+  Endpoint Source:        aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
                             (rising edge-triggered cell FDRE clocked by clkout0)
-  Endpoint Destination:   aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  Endpoint Destination:   aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
-  Reference Source:       aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[9]/C
+  Reference Source:       aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by clkout0)
-  Reference Destination:  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+  Reference Destination:  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            10.000ns
-  Endpoint Relative Delay:    5.117ns
-  Reference Relative Delay:   3.514ns
+  Endpoint Relative Delay:    5.014ns
+  Reference Relative Delay:   3.590ns
   Relative CRPR:              0.760ns
-  Actual Bus Skew:            0.843ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Actual Bus Skew:            0.664ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clkout0 rise edge)    0.000     0.000 r  
-    GTPE2_CHANNEL_X0Y0   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
+    GTPE2_CHANNEL_X0Y1   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
                          net (fo=1, routed)           1.038     1.038    aurora_cam_i/aurora_0/inst/clock_module_i/txoutclk_out
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.085     1.123 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkin1_buf/O
                          net (fo=1, routed)           1.661     2.784    aurora_cam_i/aurora_0/inst/clock_module_i/clkin1
@@ -449,12 +449,12 @@ Endpoint path:
                                                       0.077     2.861 r  aurora_cam_i/aurora_0/inst/clock_module_i/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.835     4.696    aurora_cam_i/aurora_0/inst/clock_module_i/clkout0
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085     4.781 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkout0_buf/O
-                         net (fo=2111, routed)        1.410     6.191    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X71Y39         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
+                         net (fo=2111, routed)        1.447     6.228    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X11Y26         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X71Y39         FDRE (Prop_fdre_C_Q)         0.379     6.570 r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.700     7.270    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[0]
-    SLICE_X69Y38         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+    SLICE_X11Y26         FDRE (Prop_fdre_C_Q)         0.379     6.607 r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[8]/Q
+                         net (fo=1, routed)           0.600     7.207    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[8]
+    SLICE_X13Y26         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -462,21 +462,21 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  aurora_cam_i/ps7/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.899     0.899    aurora_cam_i/ps7/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     0.976 r  aurora_cam_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=7873, routed)        1.252     2.227    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X69Y38         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism              0.000     2.227    
-    SLICE_X69Y38         FDRE (Setup_fdre_C_D)       -0.075     2.152    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+                         net (fo=7873, routed)        1.290     2.265    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X13Y26         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/C
+                         clock pessimism              0.000     2.265    
+    SLICE_X13Y26         FDRE (Setup_fdre_C_D)       -0.073     2.192    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]
   -------------------------------------------------------------------
-                         data arrival                           7.270    
-                         clock arrival                          2.152    
+                         data arrival                           7.207    
+                         clock arrival                          2.192    
   -------------------------------------------------------------------
-                         relative delay                         5.117    
+                         relative delay                         5.014    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clkout0 rise edge)    0.000     0.000 r  
-    GTPE2_CHANNEL_X0Y0   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
+    GTPE2_CHANNEL_X0Y1   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
                          net (fo=1, routed)           0.944     0.944    aurora_cam_i/aurora_0/inst/clock_module_i/txoutclk_out
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.077     1.021 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkin1_buf/O
                          net (fo=1, routed)           1.479     2.499    aurora_cam_i/aurora_0/inst/clock_module_i/clkin1
@@ -484,12 +484,12 @@ Reference path:
                                                       0.073     2.572 r  aurora_cam_i/aurora_0/inst/clock_module_i/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.665     4.238    aurora_cam_i/aurora_0/inst/clock_module_i/clkout0
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077     4.315 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkout0_buf/O
-                         net (fo=2111, routed)        1.255     5.569    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X73Y43         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[9]/C
+                         net (fo=2111, routed)        1.293     5.607    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X11Y21         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X73Y43         FDRE (Prop_fdre_C_Q)         0.304     5.873 r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[9]/Q
-                         net (fo=1, routed)           0.316     6.190    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[9]
-    SLICE_X72Y43         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+    SLICE_X11Y21         FDRE (Prop_fdre_C_Q)         0.279     5.886 r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.309     6.196    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[3]
+    SLICE_X12Y22         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -497,15 +497,15 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  aurora_cam_i/ps7/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.992     0.992    aurora_cam_i/ps7/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     1.077 r  aurora_cam_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=7873, routed)        1.412     2.489    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X72Y43         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/C
-                         clock pessimism              0.000     2.489    
-    SLICE_X72Y43         FDRE (Hold_fdre_C_D)         0.187     2.676    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]
+                         net (fo=7873, routed)        1.448     2.525    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X12Y22         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     2.525    
+    SLICE_X12Y22         FDRE (Hold_fdre_C_D)         0.081     2.606    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           6.190    
-                         clock arrival                          2.676    
+                         data arrival                           6.196    
+                         clock arrival                          2.606    
   -------------------------------------------------------------------
-                         relative delay                         3.514    
+                         relative delay                         3.590    
 
 
 
@@ -516,26 +516,26 @@ Endpoints: 10
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-clk_fpga_0            clkout0               aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
-                                                                            aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                                                            Slow         0.731      9.269
+clk_fpga_0            clkout0               aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
+                                                                                                            Slow         0.665      9.335
 
 
-Slack (MET) :             9.269ns  (requirement - actual skew)
-  Endpoint Source:        aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/C
+Slack (MET) :             9.335ns  (requirement - actual skew)
+  Endpoint Source:        aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
-  Endpoint Destination:   aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+  Endpoint Destination:   aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                             (rising edge-triggered cell FDRE clocked by clkout0)
-  Reference Source:       aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+  Reference Source:       aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[9]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
-  Reference Destination:  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  Reference Destination:  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
                             (rising edge-triggered cell FDRE clocked by clkout0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            10.000ns
-  Endpoint Relative Delay:   -1.950ns
-  Reference Relative Delay:  -3.511ns
-  Relative CRPR:              0.830ns
-  Actual Bus Skew:            0.731ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:   -2.026ns
+  Reference Relative Delay:  -3.451ns
+  Relative CRPR:              0.760ns
+  Actual Bus Skew:            0.665ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -545,16 +545,16 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  aurora_cam_i/ps7/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.992     0.992    aurora_cam_i/ps7/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     1.077 r  aurora_cam_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=7873, routed)        1.413     2.490    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X76Y41         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/C
+                         net (fo=7873, routed)        1.449     2.526    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X8Y21          FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X76Y41         FDRE (Prop_fdre_C_Q)         0.433     2.923 r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/Q
-                         net (fo=1, routed)           0.622     3.545    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[6]
-    SLICE_X75Y41         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+    SLICE_X8Y21          FDRE (Prop_fdre_C_Q)         0.398     2.924 r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.456     3.380    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[1]
+    SLICE_X9Y21          FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clkout0 rise edge)    0.000     0.000 r  
-    GTPE2_CHANNEL_X0Y0   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
+    GTPE2_CHANNEL_X0Y1   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
                          net (fo=1, routed)           0.944     0.944    aurora_cam_i/aurora_0/inst/clock_module_i/txoutclk_out
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.077     1.021 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkin1_buf/O
                          net (fo=1, routed)           1.479     2.499    aurora_cam_i/aurora_0/inst/clock_module_i/clkin1
@@ -562,15 +562,15 @@ Endpoint path:
                                                       0.073     2.572 r  aurora_cam_i/aurora_0/inst/clock_module_i/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.665     4.238    aurora_cam_i/aurora_0/inst/clock_module_i/clkout0
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077     4.315 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkout0_buf/O
-                         net (fo=2111, routed)        1.255     5.569    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X75Y41         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C
-                         clock pessimism              0.000     5.569    
-    SLICE_X75Y41         FDRE (Setup_fdre_C_D)       -0.075     5.494    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]
+                         net (fo=2111, routed)        1.292     5.606    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X9Y21          FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.000     5.606    
+    SLICE_X9Y21          FDRE (Setup_fdre_C_D)       -0.200     5.406    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                           3.545    
-                         clock arrival                          5.494    
+                         data arrival                           3.380    
+                         clock arrival                          5.406    
   -------------------------------------------------------------------
-                         relative delay                        -1.950    
+                         relative delay                        -2.026    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -580,16 +580,16 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  aurora_cam_i/ps7/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.899     0.899    aurora_cam_i/ps7/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     0.976 r  aurora_cam_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=7873, routed)        1.255     2.230    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X76Y40         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
+                         net (fo=7873, routed)        1.291     2.266    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X10Y26         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[9]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X76Y40         FDRE (Prop_fdre_C_Q)         0.347     2.577 r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.297     2.874    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[2]
-    SLICE_X74Y40         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X10Y26         FDRE (Prop_fdre_C_Q)         0.347     2.613 r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[9]/Q
+                         net (fo=1, routed)           0.299     2.912    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[9]
+    SLICE_X9Y26          FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clkout0 rise edge)    0.000     0.000 r  
-    GTPE2_CHANNEL_X0Y0   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
+    GTPE2_CHANNEL_X0Y1   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
                          net (fo=1, routed)           1.038     1.038    aurora_cam_i/aurora_0/inst/clock_module_i/txoutclk_out
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.085     1.123 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkin1_buf/O
                          net (fo=1, routed)           1.661     2.784    aurora_cam_i/aurora_0/inst/clock_module_i/clkin1
@@ -597,15 +597,15 @@ Reference path:
                                                       0.077     2.861 r  aurora_cam_i/aurora_0/inst/clock_module_i/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.835     4.696    aurora_cam_i/aurora_0/inst/clock_module_i/clkout0
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085     4.781 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkout0_buf/O
-                         net (fo=2111, routed)        1.413     6.194    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X74Y40         FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism              0.000     6.194    
-    SLICE_X74Y40         FDRE (Hold_fdre_C_D)         0.191     6.385    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+                         net (fo=2111, routed)        1.446     6.227    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X9Y26          FDRE                                         r  aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/C
+                         clock pessimism              0.000     6.227    
+    SLICE_X9Y26          FDRE (Hold_fdre_C_D)         0.136     6.363    aurora_cam_i/fifo_tx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]
   -------------------------------------------------------------------
-                         data arrival                           2.874    
-                         clock arrival                          6.385    
+                         data arrival                           2.912    
+                         clock arrival                          6.363    
   -------------------------------------------------------------------
-                         relative delay                        -3.511    
+                         relative delay                        -3.451    
 
 
 
@@ -617,32 +617,32 @@ Endpoints: 8
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clkout0               clk_out1_aurora_cam_clk_wiz_0_0
-                                            aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][7]/D
-                                                                            aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][4]/D
-                                                                                                            Slow         0.616     12.184
+                                            aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][3]/D
+                                                                            aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][6]/D
+                                                                                                            Slow         0.605     12.195
 
 
-Slack (MET) :             12.184ns  (requirement - actual skew)
-  Endpoint Source:        aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[7]/C
+Slack (MET) :             12.195ns  (requirement - actual skew)
+  Endpoint Source:        aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by clkout0)
-  Endpoint Destination:   aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][7]/D
+  Endpoint Destination:   aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
-  Reference Source:       aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[4]/C
+  Reference Source:       aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[6]/C
                             (rising edge-triggered cell FDRE clocked by clkout0)
-  Reference Destination:  aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][4]/D
+  Reference Destination:  aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][6]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            12.800ns
-  Endpoint Relative Delay:    2.035ns
-  Reference Relative Delay:   0.396ns
-  Relative CRPR:              1.023ns
-  Actual Bus Skew:            0.616ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:    2.077ns
+  Reference Relative Delay:   0.384ns
+  Relative CRPR:              1.088ns
+  Actual Bus Skew:            0.605ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clkout0 rise edge)    0.000     0.000 r  
-    GTPE2_CHANNEL_X0Y0   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
+    GTPE2_CHANNEL_X0Y1   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
                          net (fo=1, routed)           1.038     1.038    aurora_cam_i/aurora_0/inst/clock_module_i/txoutclk_out
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.085     1.123 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkin1_buf/O
                          net (fo=1, routed)           1.661     2.784    aurora_cam_i/aurora_0/inst/clock_module_i/clkin1
@@ -650,12 +650,12 @@ Endpoint path:
                                                       0.077     2.861 r  aurora_cam_i/aurora_0/inst/clock_module_i/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.835     4.696    aurora_cam_i/aurora_0/inst/clock_module_i/clkout0
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085     4.781 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkout0_buf/O
-                         net (fo=2111, routed)        1.429     6.210    aurora_cam_i/link_ctrl_0/inst/u_rxc/src_clk
-    SLICE_X40Y25         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[7]/C
+                         net (fo=2111, routed)        1.441     6.222    aurora_cam_i/link_ctrl_0/inst/u_rxc/src_clk
+    SLICE_X33Y20         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X40Y25         FDRE (Prop_fdre_C_Q)         0.348     6.558 r  aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[7]/Q
-                         net (fo=1, routed)           0.483     7.041    aurora_cam_i/link_ctrl_0/inst/u_rxc/async_path[7]
-    SLICE_X44Y29         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][7]/D
+    SLICE_X33Y20         FDRE (Prop_fdre_C_Q)         0.348     6.570 r  aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.522     7.092    aurora_cam_i/link_ctrl_0/inst/u_rxc/async_path[3]
+    SLICE_X32Y20         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_aurora_cam_clk_wiz_0_0 rise edge)
@@ -668,21 +668,21 @@ Endpoint path:
                                                       0.073     2.475 r  aurora_cam_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.393     3.868    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.945 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=1890, routed)        1.274     5.219    aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_clk
-    SLICE_X44Y29         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][7]/C
-                         clock pessimism              0.000     5.219    
-    SLICE_X44Y29         FDRE (Setup_fdre_C_D)       -0.212     5.007    aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][7]
+                         net (fo=1890, routed)        1.280     5.225    aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_clk
+    SLICE_X32Y20         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     5.225    
+    SLICE_X32Y20         FDRE (Setup_fdre_C_D)       -0.209     5.016    aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                           7.041    
-                         clock arrival                          5.007    
+                         data arrival                           7.092    
+                         clock arrival                          5.016    
   -------------------------------------------------------------------
-                         relative delay                         2.035    
+                         relative delay                         2.077    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clkout0 rise edge)    0.000     0.000 r  
-    GTPE2_CHANNEL_X0Y0   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
+    GTPE2_CHANNEL_X0Y1   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
                          net (fo=1, routed)           0.944     0.944    aurora_cam_i/aurora_0/inst/clock_module_i/txoutclk_out
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.077     1.021 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkin1_buf/O
                          net (fo=1, routed)           1.479     2.499    aurora_cam_i/aurora_0/inst/clock_module_i/clkin1
@@ -690,12 +690,12 @@ Reference path:
                                                       0.073     2.572 r  aurora_cam_i/aurora_0/inst/clock_module_i/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.665     4.238    aurora_cam_i/aurora_0/inst/clock_module_i/clkout0
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077     4.315 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkout0_buf/O
-                         net (fo=2111, routed)        1.274     5.588    aurora_cam_i/link_ctrl_0/inst/u_rxc/src_clk
-    SLICE_X43Y24         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[4]/C
+                         net (fo=2111, routed)        1.282     5.596    aurora_cam_i/link_ctrl_0/inst/u_rxc/src_clk
+    SLICE_X33Y20         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y24         FDRE (Prop_fdre_C_Q)         0.304     5.892 r  aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[4]/Q
-                         net (fo=1, routed)           0.341     6.233    aurora_cam_i/link_ctrl_0/inst/u_rxc/async_path[4]
-    SLICE_X44Y26         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][4]/D
+    SLICE_X33Y20         FDRE (Prop_fdre_C_Q)         0.304     5.900 r  aurora_cam_i/link_ctrl_0/inst/u_rxc/src_gray_ff_reg[6]/Q
+                         net (fo=1, routed)           0.329     6.230    aurora_cam_i/link_ctrl_0/inst/u_rxc/async_path[6]
+    SLICE_X33Y21         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][6]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_aurora_cam_clk_wiz_0_0 rise edge)
@@ -708,15 +708,15 @@ Reference path:
                                                       0.077     2.652 r  aurora_cam_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.536     4.188    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     4.273 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=1890, routed)        1.426     5.699    aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_clk
-    SLICE_X44Y26         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][4]/C
-                         clock pessimism              0.000     5.699    
-    SLICE_X44Y26         FDRE (Hold_fdre_C_D)         0.138     5.837    aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][4]
+                         net (fo=1890, routed)        1.437     5.710    aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_clk
+    SLICE_X33Y21         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][6]/C
+                         clock pessimism              0.000     5.710    
+    SLICE_X33Y21         FDRE (Hold_fdre_C_D)         0.136     5.846    aurora_cam_i/link_ctrl_0/inst/u_rxc/dest_graysync_ff_reg[0][6]
   -------------------------------------------------------------------
-                         data arrival                           6.233    
-                         clock arrival                          5.837    
+                         data arrival                           6.230    
+                         clock arrival                          5.846    
   -------------------------------------------------------------------
-                         relative delay                         0.396    
+                         relative delay                         0.384    
 
 
 
@@ -729,31 +729,31 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clkout0               clk_out1_aurora_cam_clk_wiz_0_0
                                             aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][5]/D
-                                                                            aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][0]/D
-                                                                                                            Slow         0.650     12.150
+                                                                            aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][6]/D
+                                                                                                            Slow         0.649     12.151
 
 
-Slack (MET) :             12.150ns  (requirement - actual skew)
+Slack (MET) :             12.151ns  (requirement - actual skew)
   Endpoint Source:        aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[5]/C
                             (rising edge-triggered cell FDRE clocked by clkout0)
   Endpoint Destination:   aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][5]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
-  Reference Source:       aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[0]/C
+  Reference Source:       aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[6]/C
                             (rising edge-triggered cell FDRE clocked by clkout0)
-  Reference Destination:  aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][0]/D
+  Reference Destination:  aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][6]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            12.800ns
-  Endpoint Relative Delay:    2.014ns
-  Reference Relative Delay:   0.318ns
-  Relative CRPR:              1.046ns
-  Actual Bus Skew:            0.650ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:    2.006ns
+  Reference Relative Delay:   0.370ns
+  Relative CRPR:              0.987ns
+  Actual Bus Skew:            0.649ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clkout0 rise edge)    0.000     0.000 r  
-    GTPE2_CHANNEL_X0Y0   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
+    GTPE2_CHANNEL_X0Y1   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
                          net (fo=1, routed)           1.038     1.038    aurora_cam_i/aurora_0/inst/clock_module_i/txoutclk_out
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.085     1.123 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkin1_buf/O
                          net (fo=1, routed)           1.661     2.784    aurora_cam_i/aurora_0/inst/clock_module_i/clkin1
@@ -761,12 +761,12 @@ Endpoint path:
                                                       0.077     2.861 r  aurora_cam_i/aurora_0/inst/clock_module_i/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.835     4.696    aurora_cam_i/aurora_0/inst/clock_module_i/clkout0
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.085     4.781 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkout0_buf/O
-                         net (fo=2111, routed)        1.403     6.184    aurora_cam_i/link_ctrl_0/inst/u_txc/src_clk
-    SLICE_X69Y32         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[5]/C
+                         net (fo=2111, routed)        1.434     6.215    aurora_cam_i/link_ctrl_0/inst/u_txc/src_clk
+    SLICE_X37Y26         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[5]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X69Y32         FDRE (Prop_fdre_C_Q)         0.348     6.532 r  aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[5]/Q
-                         net (fo=1, routed)           0.462     6.994    aurora_cam_i/link_ctrl_0/inst/u_txc/async_path[5]
-    SLICE_X69Y31         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][5]/D
+    SLICE_X37Y26         FDRE (Prop_fdre_C_Q)         0.348     6.563 r  aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[5]/Q
+                         net (fo=1, routed)           0.452     7.015    aurora_cam_i/link_ctrl_0/inst/u_txc/async_path[5]
+    SLICE_X39Y26         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][5]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_aurora_cam_clk_wiz_0_0 rise edge)
@@ -779,21 +779,21 @@ Endpoint path:
                                                       0.073     2.475 r  aurora_cam_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.393     3.868    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.945 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=1890, routed)        1.245     5.190    aurora_cam_i/link_ctrl_0/inst/u_txc/dest_clk
-    SLICE_X69Y31         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][5]/C
-                         clock pessimism              0.000     5.190    
-    SLICE_X69Y31         FDRE (Setup_fdre_C_D)       -0.210     4.980    aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][5]
+                         net (fo=1890, routed)        1.275     5.220    aurora_cam_i/link_ctrl_0/inst/u_txc/dest_clk
+    SLICE_X39Y26         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][5]/C
+                         clock pessimism              0.000     5.220    
+    SLICE_X39Y26         FDRE (Setup_fdre_C_D)       -0.210     5.010    aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][5]
   -------------------------------------------------------------------
-                         data arrival                           6.994    
-                         clock arrival                          4.980    
+                         data arrival                           7.015    
+                         clock arrival                          5.010    
   -------------------------------------------------------------------
-                         relative delay                         2.014    
+                         relative delay                         2.006    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clkout0 rise edge)    0.000     0.000 r  
-    GTPE2_CHANNEL_X0Y0   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
+    GTPE2_CHANNEL_X0Y1   GTPE2_CHANNEL                0.000     0.000 r  aurora_cam_i/aurora_0/inst/aurora_cam_aurora_0_0_core_i/gt_wrapper_i/aurora_cam_aurora_0_0_multi_gt_i/gt0_aurora_cam_aurora_0_0_i/gtpe2_i/TXOUTCLK
                          net (fo=1, routed)           0.944     0.944    aurora_cam_i/aurora_0/inst/clock_module_i/txoutclk_out
     BUFGCTRL_X0Y2        BUFG (Prop_bufg_I_O)         0.077     1.021 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkin1_buf/O
                          net (fo=1, routed)           1.479     2.499    aurora_cam_i/aurora_0/inst/clock_module_i/clkin1
@@ -801,12 +801,12 @@ Reference path:
                                                       0.073     2.572 r  aurora_cam_i/aurora_0/inst/clock_module_i/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.665     4.238    aurora_cam_i/aurora_0/inst/clock_module_i/clkout0
     BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.077     4.315 r  aurora_cam_i/aurora_0/inst/clock_module_i/clkout0_buf/O
-                         net (fo=2111, routed)        1.248     5.562    aurora_cam_i/link_ctrl_0/inst/u_txc/src_clk
-    SLICE_X69Y32         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[0]/C
+                         net (fo=2111, routed)        1.277     5.591    aurora_cam_i/link_ctrl_0/inst/u_txc/src_clk
+    SLICE_X41Y28         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X69Y32         FDRE (Prop_fdre_C_Q)         0.304     5.866 r  aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.311     6.177    aurora_cam_i/link_ctrl_0/inst/u_txc/async_path[0]
-    SLICE_X66Y31         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][0]/D
+    SLICE_X41Y28         FDRE (Prop_fdre_C_Q)         0.304     5.895 r  aurora_cam_i/link_ctrl_0/inst/u_txc/src_gray_ff_reg[6]/Q
+                         net (fo=1, routed)           0.313     6.209    aurora_cam_i/link_ctrl_0/inst/u_txc/async_path[6]
+    SLICE_X41Y27         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][6]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_aurora_cam_clk_wiz_0_0 rise edge)
@@ -819,15 +819,15 @@ Reference path:
                                                       0.077     2.652 r  aurora_cam_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.536     4.188    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     4.273 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=1890, routed)        1.399     5.672    aurora_cam_i/link_ctrl_0/inst/u_txc/dest_clk
-    SLICE_X66Y31         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism              0.000     5.672    
-    SLICE_X66Y31         FDRE (Hold_fdre_C_D)         0.187     5.859    aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][0]
+                         net (fo=1890, routed)        1.430     5.703    aurora_cam_i/link_ctrl_0/inst/u_txc/dest_clk
+    SLICE_X41Y27         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][6]/C
+                         clock pessimism              0.000     5.703    
+    SLICE_X41Y27         FDRE (Hold_fdre_C_D)         0.136     5.839    aurora_cam_i/link_ctrl_0/inst/u_txc/dest_graysync_ff_reg[0][6]
   -------------------------------------------------------------------
-                         data arrival                           6.177    
-                         clock arrival                          5.859    
+                         data arrival                           6.209    
+                         clock arrival                          5.839    
   -------------------------------------------------------------------
-                         relative delay                         0.318    
+                         relative delay                         0.370    
 
 
 
@@ -900,15 +900,15 @@ Endpoints: 31
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out1_aurora_cam_clk_wiz_0_0
-                      clk_fpga_0            aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[4]/D
+                      clk_fpga_0            aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[9]/D
                                                                             aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[13]/D
-                                                                                                            Slow         0.996     39.004
+                                                                                                            Slow         0.823     39.177
 
 
-Slack (MET) :             39.004ns  (requirement - actual skew)
-  Endpoint Source:        aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[4]/C
+Slack (MET) :             39.177ns  (requirement - actual skew)
+  Endpoint Source:        aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[9]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
-  Endpoint Destination:   aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[4]/D
+  Endpoint Destination:   aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[9]/D
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
   Reference Source:       aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[13]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
@@ -916,10 +916,10 @@ Slack (MET) :             39.004ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            40.000ns
-  Endpoint Relative Delay:    4.593ns
-  Reference Relative Delay:   3.144ns
-  Relative CRPR:              0.454ns
-  Actual Bus Skew:            0.996ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:    4.607ns
+  Reference Relative Delay:   3.162ns
+  Relative CRPR:              0.622ns
+  Actual Bus Skew:            0.823ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -934,12 +934,12 @@ Endpoint path:
                                                       0.077     2.652 r  aurora_cam_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.536     4.188    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     4.273 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=1890, routed)        1.400     5.673    aurora_cam_i/link_ctrl_0/inst/u_stat/src_clk
-    SLICE_X63Y33         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[4]/C
+                         net (fo=1890, routed)        1.431     5.704    aurora_cam_i/link_ctrl_0/inst/u_stat/src_clk
+    SLICE_X45Y29         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[9]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X63Y33         FDRE (Prop_fdre_C_Q)         0.379     6.052 r  aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[4]/Q
-                         net (fo=1, routed)           0.721     6.773    aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff[4]
-    SLICE_X61Y34         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[4]/D
+    SLICE_X45Y29         FDRE (Prop_fdre_C_Q)         0.348     6.052 r  aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[9]/Q
+                         net (fo=1, routed)           0.594     6.646    aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff[9]
+    SLICE_X44Y31         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[9]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -947,15 +947,15 @@ Endpoint path:
     PS7_X0Y0             PS7                          0.000     0.000 r  aurora_cam_i/ps7/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.899     0.899    aurora_cam_i/ps7/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.077     0.976 r  aurora_cam_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=7873, routed)        1.247     2.222    aurora_cam_i/link_ctrl_0/inst/u_stat/dest_clk
-    SLICE_X61Y34         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[4]/C
-                         clock pessimism              0.000     2.222    
-    SLICE_X61Y34         FDRE (Setup_fdre_C_D)       -0.042     2.180    aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[4]
+                         net (fo=7873, routed)        1.278     2.253    aurora_cam_i/link_ctrl_0/inst/u_stat/dest_clk
+    SLICE_X44Y31         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[9]/C
+                         clock pessimism              0.000     2.253    
+    SLICE_X44Y31         FDRE (Setup_fdre_C_D)       -0.214     2.039    aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[9]
   -------------------------------------------------------------------
-                         data arrival                           6.773    
-                         clock arrival                          2.180    
+                         data arrival                           6.646    
+                         clock arrival                          2.039    
   -------------------------------------------------------------------
-                         relative delay                         4.593    
+                         relative delay                         4.607    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -971,11 +971,11 @@ Reference path:
                          net (fo=1, routed)           1.393     3.868    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.945 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
                          net (fo=1890, routed)        1.265     5.210    aurora_cam_i/link_ctrl_0/inst/u_stat/src_clk
-    SLICE_X59Y33         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[13]/C
+    SLICE_X55Y31         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[13]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X59Y33         FDRE (Prop_fdre_C_Q)         0.304     5.514 r  aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[13]/Q
-                         net (fo=1, routed)           0.331     5.845    aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff[13]
-    SLICE_X58Y33         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[13]/D
+    SLICE_X55Y31         FDRE (Prop_fdre_C_Q)         0.304     5.514 r  aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff_reg[13]/Q
+                         net (fo=1, routed)           0.288     5.801    aurora_cam_i/link_ctrl_0/inst/u_stat/src_hsdata_ff[13]
+    SLICE_X56Y31         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[13]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -983,15 +983,15 @@ Reference path:
     PS7_X0Y0             PS7                          0.000     0.000 r  aurora_cam_i/ps7/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.992     0.992    aurora_cam_i/ps7/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.085     1.077 r  aurora_cam_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=7873, routed)        1.423     2.500    aurora_cam_i/link_ctrl_0/inst/u_stat/dest_clk
-    SLICE_X58Y33         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[13]/C
-                         clock pessimism              0.000     2.500    
-    SLICE_X58Y33         FDRE (Hold_fdre_C_D)         0.201     2.701    aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[13]
+                         net (fo=7873, routed)        1.424     2.501    aurora_cam_i/link_ctrl_0/inst/u_stat/dest_clk
+    SLICE_X56Y31         FDRE                                         r  aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[13]/C
+                         clock pessimism              0.000     2.501    
+    SLICE_X56Y31         FDRE (Hold_fdre_C_D)         0.138     2.639    aurora_cam_i/link_ctrl_0/inst/u_stat/dest_hsdata_ff_reg[13]
   -------------------------------------------------------------------
-                         data arrival                           5.845    
-                         clock arrival                          2.701    
+                         data arrival                           5.801    
+                         clock arrival                          2.639    
   -------------------------------------------------------------------
-                         relative delay                         3.144    
+                         relative delay                         3.162    
 
 
 
@@ -1004,26 +1004,26 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
                       clk_out1_aurora_cam_clk_wiz_0_0
-                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
-                                                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/D
-                                                                                                            Slow         0.591     15.409
+                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/D
+                                                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
+                                                                                                            Slow         0.907     15.093
 
 
-Slack (MET) :             15.409ns  (requirement - actual skew)
-  Endpoint Source:        dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/C
+Slack (MET) :             15.093ns  (requirement - actual skew)
+  Endpoint Source:        dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]/C
                             (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK)
-  Endpoint Destination:   dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
+  Endpoint Destination:   dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/D
                             (rising edge-triggered cell FDCE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
-  Reference Source:       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]/C
+  Reference Source:       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/C
                             (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK)
-  Reference Destination:  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/D
+  Reference Destination:  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
                             (rising edge-triggered cell FDCE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            16.000ns
-  Endpoint Relative Delay:   -1.314ns
-  Reference Relative Delay:  -2.689ns
-  Relative CRPR:              0.784ns
-  Actual Bus Skew:            0.591ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:   -1.000ns
+  Reference Relative Delay:  -2.657ns
+  Relative CRPR:              0.750ns
+  Actual Bus Skew:            0.907ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1033,12 +1033,12 @@ Endpoint path:
     BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
                          net (fo=1, routed)           1.469     1.469    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.085     1.554 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
-                         net (fo=482, routed)         1.397     2.951    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_clk
-    SLICE_X67Y20         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/C
+                         net (fo=482, routed)         1.404     2.958    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_clk
+    SLICE_X72Y35         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X67Y20         FDCE (Prop_fdce_C_Q)         0.379     3.330 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/Q
-                         net (fo=1, routed)           0.467     3.797    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q[1]
-    SLICE_X65Y20         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
+    SLICE_X72Y35         FDCE (Prop_fdce_C_Q)         0.398     3.356 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]/Q
+                         net (fo=1, routed)           0.678     4.035    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q[2]
+    SLICE_X72Y34         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_aurora_cam_clk_wiz_0_0 rise edge)
@@ -1051,15 +1051,15 @@ Endpoint path:
                                                       0.073     2.475 r  aurora_cam_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.393     3.868    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.945 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=1890, routed)        1.242     5.187    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/wr_clk
-    SLICE_X65Y20         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/C
-                         clock pessimism              0.000     5.187    
-    SLICE_X65Y20         FDCE (Setup_fdce_C_D)       -0.075     5.112    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]
+                         net (fo=1890, routed)        1.247     5.192    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/wr_clk
+    SLICE_X72Y34         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/C
+                         clock pessimism              0.000     5.192    
+    SLICE_X72Y34         FDCE (Setup_fdce_C_D)       -0.157     5.035    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]
   -------------------------------------------------------------------
-                         data arrival                           3.797    
-                         clock arrival                          5.112    
+                         data arrival                           4.035    
+                         clock arrival                          5.035    
   -------------------------------------------------------------------
-                         relative delay                        -1.314    
+                         relative delay                        -1.000    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1069,12 +1069,12 @@ Reference path:
     BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
                          net (fo=1, routed)           1.248     1.248    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     1.325 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
-                         net (fo=482, routed)         1.242     2.567    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_clk
-    SLICE_X64Y20         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]/C
+                         net (fo=482, routed)         1.248     2.573    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_clk
+    SLICE_X70Y35         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X64Y20         FDCE (Prop_fdce_C_Q)         0.304     2.871 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]/Q
-                         net (fo=1, routed)           0.302     3.173    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q[2]
-    SLICE_X72Y20         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/D
+    SLICE_X70Y35         FDCE (Prop_fdce_C_Q)         0.347     2.920 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/Q
+                         net (fo=1, routed)           0.290     3.210    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q[1]
+    SLICE_X70Y34         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_aurora_cam_clk_wiz_0_0 rise edge)
@@ -1087,15 +1087,15 @@ Reference path:
                                                       0.077     2.652 r  aurora_cam_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.536     4.188    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     4.273 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=1890, routed)        1.398     5.671    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/wr_clk
-    SLICE_X72Y20         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/C
-                         clock pessimism              0.000     5.671    
-    SLICE_X72Y20         FDCE (Hold_fdce_C_D)         0.191     5.862    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]
+                         net (fo=1890, routed)        1.403     5.676    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/wr_clk
+    SLICE_X70Y34         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/C
+                         clock pessimism              0.000     5.676    
+    SLICE_X70Y34         FDCE (Hold_fdce_C_D)         0.191     5.867    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]
   -------------------------------------------------------------------
-                         data arrival                           3.173    
-                         clock arrival                          5.862    
+                         data arrival                           3.210    
+                         clock arrival                          5.867    
   -------------------------------------------------------------------
-                         relative delay                        -2.689    
+                         relative delay                        -2.657    
 
 
 
@@ -1108,26 +1108,26 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out1_aurora_cam_clk_wiz_0_0
                       dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
-                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
-                                                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]/D
-                                                                                                            Slow         0.605     15.395
+                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]/D
+                                                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
+                                                                                                            Slow         0.482     15.518
 
 
-Slack (MET) :             15.395ns  (requirement - actual skew)
-  Endpoint Source:        dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/C
+Slack (MET) :             15.518ns  (requirement - actual skew)
+  Endpoint Source:        dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]/C
                             (rising edge-triggered cell FDCE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
-  Endpoint Destination:   dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
+  Endpoint Destination:   dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]/D
                             (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK)
-  Reference Source:       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[2]/C
+  Reference Source:       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/C
                             (rising edge-triggered cell FDCE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
-  Reference Destination:  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]/D
+  Reference Destination:  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
                             (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            16.000ns
-  Endpoint Relative Delay:    4.165ns
-  Reference Relative Delay:   2.718ns
-  Relative CRPR:              0.843ns
-  Actual Bus Skew:            0.605ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:    4.119ns
+  Reference Relative Delay:   2.819ns
+  Relative CRPR:              0.818ns
+  Actual Bus Skew:            0.482ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1142,12 +1142,12 @@ Endpoint path:
                                                       0.077     2.652 r  aurora_cam_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.536     4.188    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     4.273 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=1890, routed)        1.397     5.670    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_clk
-    SLICE_X65Y20         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/C
+                         net (fo=1890, routed)        1.403     5.676    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_clk
+    SLICE_X70Y34         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X65Y20         FDCE (Prop_fdce_C_Q)         0.348     6.018 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/Q
-                         net (fo=1, routed)           0.505     6.523    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q[1]
-    SLICE_X67Y20         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
+    SLICE_X70Y34         FDCE (Prop_fdce_C_Q)         0.398     6.074 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]/Q
+                         net (fo=1, routed)           0.459     6.533    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q[3]
+    SLICE_X70Y36         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK rise edge)
@@ -1155,15 +1155,15 @@ Endpoint path:
     BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
                          net (fo=1, routed)           1.248     1.248    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     1.325 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
-                         net (fo=482, routed)         1.242     2.567    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/rd_clk
-    SLICE_X67Y20         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/C
-                         clock pessimism              0.000     2.567    
-    SLICE_X67Y20         FDCE (Setup_fdce_C_D)       -0.209     2.358    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]
+                         net (fo=482, routed)         1.249     2.574    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/rd_clk
+    SLICE_X70Y36         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]/C
+                         clock pessimism              0.000     2.574    
+    SLICE_X70Y36         FDCE (Setup_fdce_C_D)       -0.160     2.414    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]
   -------------------------------------------------------------------
-                         data arrival                           6.523    
-                         clock arrival                          2.358    
+                         data arrival                           6.533    
+                         clock arrival                          2.414    
   -------------------------------------------------------------------
-                         relative delay                         4.165    
+                         relative delay                         4.119    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1178,12 +1178,12 @@ Reference path:
                                                       0.073     2.475 r  aurora_cam_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.393     3.868    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.945 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=1890, routed)        1.242     5.187    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_clk
-    SLICE_X65Y20         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[2]/C
+                         net (fo=1890, routed)        1.247     5.192    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_clk
+    SLICE_X69Y34         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X65Y20         FDCE (Prop_fdce_C_Q)         0.304     5.491 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[2]/Q
-                         net (fo=1, routed)           0.312     5.803    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q[2]
-    SLICE_X64Y21         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]/D
+    SLICE_X69Y34         FDCE (Prop_fdce_C_Q)         0.279     5.471 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/Q
+                         net (fo=1, routed)           0.390     5.860    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q[1]
+    SLICE_X70Y35         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK rise edge)
@@ -1191,15 +1191,15 @@ Reference path:
     BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
                          net (fo=1, routed)           1.469     1.469    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.085     1.554 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
-                         net (fo=482, routed)         1.395     2.949    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/rd_clk
-    SLICE_X64Y21         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]/C
-                         clock pessimism              0.000     2.949    
-    SLICE_X64Y21         FDCE (Hold_fdce_C_D)         0.136     3.085    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]
+                         net (fo=482, routed)         1.404     2.958    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/rd_clk
+    SLICE_X70Y35         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/C
+                         clock pessimism              0.000     2.958    
+    SLICE_X70Y35         FDCE (Hold_fdce_C_D)         0.083     3.041    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]
   -------------------------------------------------------------------
-                         data arrival                           5.803    
-                         clock arrival                          3.085    
+                         data arrival                           5.860    
+                         clock arrival                          3.041    
   -------------------------------------------------------------------
-                         relative delay                         2.718    
+                         relative delay                         2.819    
 
 
 
@@ -1212,26 +1212,26 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out1_aurora_cam_clk_wiz_0_0
                       dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
-                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/D
-                                                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
-                                                                                                            Slow         0.461     15.539
+                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
+                                                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]/D
+                                                                                                            Slow         0.485     15.515
 
 
-Slack (MET) :             15.539ns  (requirement - actual skew)
-  Endpoint Source:        dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]/C
+Slack (MET) :             15.515ns  (requirement - actual skew)
+  Endpoint Source:        dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/C
                             (rising edge-triggered cell FDCE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
-  Endpoint Destination:   dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/D
+  Endpoint Destination:   dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
                             (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK)
-  Reference Source:       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/C
+  Reference Source:       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[0]/C
                             (rising edge-triggered cell FDCE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
-  Reference Destination:  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
+  Reference Destination:  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]/D
                             (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            16.000ns
-  Endpoint Relative Delay:    4.012ns
-  Reference Relative Delay:   2.704ns
-  Relative CRPR:              0.847ns
-  Actual Bus Skew:            0.461ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:    4.070ns
+  Reference Relative Delay:   2.740ns
+  Relative CRPR:              0.845ns
+  Actual Bus Skew:            0.485ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1246,12 +1246,12 @@ Endpoint path:
                                                       0.077     2.652 r  aurora_cam_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.536     4.188    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     4.273 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=1890, routed)        1.398     5.671    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_clk
-    SLICE_X77Y28         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]/C
+                         net (fo=1890, routed)        1.402     5.675    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_clk
+    SLICE_X74Y31         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X77Y28         FDCE (Prop_fdce_C_Q)         0.348     6.019 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]/Q
-                         net (fo=1, routed)           0.451     6.470    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q[2]
-    SLICE_X78Y29         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/D
+    SLICE_X74Y31         FDCE (Prop_fdce_C_Q)         0.433     6.108 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/Q
+                         net (fo=1, routed)           0.460     6.568    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q[1]
+    SLICE_X75Y31         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK rise edge)
@@ -1259,15 +1259,15 @@ Endpoint path:
     BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
                          net (fo=1, routed)           1.248     1.248    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     1.325 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
-                         net (fo=482, routed)         1.299     2.624    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/wr_clk
-    SLICE_X78Y29         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/C
-                         clock pessimism              0.000     2.624    
-    SLICE_X78Y29         FDCE (Setup_fdce_C_D)       -0.167     2.457    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]
+                         net (fo=482, routed)         1.246     2.571    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/wr_clk
+    SLICE_X75Y31         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/C
+                         clock pessimism              0.000     2.571    
+    SLICE_X75Y31         FDCE (Setup_fdce_C_D)       -0.073     2.498    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]
   -------------------------------------------------------------------
-                         data arrival                           6.470    
-                         clock arrival                          2.457    
+                         data arrival                           6.568    
+                         clock arrival                          2.498    
   -------------------------------------------------------------------
-                         relative delay                         4.012    
+                         relative delay                         4.070    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1282,12 +1282,12 @@ Reference path:
                                                       0.073     2.475 r  aurora_cam_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.393     3.868    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.945 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=1890, routed)        1.242     5.187    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_clk
-    SLICE_X77Y28         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/C
+                         net (fo=1890, routed)        1.245     5.190    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_clk
+    SLICE_X74Y30         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X77Y28         FDCE (Prop_fdce_C_Q)         0.304     5.491 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/Q
-                         net (fo=1, routed)           0.362     5.853    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q[1]
-    SLICE_X79Y29         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
+    SLICE_X74Y30         FDCE (Prop_fdce_C_Q)         0.347     5.537 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[0]/Q
+                         net (fo=1, routed)           0.296     5.832    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q[0]
+    SLICE_X75Y31         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK rise edge)
@@ -1295,15 +1295,15 @@ Reference path:
     BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
                          net (fo=1, routed)           1.469     1.469    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.085     1.554 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
-                         net (fo=482, routed)         1.456     3.010    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/wr_clk
-    SLICE_X79Y29         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/C
-                         clock pessimism              0.000     3.010    
-    SLICE_X79Y29         FDCE (Hold_fdce_C_D)         0.138     3.148    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]
+                         net (fo=482, routed)         1.402     2.956    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/wr_clk
+    SLICE_X75Y31         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]/C
+                         clock pessimism              0.000     2.956    
+    SLICE_X75Y31         FDCE (Hold_fdce_C_D)         0.136     3.092    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]
   -------------------------------------------------------------------
-                         data arrival                           5.853    
-                         clock arrival                          3.148    
+                         data arrival                           5.832    
+                         clock arrival                          3.092    
   -------------------------------------------------------------------
-                         relative delay                         2.704    
+                         relative delay                         2.740    
 
 
 
@@ -1316,26 +1316,26 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
                       clk_out1_aurora_cam_clk_wiz_0_0
-                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
-                                                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]/D
-                                                                                                            Slow         0.539     15.461
+                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]/D
+                                                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]/D
+                                                                                                            Slow         0.614     15.386
 
 
-Slack (MET) :             15.461ns  (requirement - actual skew)
-  Endpoint Source:        dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/C
+Slack (MET) :             15.386ns  (requirement - actual skew)
+  Endpoint Source:        dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]/C
                             (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK)
-  Endpoint Destination:   dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
+  Endpoint Destination:   dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]/D
                             (rising edge-triggered cell FDCE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
-  Reference Source:       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[0]/C
+  Reference Source:       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[2]/C
                             (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK)
-  Reference Destination:  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]/D
+  Reference Destination:  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]/D
                             (rising edge-triggered cell FDCE clocked by clk_out1_aurora_cam_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            16.000ns
-  Endpoint Relative Delay:   -1.153ns
-  Reference Relative Delay:  -2.562ns
-  Relative CRPR:              0.871ns
-  Actual Bus Skew:            0.539ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:   -1.185ns
+  Reference Relative Delay:  -2.644ns
+  Relative CRPR:              0.845ns
+  Actual Bus Skew:            0.614ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1345,12 +1345,12 @@ Endpoint path:
     BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
                          net (fo=1, routed)           1.469     1.469    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.085     1.554 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
-                         net (fo=482, routed)         1.456     3.010    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_clk
-    SLICE_X78Y29         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/C
+                         net (fo=482, routed)         1.401     2.955    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_clk
+    SLICE_X76Y30         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X78Y29         FDCE (Prop_fdce_C_Q)         0.398     3.408 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/Q
-                         net (fo=1, routed)           0.428     3.836    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q[1]
-    SLICE_X77Y29         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
+    SLICE_X76Y30         FDCE (Prop_fdce_C_Q)         0.398     3.353 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]/Q
+                         net (fo=1, routed)           0.491     3.844    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q[3]
+    SLICE_X74Y30         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_aurora_cam_clk_wiz_0_0 rise edge)
@@ -1363,15 +1363,15 @@ Endpoint path:
                                                       0.073     2.475 r  aurora_cam_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.393     3.868    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.945 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=1890, routed)        1.244     5.189    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/rd_clk
-    SLICE_X77Y29         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/C
-                         clock pessimism              0.000     5.189    
-    SLICE_X77Y29         FDCE (Setup_fdce_C_D)       -0.200     4.989    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]
+                         net (fo=1890, routed)        1.245     5.190    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/rd_clk
+    SLICE_X74Y30         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]/C
+                         clock pessimism              0.000     5.190    
+    SLICE_X74Y30         FDCE (Setup_fdce_C_D)       -0.160     5.030    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]
   -------------------------------------------------------------------
-                         data arrival                           3.836    
-                         clock arrival                          4.989    
+                         data arrival                           3.844    
+                         clock arrival                          5.030    
   -------------------------------------------------------------------
-                         relative delay                        -1.153    
+                         relative delay                        -1.185    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1381,12 +1381,12 @@ Reference path:
     BSCAN_X0Y0           BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
                          net (fo=1, routed)           1.248     1.248    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     1.325 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
-                         net (fo=482, routed)         1.299     2.624    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_clk
-    SLICE_X78Y29         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[0]/C
+                         net (fo=482, routed)         1.245     2.570    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_clk
+    SLICE_X76Y30         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X78Y29         FDCE (Prop_fdce_C_Q)         0.347     2.971 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[0]/Q
-                         net (fo=1, routed)           0.276     3.247    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q[0]
-    SLICE_X77Y29         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]/D
+    SLICE_X76Y30         FDCE (Prop_fdce_C_Q)         0.347     2.917 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[2]/Q
+                         net (fo=1, routed)           0.299     3.216    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q[2]
+    SLICE_X76Y29         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_aurora_cam_clk_wiz_0_0 rise edge)
@@ -1400,14 +1400,14 @@ Reference path:
                          net (fo=1, routed)           1.536     4.188    aurora_cam_i/clk_wiz_0/inst/clk_out1_aurora_cam_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.085     4.273 r  aurora_cam_i/clk_wiz_0/inst/clkout1_buf/O
                          net (fo=1890, routed)        1.400     5.673    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/rd_clk
-    SLICE_X77Y29         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]/C
+    SLICE_X76Y29         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]/C
                          clock pessimism              0.000     5.673    
-    SLICE_X77Y29         FDCE (Hold_fdce_C_D)         0.136     5.809    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]
+    SLICE_X76Y29         FDCE (Hold_fdce_C_D)         0.187     5.860    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_5_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]
   -------------------------------------------------------------------
-                         data arrival                           3.247    
-                         clock arrival                          5.809    
+                         data arrival                           3.216    
+                         clock arrival                          5.860    
   -------------------------------------------------------------------
-                         relative delay                        -2.562    
+                         relative delay                        -2.644    
 
 
 

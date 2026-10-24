@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Sat Oct 24 17:33:12 2026
+| Date             : Sat Oct 24 21:38:09 2026
 | Host             : dhkim-home running 64-bit Ubuntu 24.04.5 LTS
 | Command          : report_power -file aurora_cam_wrapper_power_routed.rpt -pb aurora_cam_wrapper_power_summary_routed.pb -rpx aurora_cam_wrapper_power_routed.rpx
 | Design           : aurora_cam_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.027        |
+| Total On-Chip Power (W)  | 2.025        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.900        |
+| Dynamic (W)              | 1.899        |
 | Device Static (W)        | 0.126        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 75.7         |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.044 |       12 |       --- |             --- |
+| Clocks                   |     0.042 |       12 |       --- |             --- |
 | Slice Logic              |     0.012 |    21748 |       --- |             --- |
-|   LUT as Logic           |     0.010 |     6332 |     46200 |           13.71 |
+|   LUT as Logic           |     0.010 |     6336 |     46200 |           13.71 |
 |   Register               |    <0.001 |    11199 |     92400 |           12.12 |
 |   LUT as Distributed RAM |    <0.001 |      442 |     14400 |            3.07 |
 |   CARRY4                 |    <0.001 |      245 |     11550 |            2.12 |
 |   LUT as Shift Register  |    <0.001 |      167 |     14400 |            1.16 |
 |   F7/F8 Muxes            |    <0.001 |       21 |     46200 |            0.05 |
 |   Others                 |     0.000 |     1081 |       --- |             --- |
-| Signals                  |     0.012 |    15494 |       --- |             --- |
+| Signals                  |     0.012 |    15473 |       --- |             --- |
 | Block RAM                |     0.002 |        9 |        95 |            9.47 |
 | MMCM                     |     0.217 |        2 |         3 |           66.67 |
 | I/O                      |    <0.001 |        1 |       150 |            0.67 |
 | GTP                      |     0.139 |        1 |       --- |             --- |
 | PS7                      |     1.474 |        1 |       --- |             --- |
 | Static Power             |     0.126 |          |           |                 |
-| Total                    |     2.027 |          |           |                 |
+| Total                    |     2.025 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.096 |       0.085 |      0.011 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.094 |       0.083 |      0.011 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.131 |       0.120 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -163,12 +163,12 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| aurora_cam_wrapper       |     1.900 |
-|   aurora_cam_i           |     1.898 |
+| aurora_cam_wrapper       |     1.899 |
+|   aurora_cam_i           |     1.896 |
 |     aurora_0             |     0.264 |
 |       inst               |     0.264 |
-|     axi_dma_0            |     0.010 |
-|       U0                 |     0.010 |
+|     axi_dma_0            |     0.009 |
+|       U0                 |     0.009 |
 |     axi_gpio_link        |     0.001 |
 |       U0                 |     0.001 |
 |     clk_wiz_0            |     0.105 |
@@ -185,13 +185,13 @@ Table of Contents
 |       inst               |     1.474 |
 |     sc_ctrl              |     0.006 |
 |       inst               |     0.006 |
-|     sc_mem               |     0.024 |
-|       inst               |     0.024 |
+|     sc_mem               |     0.023 |
+|       inst               |     0.023 |
 |     vio_link             |     0.003 |
 |       inst               |     0.003 |
-|   dbg_hub                |     0.003 |
-|     inst                 |     0.003 |
-|       BSCANID.u_xsdbm_id |     0.003 |
+|   dbg_hub                |     0.002 |
+|     inst                 |     0.002 |
+|       BSCANID.u_xsdbm_id |     0.002 |
 +--------------------------+-----------+
 
 

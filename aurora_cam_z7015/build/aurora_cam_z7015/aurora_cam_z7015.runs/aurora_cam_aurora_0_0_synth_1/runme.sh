@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_aurora_0_0_synth_1'
+HD_PWD='/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_aurora_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

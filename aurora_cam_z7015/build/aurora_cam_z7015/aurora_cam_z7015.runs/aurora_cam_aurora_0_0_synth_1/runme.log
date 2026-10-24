@@ -7,7 +7,7 @@
   **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat Oct 24 17:22:03 2026
+  **** Start of session at: Sat Oct 24 21:36:46 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -19,18 +19,18 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015
 INFO: [Device 21-403] Loading part xc7z015clg485-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 441644
+INFO: [Synth 8-7075] Helper process launched with PID 685642
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2247.711 ; gain = 482.875 ; free physical = 34516 ; free virtual = 48796
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2247.879 ; gain = 480.562 ; free physical = 41759 ; free virtual = 61480
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'clkout0', assumed default net type 'wire' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_clock_module.v:154]
-WARNING: [Synth 8-11065] parameter 'STABLE_CLOCK_PERIOD' becomes localparam in 'aurora_cam_aurora_0_0_GT_WRAPPER' with formal parameter declaration list [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_transceiver_wrapper.v:219]
-WARNING: [Synth 8-11065] parameter 'RX_CDRLOCK_TIME' becomes localparam in 'aurora_cam_aurora_0_0_GT_WRAPPER' with formal parameter declaration list [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_transceiver_wrapper.v:221]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0.v:52]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_support' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_support.v:52]
+INFO: [Synth 8-11241] undeclared symbol 'clkout0', assumed default net type 'wire' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_clock_module.v:154]
+WARNING: [Synth 8-11065] parameter 'STABLE_CLOCK_PERIOD' becomes localparam in 'aurora_cam_aurora_0_0_GT_WRAPPER' with formal parameter declaration list [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_transceiver_wrapper.v:219]
+WARNING: [Synth 8-11065] parameter 'RX_CDRLOCK_TIME' becomes localparam in 'aurora_cam_aurora_0_0_GT_WRAPPER' with formal parameter declaration list [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_transceiver_wrapper.v:221]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0.v:52]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_support' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_support.v:52]
 INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE2' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:83044]
 INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE2' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:83044]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_CLOCK_MODULE' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_clock_module.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_CLOCK_MODULE' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_clock_module.v:61]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
 INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95844]
@@ -61,34 +61,34 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/tools/Xilinx/2025.2/Viva
 	Parameter REF_JITTER1 bound to: 1.000000e-02 - type: double 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95844]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_CLOCK_MODULE' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_clock_module.v:61]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_cdc_sync' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_CLOCK_MODULE' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_clock_module.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_cdc_sync' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
 	Parameter c_cdc_type bound to: 2'b01 
 	Parameter c_flop_input bound to: 1'b0 
 	Parameter c_reset_state bound to: 1'b0 
 	Parameter c_single_bit bound to: 1'b1 
 	Parameter c_vector_width bound to: 6'b000010 
 	Parameter c_mtbf_stages bound to: 3'b101 
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_cdc_sync' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_cdc_sync__parameterized0' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_cdc_sync' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_cdc_sync__parameterized0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
 	Parameter c_cdc_type bound to: 2'b01 
 	Parameter c_flop_input bound to: 1'b0 
 	Parameter c_reset_state bound to: 1'b0 
 	Parameter c_single_bit bound to: 1'b1 
 	Parameter c_vector_width bound to: 6'b000010 
 	Parameter c_mtbf_stages bound to: 3'b110 
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_cdc_sync__parameterized0' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_SUPPORT_RESET_LOGIC' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_support_reset_logic.v:60]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_cdc_sync__parameterized1' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_cdc_sync__parameterized0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_SUPPORT_RESET_LOGIC' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_support_reset_logic.v:60]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_cdc_sync__parameterized1' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
 	Parameter c_cdc_type bound to: 2'b01 
 	Parameter c_flop_input bound to: 1'b1 
 	Parameter c_reset_state bound to: 1'b0 
 	Parameter c_single_bit bound to: 1'b1 
 	Parameter c_vector_width bound to: 6'b000010 
 	Parameter c_mtbf_stages bound to: 3'b101 
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_cdc_sync__parameterized1' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_SUPPORT_RESET_LOGIC' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_support_reset_logic.v:60]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_gt_common_wrapper' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_gt_common_wrapper.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_cdc_sync__parameterized1' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_SUPPORT_RESET_LOGIC' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_support_reset_logic.v:60]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_gt_common_wrapper' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_gt_common_wrapper.v:55]
 INFO: [Synth 8-6157] synthesizing module 'GTPE2_COMMON' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:60056]
 	Parameter BIAS_CFG bound to: 64'b0000000000000000000000000000000000000000000001010000000000000001 
 	Parameter COMMON_CFG bound to: 0 - type: integer 
@@ -114,56 +114,56 @@ INFO: [Synth 8-6157] synthesizing module 'GTPE2_COMMON' [/tools/Xilinx/2025.2/Vi
 	Parameter SIM_RESET_SPEEDUP bound to: FALSE - type: string 
 	Parameter SIM_VERSION bound to: 2.0 - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'GTPE2_COMMON' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:60056]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_gt_common_wrapper' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_gt_common_wrapper.v:55]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_core' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_core.v:61]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_RESET_LOGIC' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_reset_logic.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_RESET_LOGIC' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_reset_logic.v:60]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_AURORA_LANE_4BYTE' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_aurora_lane_4byte.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_gt_common_wrapper' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_gt_common_wrapper.v:55]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_core' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_core.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_RESET_LOGIC' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_reset_logic.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_RESET_LOGIC' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_reset_logic.v:60]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_AURORA_LANE_4BYTE' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_aurora_lane_4byte.v:65]
 	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_LANE_INIT_SM_4BYTE' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_lane_init_sm_4byte.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_LANE_INIT_SM_4BYTE' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_lane_init_sm_4byte.v:62]
 INFO: [Synth 8-6157] synthesizing module 'FDR' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383]
 INFO: [Synth 8-6155] done synthesizing module 'FDR' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_LANE_INIT_SM_4BYTE' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_lane_init_sm_4byte.v:62]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_CHBOND_COUNT_DEC_4BYTE' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_chbond_count_dec_4byte.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_CHBOND_COUNT_DEC_4BYTE' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_chbond_count_dec_4byte.v:62]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_SYM_GEN_4BYTE' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_gen_4byte.v:77]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_SYM_GEN_4BYTE' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_gen_4byte.v:77]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_SYM_DEC_4BYTE' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:64]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:248]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:260]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:272]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:284]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:296]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:308]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:320]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:332]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_SYM_DEC_4BYTE' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:64]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_ERR_DETECT_4BYTE' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_err_detect_4byte.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_ERR_DETECT_4BYTE' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_err_detect_4byte.v:62]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_hotplug' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_hotplug.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_LANE_INIT_SM_4BYTE' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_lane_init_sm_4byte.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_CHBOND_COUNT_DEC_4BYTE' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_chbond_count_dec_4byte.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_CHBOND_COUNT_DEC_4BYTE' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_chbond_count_dec_4byte.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_SYM_GEN_4BYTE' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_gen_4byte.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_SYM_GEN_4BYTE' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_gen_4byte.v:77]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_SYM_DEC_4BYTE' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:64]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:248]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:260]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:272]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:284]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:296]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:308]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:320]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:332]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_SYM_DEC_4BYTE' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sym_dec_4byte.v:64]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_ERR_DETECT_4BYTE' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_err_detect_4byte.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_ERR_DETECT_4BYTE' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_err_detect_4byte.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_hotplug' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_hotplug.v:51]
 	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_cdc_sync__parameterized2' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_cdc_sync__parameterized2' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
 	Parameter c_cdc_type bound to: 2'b01 
 	Parameter c_flop_input bound to: 1'b1 
 	Parameter c_reset_state bound to: 1'b0 
 	Parameter c_single_bit bound to: 1'b1 
 	Parameter c_vector_width bound to: 6'b000010 
 	Parameter c_mtbf_stages bound to: 3'b110 
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_cdc_sync__parameterized2' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_hotplug' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_hotplug.v:51]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_AURORA_LANE_4BYTE' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_aurora_lane_4byte.v:65]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_GT_WRAPPER' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_transceiver_wrapper.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_cdc_sync__parameterized2' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_cdc_sync.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_hotplug' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_hotplug.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_AURORA_LANE_4BYTE' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_aurora_lane_4byte.v:65]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_GT_WRAPPER' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_transceiver_wrapper.v:55]
 	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
 	Parameter SIM_GTRESET_SPEEDUP bound to: FALSE - type: string 
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_tx_startup_fsm' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_tx_startup_fsm.v:76]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_tx_startup_fsm' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_tx_startup_fsm.v:76]
 	Parameter GT_TYPE bound to: GTP - type: string 
 	Parameter STABLE_CLOCK_PERIOD bound to: 16 - type: integer 
 	Parameter RETRY_COUNTER_BITWIDTH bound to: 8 - type: integer 
 	Parameter TX_PLL0_USED bound to: TRUE - type: string 
 	Parameter RX_PLL0_USED bound to: TRUE - type: string 
 	Parameter PHASE_ALIGNMENT_MANUAL bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_tx_startup_fsm' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_tx_startup_fsm.v:76]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_rx_startup_fsm' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_rx_startup_fsm.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_tx_startup_fsm' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_tx_startup_fsm.v:76]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_rx_startup_fsm' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_rx_startup_fsm.v:74]
 	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
 	Parameter GT_TYPE bound to: GTP - type: string 
 	Parameter STABLE_CLOCK_PERIOD bound to: 16 - type: integer 
@@ -171,10 +171,10 @@ INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_rx_startup_fsm' 
 	Parameter TX_PLL0_USED bound to: TRUE - type: string 
 	Parameter RX_PLL0_USED bound to: TRUE - type: string 
 	Parameter PHASE_ALIGNMENT_MANUAL bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_rx_startup_fsm' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_rx_startup_fsm.v:74]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_multi_gt' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_multi_gt.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_rx_startup_fsm' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_rx_startup_fsm.v:74]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_multi_gt' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_multi_gt.v:55]
 	Parameter WRAPPER_SIM_GTRESET_SPEEDUP bound to: FALSE - type: string 
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_gt' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gt.v:51]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_gt' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gt.v:51]
 	Parameter GT_SIM_GTRESET_SPEEDUP bound to: FALSE - type: string 
 	Parameter TXSYNC_OVRD_IN bound to: 1'b0 
 	Parameter TXSYNC_MULTILANE_IN bound to: 1'b0 
@@ -412,100 +412,100 @@ INFO: [Synth 8-6157] synthesizing module 'GTPE2_CHANNEL' [/tools/Xilinx/2025.2/V
 	Parameter UCODEER_CLR bound to: 1'b0 
 	Parameter USE_PCS_CLK_PHASE_SEL bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'GTPE2_CHANNEL' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:59354]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_gtrxreset_seq' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gtrxreset_seq.v:54]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gtrxreset_seq.v:237]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gtrxreset_seq.v:298]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_gtrxreset_seq' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gtrxreset_seq.v:54]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_gt' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gt.v:51]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_multi_gt' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_multi_gt.v:55]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_GT_WRAPPER' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_transceiver_wrapper.v:55]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_GLOBAL_LOGIC' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_global_logic.v:62]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_CHANNEL_INIT_SM' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_channel_init_sm.v:79]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_gtrxreset_seq' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gtrxreset_seq.v:54]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gtrxreset_seq.v:237]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gtrxreset_seq.v:298]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_gtrxreset_seq' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gtrxreset_seq.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_gt' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gt.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_multi_gt' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_multi_gt.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_GT_WRAPPER' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_transceiver_wrapper.v:55]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_GLOBAL_LOGIC' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_global_logic.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_CHANNEL_INIT_SM' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_channel_init_sm.v:79]
 INFO: [Synth 8-6157] synthesizing module 'FD' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49155]
 	Parameter INIT bound to: 1'b1 
 INFO: [Synth 8-6155] done synthesizing module 'FD' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49155]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_CHANNEL_INIT_SM' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_channel_init_sm.v:79]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_IDLE_AND_VER_GEN' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_idle_and_ver_gen.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_CHANNEL_INIT_SM' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_channel_init_sm.v:79]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_IDLE_AND_VER_GEN' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_idle_and_ver_gen.v:65]
 INFO: [Synth 8-6157] synthesizing module 'SRL16' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318]
 	Parameter INIT bound to: 16'b0000000000000000 
 INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318]
 INFO: [Synth 8-6157] synthesizing module 'FD__parameterized0' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49155]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'FD__parameterized0' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49155]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_IDLE_AND_VER_GEN' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_idle_and_ver_gen.v:65]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_CHANNEL_ERR_DETECT' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_channel_err_detect.v:65]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_CHANNEL_ERR_DETECT' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_channel_err_detect.v:65]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_GLOBAL_LOGIC' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_global_logic.v:62]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_AXI_TO_LL' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_axi_to_ll.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_IDLE_AND_VER_GEN' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_idle_and_ver_gen.v:65]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_CHANNEL_ERR_DETECT' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_channel_err_detect.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_CHANNEL_ERR_DETECT' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_channel_err_detect.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_GLOBAL_LOGIC' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_global_logic.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_AXI_TO_LL' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_axi_to_ll.v:61]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter STRB_WIDTH bound to: 4 - type: integer 
 	Parameter USE_4_NFC bound to: 0 - type: integer 
 	Parameter REM_WIDTH bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_AXI_TO_LL' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_axi_to_ll.v:61]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_TX_CRC' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_txcrc.v:63]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_CRC_TOP' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_crc_top.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_AXI_TO_LL' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_axi_to_ll.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_TX_CRC' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_txcrc.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_CRC_TOP' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_crc_top.v:66]
 	Parameter CRC_INIT bound to: -1 - type: integer 
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_crc_top.v:115]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_CRC_TOP' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_crc_top.v:66]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_TX_CRC' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_txcrc.v:63]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_STANDARD_CC_MODULE' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_standard_cc_module.v:64]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_crc_top.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_CRC_TOP' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_crc_top.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_TX_CRC' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_txcrc.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_STANDARD_CC_MODULE' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_standard_cc_module.v:64]
 	Parameter CC_FREQ_FACTOR bound to: 5'b01100 
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_STANDARD_CC_MODULE' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_standard_cc_module.v:64]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_TX_LL' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll.v:63]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_TX_LL_DATAPATH' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll_datapath.v:62]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll_datapath.v:194]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll_datapath.v:237]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_TX_LL_DATAPATH' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll_datapath.v:62]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_TX_LL_CONTROL' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll_control.v:63]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_TX_LL_CONTROL' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll_control.v:63]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_TX_LL' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll.v:63]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_LL_TO_AXI' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_ll_to_axi.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_STANDARD_CC_MODULE' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_standard_cc_module.v:64]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_TX_LL' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_TX_LL_DATAPATH' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll_datapath.v:62]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll_datapath.v:194]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll_datapath.v:237]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_TX_LL_DATAPATH' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll_datapath.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_TX_LL_CONTROL' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll_control.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_TX_LL_CONTROL' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll_control.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_TX_LL' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_tx_ll.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_LL_TO_AXI' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_ll_to_axi.v:61]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter STRB_WIDTH bound to: 4 - type: integer 
 	Parameter REM_WIDTH bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_LL_TO_AXI' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_ll_to_axi.v:61]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_RX_CRC' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rxcrc.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_RX_CRC' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rxcrc.v:62]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_RX_LL' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rx_ll.v:64]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_RX_LL_PDU_DATAPATH' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rx_ll_pdu_datapath.v:63]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_RX_LL_DEFRAMER' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rx_ll_deframer.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_LL_TO_AXI' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_ll_to_axi.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_RX_CRC' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rxcrc.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_RX_CRC' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rxcrc.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_RX_LL' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rx_ll.v:64]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_RX_LL_PDU_DATAPATH' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rx_ll_pdu_datapath.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_RX_LL_DEFRAMER' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rx_ll_deframer.v:64]
 INFO: [Synth 8-6157] synthesizing module 'MUXCY' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104847]
 INFO: [Synth 8-6155] done synthesizing module 'MUXCY' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104847]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_RX_LL_DEFRAMER' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rx_ll_deframer.v:64]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_LEFT_ALIGN_CONTROL' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_left_align_control.v:63]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_LEFT_ALIGN_CONTROL' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_left_align_control.v:63]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_VALID_DATA_COUNTER' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_valid_data_counter.v:70]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_VALID_DATA_COUNTER' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_valid_data_counter.v:70]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_LEFT_ALIGN_MUX' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_left_align_mux.v:67]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_LEFT_ALIGN_MUX' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_left_align_mux.v:67]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_STORAGE_COUNT_CONTROL' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_count_control.v:62]
-INFO: [Synth 8-226] default block is never used [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_count_control.v:116]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_STORAGE_COUNT_CONTROL' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_count_control.v:62]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_STORAGE_CE_CONTROL' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_ce_control.v:63]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_STORAGE_CE_CONTROL' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_ce_control.v:63]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_STORAGE_SWITCH_CONTROL' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_switch_control.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_STORAGE_SWITCH_CONTROL' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_switch_control.v:62]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_OUTPUT_SWITCH_CONTROL' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_output_switch_control.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_OUTPUT_SWITCH_CONTROL' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_output_switch_control.v:62]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_SIDEBAND_OUTPUT' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sideband_output.v:63]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_SIDEBAND_OUTPUT' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sideband_output.v:63]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_STORAGE_MUX' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_mux.v:64]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_STORAGE_MUX' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_mux.v:64]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_OUTPUT_MUX' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_output_mux.v:65]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_OUTPUT_MUX' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_output_mux.v:65]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_RX_LL_PDU_DATAPATH' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rx_ll_pdu_datapath.v:63]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_RX_LL' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rx_ll.v:64]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_core' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_core.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_support' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_support.v:52]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0.v:52]
-WARNING: [Synth 8-6014] Unused sequential element prev_char_was_comma_r_reg was removed.  [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_lane_init_sm_4byte.v:367]
-INFO: [Synth 8-3936] Found unconnected internal register 'link_reset_r_reg' and it is trimmed from '2' to '1' bits. [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_hotplug.v:185]
-INFO: [Synth 8-6014] Unused sequential element time_out_500us_reg was removed.  [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_rx_startup_fsm.v:395]
-INFO: [Synth 8-6014] Unused sequential element pll_reset_asserted_reg was removed.  [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_rx_startup_fsm.v:681]
-WARNING: [Synth 8-6014] Unused sequential element drp_busy_i2_reg was removed.  [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gt.v:896]
-INFO: [Synth 8-6014] Unused sequential element rxfsm_rxresetdone_r1_reg was removed.  [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_transceiver_wrapper.v:346]
-WARNING: [Synth 8-3936] Found unconnected internal register 'msg_reg' and it is trimmed from '33' to '32' bits. [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_crc_top.v:165]
-WARNING: [Synth 8-3936] Found unconnected internal register 'rx_rem_c_reg' and it is trimmed from '3' to '2' bits. [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sideband_output.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_RX_LL_DEFRAMER' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rx_ll_deframer.v:64]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_LEFT_ALIGN_CONTROL' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_left_align_control.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_LEFT_ALIGN_CONTROL' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_left_align_control.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_VALID_DATA_COUNTER' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_valid_data_counter.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_VALID_DATA_COUNTER' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_valid_data_counter.v:70]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_LEFT_ALIGN_MUX' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_left_align_mux.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_LEFT_ALIGN_MUX' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_left_align_mux.v:67]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_STORAGE_COUNT_CONTROL' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_count_control.v:62]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_count_control.v:116]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_STORAGE_COUNT_CONTROL' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_count_control.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_STORAGE_CE_CONTROL' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_ce_control.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_STORAGE_CE_CONTROL' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_ce_control.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_STORAGE_SWITCH_CONTROL' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_switch_control.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_STORAGE_SWITCH_CONTROL' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_switch_control.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_OUTPUT_SWITCH_CONTROL' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_output_switch_control.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_OUTPUT_SWITCH_CONTROL' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_output_switch_control.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_SIDEBAND_OUTPUT' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sideband_output.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_SIDEBAND_OUTPUT' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sideband_output.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_STORAGE_MUX' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_mux.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_STORAGE_MUX' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_storage_mux.v:64]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_0_0_OUTPUT_MUX' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_output_mux.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_OUTPUT_MUX' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_output_mux.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_RX_LL_PDU_DATAPATH' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rx_ll_pdu_datapath.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_RX_LL' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_rx_ll.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_core' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_core.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0_support' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_support.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0.v:52]
+WARNING: [Synth 8-6014] Unused sequential element prev_char_was_comma_r_reg was removed.  [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_lane_init_sm_4byte.v:367]
+INFO: [Synth 8-3936] Found unconnected internal register 'link_reset_r_reg' and it is trimmed from '2' to '1' bits. [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_hotplug.v:185]
+INFO: [Synth 8-6014] Unused sequential element time_out_500us_reg was removed.  [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_rx_startup_fsm.v:395]
+INFO: [Synth 8-6014] Unused sequential element pll_reset_asserted_reg was removed.  [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_rx_startup_fsm.v:681]
+WARNING: [Synth 8-6014] Unused sequential element drp_busy_i2_reg was removed.  [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_gt.v:896]
+INFO: [Synth 8-6014] Unused sequential element rxfsm_rxresetdone_r1_reg was removed.  [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/gt/aurora_cam_aurora_0_0_transceiver_wrapper.v:346]
+WARNING: [Synth 8-3936] Found unconnected internal register 'msg_reg' and it is trimmed from '33' to '32' bits. [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_crc_top.v:165]
+WARNING: [Synth 8-3936] Found unconnected internal register 'rx_rem_c_reg' and it is trimmed from '3' to '2' bits. [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0/src/aurora_cam_aurora_0_0_sideband_output.v:276]
 WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[16] in module aurora_cam_aurora_0_0_OUTPUT_MUX is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[17] in module aurora_cam_aurora_0_0_OUTPUT_MUX is either unconnected or has no load
 WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[18] in module aurora_cam_aurora_0_0_OUTPUT_MUX is either unconnected or has no load
@@ -571,35 +571,35 @@ WARNING: [Synth 8-7129] Port RESET in module aurora_cam_aurora_0_0_SYM_DEC_4BYTE
 WARNING: [Synth 8-7129] Port RESET in module aurora_cam_aurora_0_0_SYM_GEN_4BYTE is either unconnected or has no load
 WARNING: [Synth 8-7129] Port CHANNEL_UP in module aurora_cam_aurora_0_0_AURORA_LANE_4BYTE is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2367.648 ; gain = 602.812 ; free physical = 34686 ; free virtual = 48944
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2367.816 ; gain = 600.500 ; free physical = 41617 ; free virtual = 61346
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2370.617 ; gain = 605.781 ; free physical = 34678 ; free virtual = 48935
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2373.754 ; gain = 606.438 ; free physical = 41617 ; free virtual = 61346
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2370.617 ; gain = 605.781 ; free physical = 34678 ; free virtual = 48935
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2373.754 ; gain = 606.438 ; free physical = 41617 ; free virtual = 61346
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2373.586 ; gain = 0.000 ; free physical = 34677 ; free virtual = 48935
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2379.691 ; gain = 0.000 ; free physical = 41617 ; free virtual = 61346
 INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0.xdc] for cell 'inst'
-Parsing XDC File [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_aurora_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_aurora_0_0_synth_1/dont_touch.xdc]
-Parsing XDC File [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_clocks.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_clocks.xdc] for cell 'inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0.xdc] for cell 'inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_aurora_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_aurora_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_clocks.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_clocks.xdc] for cell 'inst'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2471.418 ; gain = 0.000 ; free physical = 34664 ; free virtual = 48922
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2470.523 ; gain = 0.000 ; free physical = 41614 ; free virtual = 61343
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 17 instances were transformed.
   FD => FDRE: 14 instances
@@ -607,23 +607,23 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instance 
 
 INFO: [Timing 38-2] Deriving generated clocks
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2471.453 ; gain = 0.000 ; free physical = 34663 ; free virtual = 48921
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2470.559 ; gain = 0.000 ; free physical = 41615 ; free virtual = 61344
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2471.453 ; gain = 706.617 ; free physical = 34855 ; free virtual = 49117
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2470.559 ; gain = 703.242 ; free physical = 41619 ; free virtual = 61342
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z015clg485-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2479.422 ; gain = 714.586 ; free physical = 34855 ; free virtual = 49117
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2478.527 ; gain = 711.211 ; free physical = 41618 ; free virtual = 61341
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2479.422 ; gain = 714.586 ; free physical = 34855 ; free virtual = 49117
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2478.527 ; gain = 711.211 ; free physical = 41618 ; free virtual = 61341
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'aurora_cam_aurora_0_0_tx_startup_fsm'
 INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'aurora_cam_aurora_0_0_rx_startup_fsm'
@@ -673,7 +673,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encodi
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'aurora_cam_aurora_0_0_gtrxreset_seq'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2479.422 ; gain = 714.586 ; free physical = 34735 ; free virtual = 48999
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2478.527 ; gain = 711.211 ; free physical = 41600 ; free virtual = 61325
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -774,25 +774,25 @@ WARNING: [Synth 8-7129] Port HPCNT_RESET in module aurora_cam_aurora_0_0_AURORA_
 WARNING: [Synth 8-7129] Port CHANNEL_UP in module aurora_cam_aurora_0_0_AURORA_LANE_4BYTE is either unconnected or has no load
 WARNING: [Synth 8-7129] Port RESET_SYMGEN in module aurora_cam_aurora_0_0_AURORA_LANE_4BYTE is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2479.422 ; gain = 714.586 ; free physical = 37923 ; free virtual = 52183
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2478.527 ; gain = 711.211 ; free physical = 41617 ; free virtual = 61342
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2555.422 ; gain = 790.586 ; free physical = 44124 ; free virtual = 58378
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2554.527 ; gain = 787.211 ; free physical = 41568 ; free virtual = 61298
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2560.422 ; gain = 795.586 ; free physical = 44194 ; free virtual = 58448
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2559.527 ; gain = 792.211 ; free physical = 41560 ; free virtual = 61290
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2590.469 ; gain = 825.633 ; free physical = 43762 ; free virtual = 58523
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2590.574 ; gain = 823.258 ; free physical = 41534 ; free virtual = 61265
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -810,37 +810,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.281 ; gain = 986.445 ; free physical = 43663 ; free virtual = 58424
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2750.387 ; gain = 983.070 ; free physical = 41398 ; free virtual = 61123
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.281 ; gain = 986.445 ; free physical = 43663 ; free virtual = 58424
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2750.387 ; gain = 983.070 ; free physical = 41398 ; free virtual = 61123
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.281 ; gain = 986.445 ; free physical = 44258 ; free virtual = 58513
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2750.387 ; gain = 983.070 ; free physical = 41398 ; free virtual = 61123
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.281 ; gain = 986.445 ; free physical = 44258 ; free virtual = 58513
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2750.387 ; gain = 983.070 ; free physical = 41398 ; free virtual = 61123
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.281 ; gain = 986.445 ; free physical = 44258 ; free virtual = 58513
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2750.387 ; gain = 983.070 ; free physical = 41398 ; free virtual = 61123
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.281 ; gain = 986.445 ; free physical = 44258 ; free virtual = 58513
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2750.387 ; gain = 983.070 ; free physical = 41398 ; free virtual = 61123
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -909,18 +909,18 @@ Report Cell Usage:
 |23    |FDSE          |   129|
 +------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.281 ; gain = 986.445 ; free physical = 44258 ; free virtual = 58513
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2750.387 ; gain = 983.070 ; free physical = 41398 ; free virtual = 61123
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2751.281 ; gain = 885.609 ; free physical = 44258 ; free virtual = 58513
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2751.289 ; gain = 986.445 ; free physical = 44258 ; free virtual = 58513
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2750.387 ; gain = 886.266 ; free physical = 41404 ; free virtual = 61129
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2750.395 ; gain = 983.070 ; free physical = 41404 ; free virtual = 61129
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2751.289 ; gain = 0.000 ; free physical = 44435 ; free virtual = 58690
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2750.395 ; gain = 0.000 ; free physical = 41582 ; free virtual = 61307
 INFO: [Netlist 29-17] Analyzing 86 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2807.309 ; gain = 0.000 ; free physical = 44484 ; free virtual = 58738
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2806.414 ; gain = 0.000 ; free physical = 41584 ; free virtual = 61309
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 19 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 2 instances
@@ -932,13 +932,13 @@ Synth Design complete | Checksum: db5b0a19
 INFO: [Common 17-83] Releasing license: Synthesis
 163 Infos, 90 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 2807.344 ; gain = 1231.117 ; free physical = 44498 ; free virtual = 58753
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1872.470; main = 1872.470; forked = 193.641
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3473.660; main = 2807.312; forked = 994.234
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2831.320 ; gain = 0.000 ; free physical = 44498 ; free virtual = 58753
-INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_aurora_0_0_synth_1/aurora_cam_aurora_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP aurora_cam_aurora_0_0, cache-ID = 663e4ae06c271bfc
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2831.320 ; gain = 0.000 ; free physical = 44483 ; free virtual = 58741
-INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_aurora_0_0_synth_1/aurora_cam_aurora_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 2806.449 ; gain = 1185.992 ; free physical = 41584 ; free virtual = 61309
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1889.265; main = 1889.265; forked = 280.612
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3472.770; main = 2806.418; forked = 994.238
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2830.426 ; gain = 0.000 ; free physical = 41584 ; free virtual = 61309
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_aurora_0_0_synth_1/aurora_cam_aurora_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP aurora_cam_aurora_0_0, cache-ID = 4ebad105056aec1c
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2830.426 ; gain = 0.000 ; free physical = 41581 ; free virtual = 61310
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_aurora_0_0_synth_1/aurora_cam_aurora_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file aurora_cam_aurora_0_0_utilization_synth.rpt -pb aurora_cam_aurora_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 17:22:24 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 21:37:05 2026...

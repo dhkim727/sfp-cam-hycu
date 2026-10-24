@@ -3846,10 +3846,10 @@
             "value": "GTPQ0"
           },
           "C_GT_LOC_1": {
-            "value": "1"
+            "value": "X"
           },
           "C_GT_LOC_2": {
-            "value": "X"
+            "value": "1"
           },
           "C_GT_LOC_3": {
             "value": "X"

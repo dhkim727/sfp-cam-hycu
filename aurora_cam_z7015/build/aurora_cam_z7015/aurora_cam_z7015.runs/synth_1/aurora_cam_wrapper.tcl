@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/synth_1/aurora_cam_wrapper.tcl"
+  variable script "/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/synth_1/aurora_cam_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -57,7 +57,6 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param bd.open.in_stealth_mode 2
-set_param chipscope.maxJobs 8
 set_param general.usePosixSpawnForFork 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z015clg485-2
@@ -66,93 +65,93 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.cache/wt [current_project]
-set_property parent.project_path /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.xpr [current_project]
+set_property webtalk.parent_dir /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.cache/wt [current_project]
+set_property parent.project_path /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.cache/ip [current_project]
+set_property ip_output_repo /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/hdl/aurora_cam_wrapper.v
-add_files /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.srcs/sources_1/bd/aurora_cam/aurora_cam.bd
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/aurora_cam_ps7_0.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_rst_axi_0/aurora_cam_rst_axi_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_rst_axi_0/aurora_cam_rst_axi_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_dma_0_0/aurora_cam_axi_dma_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_dma_0_0/aurora_cam_axi_dma_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_dma_0_0/aurora_cam_axi_dma_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_gpio_link_0/aurora_cam_axi_gpio_link_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_gpio_link_0/aurora_cam_axi_gpio_link_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_1/bd_ed12_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_2/bd_ed12_arinsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_3/bd_ed12_rinsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_4/bd_ed12_awinsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_5/bd_ed12_winsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_6/bd_ed12_binsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_7/bd_ed12_aroutsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_8/bd_ed12_routsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_9/bd_ed12_awoutsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_10/bd_ed12_woutsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_11/bd_ed12_boutsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_12/bd_ed12_arni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_13/bd_ed12_rni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_14/bd_ed12_awni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_15/bd_ed12_wni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_16/bd_ed12_bni_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_20/bd_ed12_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_21/bd_ed12_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_22/bd_ed12_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_23/bd_ed12_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_24/bd_ed12_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_25/bd_ed12_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_26/bd_ed12_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_27/bd_ed12_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_28/bd_ed12_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_29/bd_ed12_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_30/bd_ed12_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_31/bd_ed12_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_33/bd_ed12_m01s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_34/bd_ed12_m01arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_35/bd_ed12_m01rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_36/bd_ed12_m01awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_37/bd_ed12_m01wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_38/bd_ed12_m01bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/smartconnect.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_1/bd_3454_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_2/bd_3454_arsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_3/bd_3454_rsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_4/bd_3454_awsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_5/bd_3454_wsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_6/bd_3454_bsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_10/bd_3454_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_11/bd_3454_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_12/bd_3454_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_16/bd_3454_s01a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_17/bd_3454_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_18/bd_3454_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_19/bd_3454_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_20/bd_3454_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_21/bd_3454_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_22/bd_3454_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_23/bd_3454_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_24/bd_3454_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_25/bd_3454_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/smartconnect.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_fifo_tx_0/aurora_cam_fifo_tx_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_fifo_rx_0/aurora_cam_fifo_rx_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_vio_link_0/aurora_cam_vio_link_0.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_vio_link_0/aurora_cam_vio_link_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_clk_wiz_0_0/aurora_cam_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_clk_wiz_0_0/aurora_cam_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_clk_wiz_0_0/aurora_cam_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/aurora_cam_ooc.xdc]
+read_verilog -library xil_defaultlib /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/hdl/aurora_cam_wrapper.v
+add_files /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.srcs/sources_1/bd/aurora_cam/aurora_cam.bd
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/aurora_cam_ps7_0.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_rst_axi_0/aurora_cam_rst_axi_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_rst_axi_0/aurora_cam_rst_axi_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_dma_0_0/aurora_cam_axi_dma_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_dma_0_0/aurora_cam_axi_dma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_dma_0_0/aurora_cam_axi_dma_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_gpio_link_0/aurora_cam_axi_gpio_link_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_gpio_link_0/aurora_cam_axi_gpio_link_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_1/bd_ed12_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_2/bd_ed12_arinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_3/bd_ed12_rinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_4/bd_ed12_awinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_5/bd_ed12_winsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_6/bd_ed12_binsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_7/bd_ed12_aroutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_8/bd_ed12_routsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_9/bd_ed12_awoutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_10/bd_ed12_woutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_11/bd_ed12_boutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_12/bd_ed12_arni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_13/bd_ed12_rni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_14/bd_ed12_awni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_15/bd_ed12_wni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_16/bd_ed12_bni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_20/bd_ed12_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_21/bd_ed12_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_22/bd_ed12_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_23/bd_ed12_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_24/bd_ed12_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_25/bd_ed12_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_26/bd_ed12_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_27/bd_ed12_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_28/bd_ed12_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_29/bd_ed12_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_30/bd_ed12_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_31/bd_ed12_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_33/bd_ed12_m01s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_34/bd_ed12_m01arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_35/bd_ed12_m01rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_36/bd_ed12_m01awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_37/bd_ed12_m01wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_38/bd_ed12_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_1/bd_3454_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_2/bd_3454_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_3/bd_3454_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_4/bd_3454_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_5/bd_3454_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_6/bd_3454_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_10/bd_3454_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_11/bd_3454_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_12/bd_3454_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_16/bd_3454_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_17/bd_3454_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_18/bd_3454_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_19/bd_3454_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_20/bd_3454_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_21/bd_3454_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_22/bd_3454_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_23/bd_3454_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_24/bd_3454_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_25/bd_3454_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_sc_mem_0/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_fifo_tx_0/aurora_cam_fifo_tx_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_fifo_rx_0/aurora_cam_fifo_rx_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_vio_link_0/aurora_cam_vio_link_0.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_vio_link_0/aurora_cam_vio_link_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_0_0/aurora_cam_aurora_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_clk_wiz_0_0/aurora_cam_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_clk_wiz_0_0/aurora_cam_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_clk_wiz_0_0/aurora_cam_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/aurora_cam_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -163,17 +162,17 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.srcs/constrs_1/imports/work/aurora_cam_z7015/build/aurora_cam_z7015/z7015_aurora_cam.xdc
-set_property used_in_implementation false [get_files /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.srcs/constrs_1/imports/work/aurora_cam_z7015/build/aurora_cam_z7015/z7015_aurora_cam.xdc]
+read_xdc /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.srcs/constrs_1/imports/work/aurora_cam_z7015/build/aurora_cam_z7015/z7015_aurora_cam.xdc
+set_property used_in_implementation false [get_files /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.srcs/constrs_1/imports/work/aurora_cam_z7015/build/aurora_cam_z7015/z7015_aurora_cam.xdc]
 
-read_xdc /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.srcs/constrs_1/imports/work/sfp-cam-hycu/vivado-design/constraints/sfp-camrx/design_1/pins.xdc
-set_property used_in_implementation false [get_files /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.srcs/constrs_1/imports/work/sfp-cam-hycu/vivado-design/constraints/sfp-camrx/design_1/pins.xdc]
+read_xdc /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.srcs/constrs_1/imports/work/sfp-cam-hycu/vivado-design/constraints/sfp-camrx/design_1/pins.xdc
+set_property used_in_implementation false [get_files /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.srcs/constrs_1/imports/work/sfp-cam-hycu/vivado-design/constraints/sfp-camrx/design_1/pins.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.srcs/utils_1/imports/synth_1/aurora_cam_wrapper.dcp
+read_checkpoint -auto_incremental -incremental /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.srcs/utils_1/imports/synth_1/aurora_cam_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

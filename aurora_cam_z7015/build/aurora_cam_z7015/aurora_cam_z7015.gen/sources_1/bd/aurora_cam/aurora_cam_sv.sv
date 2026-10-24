@@ -96,6 +96,10 @@ module aurora_cam_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   inout wire FIXED_IO_ps_porb,
   (* X_INTERFACE_IGNORE = "true" *)
+  input wire [0:0] GT_REFCLK_clk_n,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [0:0] GT_REFCLK_clk_p,
+  (* X_INTERFACE_IGNORE = "true" *)
   output wire [0:0] gt_txp,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [0:0] gt_txn,
@@ -103,10 +107,6 @@ module aurora_cam_sv (
   input wire [0:0] gt_rxp,
   (* X_INTERFACE_IGNORE = "true" *)
   input wire [0:0] gt_rxn,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire [0:0] GT_REFCLK_clk_n,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire [0:0] GT_REFCLK_clk_p,
   (* X_INTERFACE_IGNORE = "true" *)
   input wire clk_50m
 );
@@ -133,12 +133,12 @@ module aurora_cam_sv (
     .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
     .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
     .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
+    .GT_REFCLK_clk_n(GT_REFCLK_clk_n),
+    .GT_REFCLK_clk_p(GT_REFCLK_clk_p),
     .gt_txp(gt_txp),
     .gt_txn(gt_txn),
     .gt_rxp(gt_rxp),
     .gt_rxn(gt_rxn),
-    .GT_REFCLK_clk_n(GT_REFCLK_clk_n),
-    .GT_REFCLK_clk_p(GT_REFCLK_clk_p),
     .clk_50m(clk_50m)
   );
 

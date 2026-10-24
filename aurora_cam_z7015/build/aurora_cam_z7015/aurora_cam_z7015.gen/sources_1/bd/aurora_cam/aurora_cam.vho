@@ -74,12 +74,12 @@ COMPONENT aurora_cam
     FIXED_IO_ps_srstb : INOUT STD_LOGIC;
     FIXED_IO_ps_clk : INOUT STD_LOGIC;
     FIXED_IO_ps_porb : INOUT STD_LOGIC;
+    GT_REFCLK_clk_n : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    GT_REFCLK_clk_p : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     gt_txp : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     gt_txn : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     gt_rxp : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     gt_rxn : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    GT_REFCLK_clk_n : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    GT_REFCLK_clk_p : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     clk_50m : IN STD_LOGIC
   );
 END COMPONENT;
@@ -112,12 +112,12 @@ your_instance_name : aurora_cam
     FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
     FIXED_IO_ps_clk => FIXED_IO_ps_clk,
     FIXED_IO_ps_porb => FIXED_IO_ps_porb,
+    GT_REFCLK_clk_n => GT_REFCLK_clk_n,
+    GT_REFCLK_clk_p => GT_REFCLK_clk_p,
     gt_txp => gt_txp,
     gt_txn => gt_txn,
     gt_rxp => gt_rxp,
     gt_rxn => gt_rxn,
-    GT_REFCLK_clk_n => GT_REFCLK_clk_n,
-    GT_REFCLK_clk_p => GT_REFCLK_clk_p,
     clk_50m => clk_50m
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------

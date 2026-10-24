@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Sat Oct 24 17:21:50 2026
+//Date        : Sat Oct 24 21:36:40 2026
 //Host        : dhkim-home running 64-bit Ubuntu 24.04.5 LTS
 //Command     : generate_target aurora_cam_wrapper.bd
 //Design      : aurora_cam_wrapper

@@ -3,7 +3,7 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_wrapper.xsa",
+    "xsa": "/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_wrapper.xsa",
     "xsaPathInPlatform": "platform/hw/aurora_cam_wrapper.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",

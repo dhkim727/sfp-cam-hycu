@@ -75,12 +75,12 @@ aurora_cam your_instance_name (
   .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb), // inout wire FIXED_IO_ps_srstb
   .FIXED_IO_ps_clk(FIXED_IO_ps_clk), // inout wire FIXED_IO_ps_clk
   .FIXED_IO_ps_porb(FIXED_IO_ps_porb), // inout wire FIXED_IO_ps_porb
+  .GT_REFCLK_clk_n(GT_REFCLK_clk_n), // input wire [0:0] GT_REFCLK_clk_n
+  .GT_REFCLK_clk_p(GT_REFCLK_clk_p), // input wire [0:0] GT_REFCLK_clk_p
   .gt_txp(gt_txp), // output wire [0:0] gt_txp
   .gt_txn(gt_txn), // output wire [0:0] gt_txn
   .gt_rxp(gt_rxp), // input wire [0:0] gt_rxp
   .gt_rxn(gt_rxn), // input wire [0:0] gt_rxn
-  .GT_REFCLK_clk_n(GT_REFCLK_clk_n), // input wire [0:0] GT_REFCLK_clk_n
-  .GT_REFCLK_clk_p(GT_REFCLK_clk_p), // input wire [0:0] GT_REFCLK_clk_p
   .clk_50m(clk_50m) // input wire clk_50m
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------

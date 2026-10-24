@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1792830728" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/aurora_cam_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z015clg485-2" LaunchTime="1792845404" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/aurora_cam_wrapper.dcp">
   <File Type="VDS-TIMING-PB" Name="aurora_cam_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="aurora_cam_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="aurora_cam_wrapper.dcp"/>
@@ -93,7 +93,7 @@
     </File>
     <File Path="$PSRCDIR/constrs_1/imports/work/sfp-cam-hycu/vivado-design/constraints/sfp-camrx/design_1/pins.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../sfp-cam-hycu/vivado-design/constraints/sfp-camrx/design_1/pins.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../vivado-design/constraints/sfp-camrx/design_1/pins.xdc"/>
         <Attr Name="ImportTime" Val="1792168645"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

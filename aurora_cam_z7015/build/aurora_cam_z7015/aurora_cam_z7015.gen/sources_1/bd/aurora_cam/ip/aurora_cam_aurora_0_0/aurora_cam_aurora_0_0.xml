@@ -17839,11 +17839,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Oct 24 08:21:58 UTC 2026</spirit:value>
+            <spirit:value>Sat Oct 24 12:36:41 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9fa5e3c6</spirit:value>
+            <spirit:value>9:37a33b72</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17858,11 +17858,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Oct 24 08:21:58 UTC 2026</spirit:value>
+            <spirit:value>Sat Oct 24 12:36:41 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:00d1de61</spirit:value>
+            <spirit:value>9:c27f0df3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17873,7 +17873,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:00d1de61</spirit:value>
+            <spirit:value>9:c27f0df3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17884,7 +17884,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:df314621</spirit:value>
+            <spirit:value>9:858eec22</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17898,11 +17898,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Oct 24 08:22:24 UTC 2026</spirit:value>
+            <spirit:value>Sat Oct 24 12:37:05 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:00d1de61</spirit:value>
+            <spirit:value>9:c27f0df3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17913,7 +17913,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:00d1de61</spirit:value>
+            <spirit:value>9:c27f0df3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17929,11 +17929,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Oct 24 08:21:58 UTC 2026</spirit:value>
+            <spirit:value>Sat Oct 24 12:36:41 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9fa5e3c6</spirit:value>
+            <spirit:value>9:37a33b72</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17949,11 +17949,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Oct 24 08:21:58 UTC 2026</spirit:value>
+            <spirit:value>Sat Oct 24 12:36:41 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:00d1de61</spirit:value>
+            <spirit:value>9:c27f0df3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -55455,11 +55455,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_gt_loc_1</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_gt_loc_1">1</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_gt_loc_1">X</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_gt_loc_2</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_gt_loc_2">X</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_gt_loc_2">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_gt_loc_3</spirit:name>
@@ -55837,6 +55837,11 @@
       <spirit:name>choice_list_57c4a416</spirit:name>
       <spirit:enumeration>None</spirit:enumeration>
       <spirit:enumeration>None</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_628aac54</spirit:name>
+      <spirit:enumeration>1</spirit:enumeration>
+      <spirit:enumeration>X</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_6f5507b7</spirit:name>
@@ -57076,7 +57081,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_GT_LOC_2</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C_GT_LOC_2" spirit:choiceRef="choice_list_ddf7a1a5" spirit:order="66">X</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C_GT_LOC_2" spirit:choiceRef="choice_list_628aac54" spirit:order="66">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -57087,7 +57092,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_GT_LOC_1</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C_GT_LOC_1" spirit:choiceRef="choice_list_9bee990d" spirit:order="67">1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C_GT_LOC_1" spirit:choiceRef="choice_list_9bee990d" spirit:order="67">X</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -57405,7 +57410,7 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_DRP_CLK_IN.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_DRP_CLK_IN.ASSOCIATED_PORT" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_DRP_CLK_IN.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_DRP_CLK_IN.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_DRP_CLK_IN.CLK_DOMAIN" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_DRP_CLK_IN.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_DRP_CLK_IN.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_DRP_CLK_IN.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
@@ -57428,8 +57433,6 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INIT_CLK_OUT.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INIT_CLK_OUT.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INIT_DIFF_CLK.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INIT_DIFF_CLK.CAN_DEBUG" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INIT_DIFF_CLK.FREQ_HZ" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LINK_RESET_OUT.POLARITY" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RESET.POLARITY" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYNC_CLK_OUT.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
