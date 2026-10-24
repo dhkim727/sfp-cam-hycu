@@ -1,0 +1,45 @@
+aurora_cam block design build : OK
+last stage                    : address map / finish
+rejected / missing parameters : 0
+
+INFO: [ac] ---- stage: block design
+INFO: [ac] ---- stage: Zynq PS7
+INFO: [ac] ps7 <- xilinx.com:ip:processing_system7:5.5
+INFO: [ac] ---- stage: AXI infrastructure
+INFO: [ac] rst_axi <- xilinx.com:ip:proc_sys_reset:5.0
+INFO: [ac] axi_dma_0 <- xilinx.com:ip:axi_dma:7.1
+INFO: [ac] axi_gpio_link <- xilinx.com:ip:axi_gpio:2.0
+INFO: [ac] sc_ctrl <- xilinx.com:ip:smartconnect:1.0
+INFO: [ac] sc_mem <- xilinx.com:ip:smartconnect:1.0
+INFO: [ac] irq_concat <- xilinx.com:ip:xlconcat:2.1
+INFO: [ac] fifo_tx <- xilinx.com:ip:axis_data_fifo:2.0
+INFO: [ac] fifo_rx <- xilinx.com:ip:axis_data_fifo:2.0
+INFO: [ac] ---- stage: custom RTL (module reference)
+INFO: [ac] ---- stage: VIO (link control + PRBS test)
+INFO: [ac] vio_link <- xilinx.com:ip:vio:3.0
+INFO: [ac] ---- stage: serial link
+INFO: [ac] aurora_0 <- xilinx.com:ip:aurora_8b10b:11.1
+INFO: [ac] aurora_0  C_AURORA_LANES       = 1
+INFO: [ac] aurora_0  C_LANE_WIDTH         = 4
+INFO: [ac] aurora_0  C_LINE_RATE          = 3.125
+INFO: [ac] aurora_0  C_REFCLK_FREQUENCY   = 125.000
+INFO: [ac] aurora_0  C_INIT_CLK           = 50.0
+INFO: [ac] aurora_0  Interface_Mode       = Framing
+INFO: [ac] aurora_0  C_USE_CRC            = true
+INFO: [ac] aurora_0  C_USE_BYTESWAP       = true
+INFO: [ac] aurora_0  SupportLevel         = 1
+INFO: [ac] aurora_0  C_GT_CLOCK_1         = GTPQ0
+INFO: [ac] aurora_0  C_GT_LOC_1           = 1
+INFO: [ac] ---- stage: clocks
+INFO: [ac] ---- stage: resets
+INFO: [ac] ---- stage: AXI memory-mapped
+INFO: [ac] ---- stage: AXI4-Stream : TX -> link -> RX
+INFO: [ac] ---- stage: link control / status
+INFO: [ac] ---- stage: VIO <-> link_ctrl / PRBS (named nets)
+INFO: [ac] ---- stage: interrupts
+INFO: [ac] ---- stage: GTP serial ports
+INFO: [ac] ---- stage: address map / finish
+INFO: [ac] ---- address map (ps7/Data) ----
+INFO: [ac]   SEG_axi_gpio_link_Reg                    offset 0x41200000  range 0x00010000
+INFO: [ac]   SEG_axi_dma_0_Reg                        offset 0x40400000  range 0x00010000
+INFO: [ac] 'aurora_cam' : link=gt lane=X0Y0 rate=3.125 Gb/s refclk0=125.000 MHz loopback=pma ctrl=vio free_clk=refclk

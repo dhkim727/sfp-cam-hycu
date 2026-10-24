@@ -1,0 +1,374 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Oct 24 17:22:03 2026
+# Process ID         : 441255
+# Current directory  : /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_link_ctrl_0_0_synth_1
+# Command line       : vivado -log aurora_cam_link_ctrl_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source aurora_cam_link_ctrl_0_0.tcl
+# Log file           : /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_link_ctrl_0_0_synth_1/aurora_cam_link_ctrl_0_0.vds
+# Journal file       : /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_link_ctrl_0_0_synth_1/vivado.jou
+# Running On         : dhkim-home
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
+# CPU Frequency      : 5400.122 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 67058 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75648 MB
+# Available Virtual  : 62377 MB
+#-----------------------------------------------------------
+source aurora_cam_link_ctrl_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+Command: synth_design -top aurora_cam_link_ctrl_0_0 -part xc7z015clg485-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 441849
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2236.613 ; gain = 483.188 ; free physical = 34398 ; free virtual = 48678
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_link_ctrl_0_0' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_link_ctrl_0_0/synth/aurora_cam_link_ctrl_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'link_ctrl' [/home/dhkim/work/aurora_cam_z7015/rtl/link_ctrl.v:23]
+	Parameter EMULATED bound to: 0 - type: integer 
+	Parameter RST_DELAY bound to: 16384 - type: integer 
+	Parameter TXRST_DLY bound to: 255 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single' [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single' (0#1) [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized0' [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 1 - type: integer 
+	Parameter WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized0' (0#1) [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized1' [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized1' (0#1) [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter REG_OUTPUT bound to: 1 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake' [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:468]
+	Parameter DEST_EXT_HSK bound to: 0 - type: integer 
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_SYNC_FF bound to: 4 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized0' [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized0' (0#1) [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake' (0#1) [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:468]
+INFO: [Synth 8-6155] done synthesizing module 'link_ctrl' (0#1) [/home/dhkim/work/aurora_cam_z7015/rtl/link_ctrl.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_link_ctrl_0_0' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_link_ctrl_0_0/synth/aurora_cam_link_ctrl_0_0.v:53]
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_single__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dest_ack in module xpm_cdc_handshake is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[31] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[30] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[29] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[28] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[27] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[26] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[25] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[24] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[23] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[22] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[21] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[20] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[19] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[18] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[17] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[16] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[15] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[14] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[13] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[12] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[11] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[10] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[9] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[7] in module link_ctrl is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[6] in module link_ctrl is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2328.582 ; gain = 575.156 ; free physical = 33547 ; free virtual = 47832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2343.426 ; gain = 590.000 ; free physical = 33543 ; free virtual = 47829
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2343.426 ; gain = 590.000 ; free physical = 33543 ; free virtual = 47829
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2343.426 ; gain = 0.000 ; free physical = 33543 ; free virtual = 47829
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/aurora_cam_link_ctrl_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/aurora_cam_link_ctrl_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/aurora_cam_link_ctrl_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/aurora_cam_link_ctrl_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/aurora_cam_link_ctrl_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/aurora_cam_link_ctrl_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/aurora_cam_link_ctrl_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/aurora_cam_link_ctrl_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 15 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2459.164 ; gain = 0.000 ; free physical = 34668 ; free virtual = 48926
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2459.199 ; gain = 0.000 ; free physical = 34668 ; free virtual = 48926
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2459.199 ; gain = 705.773 ; free physical = 34714 ; free virtual = 48971
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2467.168 ; gain = 713.742 ; free physical = 34713 ; free virtual = 48970
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2467.168 ; gain = 713.742 ; free physical = 34707 ; free virtual = 48966
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2467.168 ; gain = 713.742 ; free physical = 34715 ; free virtual = 48975
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               32 Bit    Registers := 5     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 17    
+	                7 Bit    Registers := 4     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_single is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_single__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dest_ack in module xpm_cdc_handshake is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port src_clk in module xpm_cdc_array_single is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[31] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[30] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[29] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[28] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[27] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[26] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[25] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[24] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[23] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[22] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[21] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[20] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[19] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[18] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[17] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[16] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[15] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[14] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[13] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[12] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[11] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[10] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[9] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[7] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_ctrl[6] in module aurora_cam_link_ctrl_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2467.168 ; gain = 713.742 ; free physical = 34769 ; free virtual = 49033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2511.168 ; gain = 757.742 ; free physical = 34153 ; free virtual = 48417
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2511.168 ; gain = 757.742 ; free physical = 34153 ; free virtual = 48417
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2540.223 ; gain = 786.797 ; free physical = 34099 ; free virtual = 48363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2708.035 ; gain = 954.609 ; free physical = 36182 ; free virtual = 50443
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2708.035 ; gain = 954.609 ; free physical = 36182 ; free virtual = 50443
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2708.035 ; gain = 954.609 ; free physical = 36336 ; free virtual = 50596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2708.035 ; gain = 954.609 ; free physical = 36336 ; free virtual = 50596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2708.035 ; gain = 954.609 ; free physical = 36336 ; free virtual = 50596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2708.035 ; gain = 954.609 ; free physical = 36336 ; free virtual = 50596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name              | RTL Name              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|aurora_cam_link_ctrl_0_0 | inst/user_aresetn_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++-------------------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     4|
+|2     |LUT1   |     8|
+|3     |LUT2   |    32|
+|4     |LUT3   |    12|
+|5     |LUT4   |     9|
+|6     |LUT5   |     4|
+|7     |LUT6   |     5|
+|8     |SRL16E |     1|
+|9     |FDRE   |   406|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2708.035 ; gain = 954.609 ; free physical = 36336 ; free virtual = 50596
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2708.035 ; gain = 838.836 ; free physical = 36349 ; free virtual = 50610
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2708.043 ; gain = 954.609 ; free physical = 36357 ; free virtual = 50618
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2708.043 ; gain = 0.000 ; free physical = 36424 ; free virtual = 50685
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2764.062 ; gain = 0.000 ; free physical = 37850 ; free virtual = 52109
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: b4418b0c
+INFO: [Common 17-83] Releasing license: Synthesis
+101 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2764.098 ; gain = 1160.594 ; free physical = 37860 ; free virtual = 52119
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1747.739; main = 1622.610; forked = 193.834
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3637.465; main = 2764.066; forked = 994.238
+INFO: [Coretcl 2-1174] Renamed 16 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2788.074 ; gain = 0.000 ; free physical = 37916 ; free virtual = 52175
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_link_ctrl_0_0_synth_1/aurora_cam_link_ctrl_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file aurora_cam_link_ctrl_0_0_utilization_synth.rpt -pb aurora_cam_link_ctrl_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 17:22:19 2026...

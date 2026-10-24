@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Oct 24 15:24:30 2026
+# Process ID         : 106146
+# Current directory  : /home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.runs/aurora_8b10b_0_synth_1
+# Command line       : vivado -log aurora_8b10b_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source aurora_8b10b_0.tcl
+# Log file           : /home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.runs/aurora_8b10b_0_synth_1/aurora_8b10b_0.vds
+# Journal file       : /home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.runs/aurora_8b10b_0_synth_1/vivado.jou
+# Running On         : dhkim-home
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
+# CPU Frequency      : 5466.469 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 67058 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75648 MB
+# Available Virtual  : 67448 MB
+#-----------------------------------------------------------
+source aurora_8b10b_0.tcl -notrace

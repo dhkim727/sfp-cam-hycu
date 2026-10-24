@@ -1,0 +1,286 @@
+
+*** Running vivado
+    with args -log aurora_8b10b_0_exdes.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source aurora_8b10b_0_exdes.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 15:24:46 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source aurora_8b10b_0_exdes.tcl -notrace
+Command: synth_design -top aurora_8b10b_0_exdes -part xc7z015clg485-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 106704
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2242.199 ; gain = 479.844 ; free physical = 48415 ; free virtual = 62698
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_exdes' [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_LL_TO_AXI_EXDES' [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_ll_to_axi_exdes.v:61]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STRB_WIDTH bound to: 4 - type: integer 
+	Parameter USE_4_NFC bound to: 0 - type: integer 
+	Parameter REM_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_LL_TO_AXI_EXDES' (0#1) [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_ll_to_axi_exdes.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_FRAME_GEN' [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_frame_gen.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_FRAME_GEN' (0#1) [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_frame_gen.v:64]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_AXI_TO_LL_EXDES' [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_axi_to_ll_exdes.v:61]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STRB_WIDTH bound to: 4 - type: integer 
+	Parameter REM_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_AXI_TO_LL_EXDES' (0#1) [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_axi_to_ll_exdes.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_FRAME_CHECK' [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_frame_check.v:64]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_frame_check.v:182]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_frame_check.v:203]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_FRAME_CHECK' (0#1) [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_frame_check.v:64]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:82819]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:82819]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE2' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:83044]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE2' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:83044]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.runs/synth_1/.Xil/Vivado-106648-dhkim-home/realtime/aurora_8b10b_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.runs/synth_1/.Xil/Vivado-106648-dhkim-home/realtime/aurora_8b10b_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_exdes' (0#1) [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.v:61]
+WARNING: [Synth 8-6014] Unused sequential element RX_REM_2SLACK_reg was removed.  [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_frame_check.v:142]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'traffic.frame_gen_i'. This will prevent further optimization [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.v:378]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'traffic.frame_gen_ll_to_axi_pdu_i'. This will prevent further optimization [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.v:359]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'aurora_module_i'. This will prevent further optimization [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.v:288]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'traffic.frame_check_i'. This will prevent further optimization [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.v:424]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'traffic.frame_chk_axi_to_ll_pdu_i'. This will prevent further optimization [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.v:401]
+INFO: [Synth 8-6014] Unused sequential element lane_up_r_reg was removed.  [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.v:250]
+INFO: [Synth 8-6014] Unused sequential element lane_up_r2_reg was removed.  [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.v:251]
+INFO: [Synth 8-7129] Port LL_IP_SOF_N in module aurora_8b10b_0_LL_TO_AXI_EXDES is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2336.137 ; gain = 573.781 ; free physical = 48335 ; free virtual = 62619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2336.137 ; gain = 573.781 ; free physical = 48335 ; free virtual = 62619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2336.137 ; gain = 573.781 ; free physical = 48335 ; free virtual = 62619
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2336.137 ; gain = 0.000 ; free physical = 48335 ; free virtual = 62619
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/aurora_8b10b_0_in_context.xdc] for cell 'aurora_module_i'
+Finished Parsing XDC File [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/aurora_8b10b_0_in_context.xdc] for cell 'aurora_module_i'
+Parsing XDC File [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.xdc]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter {NAME =~ *aurora_8b10b_0_cdc_to*}'. [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.xdc:68]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter REF_PIN_NAME=~*D -of_objects [get_cells -hierarchical -filter {NAME =~ *aurora_8b10b_0_cdc_to*}]'. [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.xdc:68]
+Finished Parsing XDC File [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/aurora_8b10b_0_exdes_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dhkim/aurora_8b10b_0_ex/imports/aurora_8b10b_0_exdes.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/aurora_8b10b_0_exdes_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/aurora_8b10b_0_exdes_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2437.602 ; gain = 0.000 ; free physical = 48847 ; free virtual = 62624
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2437.637 ; gain = 0.000 ; free physical = 48846 ; free virtual = 62624
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2437.637 ; gain = 675.281 ; free physical = 48861 ; free virtual = 62639
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2445.605 ; gain = 683.250 ; free physical = 48861 ; free virtual = 62639
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2445.605 ; gain = 683.250 ; free physical = 48861 ; free virtual = 62639
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2445.605 ; gain = 683.250 ; free physical = 48861 ; free virtual = 62639
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
+	   5 Input    2 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               16 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 7     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 24    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 2     
+	   4 Input   32 Bit        Muxes := 2     
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7129] Port LL_IP_SOF_N in module aurora_8b10b_0_LL_TO_AXI_EXDES is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2445.605 ; gain = 683.250 ; free physical = 48845 ; free virtual = 62629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2520.605 ; gain = 758.250 ; free physical = 48758 ; free virtual = 62542
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2551.652 ; gain = 789.297 ; free physical = 48734 ; free virtual = 62518
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2551.652 ; gain = 789.297 ; free physical = 48738 ; free virtual = 62521
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2719.465 ; gain = 957.109 ; free physical = 48663 ; free virtual = 62447
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2719.465 ; gain = 957.109 ; free physical = 48663 ; free virtual = 62447
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2719.465 ; gain = 957.109 ; free physical = 48663 ; free virtual = 62447
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2719.465 ; gain = 957.109 ; free physical = 48663 ; free virtual = 62447
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2719.465 ; gain = 957.109 ; free physical = 48663 ; free virtual = 62447
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2719.465 ; gain = 957.109 ; free physical = 48663 ; free virtual = 62447
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |aurora_8b10b_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |aurora_8b10b |     1|
+|2     |BUFG         |     2|
+|3     |CARRY4       |     3|
+|4     |IBUFDS_GTE2  |     1|
+|5     |LUT1         |    29|
+|6     |LUT2         |    34|
+|7     |LUT3         |    11|
+|8     |LUT4         |    22|
+|9     |LUT5         |    15|
+|10    |LUT6         |    26|
+|11    |FDRE         |   186|
+|12    |FDSE         |    43|
+|13    |IBUF         |     7|
+|14    |IBUFDS       |     1|
+|15    |OBUF         |    15|
++------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2719.465 ; gain = 957.109 ; free physical = 48663 ; free virtual = 62447
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2719.465 ; gain = 855.609 ; free physical = 48663 ; free virtual = 62447
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2719.473 ; gain = 957.109 ; free physical = 48663 ; free virtual = 62447
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2719.473 ; gain = 0.000 ; free physical = 48663 ; free virtual = 62447
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2775.492 ; gain = 0.000 ; free physical = 48821 ; free virtual = 62605
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: a7cf8b4e
+INFO: [Common 17-83] Releasing license: Synthesis
+46 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2775.527 ; gain = 1155.000 ; free physical = 48821 ; free virtual = 62605
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1776.078; main = 1776.078; forked = 0.000
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2775.496; main = 2775.496; forked = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2799.504 ; gain = 0.000 ; free physical = 48821 ; free virtual = 62605
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.runs/synth_1/aurora_8b10b_0_exdes.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file aurora_8b10b_0_exdes_utilization_synth.rpt -pb aurora_8b10b_0_exdes_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 15:25:00 2026...

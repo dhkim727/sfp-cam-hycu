@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aurora_cam_z7015 시스템 개요 — BD 구성과 C 프로그램 데이터 흐름 제어</title>
+<style>
+body{font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif;margin:0;background:#f1f5f9;color:#0f172a;line-height:1.55}
+header{background:#0f172a;color:#e2e8f0;padding:18px 30px}
+header h1{margin:0;font-size:21px}
+header p{margin:5px 0 0;color:#94a3b8;font-size:13px}
+nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #cbd5e1;padding:8px 30px;font-size:13px;z-index:9}
+nav a{margin-right:14px;color:#1d4ed8;text-decoration:none}
+main{max-width:1240px;margin:0 auto;padding:18px 24px 60px}
+section{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px 22px 20px;margin:22px 0}
+h2{font-size:18px;border-left:5px solid #1d4ed8;padding-left:10px;margin:2px 0 8px}
+h3{font-size:14.5px;margin:20px 0 6px;color:#0f172a}
+.src{font-size:12px;color:#64748b}
+figure{margin:8px 0 4px;overflow-x:auto}
+table{border-collapse:collapse;font-size:12.5px;margin:8px 0}
+th,td{border:1px solid #cbd5e1;padding:4px 9px;text-align:left;vertical-align:top}
+th{background:#f1f5f9;white-space:nowrap}
+code{background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:12px}
+pre{background:#0f172a;color:#e2e8f0;padding:10px 14px;border-radius:8px;font-size:12px;overflow-x:auto}
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:12.5px;align-items:center;margin:6px 0}
+.sw{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:5px;vertical-align:-2px;border:1.5px solid}
+.note{background:#fffbeb;border:1px solid #fcd34d;border-radius:6px;padding:8px 12px;font-size:12.5px;margin:8px 0}
+svg{display:block}
+svg text{font-family:inherit}
+.bb{fill:#fff;stroke:#334155;stroke-width:1.3}
+.bPs{fill:#e2e8f0;stroke:#0f172a;stroke-width:1.5}
+.bInit{fill:#fef3c7;stroke:#b45309;stroke-width:1.5}
+.bUser{fill:#dbeafe;stroke:#1d4ed8;stroke-width:1.5}
+.bFclk{fill:#d1fae5;stroke:#047857;stroke-width:1.5}
+.bGt{fill:#ede9fe;stroke:#6d28d9;stroke-width:1.5}
+.bDim{fill:#f8fafc;stroke:#94a3b8;stroke-width:1.2;stroke-dasharray:4 3}
+.lb{font-size:12px;font-weight:700;fill:#0f172a}
+.lw{font-size:11px;font-weight:600}
+.lt{font-size:10px;fill:#475569}
+.lk{font-size:10.5px;fill:#334155}
+.badge{fill:#dc2626}
+.badgetxt{font-size:11px;font-weight:700;fill:#fff;text-anchor:middle}
+.eK{stroke:#334155;stroke-width:1.6;fill:none}
+.eS{stroke:#334155;stroke-width:1.6;fill:none;stroke-dasharray:5 4}
+.eU{stroke:#1d4ed8;stroke-width:1.5;fill:none}
+.eG{stroke:#047857;stroke-width:1.5;fill:none}
+.eA{stroke:#b45309;stroke-width:1.5;fill:none}
+.eV{stroke:#6d28d9;stroke-width:1.5;fill:none}
+.eR{stroke:#dc2626;stroke-width:1.8;fill:none}
+.eX{stroke:#94a3b8;stroke-width:1.2;fill:none;stroke-dasharray:4 3}
+.dim{opacity:.55}
+@media print{nav{display:none}section{break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+<header>
+<h1>aurora_cam_z7015 — Zynq-7015 Aurora 8B/10B 루프백 시스템</h1>
+<p>블록 디자인 구성 · 클럭/리셋 도메인 · 데이터 흐름 · <b>C 프로그램(sw/loopback_test.c)의 제어 경로 중심</b> 설명 자료 (현재 BD 기준, Vivado 2025.2)</p>
+</header>
+<nav>
+<a href="#s1">1 개요</a><a href="#s2">2 블록 디자인</a><a href="#s3">3 클럭·리셋</a><a href="#s4">4 데이터 경로</a><a href="#s5">5 C 실행 흐름</a><a href="#s6">6 프레임 시퀀스</a><a href="#s7">7 레지스터·판정</a>
+</nav>
+<main>
+
+<section id="legend">
+<h2>범례</h2>
+<div class="legend">
+<span><span class="sw" style="background:#fef3c7;border-color:#b45309"></span>init_clk 62.5 MHz (clk_wiz_0)</span>
+<span><span class="sw" style="background:#dbeafe;border-color:#1d4ed8"></span>user_clk 78.125 MHz (Aurora MMCM)</span>
+<span><span class="sw" style="background:#d1fae5;border-color:#047857"></span>FCLK_CLK0 100 MHz (PS)</span>
+<span><span class="sw" style="background:#ede9fe;border-color:#6d28d9"></span>GT refclk 125 MHz / GTP</span>
+</div>
+<div class="legend">
+<span><svg width="46" height="12"><line x1="2" y1="6" x2="40" y2="6" class="eK" marker-end="url(#mK)"/></svg> AXI-Stream 데이터 / AXI 버스</span>
+<span><svg width="46" height="12"><line x1="2" y1="6" x2="40" y2="6" class="eS" marker-end="url(#mK)"/></svg> 제어·상태 신호</span>
+<span><svg width="46" height="12"><line x1="2" y1="6" x2="40" y2="6" class="eR" marker-end="url(#mR)"/></svg> C 프로그램 레지스터 접근</span>
+<span><svg width="46" height="12"><line x1="2" y1="6" x2="40" y2="6" class="eX" marker-end="url(#mX)"/></svg> VIO·PRBS (C 실행 중 미사용)</span>
+<span><svg width="20" height="20"><circle cx="10" cy="10" r="9" class="badge"/><text x="10" y="14" class="badgetxt">1</text></svg> C 코드 단계 ①~⑤</span>
+<span>◆ = 클럭 도메인 경계(CDC)</span>
+</div>
+<p class="src">모든 수치는 현재 <code>aurora_cam.bd</code>, <code>rtl/*.v</code>, <code>sw/loopback_test.c</code>, 구현 결과(timing WNS +3.720 ns, 라우팅 오류 0)에서 확인한 값이다.</p>
+</section>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="mK" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#334155"/></marker>
+<marker id="mU" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1d4ed8"/></marker>
+<marker id="mG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker>
+<marker id="mA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#b45309"/></marker>
+<marker id="mV" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6d28d9"/></marker>
+<marker id="mR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#dc2626"/></marker>
+<marker id="mX" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker>
+</defs></svg>
+
+<section id="s1">
+<h2>1. 시스템 개요 — C 프로그램이 바라보는 전체 구조</h2>
+<p>PS(Cortex-A9)의 C 프로그램은 <b>GP0(AXI-Lite)</b>로 GPIO·DMA 레지스터에 접근해 링크를 기동하고(②) 전송을 지시하며(③), <b>HP0(64-bit)</b>는 DMA가 DDR 버퍼를 읽고 쓰는 데이터 전용 경로다(⑤ 비교는 CPU가 수행). PL 데이터 경로는 <b>user_clk 78.125 MHz</b> 하나로 흐르고, 링크 리셋 시퀀스·상태 수집은 GT와 무관하게 도는 <b>init_clk 62.5 MHz</b>가 맡는다. 현재 기동값은 VIO 소유(<code>vio_ctrl_sel=1</code>, PMA 루프백=2)이므로 C는 ②를 건너뛰고 채널 상승만 기다린다.</p>
+<figure><svg viewBox="0 0 960 660" width="100%" role="img" aria-label="시스템 개요">
+<rect x="15" y="95" width="215" height="490" class="bPs"/>
+<text x="122" y="118" text-anchor="middle" class="lb">PS7 (Zynq-7015)</text>
+<rect x="30" y="130" width="185" height="60" class="bb"/>
+<text x="122" y="150" text-anchor="middle" class="lb">Cortex-A9 (Core0)</text>
+<text x="122" y="164" text-anchor="middle" class="lt">loopback_test.c · UART0</text>
+<text x="122" y="177" text-anchor="middle" class="lt">L1 + PL310 L2 캐시</text>
+<rect x="30" y="200" width="185" height="84" class="bb"/>
+<text x="122" y="217" text-anchor="middle" class="lw">DDR3 1 GB</text>
+<rect x="42" y="224" width="78" height="46" class="bb"/>
+<text x="81" y="242" text-anchor="middle" class="lt">src_buf</text>
+<text x="81" y="256" text-anchor="middle" class="lt">1,843,200 B</text>
+<rect x="128" y="224" width="76" height="46" class="bb"/>
+<text x="166" y="242" text-anchor="middle" class="lt">dst_buf</text>
+<text x="166" y="256" text-anchor="middle" class="lt">1,843,456 B</text>
+<circle cx="188" cy="212" r="10" class="badge"/><text x="188" y="216" class="badgetxt">5</text>
+<rect x="30" y="292" width="185" height="34" class="bb"/>
+<text x="122" y="313" text-anchor="middle" class="lw">M_AXI_GP0 (AXI-Lite 마스터)</text>
+<rect x="30" y="336" width="185" height="34" class="bb"/>
+<text x="122" y="357" text-anchor="middle" class="lw">S_AXI_HP0 (64-bit, 캐시 비일관)</text>
+<rect x="30" y="380" width="185" height="30" class="bb"/>
+<text x="122" y="399" text-anchor="middle" class="lt">IRQ_F2P[1:0] ← DMA (C는 폴링)</text>
+<rect x="30" y="424" width="185" height="52" class="bFclk"/>
+<text x="122" y="446" text-anchor="middle" class="lw">FCLK_CLK0 100 MHz</text>
+<text x="122" y="462" text-anchor="middle" class="lt">→ 제어면 전체·rst_axi</text>
+<rect x="15" y="600" width="150" height="40" class="bInit"/>
+<text x="90" y="618" text-anchor="middle" class="lw">clk_50m (Y14)</text>
+<text x="90" y="632" text-anchor="middle" class="lt">50 MHz 외부 입력</text>
+<rect x="270" y="95" width="660" height="490" class="bb"/>
+<text x="600" y="116" text-anchor="middle" class="lb">PL (블록 디자인 aurora_cam)</text>
+<rect x="285" y="125" width="410" height="95" fill="#ecfdf5" stroke="#047857" stroke-dasharray="6 4"/>
+<text x="294" y="141" class="lt">AXI 제어면 · FCLK_CLK0 100 MHz ◆ (sc_ctrl / sc_mem 포함)</text>
+<rect x="300" y="150" width="150" height="56" class="bFclk"/>
+<text x="375" y="170" text-anchor="middle" class="lw">axi_dma_0 (simple)</text>
+<text x="375" y="184" text-anchor="middle" class="lt">0x4040_0000 · MM2S/S2MM</text>
+<text x="375" y="197" text-anchor="middle" class="lt">MM 64b · Stream 32b · burst 64</text>
+<circle cx="322" cy="228" r="10" class="badge"/><text x="322" y="232" class="badgetxt">3</text>
+<circle cx="262" cy="292" r="10" class="badge"/><text x="262" y="296" class="badgetxt">4</text>
+<rect x="470" y="150" width="120" height="56" class="bFclk"/>
+<text x="530" y="170" text-anchor="middle" class="lw">axi_gpio_link</text>
+<text x="530" y="184" text-anchor="middle" class="lt">0x4120_0000</text>
+<text x="530" y="197" text-anchor="middle" class="lt">ch1 상태(in) / ch2 제어(out)</text>
+<circle cx="466" cy="146" r="10" class="badge"/><text x="466" y="150" class="badgetxt">1</text>
+<circle cx="600" cy="178" r="10" class="badge"/><text x="600" y="182" class="badgetxt">2</text>
+<rect x="285" y="232" width="410" height="190" fill="#eff6ff" stroke="#1d4ed8" stroke-dasharray="6 4"/>
+<text x="294" y="248" class="lt">데이터 경로 · user_clk 78.125 MHz ◆</text>
+<rect x="300" y="258" width="74" height="44" class="bUser"/>
+<text x="337" y="276" text-anchor="middle" class="lw">fifo_tx ◆</text>
+<text x="337" y="290" text-anchor="middle" class="lt">1024워드</text>
+<rect x="388" y="258" width="84" height="44" class="bUser"/>
+<text x="430" y="276" text-anchor="middle" class="lw">pkt_0</text>
+<text x="430" y="290" text-anchor="middle" class="lt">라인→프레임</text>
+<rect x="486" y="258" width="92" height="44" class="bUser"/>
+<text x="532" y="276" text-anchor="middle" class="lw">prbs_gen_0</text>
+<text x="532" y="290" text-anchor="middle" class="lt">bypass (en=0)</text>
+<rect x="594" y="240" width="86" height="174" class="bUser"/>
+<text x="637" y="260" text-anchor="middle" class="lw">aurora_0</text>
+<text x="637" y="274" text-anchor="middle" class="lt">Aurora 8B/10B</text>
+<text x="637" y="287" text-anchor="middle" class="lt">1lane 3.125Gb/s</text>
+<text x="637" y="300" text-anchor="middle" class="lt">GTPE2+MMCM</text>
+<text x="637" y="313" text-anchor="middle" class="lt">CRC·Framing</text>
+<text x="637" y="340" text-anchor="middle" class="lw">▶ S_AXI_TX</text>
+<text x="637" y="375" text-anchor="middle" class="lw">M_AXI_RX ◀</text>
+<rect x="486" y="358" width="92" height="44" class="bUser"/>
+<text x="532" y="376" text-anchor="middle" class="lw">prbs_check_0</text>
+<text x="532" y="390" text-anchor="middle" class="lt">PRBS만 걸러냄</text>
+<rect x="388" y="358" width="84" height="44" class="bUser"/>
+<text x="430" y="376" text-anchor="middle" class="lw">depkt_0</text>
+<text x="430" y="390" text-anchor="middle" class="lt">헤더 제거·검사</text>
+<rect x="300" y="358" width="74" height="44" class="bUser"/>
+<text x="337" y="376" text-anchor="middle" class="lw">fifo_rx ◆</text>
+<text x="337" y="390" text-anchor="middle" class="lt">4096워드</text>
+<rect x="285" y="436" width="410" height="120" fill="#fffbeb" stroke="#b45309" stroke-dasharray="6 4"/>
+<text x="294" y="452" class="lt">링크 제어·관측 · init_clk 62.5 MHz ◆ (GT·PS와 무관하게 항상 동작)</text>
+<rect x="300" y="460" width="140" height="84" class="bInit"/>
+<text x="370" y="480" text-anchor="middle" class="lw">link_ctrl_0</text>
+<text x="370" y="494" text-anchor="middle" class="lt">리셋 시퀀서(gt→reset)</text>
+<text x="370" y="507" text-anchor="middle" class="lt">상태 수집·sticky</text>
+<text x="370" y="520" text-anchor="middle" class="lt">user_aresetn 생성</text>
+<rect x="468" y="464" width="84" height="70" class="bDim dim"/>
+<text x="510" y="486" text-anchor="middle" class="lw">vio_link</text>
+<text x="510" y="500" text-anchor="middle" class="lt">HW Manager</text>
+<text x="510" y="513" text-anchor="middle" class="lt">전용 (dim)</text>
+<rect x="562" y="460" width="96" height="84" class="bInit"/>
+<text x="610" y="481" text-anchor="middle" class="lw">clk_wiz_0</text>
+<text x="610" y="495" text-anchor="middle" class="lt">50 → 62.5 MHz</text>
+<text x="610" y="508" text-anchor="middle" class="lt">(×20 ÷16)</text>
+<rect x="715" y="240" width="120" height="46" class="bGt"/>
+<text x="775" y="258" text-anchor="middle" class="lw">GT refclk 125 MHz</text>
+<text x="775" y="272" text-anchor="middle" class="lt">U9/V9 → GT_DIFF_REFCLK1</text>
+<rect x="715" y="300" width="120" height="88" class="bGt"/>
+<text x="775" y="322" text-anchor="middle" class="lw">GTP X0Y0</text>
+<text x="775" y="336" text-anchor="middle" class="lt">near-end PMA</text>
+<text x="775" y="350" text-anchor="middle" class="lt">LOOPBACK = 2</text>
+<text x="775" y="368" text-anchor="middle" class="lt">TX→RX 내부 루프</text>
+<text x="775" y="404" text-anchor="middle" class="lt">txn/rxn 핀: 외부 링크 시 사용</text>
+<circle cx="188" cy="212" r="0"/>
+<polyline points="215,308 250,308 250,178 285,178" class="eG" marker-end="url(#mG)"/>
+<text x="254" y="170" class="lt" text-anchor="end">GP0 레지스터 R/W ①③④</text>
+<polyline points="215,350 268,350 268,192 300,192" class="eG" marker-end="url(#mG)"/>
+<polyline points="300,202 272,202 272,358 215,358" class="eG" marker-end="url(#mG)"/>
+<text x="290" y="348" class="lt">HP0 64b</text>
+<polyline points="215,450 262,450 262,172 285,172" class="eG" marker-end="url(#mG)"/>
+<polyline points="375,206 375,230 337,230 337,258" class="eK" marker-end="url(#mK)"/>
+<text x="368" y="240" class="lt">MM2S 32b</text>
+<polyline points="300,380 292,380 292,196 300,196" class="eK" marker-end="url(#mK)"/>
+<text x="283" y="300" class="lt" transform="rotate(-90 283 300)">S2MM 32b</text>
+<line x1="378" y1="280" x2="594" y2="280" class="eK" marker-end="url(#mK)"/>
+<line x1="594" y1="380" x2="580" y2="380" class="eK" marker-end="url(#mK)"/>
+<polyline points="715,263 682,263" class="eV" marker-end="url(#mV)"/>
+<line x1="680" y1="330" x2="715" y2="330" class="eV" marker-end="url(#mV)"/>
+<line x1="715" y1="352" x2="680" y2="352" class="eV" marker-end="url(#mV)"/>
+<polyline points="534,206 534,228 590,228 590,448 434,448 434,460" class="eR" marker-end="url(#mR)"/>
+<text x="470" y="444" class="lt">② gpio_ctrl : run=1, lb, err_clear</text>
+<polyline points="430,460 430,442 582,442 582,224 526,224 526,206" class="eS" marker-end="url(#mK)"/>
+<text x="597" y="330" class="lt" transform="rotate(-90 597 330)">gpio_status → ①</text>
+<polyline points="440,530 420,530 420,546 700,546 700,400 682,400" class="eS" marker-end="url(#mK)"/>
+<text x="470" y="562" class="lt">gt_reset·reset·loopback·power_down → aurora</text>
+<polyline points="680,386 706,386 706,430 410,430 410,460" class="eS" marker-end="url(#mK)"/>
+<text x="480" y="426" class="lt">channel_up·lane_up·err·sys_reset·pll_not_locked ←</text>
+<polyline points="658,500 668,500 668,414" class="eA" marker-end="url(#mA)"/>
+<text x="676" y="460" class="lt">init·drp</text>
+<polyline points="165,620 610,620 610,546" class="eA" marker-end="url(#mA)"/>
+</svg></figure>
+<table>
+<tr><th>단계</th><th>C 코드 (sw/loopback_test.c)</th><th>접근 대상</th><th>내용</th></tr>
+<tr><td>①</td><td><code>show_status()</code></td><td>GPIO1 읽기 0x4120_0000</td><td>상태 워드 32 bit(채널·에러·프레임 수)를 UART 출력</td></tr>
+<tr><td>②</td><td><code>link_start()</code></td><td>GPIO2 쓰기 0x4120_0008</td><td>run=1 기동 → channel_up 폴링(최대 1 s) → err_clear 펄스. VIO 소유(bit14=1)면 쓰기를 생략하고 대기만</td></tr>
+<tr><td>③</td><td><code>dma_reset()</code>→<code>run_frame()</code></td><td>DMA 쓰기 0x4040_0000</td><td>S2MM 선무장(DA·LENGTH 1,843,456) 후 MM2S 시작(SA·LENGTH 1,843,200)</td></tr>
+<tr><td>④</td><td><code>run_frame()</code> 폴링</td><td>DMA 읽기</td><td>양쪽 DMASR의 IOC(bit12)·ERR(bit6:4) 확인, 500 ms 초과 시 TIMEOUT</td></tr>
+<tr><td>⑤</td><td><code>run_frame()</code> 후반</td><td>DMA 읽기 + DDR</td><td>S2MM_LENGTH 실수신 바이트 → 캐시 invalidate → 460,800워드 비교(<code>memcmp</code> 상당)</td></tr>
+</table>
+<p class="src">근거: aurora_cam.bd(주소 맵·connections 3991~4440행), sw/loopback_test.c 42~71행(레지스터 정의)·96~124행(link_start)·133~184행(run_frame), rtl/link_ctrl.v 94~107행(gpio/vio 제어 선택)</p>
+</section>
+<section id="s2">
+<h2>2. 블록 디자인 상세 — aurora_cam.bd 전체 셀과 넷</h2>
+<p>현재 BD의 셀 17개(PS7 1 + IP 11 + RTL module reference 5)를 세 개의 면으로 나누어 그렸다. <b>박스 테두리 색 = 클럭 도메인</b>(범례 참조), <b>◆ = 클럭 도메인이 바뀌는 지점(CDC)</b>이다. 붉은 실선이 C 프로그램의 레지스터 접근 경로, 회색 점선 사각형(prbs_gen·prbs_check의 PRBS 기능, vio_link)은 C 실행 중 사용하지 않는 경로다.</p>
+<figure><svg viewBox="0 0 1180 900" width="100%" role="img" aria-label="블록 디자인 상세">
+<text x="20" y="52" class="lw" fill="#047857">제어면 · FCLK_CLK0 100 MHz</text>
+<rect x="15" y="70" width="180" height="230" class="bPs"/>
+<text x="105" y="92" text-anchor="middle" class="lb">ps7</text>
+<text x="105" y="136" class="lt">M_AXI_GP0 ──▶ (레지스터)</text>
+<text x="105" y="172" class="lt">S_AXI_HP0 ◀──▶ (데이터)</text>
+<text x="105" y="204" class="lt">IRQ_F2P[1:0] ◀──</text>
+<text x="105" y="226" class="lt">FCLK_CLK0 ──▶ 100 MHz</text>
+<text x="105" y="252" class="lt">DDR3 1 GB · UART0(MIO14/15)</text>
+<text x="105" y="268" class="lt">ps7_init + ps7_post_config 필수</text>
+<rect x="260" y="70" width="120" height="64" class="bFclk"/>
+<text x="320" y="90" text-anchor="middle" class="lw">sc_ctrl</text>
+<text x="320" y="104" text-anchor="middle" class="lt">smartconnect 1:2</text>
+<text x="320" y="118" text-anchor="middle" class="lt">GP0 → DMA / GPIO</text>
+<rect x="560" y="70" width="120" height="64" class="bFclk"/>
+<text x="620" y="90" text-anchor="middle" class="lw">axi_gpio_link</text>
+<text x="620" y="104" text-anchor="middle" class="lt">0x4120_0000</text>
+<text x="620" y="118" text-anchor="middle" class="lt">ch1 in(①) / ch2 out(②)</text>
+<rect x="260" y="160" width="250" height="150" class="bFclk"/>
+<text x="385" y="180" text-anchor="middle" class="lw">axi_dma_0 · 0x4040_0000</text>
+<rect x="275" y="192" width="100" height="44" class="bb"/>
+<text x="325" y="210" text-anchor="middle" class="lt">MM2S</text>
+<text x="325" y="224" text-anchor="middle" class="lt">▶ M_AXIS 32b</text>
+<rect x="395" y="192" width="100" height="44" class="bb"/>
+<text x="445" y="210" text-anchor="middle" class="lt">S2MM</text>
+<text x="445" y="224" text-anchor="middle" class="lt">S_AXIS 32b ◀</text>
+<text x="385" y="256" text-anchor="middle" class="lt">simple mode(sg 없음) · MM 64b / ST 32b</text>
+<text x="385" y="270" text-anchor="middle" class="lt">burst 64 · 길이레지스터 24b(최대 16 MiB)</text>
+<text x="385" y="288" text-anchor="middle" class="lt" fill="#dc2626">S_AXI_LITE = C 레지스터 ①③④</text>
+<rect x="560" y="160" width="150" height="150" class="bFclk"/>
+<text x="635" y="182" text-anchor="middle" class="lw">sc_mem</text>
+<text x="635" y="196" text-anchor="middle" class="lt">smartconnect 2:1</text>
+<text x="635" y="210" text-anchor="middle" class="lt">S00←MM2S · S01←S2MM</text>
+<text x="635" y="224" text-anchor="middle" class="lt">M00 → S_AXI_HP0 (64b)</text>
+<text x="635" y="248" text-anchor="middle" class="lt">HP0는 캐시 비일관 포트</text>
+<text x="635" y="262" text-anchor="middle" class="lt">→ flush / invalidate 필수(⑤)</text>
+<rect x="760" y="70" width="120" height="64" class="bFclk"/>
+<text x="820" y="90" text-anchor="middle" class="lw">rst_axi</text>
+<text x="820" y="104" text-anchor="middle" class="lt">proc_sys_reset</text>
+<text x="820" y="118" text-anchor="middle" class="lt">ext_reset_in ← PS</text>
+<text x="898" y="88" class="lt">interconnect_aresetn → sc_ctrl·sc_mem</text>
+<text x="898" y="102" class="lt">peripheral_aresetn → DMA·GPIO·</text>
+<text x="898" y="116" class="lt">fifo_tx(s)◆·fifo_rx(m)◆·link_ctrl◆</text>
+<rect x="760" y="160" width="120" height="64" class="bb"/>
+<text x="820" y="182" text-anchor="middle" class="lw">irq_concat</text>
+<text x="820" y="196" text-anchor="middle" class="lt">In0=mm2s_introut</text>
+<text x="820" y="210" text-anchor="middle" class="lt">In1=s2mm_introut</text>
+<polyline points="195,132 228,132 228,102 260,102" class="eG" marker-end="url(#mG)"/>
+<line x1="320" y1="134" x2="320" y2="160" class="eG" marker-end="url(#mG)"/>
+<text x="326" y="152" class="lt">M00 · 0x4040_0000</text>
+<line x1="380" y1="102" x2="560" y2="102" class="eG" marker-end="url(#mG)"/>
+<text x="420" y="96" class="lt">M01 · 0x4120_0000</text>
+<line x1="510" y1="215" x2="560" y2="215" class="eG" marker-end="url(#mG)"/>
+<text x="512" y="208" class="lt">M_AXI_MM2S</text>
+<line x1="510" y1="250" x2="560" y2="250" class="eG" marker-end="url(#mG)"/>
+<text x="512" y="243" class="lt">M_AXI_S2MM</text>
+<polyline points="635,310 635,330 202,330 202,170 195,170" class="eG" marker-end="url(#mG)"/>
+<polyline points="195,178 206,178 206,336 641,336 641,310" class="eG" marker-end="url(#mG)"/>
+<text x="300" y="326" class="lt">HP0 64-bit (DDR ↔ DMA, src_buf/dst_buf)</text>
+<polyline points="450,160 450,144 770,144 770,160" class="eS" marker-end="url(#mK)"/>
+<text x="580" y="140" class="lt">introut ×2</text>
+<polyline points="760,192 890,192 890,44 105,44 105,70" class="eS" marker-end="url(#mK)"/>
+<text x="400" y="38" class="lt">IRQ_F2P[1:0] — C는 폴링 방식(GIC 미초기화, 인터럽트 미수신)</text>
+<polyline points="195,226 222,226 222,64" class="eG"/>
+<line x1="222" y1="88" x2="260" y2="88" class="eG" marker-end="url(#mG)"/>
+<line x1="222" y1="180" x2="260" y2="180" class="eG" marker-end="url(#mG)"/>
+<text x="214" y="150" class="lt" transform="rotate(-90 214 150)">FCLK_CLK0 100 MHz</text>
+<text x="20" y="356" class="lw" fill="#1d4ed8">데이터면 · user_clk 78.125 MHz (Aurora MMCM 생성)</text>
+<rect x="20" y="380" width="80" height="48" class="bUser"/>
+<text x="60" y="398" text-anchor="middle" class="lw">fifo_tx ◆</text>
+<text x="60" y="411" text-anchor="middle" class="lt">1024워드</text>
+<text x="60" y="424" text-anchor="middle" class="lt">s:FCLK→m:user</text>
+<rect x="120" y="380" width="90" height="48" class="bUser"/>
+<text x="165" y="398" text-anchor="middle" class="lw">pkt_0</text>
+<text x="165" y="411" text-anchor="middle" class="lt">line_packetizer</text>
+<text x="165" y="424" text-anchor="middle" class="lt">헤더 삽입/라인→프레임</text>
+<rect x="230" y="380" width="100" height="48" class="bUser"/>
+<text x="280" y="398" text-anchor="middle" class="lw">prbs_gen_0</text>
+<text x="280" y="411" text-anchor="middle" class="lt">en=0 → bypass</text>
+<text x="280" y="424" text-anchor="middle" class="lt">(PRBS dim)</text>
+<rect x="350" y="360" width="140" height="260" class="bUser"/>
+<text x="420" y="380" text-anchor="middle" class="lw">aurora_0</text>
+<text x="420" y="394" text-anchor="middle" class="lt">Aurora 8B/10B v11.1</text>
+<text x="420" y="407" text-anchor="middle" class="lt">framing + CRC</text>
+<text x="420" y="436" text-anchor="middle" class="lt">S_AXI_TX ▶ (32b)</text>
+<text x="420" y="470" text-anchor="middle" class="lt">MMCM → user_clk_out</text>
+<text x="420" y="483" text-anchor="middle" class="lt">78.125 MHz</text>
+<text x="420" y="540" text-anchor="middle" class="lt">M_AXI_RX ◀ (32b)</text>
+<text x="420" y="554" text-anchor="middle" class="lt">channel_up 등 상태 출력</text>
+<rect x="365" y="562" width="110" height="46" class="bGt"/>
+<text x="420" y="580" text-anchor="middle" class="lw">GTPE2 X0Y0</text>
+<text x="420" y="594" text-anchor="middle" class="lt">IBUFDS_GTE2 내장</text>
+<rect x="520" y="360" width="110" height="44" class="bGt"/>
+<text x="575" y="378" text-anchor="middle" class="lw">GT refclk 125 MHz</text>
+<text x="575" y="392" text-anchor="middle" class="lt">U9/V9 차동 입력</text>
+<rect x="520" y="430" width="110" height="100" class="bGt"/>
+<text x="575" y="452" text-anchor="middle" class="lw">PMA 루프백</text>
+<text x="575" y="466" text-anchor="middle" class="lt">LOOPBACK=2</text>
+<text x="575" y="480" text-anchor="middle" class="lt">(VIO 초기값)</text>
+<text x="575" y="500" text-anchor="middle" class="lt">TX→RX 내부 접속</text>
+<rect x="660" y="470" width="110" height="90" class="bb"/>
+<text x="715" y="492" text-anchor="middle" class="lw">txn/rxn 핀</text>
+<text x="715" y="506" text-anchor="middle" class="lt">최상위 포트</text>
+<text x="715" y="520" text-anchor="middle" class="lt">외부 케이블 링크 시</text>
+<text x="715" y="534" text-anchor="middle" class="lt">사용 (lb=0)</text>
+<rect x="230" y="520" width="100" height="48" class="bUser"/>
+<text x="280" y="538" text-anchor="middle" class="lw">prbs_check_0</text>
+<text x="280" y="551" text-anchor="middle" class="lt">PRBS 프레임만 차단</text>
+<text x="280" y="564" text-anchor="middle" class="lt">통계→VIO (dim)</text>
+<rect x="120" y="520" width="90" height="48" class="bUser"/>
+<text x="165" y="538" text-anchor="middle" class="lw">depkt_0</text>
+<text x="165" y="551" text-anchor="middle" class="lt">line_depacketizer</text>
+<text x="165" y="564" text-anchor="middle" class="lt">헤더 제거·검사</text>
+<rect x="20" y="520" width="80" height="48" class="bUser"/>
+<text x="60" y="538" text-anchor="middle" class="lw">fifo_rx ◆</text>
+<text x="60" y="551" text-anchor="middle" class="lt">4096워드</text>
+<text x="60" y="564" text-anchor="middle" class="lt">s:user→m:FCLK</text>
+<polyline points="325,236 325,340 60,340 60,380" class="eK" marker-end="url(#mK)"/>
+<text x="130" y="334" class="lt">M_AXIS_MM2S 32b (s측 FCLK ◆)</text>
+<polyline points="60,520 60,470 445,470 445,236" class="eK" marker-end="url(#mK)"/>
+<text x="250" y="464" class="lt">S_AXIS_S2MM 32b (m측 FCLK ◆)</text>
+<line x1="100" y1="404" x2="120" y2="404" class="eK" marker-end="url(#mK)"/>
+<line x1="210" y1="404" x2="230" y2="404" class="eK" marker-end="url(#mK)"/>
+<line x1="330" y1="404" x2="350" y2="404" class="eK" marker-end="url(#mK)"/>
+<text x="165" y="372" class="lt">TX 체인 · user_clk 78.125 MHz · 32 bit</text>
+<line x1="350" y1="544" x2="330" y2="544" class="eK" marker-end="url(#mK)"/>
+<line x1="230" y1="544" x2="210" y2="544" class="eK" marker-end="url(#mK)"/>
+<line x1="120" y1="544" x2="100" y2="544" class="eK" marker-end="url(#mK)"/>
+<text x="60" y="600" class="lt">RX 체인 · user_clk 78.125 MHz · 32 bit</text>
+<line x1="520" y1="382" x2="492" y2="382" class="eV" marker-end="url(#mV)"/>
+<line x1="490" y1="460" x2="520" y2="460" class="eV" marker-end="url(#mV)"/>
+<line x1="520" y1="500" x2="490" y2="500" class="eV" marker-end="url(#mV)"/>
+<polyline points="420,620 420,650 715,650 715,562" class="eX" marker-end="url(#mX)"/>
+<text x="500" y="664" class="lt">외부 직렬 핀(선택) — PMA 루프백 동작 시 미사용</text>
+<text x="20" y="684" class="lw" fill="#b45309">링크 제어·클럭 면 · init_clk 62.5 MHz (GT·PS와 무관, 항상 동작)</text>
+<rect x="15" y="700" width="110" height="44" class="bInit"/>
+<text x="70" y="718" text-anchor="middle" class="lw">clk_50m</text>
+<text x="70" y="732" text-anchor="middle" class="lt">50 MHz (Y14)</text>
+<rect x="150" y="690" width="120" height="64" class="bInit"/>
+<text x="210" y="710" text-anchor="middle" class="lw">clk_wiz_0</text>
+<text x="210" y="724" text-anchor="middle" class="lt">50 → 62.5 MHz</text>
+<text x="210" y="738" text-anchor="middle" class="lt">clk_out1 = init_clk</text>
+<rect x="300" y="680" width="220" height="180" class="bInit"/>
+<text x="410" y="700" text-anchor="middle" class="lw">link_ctrl_0</text>
+<text x="310" y="716" class="lt">init_clk 62.5MHz: 리셋 시퀀서·sticky·CDC 기준</text>
+<text x="310" y="730" class="lt">user_clk 78.125MHz: 상태 수집·user_aresetn</text>
+<text x="310" y="744" class="lt">axi_aclk 100MHz: GPIO↔내부 동기화</text>
+<text x="310" y="762" class="lt">→ aurora: gt_reset → reset(+262µs)·loopback·pd</text>
+<text x="310" y="776" class="lt">← aurora: ch/lane_up·hard/soft/frame_err·crc</text>
+<text x="310" y="790" class="lt">            sys_reset_out·pll_not_locked</text>
+<text x="310" y="808" class="lt">→ user_aresetn: pkt·depkt·prbs×2·fifo_rx(s)</text>
+<text x="310" y="822" class="lt">→ tx_fifo_aresetn: fifo_tx(s) [FCLK측]</text>
+<text x="310" y="840" class="lt">◆ gpio_ctrl ← GPIO2(②) / gpio_status → GPIO1(①)</text>
+<text x="310" y="854" class="lt">상태워드 32bit: ch·err 8종·frame cnt tx/rx</text>
+<rect x="560" y="690" width="130" height="150" class="bDim dim"/>
+<text x="625" y="710" text-anchor="middle" class="lw">vio_link</text>
+<text x="625" y="724" text-anchor="middle" class="lt">ctrl_sel=1·run=1</text>
+<text x="625" y="738" text-anchor="middle" class="lt">lb=2·prbs=0</text>
+<text x="625" y="752" text-anchor="middle" class="lt">probe_out0~6</text>
+<text x="625" y="770" text-anchor="middle" class="lt">probe_in0 = 상태워드</text>
+<text x="625" y="784" text-anchor="middle" class="lt">probe_in1~5 ←</text>
+<text x="625" y="798" text-anchor="middle" class="lt">prbs 통계(dim)</text>
+<text x="625" y="812" text-anchor="middle" class="lt">HW Manager 전용</text>
+<line x1="125" y1="722" x2="150" y2="722" class="eA" marker-end="url(#mA)"/>
+<line x1="270" y1="710" x2="300" y2="710" class="eA" marker-end="url(#mA)"/>
+<text x="272" y="704" class="lt">62.5</text>
+<polyline points="210,690 210,672 625,672 625,690" class="eA" marker-end="url(#mA)"/>
+<text x="300" y="668" class="lt">init_clk → vio_link.clk·prbs_check_0.stat_clk ◆</text>
+<polyline points="270,740 285,740 285,664 400,664 400,620" class="eA" marker-end="url(#mA)"/>
+<text x="316" y="660" class="lt">init_clk·drpclk_in ◆</text>
+<polyline points="210,754 210,880 545,880 545,592 280,592 280,568" class="eA" marker-end="url(#mA)"/>
+<text x="296" y="588" class="lt">stat_clk ◆</text>
+<line x1="380" y1="680" x2="380" y2="620" class="eS" marker-end="url(#mK)"/>
+<text x="374" y="650" text-anchor="end" class="lt">gt_reset·reset·loopback·pd →</text>
+<line x1="460" y1="620" x2="460" y2="680" class="eS" marker-end="url(#mK)"/>
+<text x="466" y="652" class="lt">상태 ←</text>
+<polyline points="336,680 336,476 60,476" class="eS"/>
+<line x1="60" y1="476" x2="60" y2="520" class="eS" marker-end="url(#mK)"/>
+<line x1="165" y1="476" x2="165" y2="520" class="eS" marker-end="url(#mK)"/>
+<line x1="165" y1="476" x2="165" y2="428" class="eS" marker-end="url(#mK)"/>
+<line x1="280" y1="476" x2="280" y2="428" class="eS" marker-end="url(#mK)"/>
+<line x1="300" y1="476" x2="300" y2="520" class="eS" marker-end="url(#mK)"/>
+<text x="344" y="470" class="lt">user_aresetn (user_clk 도메인)</text>
+<polyline points="310,680 310,652 14,652 14,404 20,404" class="eS" marker-end="url(#mK)"/>
+<text x="96" y="646" class="lt">tx_fifo_aresetn (FCLK측, lock 후 해제)</text>
+<polyline points="195,428 195,464 320,464 320,680" class="eS" marker-end="url(#mK)"/>
+<text x="200" y="458" class="lt">err_pulse·frame_cnt →</text>
+<polyline points="145,568 145,604 312,604 312,680" class="eS" marker-end="url(#mK)"/>
+<text x="152" y="600" class="lt">err_len·err_ovf·err_seq·frame_cnt →</text>
+<line x1="560" y1="740" x2="520" y2="740" class="eX dim" marker-end="url(#mX)"/>
+<line x1="520" y1="760" x2="560" y2="760" class="eX dim" marker-end="url(#mX)"/>
+<text x="556" y="734" text-anchor="end" class="lt dim">out0~3: ctrl_sel·run·lb·clr</text>
+<text x="556" y="756" text-anchor="end" class="lt dim">in0: vio_status</text>
+<polyline points="690,710 900,710 900,352 340,352" class="eX dim"/>
+<line x1="280" y1="352" x2="280" y2="380" class="eX dim" marker-end="url(#mX)"/>
+<polyline points="340,352 340,520 315,520" class="eX dim" marker-end="url(#mX)"/>
+<text x="700" y="706" class="lt dim">out4~6: enable·inject·clear → prbs</text>
+<polyline points="620,134 620,158 730,158 730,676 400,676 400,680" class="eR" marker-end="url(#mR)"/>
+<text x="560" y="670" class="lt" fill="#dc2626">② gpio_ctrl ◆ (xpm_cdc_array_single)</text>
+<polyline points="520,716 536,716 536,884 956,884 956,150 640,150 640,134" class="eS" marker-end="url(#mK)"/>
+<text x="700" y="878" class="lt">① gpio_status ◆ (xpm_cdc_handshake)</text>
+</svg></figure>
+<table>
+<tr><th>셀</th><th>종류</th><th>클럭</th><th>역할</th></tr>
+<tr><td><code>ps7</code></td><td>processing_system7 5.5</td><td>—</td><td>Cortex-A9·DDR3·GP0/HP0·IRQ_F2P·FCLK_CLK0 생성</td></tr>
+<tr><td><code>rst_axi</code></td><td>proc_sys_reset 5.0</td><td>FCLK</td><td>제어면(스마트커넥트·DMA·GPIO·FIFO s/m측) 리셋</td></tr>
+<tr><td><code>sc_ctrl</code></td><td>smartconnect 1.0</td><td>FCLK</td><td>GP0 → axi_dma(0x4040_0000)·axi_gpio(0x4120_0000)</td></tr>
+<tr><td><code>sc_mem</code></td><td>smartconnect 1.0</td><td>FCLK</td><td>MM2S+S2MM → HP0 64b (DDR src_buf/dst_buf)</td></tr>
+<tr><td><code>axi_dma_0</code></td><td>axi_dma 7.1 simple</td><td>FCLK</td><td>C의 ③④ 대상. MM 64b/ST 32b, burst 64, 길이 24b</td></tr>
+<tr><td><code>axi_gpio_link</code></td><td>axi_gpio 2.0</td><td>FCLK</td><td>C의 ①② 대상. ch1 상태 입력 / ch2 제어 출력</td></tr>
+<tr><td><code>irq_concat</code></td><td>xlconcat 2.1</td><td>—</td><td>DMA 인터럽트 2본 → IRQ_F2P (C는 폴링, 미수신)</td></tr>
+<tr><td><code>fifo_tx</code></td><td>axis_data_fifo 1024w</td><td>s:FCLK→m:user ◆</td><td>TX 완충(비동기 FIFO)</td></tr>
+<tr><td><code>fifo_rx</code></td><td>axis_data_fifo 4096w</td><td>s:user→m:FCLK ◆</td><td>RX 완충(비동기 FIFO)</td></tr>
+<tr><td><code>pkt_0</code></td><td>RTL line_packetizer</td><td>user</td><td>라인 1개(640 beat) → Aurora 프레임 1개, 헤더 1 beat 삽입</td></tr>
+<tr><td><code>depkt_0</code></td><td>RTL line_depacketizer</td><td>user</td><td>헤더 제거·라인 순번/길이 검사, 이상 시 0xDEADBEEF+TLAST</td></tr>
+<tr><td><code>prbs_gen_0</code></td><td>RTL prbs_gen</td><td>user</td><td>en=0 bypass / en=1 PRBS-31 프레임 생성 (dim)</td></tr>
+<tr><td><code>prbs_check_0</code></td><td>RTL prbs_check</td><td>user + stat:init ◆</td><td>PRBS 프레임만 차단(일반 데이터 통과), 통계→VIO (dim)</td></tr>
+<tr><td><code>link_ctrl_0</code></td><td>RTL link_ctrl</td><td>init/user/axi 3도메인</td><td>리셋 시퀀서·loopback/pd·상태 수집·CDC·user_aresetn</td></tr>
+<tr><td><code>aurora_0</code></td><td>aurora_8b10b 11.1</td><td>refclk→MMCM user</td><td>GTPE2 X0Y0 1lane 3.125Gb/s framing+CRC, PMA 루프백</td></tr>
+<tr><td><code>vio_link</code></td><td>vio 3.0</td><td>init</td><td>HW Manager 제어(현재 소유자)·관측 (dim)</td></tr>
+<tr><td><code>clk_wiz_0</code></td><td>clk_wiz 6.0</td><td>입력 50 MHz</td><td>init_clk 62.5 MHz 생성 (clk_out1)</td></tr>
+</table>
+<p class="src">근거: aurora_cam.bd vlnv/파라미터(2146~3935행), connections(3991~4440행), 주소 맵(0x40400000·0x41200000), rtl/link_ctrl.v, sw/loopback_test.c. 대역폭 참고: user_clk 페이로드 상한 78.125M×4B = 312.5 MB/s (README 기록 실측 ~2.47 Gb/s ≈ 309 MB/s, PRBS 모드)</p>
+</section>
+<section id="s3">
+<h2>3. 클럭 도메인과 리셋 — C 프로그램이 기다리는 시점의 물리적 의미</h2>
+<p>설계에는 클럭이 4개 있고, 서로 <b>동기 관계가 없는 독립 도메인</b>이다. GT에서 파생되는 user_clk은 <b>링크가 내려가면 멈춘다</b>. 그래서 "링크를 다시 올리는" 로직(리셋 시퀀서)은 반드시 멈추지 않는 init_clk에서 돌아야 하고, C 프로그램이 <code>channel_up</code>을 기다리는 것은 결국 user_clk이 살아났다는 뜻이 된다.</p>
+<h3>3.1 클럭 팬아웃</h3>
+<table>
+<tr><th>도메인</th><th>소스</th><th>공급 대상</th></tr>
+<tr><td style="background:#ede9fe"><b>GT refclk 125 MHz</b></td><td>외부 차동 U9/V9 → aurora_0 GT_DIFF_REFCLK1 (IBUFDS_GTE2가 IP 내부)</td><td>GTPE2_COMMON PLL → 트랜시버 비트 클럭(3.125 Gb/s)·TXOUTCLK</td></tr>
+<tr><td style="background:#fef3c7"><b>init_clk 62.5 MHz</b></td><td>외부 clk_50m(Y14) → clk_wiz_0 (×20÷16)</td><td>aurora init_clk_in·drpclk_in · link_ctrl_0(시퀀서) · vio_link · prbs_check_0.stat_clk ◆</td></tr>
+<tr><td style="background:#dbeafe"><b>user_clk 78.125 MHz</b></td><td>GT TXOUTCLK → Aurora 내부 MMCM clkout0 (= 3.125 Gb/s ÷ 40)</td><td>pkt_0 · depkt_0 · prbs_gen_0 · prbs_check_0(clk) · fifo_tx m◆ · fifo_rx s◆ · link_ctrl.user_clk◆ · aurora 사용자 인터페이스</td></tr>
+<tr><td style="background:#d1fae5"><b>FCLK_CLK0 100 MHz</b></td><td>ps7</td><td>sc_ctrl · sc_mem · axi_dma_0 · axi_gpio_link · rst_axi · fifo_tx s◆ · fifo_rx m◆ · link_ctrl.axi_aclk◆ · GP0/HP0</td></tr>
+</table>
+<h3>3.2 클럭 도메인 경계(CDC) 목록 — 모두 XPM 표준 매크로 or 비동기 FIFO</h3>
+<table>
+<tr><th>경계</th><th>신호/데이터</th><th>수단</th></tr>
+<tr><td>FCLK → init</td><td>GPIO2 제어 비트 run/lb/pd/aux/err_clear</td><td><code>xpm_cdc_array_single</code> (link_ctrl.v)</td></tr>
+<tr><td>init → FCLK</td><td>상태 워드 32b (GPIO1)</td><td><code>xpm_cdc_handshake</code></td></tr>
+<tr><td>init → user</td><td>run·clr 펄스</td><td><code>xpm_cdc_single</code> ×2</td></tr>
+<tr><td>user → init</td><td>ch/lane_up·err 4종·sys_reset·pll_not_locked·sticky</td><td><code>xpm_cdc_single/array_single</code></td></tr>
+<tr><td>user → init</td><td>tx/rx frame count 8b×2</td><td><code>xpm_cdc_gray</code> (set_bus_skew 유지)</td></tr>
+<tr><td>user → init</td><td>prbs 통계 113b</td><td><code>xpm_cdc_handshake</code> (prbs_check, stat_clk)</td></tr>
+<tr><td>FCLK ↔ user</td><td>DMA 송수신 스트림</td><td>axis_data_fifo 비동기 모드(IS_ACLK_ASYNC=1) ×2</td></tr>
+<tr><td>init ↔ user (예외)</td><td>pd_e → GT TXPD/TXELECIDLE, lb_e → LOOPBACK (정적 제어)</td><td>동기화 없음 + <code>set_clock_groups -asynchronous</code> (XDC init_user_async)</td></tr>
+</table>
+<p class="src">XPM CDC 매크로는 자체 <code>set_max_delay -datapath_only</code>/<code>set_bus_skew</code> 제약을 가져온다. XDC의 <code>set_clock_groups -asynchronous</code>(init ↔ user)가 이를 덮지만, handshake·gray·FIFO 구조라 기능 영향은 없다. 대신 이후 RTL 변경 시 <code>report_cdc</code>로 비동기 경로 누락을 별도 확인해야 한다.</p>
+<h3>3.3 링크 기동·리셋 시퀀스 (run 0→1 부터 DMA 시작까지)</h3>
+<figure><svg viewBox="0 0 1180 368" width="100%" role="img" aria-label="리셋 시퀀스">
+<text x="20" y="48" class="lw" fill="#dc2626">C 프로그램 (loopback_test.c)</text>
+<rect x="60" y="56" width="170" height="34" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="145" y="77" text-anchor="middle" class="lt">② run=1 쓰기 (VIO 소유 시 생략)</text>
+<rect x="300" y="56" width="260" height="34" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="430" y="77" text-anchor="middle" class="lt">① channel_up 폴링 — 1 ms × 최대 1000회</text>
+<rect x="640" y="56" width="230" height="34" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="755" y="70" text-anchor="middle" class="lt">10 ms 대기(TX FIFO 리셋 해제)</text>
+<text x="755" y="83" text-anchor="middle" class="lt">+ err_clear 펄스(10 µs)</text>
+<rect x="950" y="56" width="190" height="34" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="1045" y="77" text-anchor="middle" class="lt">③ DMA 리셋 → 프레임 루프 16회</text>
+<text x="20" y="128" class="lw" fill="#b45309">link_ctrl 시퀀서 (init_clk)</text>
+<rect x="60" y="136" width="160" height="34" class="bInit"/>
+<text x="140" y="157" text-anchor="middle" class="lt">run 0→1 엣지 검출</text>
+<rect x="230" y="136" width="140" height="34" class="bInit"/>
+<text x="300" y="157" text-anchor="middle" class="lt">au_gt_reset → 0</text>
+<rect x="380" y="136" width="170" height="34" class="bInit"/>
+<text x="465" y="157" text-anchor="middle" class="lt">RST_DELAY 16384클럭 ≈ 262 µs</text>
+<rect x="560" y="136" width="120" height="34" class="bInit"/>
+<text x="620" y="157" text-anchor="middle" class="lt">au_reset → 0</text>
+<text x="20" y="188" class="lw" fill="#6d28d9">Aurora / GT (gt_reset·reset)</text>
+<rect x="60" y="196" width="160" height="34" class="bGt"/>
+<text x="140" y="217" text-anchor="middle" class="lt">gt_reset=1 유지</text>
+<rect x="230" y="196" width="160" height="34" class="bGt"/>
+<text x="310" y="210" text-anchor="middle" class="lt">GT PLL lock 시도</text>
+<text x="310" y="223" text-anchor="middle" class="lt">(PMA 루프백=2)</text>
+<rect x="430" y="196" width="120" height="34" class="bGt"/>
+<text x="490" y="217" text-anchor="middle" class="lt">lock·채널 정렬</text>
+<rect x="560" y="196" width="130" height="34" class="bGt"/>
+<text x="625" y="210" text-anchor="middle" class="lt">channel_up = 1</text>
+<text x="625" y="223" text-anchor="middle" class="lt">(수십~수백 ms)</text>
+<rect x="700" y="196" width="150" height="34" class="bGt"/>
+<text x="775" y="217" text-anchor="middle" class="lt">sys_reset_out → 0</text>
+<text x="20" y="248" class="lw" fill="#1d4ed8">user_clk 도메인 (데이터 경로)</text>
+<rect x="60" y="256" width="160" height="34" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="4 3"/>
+<text x="140" y="270" text-anchor="middle" class="lt dim">user_clk 정지 상태</text>
+<text x="140" y="283" text-anchor="middle" class="lt dim">(GT 리셋 중)</text>
+<rect x="430" y="256" width="120" height="34" class="bUser"/>
+<text x="490" y="277" text-anchor="middle" class="lt">MMCM lock·클럭 시작</text>
+<rect x="700" y="256" width="130" height="34" class="bUser"/>
+<text x="765" y="277" text-anchor="middle" class="lt">sys_reset 2FF 동기</text>
+<rect x="850" y="256" width="290" height="34" class="bUser"/>
+<text x="995" y="270" text-anchor="middle" class="lt">user_aresetn = 1</text>
+<text x="995" y="283" text-anchor="middle" class="lt">→ pkt·depkt·prbs×2·fifo_rx(s) 해제</text>
+<text x="20" y="308" class="lw" fill="#047857">FCLK 도메인 (PS·DMA·버퍼)</text>
+<rect x="60" y="316" width="230" height="34" class="bFclk"/>
+<text x="175" y="330" text-anchor="middle" class="lt">PS 구성 후 rst_axi 해제</text>
+<text x="175" y="343" text-anchor="middle" class="lt">(ps7_post_config 이후 확정)</text>
+<rect x="850" y="316" width="290" height="34" class="bFclk"/>
+<text x="995" y="330" text-anchor="middle" class="lt">tx_fifo_aresetn = 1 — pll_not_locked=0 且</text>
+<text x="995" y="343" text-anchor="middle" class="lt">255 FCLK(≈2.6 µs) 경과 조건</text>
+<line x1="145" y1="90" x2="145" y2="136" class="eR" marker-end="url(#mR)"/>
+<line x1="300" y1="170" x2="310" y2="196" class="eA" marker-end="url(#mA)"/>
+<line x1="620" y1="170" x2="660" y2="196" class="eA" marker-end="url(#mA)"/>
+<line x1="490" y1="196" x2="490" y2="256" class="eV" marker-end="url(#mV)"/>
+<line x1="640" y1="196" x2="640" y2="90" class="eS" marker-end="url(#mK)"/>
+<text x="648" y="150" class="lt">channel_up → ① 폴링 탈출</text>
+<line x1="775" y1="230" x2="765" y2="256" class="eV" marker-end="url(#mV)"/>
+<line x1="1000" y1="290" x2="1045" y2="90" class="eS" marker-end="url(#mK)"/>
+<text x="1010" y="200" class="lt">user_aresetn 해제 → ③ 진행</text>
+</svg></figure>
+<div class="note"><b>주의 — user_clk이 멈추는 구간:</b> run=0(리셋) 구간, power_down=1 구간. 이때 user_clk 도메인 신호(예: channel_up 동기화기 출력)는 마지막 값을 유지한다. C는 run을 0으로 만드는 경로를 쓰지 않고(VIO 소유), 재기동 시 262 µs 시퀀스와 <code>sys_reset_out</code>을 거쳐 리셋이 다시 걸리므로 안전하다. 링크가 떨어진 상태에서 오래된 channel_up=1이 보일 수 있는 잔여 위험은 이전 분석 참조(마스킹 옵션).</div>
+<p class="src">근거: rtl/link_ctrl.v 96~129행(시퀀서·RST_DELAY=16384, 16ns=62.5MHz), 146~151행(urst 2FF·user_aresetn), 258행(tx_fifo_aresetn 255카운트+pll_not_locked), sw/loopback_test.c 96~124행(폴링 1ms×1000, 10ms 대기, err_clear), PG046 리셋 순서(gt_reset 먼저 해제)</p>
+</section>
+<section id="s4">
+<h2>4. 데이터 경로 — 프레임 1개가 지나는 10단계와 각 구간의 규격</h2>
+<p>C가 <code>MM2S_LENGTH</code>에 1,843,200 B를 쓰는 순간(③) 아래 체인이 자동으로 흐른다. 한 프레임 = 720라인 × 640 beat(32b)이며, packetizer가 라인마다 헤더 1 beat를 붙여 Aurora 프레임 1개(641 beat + CRC)로 만든다. depacketizer가 헤더를 떼어 내면 원래 460,800워드만 S2MM으로 들어가고, EOF 라인의 마지막 beat가 <code>TLAST</code>가 되어 DMA 전송을 끝낸다(④ IOC).</p>
+<figure><svg viewBox="0 0 1180 320" width="100%" role="img" aria-label="데이터 경로">
+<text x="20" y="46" class="lw" fill="#047857">TX 방향 — DDR → Aurora (③에서 시작)</text>
+<rect x="30" y="56" width="90" height="50" class="bPs"/>
+<text x="75" y="76" text-anchor="middle" class="lw">DDR</text>
+<text x="75" y="90" text-anchor="middle" class="lt">src_buf</text>
+<text x="75" y="101" text-anchor="middle" class="lt">1,843,200 B</text>
+<rect x="160" y="56" width="90" height="50" class="bFclk"/>
+<text x="205" y="76" text-anchor="middle" class="lw">MM2S</text>
+<text x="205" y="90" text-anchor="middle" class="lt">HP0 64b 읽기</text>
+<text x="205" y="101" text-anchor="middle" class="lt">burst 64</text>
+<rect x="290" y="56" width="80" height="50" class="bUser"/>
+<text x="330" y="76" text-anchor="middle" class="lw">fifo_tx</text>
+<text x="330" y="90" text-anchor="middle" class="lt">1024w</text>
+<text x="330" y="101" text-anchor="middle" class="lt">◆FCLK→user</text>
+<rect x="410" y="56" width="110" height="50" class="bUser"/>
+<text x="465" y="76" text-anchor="middle" class="lw">pkt_0</text>
+<text x="465" y="90" text-anchor="middle" class="lt">헤더 1beat/라인</text>
+<text x="465" y="101" text-anchor="middle" class="lt">SOF/EOF/번호/라인</text>
+<rect x="560" y="56" width="90" height="50" class="bUser"/>
+<text x="605" y="76" text-anchor="middle" class="lw">prbs_gen</text>
+<text x="605" y="90" text-anchor="middle" class="lt">bypass</text>
+<text x="605" y="101" text-anchor="middle" class="lt">(en=0)</text>
+<rect x="700" y="56" width="110" height="50" class="bUser"/>
+<text x="755" y="76" text-anchor="middle" class="lw">Aurora TX</text>
+<text x="755" y="90" text-anchor="middle" class="lt">32b→직렬화</text>
+<text x="755" y="101" text-anchor="middle" class="lt">8b/10b·CRC</text>
+<rect x="880" y="130" width="140" height="80" class="bGt"/>
+<text x="950" y="156" text-anchor="middle" class="lw">GTP X0Y0</text>
+<text x="950" y="172" text-anchor="middle" class="lt">3.125 Gb/s 직렬</text>
+<text x="950" y="186" text-anchor="middle" class="lt">PMA 루프백</text>
+<text x="950" y="200" text-anchor="middle" class="lt">LOOPBACK=2</text>
+<text x="20" y="236" class="lw" fill="#047857">RX 방향 — Aurora → DDR (⑤에서 검증)</text>
+<rect x="700" y="246" width="110" height="50" class="bUser"/>
+<text x="755" y="266" text-anchor="middle" class="lw">Aurora RX</text>
+<text x="755" y="280" text-anchor="middle" class="lt">프레임 복원</text>
+<text x="755" y="291" text-anchor="middle" class="lt">CRC 검사</text>
+<rect x="560" y="246" width="90" height="50" class="bUser"/>
+<text x="605" y="266" text-anchor="middle" class="lw">prbs_check</text>
+<text x="605" y="280" text-anchor="middle" class="lt">PRBS만 차단</text>
+<text x="605" y="291" text-anchor="middle" class="lt">일반 데이터 통과</text>
+<rect x="410" y="246" width="110" height="50" class="bUser"/>
+<text x="465" y="266" text-anchor="middle" class="lw">depkt_0</text>
+<text x="465" y="280" text-anchor="middle" class="lt">헤더 제거·검사</text>
+<text x="465" y="291" text-anchor="middle" class="lt">순번·길이·오버플로</text>
+<rect x="290" y="246" width="80" height="50" class="bUser"/>
+<text x="330" y="266" text-anchor="middle" class="lw">fifo_rx</text>
+<text x="330" y="280" text-anchor="middle" class="lt">4096w</text>
+<text x="330" y="291" text-anchor="middle" class="lt">◆user→FCLK</text>
+<rect x="160" y="246" width="90" height="50" class="bFclk"/>
+<text x="205" y="266" text-anchor="middle" class="lw">S2MM</text>
+<text x="205" y="280" text-anchor="middle" class="lt">HP0 64b 쓰기</text>
+<text x="205" y="291" text-anchor="middle" class="lt">실측 길이 반환</text>
+<rect x="30" y="246" width="90" height="50" class="bPs"/>
+<text x="75" y="266" text-anchor="middle" class="lw">DDR</text>
+<text x="75" y="280" text-anchor="middle" class="lt">dst_buf</text>
+<text x="75" y="291" text-anchor="middle" class="lt">1,843,456 B</text>
+<line x1="120" y1="81" x2="160" y2="81" class="eG" marker-end="url(#mG)"/>
+<line x1="250" y1="81" x2="290" y2="81" class="eK" marker-end="url(#mK)"/>
+<line x1="370" y1="81" x2="410" y2="81" class="eK" marker-end="url(#mK)"/>
+<line x1="520" y1="81" x2="560" y2="81" class="eK" marker-end="url(#mK)"/>
+<line x1="650" y1="81" x2="700" y2="81" class="eK" marker-end="url(#mK)"/>
+<line x1="700" y1="271" x2="650" y2="271" class="eK" marker-end="url(#mK)"/>
+<line x1="560" y1="271" x2="520" y2="271" class="eK" marker-end="url(#mK)"/>
+<line x1="410" y1="271" x2="370" y2="271" class="eK" marker-end="url(#mK)"/>
+<line x1="290" y1="271" x2="250" y2="271" class="eK" marker-end="url(#mK)"/>
+<line x1="160" y1="271" x2="120" y2="271" class="eG" marker-end="url(#mG)"/>
+<polyline points="810,71 950,71 950,130" class="eV" marker-end="url(#mV)"/>
+<polyline points="950,210 950,246 810,246" class="eV" marker-end="url(#mV)"/>
+<text x="830" y="64" class="lt">3.125 Gb/s</text>
+<text x="830" y="240" class="lt">내부 루프</text>
+<text x="255" y="50" class="lt">32b @FCLK 100MHz (400 MB/s)</text>
+<text x="428" y="50" class="lt">32b @user_clk 78.125MHz</text>
+<text x="262" y="240" class="lt">32b @FCLK — 배출 400 MB/s &gt; 유입 312.5 MB/s → 역압 없음</text>
+<text x="565" y="230" class="lt">user_clk 구간 페이로드 상한 312.5 MB/s (실측 참고 ~309 MB/s)</text>
+</svg></figure>
+<h3>4.1 패킷 형식 — "Aurora 프레임 1개 = 라인 1개" (비디오 프레임 1개 = 720라인)</h3>
+<figure><svg viewBox="0 0 1180 250" width="100%" role="img" aria-label="패킷 형식">
+<text x="20" y="34" class="lt">라인 0 (SOF=1)</text>
+<rect x="110" y="20" width="46" height="22" class="bInit"/>
+<text x="133" y="35" text-anchor="middle" class="lt">HDR</text>
+<rect x="160" y="20" width="40" height="22" fill="#dbeafe" stroke="#1d4ed8"/>
+<rect x="202" y="20" width="40" height="22" fill="#dbeafe" stroke="#1d4ed8"/>
+<rect x="244" y="20" width="40" height="22" fill="#dbeafe" stroke="#1d4ed8"/>
+<text x="296" y="35" class="lt">··· payload 640 beat ···</text>
+<rect x="470" y="20" width="40" height="22" fill="#dbeafe" stroke="#1d4ed8"/>
+<rect x="512" y="20" width="40" height="22" fill="#dbeafe" stroke="#1d4ed8"/>
+<text x="575" y="35" class="lt">→ 다음 라인 프레임이 뒤따름 (역압 없으면 백투백)</text>
+<text x="20" y="84" class="lt">라인 719 (EOF=1)</text>
+<rect x="110" y="70" width="46" height="22" class="bInit"/>
+<text x="133" y="85" text-anchor="middle" class="lt">HDR</text>
+<rect x="160" y="70" width="40" height="22" fill="#dbeafe" stroke="#1d4ed8"/>
+<rect x="202" y="70" width="40" height="22" fill="#dbeafe" stroke="#1d4ed8"/>
+<text x="296" y="85" class="lt">··· 640 beat 중 마지막 beat에만 ···</text>
+<rect x="512" y="70" width="60" height="22" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="542" y="85" text-anchor="middle" class="lt">TLAST</text>
+<text x="590" y="85" class="lt">→ S2MM이 IOC로 전송 완료(④), 길이 1,843,200 B 반환(⑤)</text>
+<text x="20" y="130" class="lw">헤더 워드 (pkt_0 삽입 / depkt_0 검사·제거)</text>
+<rect x="40" y="140" width="1100" height="26" class="bb"/>
+<line x1="177" y1="140" x2="177" y2="166" stroke="#334155"/>
+<line x1="246" y1="140" x2="246" y2="166" stroke="#334155"/>
+<line x1="280" y1="140" x2="280" y2="166" stroke="#334155"/>
+<line x1="314" y1="140" x2="314" y2="166" stroke="#334155"/>
+<line x1="589" y1="140" x2="589" y2="166" stroke="#334155"/>
+<line x1="761" y1="140" x2="761" y2="166" stroke="#334155"/>
+<text x="108" y="157" text-anchor="middle" class="lt">TYPE[31:28]</text>
+<text x="211" y="157" text-anchor="middle" class="lt">FMT[27:26]</text>
+<text x="263" y="157" text-anchor="middle" class="lt">SOF</text>
+<text x="297" y="157" text-anchor="middle" class="lt">EOF</text>
+<text x="451" y="157" text-anchor="middle" class="lt">FRAME_ID[23:16] — 라인마다 +1 (8b wrap)</text>
+<text x="675" y="157" text-anchor="middle" class="lt">예약[15:11]</text>
+<text x="950" y="157" text-anchor="middle" class="lt">LINE[10:0] — 0..719</text>
+<text x="40" y="184" class="lt">bit 31</text>
+<text x="169" y="184" class="lt">27</text>
+<text x="240" y="184" class="lt">25</text>
+<text x="274" y="184" class="lt">24</text>
+<text x="308" y="184" class="lt">23</text>
+<text x="583" y="184" class="lt">15</text>
+<text x="755" y="184" class="lt">10</text>
+<text x="1120" y="184" class="lt">0</text>
+<rect x="40" y="200" width="540" height="34" fill="#fef2f2" stroke="#dc2626" stroke-dasharray="5 4"/>
+<text x="57" y="214" class="lt">RX 이상 감지 시 (depkt_0): 라인 누락·길이 오류·링크 단절이면</text>
+<text x="57" y="227" class="lt">0xDEADBEEF 워드 + TLAST 를 즉시 주입 → DMA는 종료되고 C가 길이 불일치로 FAIL 판정</text>
+<rect x="610" y="200" width="530" height="34" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="5 4"/>
+<text x="627" y="214" class="lt dim">PRBS 모드(vio_prbs_en=1): prbs_gen이 PRBS-31 프레임(TYPE 구분)을 보내고</text>
+<text x="627" y="227" class="lt dim">prbs_check가 이를 차단 → DMA 경로에는 일반 프레임만 남음 (C 실행 전제: en=0)</text>
+</svg></figure>
+<p class="src">근거: rtl/line_packetizer.v 헤더 정의(TYPE/FMT/SOF/EOF/FRAME_ID/LINE, 라인당 헤더 1 beat), rtl/line_depacketizer.v(헤더 제거·순번/길이 검사·0xDEADBEEF 주입), BD 파라미터 H_BEATS=640·V_LINES=720·TLAST_PER_LINE=0, Aurora CRC 활성. 프레임 백투백 전송 시 실제 페이로드률은 헤더 1/641 오버헤드로 ≈312.0 MB/s, 프레임 경계 idle·CRC 로 약간 더 낮아짐(실측 참고 ~309 MB/s)</p>
+</section>
+<section id="s5">
+<h2>5. C 프로그램 실행 흐름 — sw/loopback_test.c 전체 순서도</h2>
+<p>C는 인터럽트 없이 <b>레지스터 쓰기→폴링→메모리 비교</b>만으로 전체 데이터 흐름을 제어한다. 모든 접근은 ①~⑤ 다섯 동작의 반복이며, 오른쪽 상자는 프레임 1개(<code>run_frame</code>)의 내부 순서다.</p>
+<figure><svg viewBox="0 0 1180 700" width="100%" role="img" aria-label="C 실행 흐름">
+<rect x="60" y="20" width="260" height="34" class="bb"/>
+<text x="190" y="41" text-anchor="middle" class="lt">main() — banner: DMA/GPIO 주소·640×720 words</text>
+<rect x="60" y="80" width="260" height="34" class="bb"/>
+<text x="190" y="101" text-anchor="middle" class="lt">① show_status("[boot]") — GPIO1 읽기</text>
+<polygon points="190,140 320,170 190,200 60,170" class="bb"/>
+<text x="190" y="167" text-anchor="middle" class="lt">bit15 PRBS 모드?</text>
+<text x="190" y="180" text-anchor="middle" class="lt">(vio_prbs_en=1)</text>
+<rect x="380" y="153" width="220" height="34" fill="#fee2e2" stroke="#dc2626"/>
+<text x="490" y="174" text-anchor="middle" class="lt">안내 출력 후 종료 (-1)</text>
+<line x1="320" y1="170" x2="380" y2="170" class="eR" marker-end="url(#mR)"/>
+<text x="340" y="162" class="lt">예</text>
+<line x1="190" y1="200" x2="190" y2="230" class="eK" marker-end="url(#mK)"/>
+<text x="198" y="218" class="lt">아니오</text>
+<rect x="60" y="230" width="260" height="40" class="bb"/>
+<text x="190" y="247" text-anchor="middle" class="lt">② link_start(2) — VIO 소유(bit14=1)면</text>
+<text x="190" y="261" text-anchor="middle" class="lt">GPIO 쓰기 생략, "ignored" 메시지만 출력</text>
+<polygon points="190,290 320,320 190,350 60,320" class="bb"/>
+<text x="190" y="317" text-anchor="middle" class="lt">channel_up?</text>
+<text x="190" y="330" text-anchor="middle" class="lt">1 ms 폴링 × 최대 1000</text>
+<rect x="380" y="303" width="220" height="34" fill="#fee2e2" stroke="#dc2626"/>
+<text x="490" y="318" text-anchor="middle" class="lt">"[link] TIMEOUT"</text>
+<text x="490" y="331" text-anchor="middle" class="lt">refclk/loopback 점검 안내 후 종료</text>
+<line x1="320" y1="320" x2="380" y2="320" class="eR" marker-end="url(#mR)"/>
+<text x="340" y="312" class="lt">아니오</text>
+<line x1="190" y1="350" x2="190" y2="380" class="eK" marker-end="url(#mK)"/>
+<text x="198" y="368" class="lt">예</text>
+<rect x="60" y="380" width="260" height="34" class="bb"/>
+<text x="190" y="395" text-anchor="middle" class="lt">"[link] channel_up after ~N ms (loopback=2)"</text>
+<text x="190" y="408" text-anchor="middle" class="lt">10 ms 대기 → err_clear 펄스(10 µs) → ① [link]</text>
+<rect x="60" y="440" width="260" height="34" class="bb"/>
+<text x="190" y="461" text-anchor="middle" class="lt">③ dma_reset — MM2S_DMACR=RESET, 해제 대기</text>
+<rect x="60" y="500" width="260" height="60" class="bb"/>
+<text x="190" y="520" text-anchor="middle" class="lt">for n = 0..15 : run_frame(n)</text>
+<text x="190" y="534" text-anchor="middle" class="lt">— 오른쪽 상자의 a~i 순서 —</text>
+<text x="190" y="548" text-anchor="middle" class="lt">실패 시 fails++ 후 다음 프레임 계속</text>
+<line x1="190" y1="560" x2="190" y2="590" class="eK" marker-end="url(#mK)"/>
+<rect x="60" y="590" width="260" height="60" class="bb"/>
+<text x="190" y="610" text-anchor="middle" class="lt">① show_status("[done]")</text>
+<text x="190" y="624" text-anchor="middle" class="lt">RESULT: PASS ⟺ fails==0 且</text>
+<text x="190" y="638" text-anchor="middle" class="lt">sticky(bits11:4)==0 → "16/16 frames OK"</text>
+<rect x="420" y="470" width="740" height="220" class="bb"/>
+<text x="440" y="492" class="lw">run_frame(n) 내부 순서 (③④⑤)</text>
+<text x="440" y="514" class="lt">a. src_buf[i] = (i×2654435761) ^ seed(n+1) 생성, dst_buf=0 (패턴은 프레임마다 상이)</text>
+<text x="440" y="532" class="lt">b. Xil_DCacheFlushRange(src_buf), (dst_buf) — L1+PL310 L2 모두 반영</text>
+<text x="440" y="550" class="lt">c. W1C 상태 클리어: MM2S/S2MM DMASR ← IOC|ERR_IRQ</text>
+<text x="440" y="568" class="lt">d. ③ S2MM 선무장: DMACR=RS|IOC|ERR, DA=dst_buf, LENGTH=1,843,456</text>
+<text x="440" y="586" class="lt">e. ③ t0=XTime; MM2S 시작: DMACR=RS|IOC|ERR, SA=src_buf, LENGTH=1,843,200</text>
+<text x="440" y="604" class="lt">f. ④ 두 DMASR 폴링 — ERR 즉시 탈출 / IOC 둘 다 확인 / 500 ms 한계(초과 시 TIMEOUT·dma_reset·-1)</text>
+<text x="440" y="622" class="lt">g. ⑤ rx_bytes = S2MM_LENGTH(실수신), Xil_DCacheInvalidateRange(dst_buf)</text>
+<text x="440" y="640" class="lt">h. 460,800워드 비교: mismatch 수·첫 오류 인덱스·기대/실제 값 기록</text>
+<text x="440" y="658" class="lt">i. UART: "[frame n] rx=B mismatch=.. us MB/s (+first@..)" → (rx==1,843,200 且 0) 이면 성공</text>
+<text x="440" y="680" class="lt dim">* 버퍼는 64 B 정렬·dst는 +256 B 여유 → 캐시 라인 오염 없음. HP0 512 KB 제한 회피(0x0010_0000 이상 배치)</text>
+</svg></figure>
+<p class="src">근거: sw/loopback_test.c 76~79행(elapsed_us), 81~94행(show_status), 96~124행(link_start), 126~131행(dma_reset), 133~184행(run_frame), 186~209행(main). 타임아웃: 링크 1 s·프레임 500 ms</p>
+</section>
+<section id="s6">
+<h2>6. 프레임 1개의 시퀀스 — CPU·캐시·DMA·PL·DDR 상호작용</h2>
+<p><code>run_frame</code> 한 번의 시간 순서다. 붉은 점선이 C의 능동 동작, 실선이 하드웨어 데이터 이동이다. <code>t0~t1</code>이 UART에 출력되는 <code>us</code>(전송 시간)의 측정 구간이다.</p>
+<figure><svg viewBox="0 0 1180 620" width="100%" role="img" aria-label="프레임 시퀀스">
+<rect x="60" y="16" width="90" height="30" class="bPs"/><text x="105" y="35" text-anchor="middle" class="lw">Cortex-A9</text>
+<rect x="255" y="16" width="90" height="30" class="bb"/><text x="300" y="35" text-anchor="middle" class="lw">L1/L2 캐시</text>
+<rect x="475" y="16" width="90" height="30" class="bFclk"/><text x="520" y="35" text-anchor="middle" class="lw">axi_dma_0</text>
+<rect x="695" y="16" width="90" height="30" class="bUser"/><text x="740" y="35" text-anchor="middle" class="lw">PL 경로</text>
+<rect x="915" y="16" width="90" height="30" class="bPs"/><text x="960" y="35" text-anchor="middle" class="lw">DDR3</text>
+<line x1="105" y1="46" x2="105" y2="570" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="300" y1="46" x2="300" y2="570" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="520" y1="46" x2="520" y2="570" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="740" y1="46" x2="740" y2="570" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="960" y1="46" x2="960" y2="570" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<text x="30" y="80" class="lt">a</text>
+<path d="M 105 72 q 24 -14 48 0" class="eR" marker-end="url(#mR)"/>
+<text x="165" y="68" class="lt">src_buf 패턴 생성 460,800워드 · dst 0</text>
+<text x="30" y="108" class="lt">b</text>
+<line x1="105" y1="100" x2="300" y2="100" class="eR" marker-end="url(#mR)"/>
+<text x="150" y="94" class="lt">Xil_DCacheFlushRange(src·dst) — 더티 라인 → DDR 강제</text>
+<text x="30" y="140" class="lt">c·d</text>
+<line x1="105" y1="132" x2="520" y2="132" class="eR" marker-end="url(#mR)"/>
+<text x="150" y="126" class="lt">S2MM 무장: DMACR=RS|IOC|ERR → DA=dst → LENGTH=1,843,456  (GP0)</text>
+<text x="30" y="172" class="lt">e</text>
+<line x1="105" y1="164" x2="520" y2="164" class="eR" marker-end="url(#mR)"/>
+<text x="150" y="158" class="lt">MM2S 시작: DMACR=RS|IOC|ERR → SA=src → LENGTH=1,843,200</text>
+<line x1="520" y1="200" x2="960" y2="200" class="eG" marker-end="url(#mG)"/>
+<text x="600" y="194" class="lt">HP0 읽기 버스트 (64beat × 8B, AXI3)</text>
+<line x1="520" y1="232" x2="740" y2="232" class="eK" marker-end="url(#mK)"/>
+<text x="560" y="226" class="lt">M_AXIS_MM2S 32b ◆FCLK→user</text>
+<rect x="660" y="252" width="160" height="96" class="bUser"/>
+<text x="740" y="270" text-anchor="middle" class="lt">fifo_tx(1024w) → pkt_0</text>
+<text x="740" y="284" text-anchor="middle" class="lt">헤더+640beat×720라인</text>
+<text x="740" y="298" text-anchor="middle" class="lt">→ prbs(bypass) → Aurora TX</text>
+<text x="740" y="312" text-anchor="middle" class="lt">→ GTP PMA 루프 → RX</text>
+<text x="740" y="326" text-anchor="middle" class="lt">→ prbs_check → depkt</text>
+<text x="740" y="340" text-anchor="middle" class="lt">→ fifo_rx(4096w) ◆</text>
+<text x="960" y="252" class="lt dim" text-anchor="middle">이 구간 전체가</text>
+<text x="960" y="266" class="lt dim" text-anchor="middle">user_clk 78.125 MHz</text>
+<text x="960" y="280" class="lt dim" text-anchor="middle">payload ~312 MB/s</text>
+<line x1="740" y1="368" x2="520" y2="368" class="eK" marker-end="url(#mK)"/>
+<text x="560" y="362" class="lt">S_AXIS_S2MM 32b — EOF 라인 마지막 beat에 TLAST</text>
+<line x1="520" y1="400" x2="960" y2="400" class="eG" marker-end="url(#mG)"/>
+<text x="620" y="394" class="lt">HP0 쓰기 버스트 → dst_buf</text>
+<line x1="520" y1="424" x2="540" y2="424" class="eK" marker-end="url(#mK)"/>
+<text x="552" y="428" class="lt">MM2S IOC · S2MM IOC (DMASR bit12, W1C)</text>
+<text x="30" y="456" class="lt">f</text>
+<line x1="105" y1="448" x2="520" y2="448" class="eR" stroke-dasharray="4 3" marker-end="url(#mR)"/>
+<text x="150" y="442" class="lt">DMASR 폴링 반복 (④) — ERR(bit6:4) 또는 IOC 둘 다 확인 / 500 ms 한계</text>
+<line x1="520" y1="480" x2="105" y2="480" class="eS" marker-end="url(#mK)"/>
+<text x="230" y="474" class="lt">양쪽 IOC=1 → t1 (elapsed_us = (t1-t0)×1e6 / COUNTS_PER_SECOND)</text>
+<text x="30" y="512" class="lt">g</text>
+<line x1="105" y1="504" x2="520" y2="504" class="eR" marker-end="url(#mR)"/>
+<text x="150" y="498" class="lt">S2MM_LENGTH 읽기 → rx_bytes (정상 1,843,200)</text>
+<text x="30" y="544" class="lt">h·i</text>
+<line x1="105" y1="536" x2="300" y2="536" class="eR" marker-end="url(#mR)"/>
+<text x="140" y="530" class="lt">Invalidate(dst)</text>
+<line x1="105" y1="536" x2="960" y2="536" class="eR" stroke-dasharray="4 3" marker-end="url(#mR)"/>
+<text x="430" y="530" class="lt">460,800워드 비교(⑤) → UART "[frame n] rx=.. mismatch=.. ..us ..MB/s"</text>
+<path d="M 1100 164 L 1100 480" stroke="#dc2626" fill="none" stroke-width="1.5"/>
+<line x1="1092" y1="164" x2="1108" y2="164" stroke="#dc2626" stroke-width="1.5"/>
+<line x1="1092" y1="480" x2="1108" y2="480" stroke="#dc2626" stroke-width="1.5"/>
+<text x="1116" y="320" class="lt" fill="#dc2626" transform="rotate(-90 1116 320)">t0 → t1 측정 구간 (MB/s = FRAME_BYTES/us)</text>
+</svg></figure>
+<p class="src">근거: sw/loopback_test.c 133~184행, PG021 simple 모드 전이(무장→RS→전송→IOC), Xil_DCache*(L1+PL310), XTime(COUNTS_PER_SECOND)</p>
+</section>
+<section id="s7">
+<h2>7. 레지스터·상태 정의와 판정 기준</h2>
+<h3>7.1 주소 맵 (BD 주소 편집기)</h3>
+<table>
+<tr><th>슬레이브</th><th>베이스</th><th>범위</th><th>비고</th></tr>
+<tr><td><code>axi_dma_0/S_AXI_LITE</code></td><td>0x4040_0000</td><td>64 KB</td><td>simple 모드 레지스터만 사용</td></tr>
+<tr><td><code>axi_gpio_link</code></td><td>0x4120_0000</td><td>64 KB</td><td>ch1(0x00) 상태 입력 · ch2(0x08) 제어 출력</td></tr>
+</table>
+<h3>7.2 AXI DMA 레지스터 (PG021, C가 접근하는 것만)</h3>
+<table>
+<tr><th>오프셋</th><th>레지스터</th><th>사용</th></tr>
+<tr><td>0x00 / 0x30</td><td>MM2S/S2MM_DMACR</td><td>RS(bit0) · RESET(bit2) · IOC_IRQEN(bit12) · ERR_IRQEN(bit14)</td></tr>
+<tr><td>0x04 / 0x34</td><td>MM2S/S2MM_DMASR</td><td>Halted(bit0)·Idle(bit1) 은 참고, ERR=0x70(DMAIntErr|SlvErr|DecErr)·IOC(bit12, W1C)</td></tr>
+<tr><td>0x18</td><td>MM2S_SA</td><td>src_buf 물리 주소 (64 B 정렬)</td></tr>
+<tr><td>0x28</td><td>MM2S_LENGTH</td><td>쓰기: 1,843,200 → 전송 시작 트리거</td></tr>
+<tr><td>0x48</td><td>S2MM_DA</td><td>dst_buf 물리 주소 (64 B 정렬)</td></tr>
+<tr><td>0x58</td><td>S2MM_LENGTH</td><td>쓰기: 1,843,456(무장) / 읽기: 실수신 바이트(⑤)</td></tr>
+</table>
+<h3>7.3 AXI GPIO (PG144)</h3>
+<table>
+<tr><th>주소</th><th>채널</th><th>방향</th><th>비트</th></tr>
+<tr><td rowspan="2">0x4120_0000 + 0x00</td><td rowspan="2">ch1 상태</td><td rowspan="2">PL → PS (①)</td><td>아래 7.4 상태 워드 32 bit 전체</td></tr>
+<tr><td>BD 설정 C_ALL_INPUTS=1 → TRI 프로그래밍 불필요</td></tr>
+<tr><td rowspan="2">0x4120_0000 + 0x08</td><td rowspan="2">ch2 제어</td><td rowspan="2">PS → PL (②)</td><td>[0] run · [3:1] loopback · [8] err_clear (C 사용)</td></tr>
+<tr><td>[4] power_down · [5] aux_off (link_ctrl 정의, C는 미사용)</td></tr>
+</table>
+<h3>7.4 상태 워드 (GPIO1 = VIO probe_in0 = link_ctrl vio_status)</h3>
+<table>
+<tr><th>bit</th><th>이름</th><th>의미</th><th>bit</th><th>이름</th><th>의미</th></tr>
+<tr><td>0</td><td>ch_up</td><td>channel_up</td><td>8</td><td>tx_len</td><td rowspan="8">sticky 에러 (err_clear 로 소거):<br>8 pkt 길이·9 rx 순번·10 rx 길이·11 rx 오버플로<br>4 hard·5 soft·6 frame·7 crc (Aurora)</td></tr>
+<tr><td>1</td><td>lane_up</td><td>lane_up</td><td>9</td><td>rx_seq</td></tr>
+<tr><td>2</td><td>pll</td><td>~pll_not_locked</td><td>10</td><td>rx_len</td></tr>
+<tr><td>3</td><td>sysrst</td><td>sys_reset_out</td><td>11</td><td>rx_ovf</td></tr>
+<tr><td>4</td><td>hard</td><td rowspan="4">Aurora 에러 sticky</td><td>12</td><td>emu</td><td>link=emu 빌드</td></tr>
+<tr><td>5</td><td>soft</td><td>13</td><td>run_ack</td><td>~au_reset (리셋 해제)</td></tr>
+<tr><td>6</td><td>frame</td><td>14</td><td>vio_ctrl</td><td>제어 소유 = VIO</td></tr>
+<tr><td>7</td><td>crc</td><td>15</td><td>prbs</td><td>PRBS 모드(DMA 차단)</td></tr>
+<tr><td>23:16</td><td>tx_cnt</td><td>TX 프레임(라인) 수 8b wrap</td><td>31:24</td><td>rx_cnt</td><td>RX 프레임(라인) 수 8b wrap</td></tr>
+</table>
+<h3>7.5 VIO(vio_link) — 현재 기본값 (PL 구성 직후 값)</h3>
+<table>
+<tr><th>probe_out</th><th>초기값</th><th>대상</th><th>probe_in</th><th>내용</th></tr>
+<tr><td>0 ctrl_sel</td><td>1</td><td>link_ctrl (제어 소유)</td><td>0 link_status[31:0]</td><td>위 상태 워드</td></tr>
+<tr><td>1 run</td><td>1</td><td>link_ctrl (자동 기동)</td><td>1 prbs_locked</td><td rowspan="5">prbs_check 통계 (dim)</td></tr>
+<tr><td>2 loopback</td><td>2 (PMA)</td><td>link_ctrl → GT LOOPBACK</td><td>2 stat_kwords</td></tr>
+<tr><td>3 err_clear</td><td>0</td><td>link_ctrl sticky 소거</td><td>3 stat_err_bits</td></tr>
+<tr><td>4 prbs_en</td><td>0</td><td>prbs_gen/check enable</td><td>4 stat_err_words</td></tr>
+<tr><td>5 inject · 6 prbs_clear</td><td>0</td><td>1-bit 주입·카운터 소거</td><td>5 stat_len_errs[15:0]</td></tr>
+</table>
+<h3>7.6 정상 실행 시 UART 출력 예와 판정</h3>
+<pre>=== aurora_cam Z-7015 loopback  DMA=0x40400000 GPIO=0x41200000  640x720 words ===
+[boot] status=0x00006007 ch_up=1 lane_up=1 pll=1 sysrst=0 emu=0 run_ack=1 vio_ctrl=1 prbs=0
+[boot]   err: hard=0 soft=0 frame=0 crc=0 tx_len=0 rx_seq=0 rx_len=0 rx_ovf=0  frames tx=.. rx=..
+[link] control owned by VIO (vio_ctrl_sel=1): GPIO run/loopback ignored
+[link] channel_up after ~0 ms (loopback=2)
+[link] status=0x... (run_ack=1, 에러 0)
+[frame  0] rx=1843200 B  mismatch=0  5946 us  309 MB/s
+[frame  1] rx=1843200 B  mismatch=0  ...           (16회 반복)
+[done] status=0x00006007 ... frames tx=0 rx=0  (아래 주석 참고)
+=== RESULT: PASS (16/16 frames OK, sticky errors none) ===</pre>
+<div class="note"><b>PASS 조건:</b> ① [boot]/[link] 에서 ch_up=1·pll=1·sysrst=0·prbs=0 ② 16프레임 모두 rx=1843200·mismatch=0 ③ [done] sticky(bits11:4)=0.<br>
+<b>실패 시 실마리:</b> ch_up=0 → GT refclk 125 MHz(U9/V9)·clk_50m(Y14) 확인 / sysrst=1 → 링크 재시도 중, 1 s 대기 / rx 짧음+rx_seq → 링크 드롭·0xDEADBEEF 주입 구간 / mismatch+first@ → 데이터 경로(CRC 정상이면 FIFO·캐시 flush 의심) / TIMEOUT·DMASR ERR=0x70 → HP0 접근·주소 정렬 확인.<br>
+<b>보드 실행 전제:</b> Vitis 실행 설정에 Program FPGA·ps7_init·ps7_post_config 포함, XSA에 bitstream 포함(export 시 "Include bitstream"), Hardware Manager에서 VIO 값을 바꾸지 않은 상태.</div>
+<p class="src">근거: rtl/link_ctrl.v 94~107·146~151·200~210행(제어·상태 비트), aurora_cam.bd GPIO/VIO 파라미터·주소 맵, sw/loopback_test.c 59~68·81~94·186~209행, PG021/PG144. 예시 status=0x00006007 = bit0·1·2(ch/lane/pll) + bit13(run_ack) + bit14(vio_ctrl). 16프레임 = 11,520라인 = 45×256 이므로 tx/rx 카운트(8b wrap)는 [done]에서 0으로 돌아온다.</p>
+</section>
+
+<footer style="text-align:center;color:#64748b;font-size:12px;padding:20px">
+aurora_cam_z7015 · docs/system_overview.html · 근거: aurora_cam.bd · rtl/link_ctrl.v · rtl/line_packetizer.v · rtl/line_depacketizer.v · rtl/prbs_gen.v · rtl/prbs_check.v · sw/loopback_test.c · XDC(z7015_aurora_cam.xdc) · PG046/PG021/PG144
+</footer>
+</main>
+</body>
+</html>

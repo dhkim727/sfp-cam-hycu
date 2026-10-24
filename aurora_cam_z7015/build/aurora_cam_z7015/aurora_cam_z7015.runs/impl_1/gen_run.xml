@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z015clg485-2" LaunchTime="1792830728">
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="aurora_cam_wrapper_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="aurora_cam_wrapper_routed.rqs"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="aurora_cam_wrapper.vdi"/>
+  <File Type="BG-DRC" Name="aurora_cam_wrapper.drc"/>
+  <File Type="BG-BGN" Name="aurora_cam_wrapper.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="aurora_cam_wrapper.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="aurora_cam_wrapper.ltx"/>
+  <File Type="PL-LTX-FILE" Name="aurora_cam_wrapper_pld.ltx"/>
+  <File Type="BOOT-LTX-FILE" Name="aurora_cam_wrapper_boot.ltx"/>
+  <File Type="LTX-FILE" Name="aurora_cam_wrapper.ltx"/>
+  <File Type="PL-BIF-FILE" Name="aurora_cam_wrapper_pld.bif"/>
+  <File Type="BOOT-BIF-FILE" Name="aurora_cam_wrapper_boot.bif"/>
+  <File Type="BIF-FILE" Name="aurora_cam_wrapper.bif"/>
+  <File Type="MMI-FILE" Name="aurora_cam_wrapper.mmi"/>
+  <File Type="RBD_FILE" Name="aurora_cam_wrapper.rbd"/>
+  <File Type="NPI_FILE" Name="aurora_cam_wrapper.npi"/>
+  <File Type="PL_UNMASK_RCDO_FILE" Name="aurora_cam_wrapper_pld_unmask.rcdo"/>
+  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="aurora_cam_wrapper_pld_unmask_markers.rcdo"/>
+  <File Type="PL_MASK_RCDO_FILE" Name="aurora_cam_wrapper_pld_mask.rcdo"/>
+  <File Type="PL_MARKER_RCDO_FILE" Name="aurora_cam_wrapper_pld_markers.rcdo"/>
+  <File Type="PL-CLEAR-RCDO-FILE" Name="aurora_cam_wrapper_pld_clear.rcdo"/>
+  <File Type="PL-RCDO-FILE" Name="aurora_cam_wrapper_pld.rcdo"/>
+  <File Type="PL_UNMASK_RNPI_FILE" Name="aurora_cam_wrapper_pld_unmask.rnpi"/>
+  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="aurora_cam_wrapper_pld_shutdown.rnpi"/>
+  <File Type="PL_MASK_RNPI_FILE" Name="aurora_cam_wrapper_pld_mask.rnpi"/>
+  <File Type="PL_MARKER_RNPI_FILE" Name="aurora_cam_wrapper_pld_markers.rnpi"/>
+  <File Type="PL_RNPI_FILE" Name="aurora_cam_wrapper_pld.rnpi"/>
+  <File Type="BOOT_MARKER_RNPI_FILE" Name="aurora_cam_wrapper_boot_markers.rnpi"/>
+  <File Type="BOOT_RNPI_FILE" Name="aurora_cam_wrapper_boot.rnpi"/>
+  <File Type="MARKER-RCDO-FILE" Name="aurora_cam_wrapper_markers.rcdo"/>
+  <File Type="MARKER-RNPI-FILE" Name="aurora_cam_wrapper_markers.rnpi"/>
+  <File Type="RCDO-FILE" Name="aurora_cam_wrapper.rcdo"/>
+  <File Type="RNPI_FILE" Name="aurora_cam_wrapper.rnpi"/>
+  <File Type="CFI_FILE" Name="aurora_cam_wrapper.cfi"/>
+  <File Type="RCFI_FILE" Name="aurora_cam_wrapper.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="aurora_cam_wrapper_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="aurora_cam_wrapper_boot.pdi"/>
+  <File Type="PDI-FILE" Name="aurora_cam_wrapper.pdi"/>
+  <File Type="BITSTR-MMI" Name="aurora_cam_wrapper.mmi"/>
+  <File Type="BITSTR-BMM" Name="aurora_cam_wrapper_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="aurora_cam_wrapper.nky"/>
+  <File Type="BITSTR-RBT" Name="aurora_cam_wrapper.rbt"/>
+  <File Type="BITSTR-MSK" Name="aurora_cam_wrapper.msk"/>
+  <File Type="BG-BIN" Name="aurora_cam_wrapper.bin"/>
+  <File Type="BG-BIT" Name="aurora_cam_wrapper.bit"/>
+  <File Type="NOC_SOLUTION_FILE" Name="aurora_cam_wrapper.ncr"/>
+  <File Type="NOC_TRAFFIC_SPEC_FILE" Name="aurora_cam_wrapper.nts"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="aurora_cam_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="aurora_cam_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="aurora_cam_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="aurora_cam_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="aurora_cam_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="aurora_cam_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="aurora_cam_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="aurora_cam_wrapper_postroute_physopt.dcp"/>
+  <File Type="ROUTE-RQS-PB" Name="aurora_cam_wrapper_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="aurora_cam_wrapper_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="aurora_cam_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="aurora_cam_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="aurora_cam_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="aurora_cam_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="aurora_cam_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="aurora_cam_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="aurora_cam_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="aurora_cam_wrapper_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="aurora_cam_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="aurora_cam_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="aurora_cam_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="aurora_cam_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="aurora_cam_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="aurora_cam_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="aurora_cam_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="aurora_cam_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="aurora_cam_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="aurora_cam_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-UTIL-PB" Name="aurora_cam_wrapper_utilization_routed.pb"/>
+  <File Type="ROUTE-UTIL" Name="aurora_cam_wrapper_utilization_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="aurora_cam_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="aurora_cam_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="aurora_cam_wrapper_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="aurora_cam_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="aurora_cam_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="aurora_cam_wrapper_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="aurora_cam_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="aurora_cam_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="aurora_cam_wrapper_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="aurora_cam_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="aurora_cam_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="aurora_cam_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="aurora_cam_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="aurora_cam_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="aurora_cam_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="aurora_cam_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="aurora_cam_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="aurora_cam_wrapper_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="aurora_cam_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="aurora_cam_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="aurora_cam_wrapper_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="aurora_cam_wrapper_rqa_opted.pb"/>
+  <File Type="OPT-TIMING" Name="aurora_cam_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="aurora_cam_wrapper.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="aurora_cam_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-UTIL-PB" Name="aurora_cam_wrapper_utilization_opted.pb"/>
+  <File Type="OPT-UTIL" Name="aurora_cam_wrapper_utilization_opted.rpt"/>
+  <File Type="OPT-DRC" Name="aurora_cam_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="aurora_cam_wrapper_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="aurora_cam_wrapper_timing_summary_init.rpt"/>
+  <File Type="REPORTS-TCL" Name="aurora_cam_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="aurora_cam_wrapper.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../rtl/link_emu.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/refclk_buf.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/line_packetizer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/line_depacketizer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/link_ctrl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/prbs_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/prbs_check.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/aurora_cam/aurora_cam.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/aurora_cam/hdl/aurora_cam_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="aurora_cam_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/work/aurora_cam_z7015/build/aurora_cam_z7015/z7015_aurora_cam.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/z7015_aurora_cam.xdc"/>
+        <Attr Name="ImportTime" Val="1792815771"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/imports/work/sfp-cam-hycu/vivado-design/constraints/sfp-camrx/design_1/pins.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../sfp-cam-hycu/vivado-design/constraints/sfp-camrx/design_1/pins.xdc"/>
+        <Attr Name="ImportTime" Val="1792168645"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/aurora_cam_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_depkt_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_pkt_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_ps7_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_link_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_aurora_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_prbs_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_prbs_check_0_0"/>
+</GenRun>

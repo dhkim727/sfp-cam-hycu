@@ -1,0 +1,254 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Oct 24 17:22:03 2026
+# Process ID         : 441253
+# Current directory  : /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_depkt_0_0_synth_1
+# Command line       : vivado -log aurora_cam_depkt_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source aurora_cam_depkt_0_0.tcl
+# Log file           : /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_depkt_0_0_synth_1/aurora_cam_depkt_0_0.vds
+# Journal file       : /home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_depkt_0_0_synth_1/vivado.jou
+# Running On         : dhkim-home
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
+# CPU Frequency      : 5410.194 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 67058 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75648 MB
+# Available Virtual  : 62377 MB
+#-----------------------------------------------------------
+source aurora_cam_depkt_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+Command: synth_design -top aurora_cam_depkt_0_0 -part xc7z015clg485-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 442123
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2236.570 ; gain = 482.188 ; free physical = 33906 ; free virtual = 48187
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_depkt_0_0' [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_depkt_0_0/synth/aurora_cam_depkt_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'line_depacketizer' [/home/dhkim/work/aurora_cam_z7015/rtl/line_depacketizer.v:18]
+	Parameter H_BEATS bound to: 640 - type: integer 
+	Parameter V_LINES bound to: 720 - type: integer 
+	Parameter TLAST_PER_LINE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'line_depacketizer' (0#1) [/home/dhkim/work/aurora_cam_z7015/rtl/line_depacketizer.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_depkt_0_0' (0#1) [/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.gen/sources_1/bd/aurora_cam/ip/aurora_cam_depkt_0_0/synth/aurora_cam_depkt_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element o_req_reg was removed.  [/home/dhkim/work/aurora_cam_z7015/rtl/line_depacketizer.v:96]
+WARNING: [Synth 8-6014] Unused sequential element o_data_reg was removed.  [/home/dhkim/work/aurora_cam_z7015/rtl/line_depacketizer.v:97]
+WARNING: [Synth 8-6014] Unused sequential element o_last_reg was removed.  [/home/dhkim/work/aurora_cam_z7015/rtl/line_depacketizer.v:98]
+WARNING: [Synth 8-6014] Unused sequential element o_user_reg was removed.  [/home/dhkim/work/aurora_cam_z7015/rtl/line_depacketizer.v:99]
+WARNING: [Synth 8-6014] Unused sequential element o_pix_reg was removed.  [/home/dhkim/work/aurora_cam_z7015/rtl/line_depacketizer.v:100]
+INFO: [Synth 8-7129] Port s_axis_tkeep[3] in module line_depacketizer is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tkeep[2] in module line_depacketizer is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tkeep[1] in module line_depacketizer is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tkeep[0] in module line_depacketizer is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2337.508 ; gain = 583.125 ; free physical = 34677 ; free virtual = 48935
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2346.414 ; gain = 592.031 ; free physical = 34677 ; free virtual = 48935
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2346.414 ; gain = 592.031 ; free physical = 34677 ; free virtual = 48935
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2346.414 ; gain = 0.000 ; free physical = 34677 ; free virtual = 48935
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2453.152 ; gain = 0.000 ; free physical = 34664 ; free virtual = 48922
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2453.188 ; gain = 0.000 ; free physical = 34664 ; free virtual = 48922
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2453.188 ; gain = 698.805 ; free physical = 34714 ; free virtual = 48974
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2461.156 ; gain = 706.773 ; free physical = 34713 ; free virtual = 48973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2461.156 ; gain = 706.773 ; free physical = 34713 ; free virtual = 48973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2461.156 ; gain = 706.773 ; free physical = 34708 ; free virtual = 48970
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 6     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 43    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3917] design aurora_cam_depkt_0_0 has port m_axis_tkeep[3] driven by constant 1
+INFO: [Synth 8-3917] design aurora_cam_depkt_0_0 has port m_axis_tkeep[2] driven by constant 1
+INFO: [Synth 8-3917] design aurora_cam_depkt_0_0 has port m_axis_tkeep[1] driven by constant 1
+INFO: [Synth 8-3917] design aurora_cam_depkt_0_0 has port m_axis_tkeep[0] driven by constant 1
+INFO: [Synth 8-7129] Port s_axis_tkeep[3] in module aurora_cam_depkt_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tkeep[2] in module aurora_cam_depkt_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tkeep[1] in module aurora_cam_depkt_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tkeep[0] in module aurora_cam_depkt_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2461.156 ; gain = 706.773 ; free physical = 34715 ; free virtual = 48979
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2461.156 ; gain = 706.773 ; free physical = 34715 ; free virtual = 48979
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2461.156 ; gain = 706.773 ; free physical = 34715 ; free virtual = 48979
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2549.969 ; gain = 795.586 ; free physical = 33964 ; free virtual = 48228
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2549.969 ; gain = 795.586 ; free physical = 33964 ; free virtual = 48228
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2549.969 ; gain = 795.586 ; free physical = 33956 ; free virtual = 48220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2549.969 ; gain = 795.586 ; free physical = 33956 ; free virtual = 48220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2549.969 ; gain = 795.586 ; free physical = 33956 ; free virtual = 48220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2549.969 ; gain = 795.586 ; free physical = 33956 ; free virtual = 48220
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     4|
+|2     |LUT1   |     4|
+|3     |LUT2   |    32|
+|4     |LUT3   |     6|
+|5     |LUT4   |    13|
+|6     |LUT5   |    15|
+|7     |LUT6   |    39|
+|8     |FDRE   |    62|
+|9     |FDSE   |    23|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2549.969 ; gain = 795.586 ; free physical = 33956 ; free virtual = 48220
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2549.969 ; gain = 688.812 ; free physical = 33948 ; free virtual = 48211
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2549.977 ; gain = 795.586 ; free physical = 33953 ; free virtual = 48217
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2565.812 ; gain = 0.000 ; free physical = 34011 ; free virtual = 48275
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2718.434 ; gain = 0.000 ; free physical = 34801 ; free virtual = 49063
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 8b185023
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2718.469 ; gain = 1095.977 ; free physical = 34800 ; free virtual = 49063
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1552.235; main = 1552.235; forked = 0.000
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2718.438; main = 2718.438; forked = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2742.445 ; gain = 0.000 ; free physical = 34840 ; free virtual = 49102
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.runs/aurora_cam_depkt_0_0_synth_1/aurora_cam_depkt_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file aurora_cam_depkt_0_0_utilization_synth.rpt -pb aurora_cam_depkt_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 17:22:17 2026...

@@ -1,0 +1,110 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"2.09252",
+   "Default View_TopLeft":"-1241,-559",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 12 -x 5290 -y 860 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 12 -x 5290 -y 890 -defaultsOSRD
+preplace port GT_REFCLK -pg 1 -lvl 0 -x -1050 -y -210 -defaultsOSRD
+preplace port port-id_clk_50m -pg 1 -lvl 0 -x -1050 -y -110 -defaultsOSRD
+preplace portBus gt_txp -pg 1 -lvl 12 -x 5290 -y 370 -defaultsOSRD
+preplace portBus gt_txn -pg 1 -lvl 12 -x 5290 -y 330 -defaultsOSRD
+preplace portBus gt_rxp -pg 1 -lvl 0 -x -1050 -y 1250 -defaultsOSRD
+preplace portBus gt_rxn -pg 1 -lvl 0 -x -1050 -y 630 -defaultsOSRD
+preplace inst ps7 -pg 1 -lvl 11 -x 5040 -y 920 -defaultsOSRD
+preplace inst rst_axi -pg 1 -lvl 6 -x 1490 -y 1750 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 7 -x 3000 -y 40 -defaultsOSRD
+preplace inst axi_gpio_link -pg 1 -lvl 9 -x 4300 -y 1140 -defaultsOSRD
+preplace inst sc_ctrl -pg 1 -lvl 8 -x 3930 -y 1110 -defaultsOSRD
+preplace inst sc_mem -pg 1 -lvl 10 -x 4670 -y 900 -defaultsOSRD
+preplace inst irq_concat -pg 1 -lvl 10 -x 4670 -y 760 -defaultsOSRD
+preplace inst fifo_tx -pg 1 -lvl 4 -x 820 -y 860 -defaultsOSRD
+preplace inst fifo_rx -pg 1 -lvl 4 -x 820 -y 20 -defaultsOSRD
+preplace inst pkt_0 -pg 1 -lvl 4 -x 820 -y 1070 -defaultsOSRD
+preplace inst depkt_0 -pg 1 -lvl 4 -x 820 -y 650 -defaultsOSRD
+preplace inst link_ctrl_0 -pg 1 -lvl 3 -x 230 -y -290 -defaultsOSRD
+preplace inst prbs_gen_0 -pg 1 -lvl 4 -x 820 -y 1270 -defaultsOSRD
+preplace inst prbs_check_0 -pg 1 -lvl 4 -x 820 -y 380 -defaultsOSRD
+preplace inst vio_link -pg 1 -lvl 2 -x -430 -y 1090 -defaultsOSRD
+preplace inst aurora_0 -pg 1 -lvl 2 -x -430 -y -230 -defaultsOSRD
+preplace inst ilconstant_0 -pg 1 -lvl 5 -x 1200 -y -40 -defaultsOSRD
+preplace inst ilconstant_1 -pg 1 -lvl 5 -x 1200 -y 100 -defaultsOSRD
+preplace inst ilconstant_2 -pg 1 -lvl 3 -x 230 -y 50 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x -920 -y -90 -defaultsOSRD
+preplace netloc aurora_0_channel_up 1 2 2 -90 670 N
+preplace netloc aurora_0_crc_pass_fail_n 1 2 1 -110 -410n
+preplace netloc aurora_0_crc_valid 1 2 1 -130 -390n
+preplace netloc aurora_0_frame_err 1 2 2 -170 690 N
+preplace netloc aurora_0_hard_err 1 2 1 -240 -350n
+preplace netloc aurora_0_lane_up 1 2 1 -140 -330n
+preplace netloc aurora_0_soft_err 1 2 1 -160 -290n
+preplace netloc aurora_0_sys_reset_out 1 2 1 -120 -330n
+preplace netloc aurora_0_txn 1 2 10 -180 220 N 220 1100 330 N 330 N 330 N 330 NJ 330 NJ 330 NJ 330 NJ
+preplace netloc aurora_0_txp 1 2 10 -240 530 N 530 1110 370 N 370 N 370 N 370 NJ 370 NJ 370 NJ 370 NJ
+preplace netloc aurora_0_user_clk_out 1 2 2 -190 -590 600
+preplace netloc axi_dma_0_mm2s_introut 1 7 3 N 80 N 80 4480
+preplace netloc axi_dma_0_s2mm_introut 1 7 3 N 100 N 100 4460
+preplace netloc axi_gpio_link_gpio2_io_o 1 2 8 -10 950 N 950 N 950 N 950 N 950 N 950 NJ 950 4440
+preplace netloc depkt_0_err_len 1 2 3 50 170 N 170 1070
+preplace netloc depkt_0_err_ovf 1 2 3 60 160 N 160 1090
+preplace netloc depkt_0_err_seq 1 2 3 30 190 N 190 1030
+preplace netloc depkt_0_frame_cnt 1 2 3 20 540 N 540 1000
+preplace netloc gt_rxn_1 1 0 2 -1030J -160 -700
+preplace netloc gt_rxp_1 1 0 2 -1010J -150 N
+preplace netloc irq_concat_dout 1 10 1 4810 760n
+preplace netloc link_ctrl_0_au_gt_reset 1 1 3 -660 130 N 130 420
+preplace netloc link_ctrl_0_au_loopback 1 1 3 -630 -600 N -600 390
+preplace netloc link_ctrl_0_au_power_down 1 1 3 -670 140 N 140 400
+preplace netloc link_ctrl_0_au_reset 1 1 3 -630 110 N 110 410
+preplace netloc link_ctrl_0_gpio_status 1 3 7 N -370 N -370 N -370 N -370 N -370 NJ -370 4450
+preplace netloc link_ctrl_0_tx_fifo_aresetn 1 3 1 610 -350n
+preplace netloc link_ctrl_0_user_aresetn 1 3 1 580 -210n
+preplace netloc link_status 1 1 3 -690 710 N 710 430
+preplace netloc pkt_0_err_pulse 1 2 3 10 1160 N 1160 1000
+preplace netloc pkt_0_frame_cnt 1 2 3 0 1170 N 1170 1040
+preplace netloc prbs_err_bits 1 1 4 -640 960 N 960 N 960 1080
+preplace netloc prbs_err_words 1 1 4 -620 970 N 970 N 970 1050
+preplace netloc prbs_kwords 1 1 4 -660 750 N 750 N 750 1060
+preplace netloc prbs_len_errs 1 1 4 -650 760 N 760 N 760 1040
+preplace netloc prbs_locked 1 1 4 -630 770 N 770 N 770 1100
+preplace netloc ps7_FCLK_CLK0 1 2 10 70 150 620 990 N 990 1290 1110 2810 1110 3770 1190 4150 1040 4530 990 4830 810 5250
+preplace netloc ps7_FCLK_RESET0_N 1 5 7 1310 1650 NJ 1650 N 1650 NJ 1650 NJ 1650 NJ 1650 5250
+preplace netloc rst_axi_interconnect_aresetn 1 6 4 2830J 1630 3780 930 NJ 930 NJ
+preplace netloc rst_axi_peripheral_aresetn 1 2 7 40 180 N 180 N 180 N 180 2820 1640 N 1640 4160
+preplace netloc vio_ctrl_sel 1 2 1 -150 -450n
+preplace netloc vio_err_clear 1 2 1 -60 -390n
+preplace netloc vio_loopback 1 2 1 -70 -410n
+preplace netloc vio_prbs_clear 1 2 2 -20 450 N
+preplace netloc vio_prbs_en 1 2 2 -30 430 590
+preplace netloc vio_prbs_inject 1 2 2 N 1130 390
+preplace netloc vio_run 1 2 1 -80 -430n
+preplace netloc ilconstant_0_dout 1 1 5 -650 -620 N -620 N -620 N -620 1280
+preplace netloc ilconstant_1_dout 1 1 5 -640 -610 N -610 N -610 N -610 1290
+preplace netloc ilconstant_2_dout 1 1 3 -650 120 N 120 390J
+preplace netloc aurora_0_pll_not_locked_out 1 2 1 -100 -310n
+preplace netloc clk_50m_1 1 0 1 -1020 -110n
+preplace netloc clk_wiz_0_clk_out1 1 1 3 -710 -530 -40 470 N
+preplace netloc aurora_0_USER_DATA_M_AXI_RX 1 2 2 -50 290 N
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 5 630 -100 N -100 N -100 N -100 3170
+preplace netloc axi_dma_0_M_AXI_MM2S 1 7 3 N -20 N -20 4490
+preplace netloc axi_dma_0_M_AXI_S2MM 1 7 3 N 0 N 0 4470
+preplace netloc depkt_0_m_axis 1 3 2 640 -70 1010
+preplace netloc fifo_rx_M_AXIS 1 4 3 N 20 1300 10 N
+preplace netloc fifo_tx_M_AXIS 1 3 2 640 1150 1010
+preplace netloc pkt_0_m_axis 1 3 2 640 1370 1070
+preplace netloc prbs_check_0_m_axis 1 3 2 640 230 1000
+preplace netloc prbs_gen_0_m_axis 1 1 4 -680 950 -240 980 N 980 1020
+preplace netloc ps7_DDR 1 11 1 5270J 860n
+preplace netloc ps7_FIXED_IO 1 11 1 NJ 890
+preplace netloc ps7_M_AXI_GP0 1 7 5 3790 1030 NJ 1030 NJ 1030 NJ 1030 5260
+preplace netloc sc_ctrl_M00_AXI 1 6 3 2830 710 N 710 4070
+preplace netloc sc_ctrl_M01_AXI 1 8 1 N 1120
+preplace netloc sc_mem_M00_AXI 1 10 1 N 900
+preplace netloc GT_REFCLK_1 1 0 2 NJ -210 -830
+levelinfo -pg 1 -1050 -920 -430 230 820 1200 1490 3000 3930 4300 4670 5040 5290
+pagesize -pg 1 -db -bbox -sgen -1180 -630 5410 2050
+"
+}
+0

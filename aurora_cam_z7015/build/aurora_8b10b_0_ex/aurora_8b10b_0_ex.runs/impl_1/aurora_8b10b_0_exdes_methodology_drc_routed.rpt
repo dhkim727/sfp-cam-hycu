@@ -1,0 +1,46 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Sat Oct 24 15:25:23 2026
+| Host         : dhkim-home running 64-bit Ubuntu 24.04.5 LTS
+| Command      : report_methodology -file aurora_8b10b_0_exdes_methodology_drc_routed.rpt -pb aurora_8b10b_0_exdes_methodology_drc_routed.pb -rpx aurora_8b10b_0_exdes_methodology_drc_routed.rpx
+| Design       : aurora_8b10b_0_exdes
+| Device       : xc7z015clg485-2
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 2
++-----------+----------+-------------------------------+--------+
+| Rule      | Severity | Description                   | Checks |
++-----------+----------+-------------------------------+--------+
+| LUTAR-1   | Warning  | LUT drives async reset alert  | 1      |
+| TIMING-18 | Warning  | Missing input or output delay | 1      |
++-----------+----------+-------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell aurora_module_i/inst/aurora_8b10b_0_core_i/gt_wrapper_i/gt_txresetfsm_i/mmcm_adv_inst_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) aurora_module_i/inst/clock_module_i/mmcm_adv_inst/RST. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on GT_RESET_IN relative to the rising and/or falling clock edge(s) of init_clk_i.
+Related violations: <none>
+
+

@@ -1,0 +1,925 @@
+
+*** Running vivado
+    with args -log aurora_8b10b_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source aurora_8b10b_0.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 15:24:30 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source aurora_8b10b_0.tcl -notrace
+Command: synth_design -top aurora_8b10b_0 -part xc7z015clg485-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 106225
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2246.984 ; gain = 479.594 ; free physical = 49072 ; free virtual = 62830
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'clkout0', assumed default net type 'wire' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_clock_module.v:154]
+WARNING: [Synth 8-11065] parameter 'STABLE_CLOCK_PERIOD' becomes localparam in 'aurora_8b10b_0_GT_WRAPPER' with formal parameter declaration list [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_transceiver_wrapper.v:219]
+WARNING: [Synth 8-11065] parameter 'RX_CDRLOCK_TIME' becomes localparam in 'aurora_8b10b_0_GT_WRAPPER' with formal parameter declaration list [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_transceiver_wrapper.v:221]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0.v:52]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_support' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_support.v:52]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_CLOCK_MODULE' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_clock_module.v:61]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95844]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 7.000000e+00 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 6.400000e+00 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 1.400000e+01 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 5.000000e-01 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 7 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 5.000000e-01 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 14 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 5.000000e-01 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 7 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 5.000000e-01 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 1.000000e-02 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95844]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_CLOCK_MODULE' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_clock_module.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_cdc_sync' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_cdc_sync.v:103]
+	Parameter c_cdc_type bound to: 2'b01 
+	Parameter c_flop_input bound to: 1'b0 
+	Parameter c_reset_state bound to: 1'b0 
+	Parameter c_single_bit bound to: 1'b1 
+	Parameter c_vector_width bound to: 6'b000010 
+	Parameter c_mtbf_stages bound to: 3'b101 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_cdc_sync' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_cdc_sync.v:103]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_cdc_sync__parameterized0' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_cdc_sync.v:103]
+	Parameter c_cdc_type bound to: 2'b01 
+	Parameter c_flop_input bound to: 1'b0 
+	Parameter c_reset_state bound to: 1'b0 
+	Parameter c_single_bit bound to: 1'b1 
+	Parameter c_vector_width bound to: 6'b000010 
+	Parameter c_mtbf_stages bound to: 3'b110 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_cdc_sync__parameterized0' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_cdc_sync.v:103]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_SUPPORT_RESET_LOGIC' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_support_reset_logic.v:60]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_cdc_sync__parameterized1' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_cdc_sync.v:103]
+	Parameter c_cdc_type bound to: 2'b01 
+	Parameter c_flop_input bound to: 1'b1 
+	Parameter c_reset_state bound to: 1'b0 
+	Parameter c_single_bit bound to: 1'b1 
+	Parameter c_vector_width bound to: 6'b000010 
+	Parameter c_mtbf_stages bound to: 3'b101 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_cdc_sync__parameterized1' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_cdc_sync.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_SUPPORT_RESET_LOGIC' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_support_reset_logic.v:60]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_gt_common_wrapper' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_gt_common_wrapper.v:55]
+INFO: [Synth 8-6157] synthesizing module 'GTPE2_COMMON' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:60056]
+	Parameter BIAS_CFG bound to: 64'b0000000000000000000000000000000000000000000001010000000000000001 
+	Parameter COMMON_CFG bound to: 0 - type: integer 
+	Parameter PLL0_CFG bound to: 27'b000000111110000001111011100 
+	Parameter PLL0_DMON_CFG bound to: 1'b0 
+	Parameter PLL0_FBDIV bound to: 5 - type: integer 
+	Parameter PLL0_FBDIV_45 bound to: 5 - type: integer 
+	Parameter PLL0_INIT_CFG bound to: 24'b000000000000000000011110 
+	Parameter PLL0_LOCK_CFG bound to: 9'b111101000 
+	Parameter PLL0_REFCLK_DIV bound to: 1 - type: integer 
+	Parameter PLL1_CFG bound to: 27'b000000111110000001111011100 
+	Parameter PLL1_DMON_CFG bound to: 1'b0 
+	Parameter PLL1_FBDIV bound to: 4 - type: integer 
+	Parameter PLL1_FBDIV_45 bound to: 5 - type: integer 
+	Parameter PLL1_INIT_CFG bound to: 24'b000000000000000000011110 
+	Parameter PLL1_LOCK_CFG bound to: 9'b111101000 
+	Parameter PLL1_REFCLK_DIV bound to: 1 - type: integer 
+	Parameter PLL_CLKOUT_CFG bound to: 8'b00000000 
+	Parameter RSVD_ATTR0 bound to: 16'b0000000000000000 
+	Parameter RSVD_ATTR1 bound to: 16'b0000000000000000 
+	Parameter SIM_PLL0REFCLK_SEL bound to: 3'b001 
+	Parameter SIM_PLL1REFCLK_SEL bound to: 3'b001 
+	Parameter SIM_RESET_SPEEDUP bound to: FALSE - type: string 
+	Parameter SIM_VERSION bound to: 2.0 - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'GTPE2_COMMON' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:60056]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_gt_common_wrapper' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_gt_common_wrapper.v:55]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_core' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0_core.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_RESET_LOGIC' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_reset_logic.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_RESET_LOGIC' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_reset_logic.v:60]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_AURORA_LANE_4BYTE' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_aurora_lane_4byte.v:65]
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_LANE_INIT_SM_4BYTE' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_lane_init_sm_4byte.v:62]
+INFO: [Synth 8-6157] synthesizing module 'FDR' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383]
+INFO: [Synth 8-6155] done synthesizing module 'FDR' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_LANE_INIT_SM_4BYTE' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_lane_init_sm_4byte.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_CHBOND_COUNT_DEC_4BYTE' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_chbond_count_dec_4byte.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_CHBOND_COUNT_DEC_4BYTE' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_chbond_count_dec_4byte.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_SYM_GEN_4BYTE' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sym_gen_4byte.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_SYM_GEN_4BYTE' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sym_gen_4byte.v:77]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_SYM_DEC_4BYTE' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sym_dec_4byte.v:64]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sym_dec_4byte.v:248]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sym_dec_4byte.v:260]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sym_dec_4byte.v:272]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sym_dec_4byte.v:284]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sym_dec_4byte.v:296]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sym_dec_4byte.v:308]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sym_dec_4byte.v:320]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sym_dec_4byte.v:332]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_SYM_DEC_4BYTE' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sym_dec_4byte.v:64]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_ERR_DETECT_4BYTE' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_err_detect_4byte.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_ERR_DETECT_4BYTE' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_err_detect_4byte.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_hotplug' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_hotplug.v:51]
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_cdc_sync__parameterized2' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_cdc_sync.v:103]
+	Parameter c_cdc_type bound to: 2'b01 
+	Parameter c_flop_input bound to: 1'b1 
+	Parameter c_reset_state bound to: 1'b0 
+	Parameter c_single_bit bound to: 1'b1 
+	Parameter c_vector_width bound to: 6'b000010 
+	Parameter c_mtbf_stages bound to: 3'b110 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_cdc_sync__parameterized2' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_cdc_sync.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_hotplug' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_hotplug.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_AURORA_LANE_4BYTE' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_aurora_lane_4byte.v:65]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_GT_WRAPPER' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_transceiver_wrapper.v:55]
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+	Parameter SIM_GTRESET_SPEEDUP bound to: FALSE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_tx_startup_fsm' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_tx_startup_fsm.v:76]
+	Parameter GT_TYPE bound to: GTP - type: string 
+	Parameter STABLE_CLOCK_PERIOD bound to: 16 - type: integer 
+	Parameter RETRY_COUNTER_BITWIDTH bound to: 8 - type: integer 
+	Parameter TX_PLL0_USED bound to: TRUE - type: string 
+	Parameter RX_PLL0_USED bound to: TRUE - type: string 
+	Parameter PHASE_ALIGNMENT_MANUAL bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_tx_startup_fsm' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_tx_startup_fsm.v:76]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_rx_startup_fsm' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_rx_startup_fsm.v:74]
+	Parameter EXAMPLE_SIMULATION bound to: 0 - type: integer 
+	Parameter GT_TYPE bound to: GTP - type: string 
+	Parameter STABLE_CLOCK_PERIOD bound to: 16 - type: integer 
+	Parameter RETRY_COUNTER_BITWIDTH bound to: 8 - type: integer 
+	Parameter TX_PLL0_USED bound to: TRUE - type: string 
+	Parameter RX_PLL0_USED bound to: TRUE - type: string 
+	Parameter PHASE_ALIGNMENT_MANUAL bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_rx_startup_fsm' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_rx_startup_fsm.v:74]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_multi_gt' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_multi_gt.v:55]
+	Parameter WRAPPER_SIM_GTRESET_SPEEDUP bound to: FALSE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_gt' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_gt.v:51]
+	Parameter GT_SIM_GTRESET_SPEEDUP bound to: FALSE - type: string 
+	Parameter TXSYNC_OVRD_IN bound to: 1'b0 
+	Parameter TXSYNC_MULTILANE_IN bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'GTPE2_CHANNEL' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:59354]
+	Parameter ACJTAG_DEBUG_MODE bound to: 1'b0 
+	Parameter ACJTAG_MODE bound to: 1'b0 
+	Parameter ACJTAG_RESET bound to: 1'b0 
+	Parameter ADAPT_CFG0 bound to: 20'b00000000000000000000 
+	Parameter ALIGN_COMMA_DOUBLE bound to: FALSE - type: string 
+	Parameter ALIGN_COMMA_ENABLE bound to: 10'b1111111111 
+	Parameter ALIGN_COMMA_WORD bound to: 2 - type: integer 
+	Parameter ALIGN_MCOMMA_DET bound to: TRUE - type: string 
+	Parameter ALIGN_MCOMMA_VALUE bound to: 10'b1010000011 
+	Parameter ALIGN_PCOMMA_DET bound to: TRUE - type: string 
+	Parameter ALIGN_PCOMMA_VALUE bound to: 10'b0101111100 
+	Parameter CBCC_DATA_SOURCE_SEL bound to: DECODED - type: string 
+	Parameter CFOK_CFG bound to: 43'b1001001000000000000000001000000111010000000 
+	Parameter CFOK_CFG2 bound to: 7'b0100000 
+	Parameter CFOK_CFG3 bound to: 7'b0100000 
+	Parameter CFOK_CFG4 bound to: 1'b0 
+	Parameter CFOK_CFG5 bound to: 2'b00 
+	Parameter CFOK_CFG6 bound to: 4'b0000 
+	Parameter CHAN_BOND_KEEP_ALIGN bound to: FALSE - type: string 
+	Parameter CHAN_BOND_MAX_SKEW bound to: 7 - type: integer 
+	Parameter CHAN_BOND_SEQ_1_1 bound to: 10'b0101111100 
+	Parameter CHAN_BOND_SEQ_1_2 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_1_3 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_1_4 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_1_ENABLE bound to: 4'b0001 
+	Parameter CHAN_BOND_SEQ_2_1 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_2_2 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_2_3 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_2_4 bound to: 10'b0000000000 
+	Parameter CHAN_BOND_SEQ_2_ENABLE bound to: 4'b0000 
+	Parameter CHAN_BOND_SEQ_2_USE bound to: FALSE - type: string 
+	Parameter CHAN_BOND_SEQ_LEN bound to: 1 - type: integer 
+	Parameter CLK_COMMON_SWING bound to: 1'b0 
+	Parameter CLK_CORRECT_USE bound to: TRUE - type: string 
+	Parameter CLK_COR_KEEP_IDLE bound to: FALSE - type: string 
+	Parameter CLK_COR_MAX_LAT bound to: 31 - type: integer 
+	Parameter CLK_COR_MIN_LAT bound to: 24 - type: integer 
+	Parameter CLK_COR_PRECEDENCE bound to: TRUE - type: string 
+	Parameter CLK_COR_REPEAT_WAIT bound to: 0 - type: integer 
+	Parameter CLK_COR_SEQ_1_1 bound to: 10'b0111110111 
+	Parameter CLK_COR_SEQ_1_2 bound to: 10'b0111110111 
+	Parameter CLK_COR_SEQ_1_3 bound to: 10'b0111110111 
+	Parameter CLK_COR_SEQ_1_4 bound to: 10'b0111110111 
+	Parameter CLK_COR_SEQ_1_ENABLE bound to: 4'b1111 
+	Parameter CLK_COR_SEQ_2_1 bound to: 10'b0100000000 
+	Parameter CLK_COR_SEQ_2_2 bound to: 10'b0100000000 
+	Parameter CLK_COR_SEQ_2_3 bound to: 10'b0100000000 
+	Parameter CLK_COR_SEQ_2_4 bound to: 10'b0100000000 
+	Parameter CLK_COR_SEQ_2_ENABLE bound to: 4'b1111 
+	Parameter CLK_COR_SEQ_2_USE bound to: FALSE - type: string 
+	Parameter CLK_COR_SEQ_LEN bound to: 4 - type: integer 
+	Parameter DEC_MCOMMA_DETECT bound to: TRUE - type: string 
+	Parameter DEC_PCOMMA_DETECT bound to: TRUE - type: string 
+	Parameter DEC_VALID_COMMA_ONLY bound to: FALSE - type: string 
+	Parameter DMONITOR_CFG bound to: 24'b000000000000101000000000 
+	Parameter ES_CLK_PHASE_SEL bound to: 1'b0 
+	Parameter ES_CONTROL bound to: 6'b000000 
+	Parameter ES_ERRDET_EN bound to: FALSE - type: string 
+	Parameter ES_EYE_SCAN_EN bound to: FALSE - type: string 
+	Parameter ES_HORZ_OFFSET bound to: 12'b000000010000 
+	Parameter ES_PMA_CFG bound to: 10'b0000000000 
+	Parameter ES_PRESCALE bound to: 5'b00000 
+	Parameter ES_QUALIFIER bound to: 80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ES_QUAL_MASK bound to: 80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ES_SDATA_MASK bound to: 80'b00000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ES_VERT_OFFSET bound to: 9'b000000000 
+	Parameter FTS_DESKEW_SEQ_ENABLE bound to: 4'b1111 
+	Parameter FTS_LANE_DESKEW_CFG bound to: 4'b1111 
+	Parameter FTS_LANE_DESKEW_EN bound to: FALSE - type: string 
+	Parameter GEARBOX_MODE bound to: 3'b000 
+	Parameter LOOPBACK_CFG bound to: 1'b0 
+	Parameter OUTREFCLK_SEL_INV bound to: 2'b11 
+	Parameter PCS_PCIE_EN bound to: FALSE - type: string 
+	Parameter PCS_RSVD_ATTR bound to: 48'b000000000000000000000000000000000000000000000000 
+	Parameter PD_TRANS_TIME_FROM_P2 bound to: 12'b000000111100 
+	Parameter PD_TRANS_TIME_NONE_P2 bound to: 8'b00111100 
+	Parameter PD_TRANS_TIME_TO_P2 bound to: 8'b01100100 
+	Parameter PMA_LOOPBACK_CFG bound to: 1'b0 
+	Parameter PMA_RSV bound to: 819 - type: integer 
+	Parameter PMA_RSV2 bound to: 8256 - type: integer 
+	Parameter PMA_RSV3 bound to: 2'b00 
+	Parameter PMA_RSV4 bound to: 4'b0000 
+	Parameter PMA_RSV5 bound to: 1'b0 
+	Parameter PMA_RSV6 bound to: 1'b0 
+	Parameter PMA_RSV7 bound to: 1'b0 
+	Parameter RXBUFRESET_TIME bound to: 5'b00001 
+	Parameter RXBUF_ADDR_MODE bound to: FULL - type: string 
+	Parameter RXBUF_EIDLE_HI_CNT bound to: 4'b1000 
+	Parameter RXBUF_EIDLE_LO_CNT bound to: 4'b0000 
+	Parameter RXBUF_EN bound to: TRUE - type: string 
+	Parameter RXBUF_RESET_ON_CB_CHANGE bound to: TRUE - type: string 
+	Parameter RXBUF_RESET_ON_COMMAALIGN bound to: FALSE - type: string 
+	Parameter RXBUF_RESET_ON_EIDLE bound to: FALSE - type: string 
+	Parameter RXBUF_RESET_ON_RATE_CHANGE bound to: TRUE - type: string 
+	Parameter RXBUF_THRESH_OVFLW bound to: 61 - type: integer 
+	Parameter RXBUF_THRESH_OVRD bound to: FALSE - type: string 
+	Parameter RXBUF_THRESH_UNDFLW bound to: 4 - type: integer 
+	Parameter RXCDRFREQRESET_TIME bound to: 5'b00001 
+	Parameter RXCDRPHRESET_TIME bound to: 5'b00001 
+	Parameter RXCDR_CFG bound to: 83'b00000000000000000010000011111111110001000000110000000000001000001000001000000010000 
+	Parameter RXCDR_FR_RESET_ON_EIDLE bound to: 1'b0 
+	Parameter RXCDR_HOLD_DURING_EIDLE bound to: 1'b0 
+	Parameter RXCDR_LOCK_CFG bound to: 6'b001001 
+	Parameter RXCDR_PH_RESET_ON_EIDLE bound to: 1'b0 
+	Parameter RXDLY_CFG bound to: 16'b0000000000011111 
+	Parameter RXDLY_LCFG bound to: 9'b000110000 
+	Parameter RXDLY_TAP_CFG bound to: 16'b0000000000000000 
+	Parameter RXGEARBOX_EN bound to: FALSE - type: string 
+	Parameter RXISCANRESET_TIME bound to: 5'b00001 
+	Parameter RXLPMRESET_TIME bound to: 7'b0001111 
+	Parameter RXLPM_BIAS_STARTUP_DISABLE bound to: 1'b0 
+	Parameter RXLPM_CFG bound to: 4'b0110 
+	Parameter RXLPM_CFG1 bound to: 1'b0 
+	Parameter RXLPM_CM_CFG bound to: 1'b0 
+	Parameter RXLPM_GC_CFG bound to: 9'b111100010 
+	Parameter RXLPM_GC_CFG2 bound to: 3'b001 
+	Parameter RXLPM_HF_CFG bound to: 14'b00001111110000 
+	Parameter RXLPM_HF_CFG2 bound to: 5'b01010 
+	Parameter RXLPM_HF_CFG3 bound to: 4'b0000 
+	Parameter RXLPM_HOLD_DURING_EIDLE bound to: 1'b0 
+	Parameter RXLPM_INCM_CFG bound to: 1'b1 
+	Parameter RXLPM_IPCM_CFG bound to: 1'b0 
+	Parameter RXLPM_LF_CFG bound to: 18'b000000001111110000 
+	Parameter RXLPM_LF_CFG2 bound to: 5'b01010 
+	Parameter RXLPM_OSINT_CFG bound to: 3'b100 
+	Parameter RXOOB_CFG bound to: 7'b0000110 
+	Parameter RXOOB_CLK_CFG bound to: PMA - type: string 
+	Parameter RXOSCALRESET_TIME bound to: 5'b00011 
+	Parameter RXOSCALRESET_TIMEOUT bound to: 5'b00000 
+	Parameter RXOUT_DIV bound to: 2 - type: integer 
+	Parameter RXPCSRESET_TIME bound to: 5'b00001 
+	Parameter RXPHDLY_CFG bound to: 24'b000010000100000000100000 
+	Parameter RXPH_CFG bound to: 24'b110000000000000000000010 
+	Parameter RXPH_MONITOR_SEL bound to: 5'b00000 
+	Parameter RXPI_CFG0 bound to: 3'b000 
+	Parameter RXPI_CFG1 bound to: 1'b1 
+	Parameter RXPI_CFG2 bound to: 1'b1 
+	Parameter RXPMARESET_TIME bound to: 5'b00011 
+	Parameter RXPRBS_ERR_LOOPBACK bound to: 1'b0 
+	Parameter RXSLIDE_AUTO_WAIT bound to: 7 - type: integer 
+	Parameter RXSLIDE_MODE bound to: OFF - type: string 
+	Parameter RXSYNC_MULTILANE bound to: 1'b0 
+	Parameter RXSYNC_OVRD bound to: 1'b0 
+	Parameter RXSYNC_SKIP_DA bound to: 1'b0 
+	Parameter RX_BIAS_CFG bound to: 16'b0000111100110011 
+	Parameter RX_BUFFER_CFG bound to: 6'b000000 
+	Parameter RX_CLK25_DIV bound to: 5 - type: integer 
+	Parameter RX_CLKMUX_EN bound to: 1'b1 
+	Parameter RX_CM_SEL bound to: 2'b11 
+	Parameter RX_CM_TRIM bound to: 4'b1010 
+	Parameter RX_DATA_WIDTH bound to: 40 - type: integer 
+	Parameter RX_DDI_SEL bound to: 6'b000000 
+	Parameter RX_DEBUG_CFG bound to: 14'b00000000000000 
+	Parameter RX_DEFER_RESET_BUF_EN bound to: TRUE - type: string 
+	Parameter RX_DISPERR_SEQ_MATCH bound to: TRUE - type: string 
+	Parameter RX_OS_CFG bound to: 13'b0000010000000 
+	Parameter RX_SIG_VALID_DLY bound to: 10 - type: integer 
+	Parameter RX_XCLK_SEL bound to: RXREC - type: string 
+	Parameter SAS_MAX_COM bound to: 64 - type: integer 
+	Parameter SAS_MIN_COM bound to: 36 - type: integer 
+	Parameter SATA_BURST_SEQ_LEN bound to: 4'b0101 
+	Parameter SATA_BURST_VAL bound to: 3'b100 
+	Parameter SATA_EIDLE_VAL bound to: 3'b100 
+	Parameter SATA_MAX_BURST bound to: 8 - type: integer 
+	Parameter SATA_MAX_INIT bound to: 21 - type: integer 
+	Parameter SATA_MAX_WAKE bound to: 7 - type: integer 
+	Parameter SATA_MIN_BURST bound to: 4 - type: integer 
+	Parameter SATA_MIN_INIT bound to: 12 - type: integer 
+	Parameter SATA_MIN_WAKE bound to: 4 - type: integer 
+	Parameter SATA_PLL_CFG bound to: VCO_3000MHZ - type: string 
+	Parameter SHOW_REALIGN_COMMA bound to: TRUE - type: string 
+	Parameter SIM_RECEIVER_DETECT_PASS bound to: TRUE - type: string 
+	Parameter SIM_RESET_SPEEDUP bound to: FALSE - type: string 
+	Parameter SIM_TX_EIDLE_DRIVE_LEVEL bound to: X - type: string 
+	Parameter SIM_VERSION bound to: 2.0 - type: string 
+	Parameter TERM_RCAL_CFG bound to: 15'b100001000010000 
+	Parameter TERM_RCAL_OVRD bound to: 3'b000 
+	Parameter TRANS_TIME_RATE bound to: 8'b00001110 
+	Parameter TST_RSV bound to: 0 - type: integer 
+	Parameter TXBUF_EN bound to: TRUE - type: string 
+	Parameter TXBUF_RESET_ON_RATE_CHANGE bound to: TRUE - type: string 
+	Parameter TXDLY_CFG bound to: 16'b0000000000011111 
+	Parameter TXDLY_LCFG bound to: 9'b000110000 
+	Parameter TXDLY_TAP_CFG bound to: 16'b0000000000000000 
+	Parameter TXGEARBOX_EN bound to: FALSE - type: string 
+	Parameter TXOOB_CFG bound to: 1'b0 
+	Parameter TXOUT_DIV bound to: 2 - type: integer 
+	Parameter TXPCSRESET_TIME bound to: 5'b00001 
+	Parameter TXPHDLY_CFG bound to: 24'b000010000100000000100000 
+	Parameter TXPH_CFG bound to: 16'b0000011110000000 
+	Parameter TXPH_MONITOR_SEL bound to: 5'b00000 
+	Parameter TXPI_CFG0 bound to: 2'b00 
+	Parameter TXPI_CFG1 bound to: 2'b00 
+	Parameter TXPI_CFG2 bound to: 2'b00 
+	Parameter TXPI_CFG3 bound to: 1'b0 
+	Parameter TXPI_CFG4 bound to: 1'b0 
+	Parameter TXPI_CFG5 bound to: 3'b000 
+	Parameter TXPI_GREY_SEL bound to: 1'b0 
+	Parameter TXPI_INVSTROBE_SEL bound to: 1'b0 
+	Parameter TXPI_PPMCLK_SEL bound to: TXUSRCLK2 - type: string 
+	Parameter TXPI_PPM_CFG bound to: 8'b00000000 
+	Parameter TXPI_SYNFREQ_PPM bound to: 3'b000 
+	Parameter TXPMARESET_TIME bound to: 5'b00001 
+	Parameter TXSYNC_MULTILANE bound to: 1'b0 
+	Parameter TXSYNC_OVRD bound to: 1'b0 
+	Parameter TXSYNC_SKIP_DA bound to: 1'b0 
+	Parameter TX_CLK25_DIV bound to: 5 - type: integer 
+	Parameter TX_CLKMUX_EN bound to: 1'b1 
+	Parameter TX_DATA_WIDTH bound to: 40 - type: integer 
+	Parameter TX_DEEMPH0 bound to: 6'b000000 
+	Parameter TX_DEEMPH1 bound to: 6'b000000 
+	Parameter TX_DRIVE_MODE bound to: DIRECT - type: string 
+	Parameter TX_EIDLE_ASSERT_DELAY bound to: 3'b110 
+	Parameter TX_EIDLE_DEASSERT_DELAY bound to: 3'b100 
+	Parameter TX_LOOPBACK_DRIVE_HIZ bound to: FALSE - type: string 
+	Parameter TX_MAINCURSOR_SEL bound to: 1'b0 
+	Parameter TX_MARGIN_FULL_0 bound to: 7'b1001110 
+	Parameter TX_MARGIN_FULL_1 bound to: 7'b1001001 
+	Parameter TX_MARGIN_FULL_2 bound to: 7'b1000101 
+	Parameter TX_MARGIN_FULL_3 bound to: 7'b1000010 
+	Parameter TX_MARGIN_FULL_4 bound to: 7'b1000000 
+	Parameter TX_MARGIN_LOW_0 bound to: 7'b1000110 
+	Parameter TX_MARGIN_LOW_1 bound to: 7'b1000100 
+	Parameter TX_MARGIN_LOW_2 bound to: 7'b1000010 
+	Parameter TX_MARGIN_LOW_3 bound to: 7'b1000000 
+	Parameter TX_MARGIN_LOW_4 bound to: 7'b1000000 
+	Parameter TX_PREDRIVER_MODE bound to: 1'b0 
+	Parameter TX_RXDETECT_CFG bound to: 14'b01100000110010 
+	Parameter TX_RXDETECT_REF bound to: 3'b100 
+	Parameter TX_XCLK_SEL bound to: TXOUT - type: string 
+	Parameter UCODEER_CLR bound to: 1'b0 
+	Parameter USE_PCS_CLK_PHASE_SEL bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'GTPE2_CHANNEL' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:59354]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_gtrxreset_seq' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_gtrxreset_seq.v:54]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_gtrxreset_seq.v:237]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_gtrxreset_seq.v:298]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_gtrxreset_seq' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_gtrxreset_seq.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_gt' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_gt.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_multi_gt' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_multi_gt.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_GT_WRAPPER' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_transceiver_wrapper.v:55]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_GLOBAL_LOGIC' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_global_logic.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_CHANNEL_INIT_SM' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_channel_init_sm.v:79]
+INFO: [Synth 8-6157] synthesizing module 'FD' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49155]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'FD' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49155]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_CHANNEL_INIT_SM' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_channel_init_sm.v:79]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_IDLE_AND_VER_GEN' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_idle_and_ver_gen.v:65]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318]
+	Parameter INIT bound to: 16'b0000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:165318]
+INFO: [Synth 8-6157] synthesizing module 'FD__parameterized0' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49155]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FD__parameterized0' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49155]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_IDLE_AND_VER_GEN' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_idle_and_ver_gen.v:65]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_CHANNEL_ERR_DETECT' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_channel_err_detect.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_CHANNEL_ERR_DETECT' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_channel_err_detect.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_GLOBAL_LOGIC' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_global_logic.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_AXI_TO_LL' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_axi_to_ll.v:61]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STRB_WIDTH bound to: 4 - type: integer 
+	Parameter USE_4_NFC bound to: 0 - type: integer 
+	Parameter REM_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_AXI_TO_LL' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_axi_to_ll.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_STANDARD_CC_MODULE' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_standard_cc_module.v:64]
+	Parameter CC_FREQ_FACTOR bound to: 5'b01100 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_STANDARD_CC_MODULE' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_standard_cc_module.v:64]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_TX_LL' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_tx_ll.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_TX_LL_DATAPATH' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_tx_ll_datapath.v:62]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_tx_ll_datapath.v:194]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_tx_ll_datapath.v:237]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_TX_LL_DATAPATH' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_tx_ll_datapath.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_TX_LL_CONTROL' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_tx_ll_control.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_TX_LL_CONTROL' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_tx_ll_control.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_TX_LL' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_tx_ll.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_LL_TO_AXI' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_ll_to_axi.v:61]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STRB_WIDTH bound to: 4 - type: integer 
+	Parameter REM_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_LL_TO_AXI' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_ll_to_axi.v:61]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_RX_LL' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_rx_ll.v:64]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_RX_LL_PDU_DATAPATH' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_rx_ll_pdu_datapath.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_RX_LL_DEFRAMER' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_rx_ll_deframer.v:64]
+INFO: [Synth 8-6157] synthesizing module 'MUXCY' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104847]
+INFO: [Synth 8-6155] done synthesizing module 'MUXCY' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104847]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_RX_LL_DEFRAMER' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_rx_ll_deframer.v:64]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_LEFT_ALIGN_CONTROL' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_left_align_control.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_LEFT_ALIGN_CONTROL' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_left_align_control.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_VALID_DATA_COUNTER' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_valid_data_counter.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_VALID_DATA_COUNTER' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_valid_data_counter.v:70]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_LEFT_ALIGN_MUX' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_left_align_mux.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_LEFT_ALIGN_MUX' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_left_align_mux.v:67]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_STORAGE_COUNT_CONTROL' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_storage_count_control.v:62]
+INFO: [Synth 8-226] default block is never used [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_storage_count_control.v:116]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_STORAGE_COUNT_CONTROL' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_storage_count_control.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_STORAGE_CE_CONTROL' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_storage_ce_control.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_STORAGE_CE_CONTROL' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_storage_ce_control.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_STORAGE_SWITCH_CONTROL' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_storage_switch_control.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_STORAGE_SWITCH_CONTROL' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_storage_switch_control.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_OUTPUT_SWITCH_CONTROL' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_output_switch_control.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_OUTPUT_SWITCH_CONTROL' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_output_switch_control.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_SIDEBAND_OUTPUT' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sideband_output.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_SIDEBAND_OUTPUT' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sideband_output.v:63]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_STORAGE_MUX' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_storage_mux.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_STORAGE_MUX' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_storage_mux.v:64]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_0_OUTPUT_MUX' [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_output_mux.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_OUTPUT_MUX' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_output_mux.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_RX_LL_PDU_DATAPATH' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_rx_ll_pdu_datapath.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_RX_LL' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_rx_ll.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_core' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0_core.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0_support' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_support.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_0' (0#1) [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0.v:52]
+WARNING: [Synth 8-6014] Unused sequential element prev_char_was_comma_r_reg was removed.  [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_lane_init_sm_4byte.v:367]
+INFO: [Synth 8-3936] Found unconnected internal register 'link_reset_r_reg' and it is trimmed from '2' to '1' bits. [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_hotplug.v:185]
+INFO: [Synth 8-6014] Unused sequential element time_out_500us_reg was removed.  [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_rx_startup_fsm.v:395]
+INFO: [Synth 8-6014] Unused sequential element pll_reset_asserted_reg was removed.  [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_rx_startup_fsm.v:681]
+WARNING: [Synth 8-6014] Unused sequential element drp_busy_i2_reg was removed.  [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_gt.v:896]
+INFO: [Synth 8-6014] Unused sequential element rxfsm_rxresetdone_r1_reg was removed.  [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/gt/aurora_8b10b_0_transceiver_wrapper.v:346]
+WARNING: [Synth 8-3936] Found unconnected internal register 'rx_rem_c_reg' and it is trimmed from '3' to '2' bits. [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0/src/aurora_8b10b_0_sideband_output.v:276]
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[16] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[17] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[18] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[19] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[20] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[21] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[22] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[23] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[24] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[25] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[26] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[27] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[28] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[29] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[30] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LEFT_ALIGNED_DATA[31] in module aurora_8b10b_0_OUTPUT_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LL_IP_SOF_N in module aurora_8b10b_0_LL_TO_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TX_REM[0] in module aurora_8b10b_0_TX_LL_CONTROL is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TX_REM[1] in module aurora_8b10b_0_TX_LL_CONTROL is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WARN_CC in module aurora_8b10b_0_TX_LL_CONTROL is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PLL_NOT_LOCKED in module aurora_8b10b_0_STANDARD_CC_MODULE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CH_BOND_DONE in module aurora_8b10b_0_CHANNEL_INIT_SM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CHANNEL_BOND_LOAD in module aurora_8b10b_0_CHANNEL_INIT_SM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GOT_A[0] in module aurora_8b10b_0_CHANNEL_INIT_SM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GOT_A[1] in module aurora_8b10b_0_CHANNEL_INIT_SM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GOT_A[2] in module aurora_8b10b_0_CHANNEL_INIT_SM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GOT_A[3] in module aurora_8b10b_0_CHANNEL_INIT_SM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module aurora_8b10b_0_cdc_sync__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module aurora_8b10b_0_cdc_sync__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module aurora_8b10b_0_cdc_sync__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scndry_rst_n in module aurora_8b10b_0_cdc_sync__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module aurora_8b10b_0_cdc_sync__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module aurora_8b10b_0_cdc_sync__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module aurora_8b10b_0_cdc_sync__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module aurora_8b10b_0_cdc_sync__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scndry_rst_n in module aurora_8b10b_0_cdc_sync__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module aurora_8b10b_0_cdc_sync__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module aurora_8b10b_0_cdc_sync__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module aurora_8b10b_0_cdc_sync__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scndry_rst_n in module aurora_8b10b_0_cdc_sync__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_aclk in module aurora_8b10b_0_cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module aurora_8b10b_0_cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module aurora_8b10b_0_cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module aurora_8b10b_0_cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scndry_rst_n in module aurora_8b10b_0_cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PLL0REFCLKLOST in module aurora_8b10b_0_rx_startup_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PLL1REFCLKLOST in module aurora_8b10b_0_rx_startup_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PLL0REFCLKLOST in module aurora_8b10b_0_tx_startup_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PLL1REFCLKLOST in module aurora_8b10b_0_tx_startup_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENCHANSYNC_IN in module aurora_8b10b_0_GT_WRAPPER is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RXRESET_IN in module aurora_8b10b_0_GT_WRAPPER is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REFCLK in module aurora_8b10b_0_GT_WRAPPER is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TXRESET_IN in module aurora_8b10b_0_GT_WRAPPER is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RXFSM_DATA_VALID in module aurora_8b10b_0_GT_WRAPPER is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RX_SP in module aurora_8b10b_0_hotplug is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RX_SPA in module aurora_8b10b_0_hotplug is either unconnected or has no load
+WARNING: [Synth 8-7129] Port HPCNT_RESET in module aurora_8b10b_0_hotplug is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RX_CHAR_IS_COMMA[3] in module aurora_8b10b_0_SYM_DEC_4BYTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RX_CHAR_IS_COMMA[2] in module aurora_8b10b_0_SYM_DEC_4BYTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RX_CHAR_IS_COMMA[1] in module aurora_8b10b_0_SYM_DEC_4BYTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RX_CHAR_IS_COMMA[0] in module aurora_8b10b_0_SYM_DEC_4BYTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RESET in module aurora_8b10b_0_SYM_DEC_4BYTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RESET in module aurora_8b10b_0_SYM_GEN_4BYTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CHANNEL_UP in module aurora_8b10b_0_AURORA_LANE_4BYTE is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2360.922 ; gain = 593.531 ; free physical = 48934 ; free virtual = 62692
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2360.922 ; gain = 593.531 ; free physical = 48934 ; free virtual = 62692
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2360.922 ; gain = 593.531 ; free physical = 48934 ; free virtual = 62692
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2363.891 ; gain = 0.000 ; free physical = 48934 ; free virtual = 62692
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0.xdc] for cell 'inst'
+Parsing XDC File [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.runs/aurora_8b10b_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.runs/aurora_8b10b_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0_clocks.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.gen/sources_1/ip/aurora_8b10b_0/aurora_8b10b_0_clocks.xdc] for cell 'inst'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2467.355 ; gain = 0.000 ; free physical = 48937 ; free virtual = 62696
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 17 instances were transformed.
+  FD => FDRE: 14 instances
+  FDR => FDRE: 2 instances
+  SRL16 => SRL16E: 1 instance 
+
+INFO: [Timing 38-2] Deriving generated clocks
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2467.391 ; gain = 0.000 ; free physical = 48937 ; free virtual = 62696
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2467.391 ; gain = 700.000 ; free physical = 48967 ; free virtual = 62726
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2475.359 ; gain = 707.969 ; free physical = 48967 ; free virtual = 62726
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2475.359 ; gain = 707.969 ; free physical = 48967 ; free virtual = 62726
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'aurora_8b10b_0_tx_startup_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'aurora_8b10b_0_rx_startup_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'aurora_8b10b_0_gtrxreset_seq'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                             0000 |                             0000
+       ASSERT_ALL_RESETS |                             0001 |                             0001
+       WAIT_FOR_PLL_LOCK |                             0010 |                             0010
+       RELEASE_PLL_RESET |                             0011 |                             0011
+       WAIT_FOR_TXOUTCLK |                             0100 |                             0100
+      RELEASE_MMCM_RESET |                             0101 |                             0101
+       WAIT_FOR_TXUSRCLK |                             0110 |                             0110
+         WAIT_RESET_DONE |                             0111 |                             0111
+      DO_PHASE_ALIGNMENT |                             1000 |                             1000
+          RESET_FSM_DONE |                             1001 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'tx_state_reg' using encoding 'sequential' in module 'aurora_8b10b_0_tx_startup_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                             0000 |                             0000
+       ASSERT_ALL_RESETS |                             0001 |                             0001
+       WAIT_FOR_PLL_LOCK |                             0010 |                             0010
+       RELEASE_PLL_RESET |                             0011 |                             0011
+    VERIFY_RECCLK_STABLE |                             0100 |                             0100
+      RELEASE_MMCM_RESET |                             0101 |                             0101
+       WAIT_FOR_RXUSRCLK |                             0110 |                             0110
+         WAIT_RESET_DONE |                             0111 |                             0111
+      DO_PHASE_ALIGNMENT |                             1000 |                             1000
+      MONITOR_DATA_VALID |                             1001 |                             1001
+                FSM_DONE |                             1010 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'sequential' in module 'aurora_8b10b_0_rx_startup_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                         00000010 |                              000
+                  drp_rd |                         10000000 |                              001
+            wait_rd_data |                         01000000 |                              010
+                   wr_16 |                         00100000 |                              011
+           wait_wr_done1 |                         00010000 |                              100
+           wait_pmareset |                         00001000 |                              101
+                   wr_20 |                         00000100 |                              110
+           wait_wr_done2 |                         00000001 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'aurora_8b10b_0_gtrxreset_seq'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2475.359 ; gain = 707.969 ; free physical = 48951 ; free virtual = 62713
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 5     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 5     
+	   2 Input    2 Bit       Adders := 4     
+	   5 Input    2 Bit       Adders := 1     
+	   3 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+	   3 Input      1 Bit         XORs := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               96 Bit    Registers := 1     
+	               32 Bit    Registers := 11    
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 8     
+	               15 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 23    
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 13    
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 29    
+	                1 Bit    Registers := 379   
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 12    
+	   8 Input   16 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 4     
+	   8 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 5     
+	  10 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 11    
+	  11 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   7 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   5 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 6     
+	   7 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 37    
+	  10 Input    1 Bit        Muxes := 17    
+	  11 Input    1 Bit        Muxes := 18    
+	   8 Input    1 Bit        Muxes := 5     
+	   6 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port LL_IP_SOF_N in module aurora_8b10b_0_LL_TO_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WARN_CC in module aurora_8b10b_0_TX_LL is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CH_BOND_DONE in module aurora_8b10b_0_GLOBAL_LOGIC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CHANNEL_BOND_LOAD in module aurora_8b10b_0_GLOBAL_LOGIC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GOT_A[0] in module aurora_8b10b_0_GLOBAL_LOGIC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GOT_A[1] in module aurora_8b10b_0_GLOBAL_LOGIC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GOT_A[2] in module aurora_8b10b_0_GLOBAL_LOGIC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GOT_A[3] in module aurora_8b10b_0_GLOBAL_LOGIC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PLL0REFCLKLOST in module aurora_8b10b_0_rx_startup_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PLL1REFCLKLOST in module aurora_8b10b_0_rx_startup_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PLL0REFCLKLOST in module aurora_8b10b_0_tx_startup_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PLL1REFCLKLOST in module aurora_8b10b_0_tx_startup_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENCHANSYNC_IN in module aurora_8b10b_0_GT_WRAPPER is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RXRESET_IN in module aurora_8b10b_0_GT_WRAPPER is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REFCLK in module aurora_8b10b_0_GT_WRAPPER is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TXRESET_IN in module aurora_8b10b_0_GT_WRAPPER is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RXFSM_DATA_VALID in module aurora_8b10b_0_GT_WRAPPER is either unconnected or has no load
+WARNING: [Synth 8-7129] Port HPCNT_RESET in module aurora_8b10b_0_AURORA_LANE_4BYTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CHANNEL_UP in module aurora_8b10b_0_AURORA_LANE_4BYTE is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RESET_SYMGEN in module aurora_8b10b_0_AURORA_LANE_4BYTE is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2475.359 ; gain = 707.969 ; free physical = 48930 ; free virtual = 62692
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2543.359 ; gain = 775.969 ; free physical = 48864 ; free virtual = 62639
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2548.359 ; gain = 780.969 ; free physical = 48857 ; free virtual = 62631
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2576.406 ; gain = 809.016 ; free physical = 48841 ; free virtual = 62616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2741.219 ; gain = 973.828 ; free physical = 48711 ; free virtual = 62486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2741.219 ; gain = 973.828 ; free physical = 48711 ; free virtual = 62486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2741.219 ; gain = 973.828 ; free physical = 48711 ; free virtual = 62486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2741.219 ; gain = 973.828 ; free physical = 48711 ; free virtual = 62486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2741.219 ; gain = 973.828 ; free physical = 48711 ; free virtual = 62486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2741.219 ; gain = 973.828 ; free physical = 48711 ; free virtual = 62486
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-----------------------+-------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name            | RTL Name                                                                                                          | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-----------------------+-------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/aurora_8b10b_0_aurora_lane_4byte_0_i/aurora_8b10b_0_lane_init_sm_4byte_i/counter4_r_reg[15] | 16     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/aurora_8b10b_0_aurora_lane_4byte_0_i/aurora_8b10b_0_lane_init_sm_4byte_i/counter3_r_reg[3]  | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/aurora_8b10b_0_aurora_lane_4byte_0_i/aurora_8b10b_0_lane_init_sm_4byte_i/counter5_r_reg[15] | 16     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/aurora_8b10b_0_aurora_lane_4byte_0_i/aurora_8b10b_0_lane_init_sm_4byte_i/counter2_r_reg[15] | 15     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/gt_wrapper_i/rxfsm_rxresetdone_r_reg                                                        | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/gt_wrapper_i/txfsm_txresetdone_r_reg                                                        | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/aurora_8b10b_0_global_logic_i/channel_init_sm_i/v_count_r_reg[15]                           | 16     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/aurora_8b10b_0_global_logic_i/channel_init_sm_i/rxver_count_r_reg[2]                        | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/aurora_8b10b_0_global_logic_i/channel_init_sm_i/txver_count_r_reg[7]                        | 8      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/aurora_8b10b_0_global_logic_i/channel_init_sm_i/verify_watchdog_r_reg[15]                   | 16     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/aurora_8b10b_0_rx_ll_i/rx_ll_pdu_datapath_i/stage_2_data_r_reg[0]                           | 4      | 32    | NO           | NO                 | YES               | 32     | 0       | 
+|aurora_8b10b_0_support | gt_common_support/cpllpd_quad0_wait_reg[95]                                                                       | 96     | 1     | NO           | NO                 | YES               | 0      | 3       | 
+|aurora_8b10b_0_support | gt_common_support/cpllreset_quad0_wait_reg[127]                                                                   | 128    | 1     | NO           | NO                 | YES               | 0      | 4       | 
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/standard_cc_module_i/count_13d_srl_r_reg[11]                                                | 13     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|aurora_8b10b_0_support | aurora_8b10b_0_core_i/standard_cc_module_i/prepare_count_r_reg[9]                                                 | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++-----------------------+-------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |BUFG          |     3|
+|2     |CARRY4        |    45|
+|3     |GTPE2_CHANNEL |     1|
+|4     |GTPE2_COMMON  |     1|
+|5     |LUT1          |   684|
+|6     |LUT2          |    65|
+|7     |LUT3          |   137|
+|8     |LUT4          |   140|
+|9     |LUT5          |   111|
+|10    |LUT6          |   170|
+|11    |MMCME2_ADV    |     1|
+|12    |MUXCY         |     4|
+|13    |SRL16         |     1|
+|14    |SRL16E        |    44|
+|15    |SRLC32E       |     7|
+|16    |FD            |    14|
+|17    |FDCE          |    25|
+|18    |FDPE          |     4|
+|19    |FDR           |     2|
+|20    |FDRE          |  1069|
+|21    |FDSE          |    58|
++------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2741.219 ; gain = 973.828 ; free physical = 48711 ; free virtual = 62486
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2741.219 ; gain = 867.359 ; free physical = 48711 ; free virtual = 62486
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2741.227 ; gain = 973.828 ; free physical = 48711 ; free virtual = 62486
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2741.227 ; gain = 0.000 ; free physical = 48867 ; free virtual = 62642
+INFO: [Netlist 29-17] Analyzing 67 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2797.246 ; gain = 0.000 ; free physical = 48877 ; free virtual = 62652
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 19 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 2 instances
+  FD => FDRE: 14 instances
+  FDR => FDRE: 2 instances
+  SRL16 => SRL16E: 1 instance 
+
+Synth Design complete | Checksum: 35d4a02f
+INFO: [Common 17-83] Releasing license: Synthesis
+154 Infos, 89 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2797.281 ; gain = 1178.719 ; free physical = 48877 ; free virtual = 62652
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1876.411; main = 1801.764; forked = 253.013
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3570.656; main = 2797.250; forked = 994.246
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2821.258 ; gain = 0.000 ; free physical = 48877 ; free virtual = 62652
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.runs/aurora_8b10b_0_synth_1/aurora_8b10b_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP aurora_8b10b_0, cache-ID = 4f15b406de87fff6
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2821.258 ; gain = 0.000 ; free physical = 48872 ; free virtual = 62649
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/aurora_8b10b_0_ex/aurora_8b10b_0_ex.runs/aurora_8b10b_0_synth_1/aurora_8b10b_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file aurora_8b10b_0_utilization_synth.rpt -pb aurora_8b10b_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 15:24:46 2026...
