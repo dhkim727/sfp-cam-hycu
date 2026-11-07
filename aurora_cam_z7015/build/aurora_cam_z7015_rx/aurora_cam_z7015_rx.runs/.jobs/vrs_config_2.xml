@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="z7015_rx_axi_bram_ctrl_0_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_axi_bram_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_prbs_check_0_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_prbs_check_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_axi_interconnect_0_imp_auto_pc_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_axi_interconnect_0_imp_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_rst_axi_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_rst_axi_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_blk_mem_gen_0_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_blk_mem_gen_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_rx_support_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_rx_support_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_xdma_0_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_xdma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_sc_ctrl_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_sc_ctrl_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_util_ds_buf_0_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_util_ds_buf_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_gt_common_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_gt_common_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_aurora_rx_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_aurora_rx_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_util_ds_buf_1_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_util_ds_buf_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_proc_sys_reset_0_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_axi_dma_0_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_axi_dma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_depkt_0_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_depkt_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_sc_mem_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_sc_mem_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_link_ctrl_0_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_link_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_axi_gpio_link_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_axi_gpio_link_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_axi_interconnect_0_imp_auto_cc_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_axi_interconnect_0_imp_auto_cc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_ps7_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_ps7_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_rst_axi1_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_rst_axi1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_clk_wiz_0_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_vio_link_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_vio_link_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="z7015_rx_fifo_rx_0_synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_fifo_rx_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="z7015_rx_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="z7015_rx_prbs_check_0_0_synth_1"/>
+		<Parent Id="z7015_rx_axi_interconnect_0_imp_auto_pc_0_synth_1"/>
+		<Parent Id="z7015_rx_rst_axi_0_synth_1"/>
+		<Parent Id="z7015_rx_blk_mem_gen_0_0_synth_1"/>
+		<Parent Id="z7015_rx_rx_support_0_synth_1"/>
+		<Parent Id="z7015_rx_xdma_0_0_synth_1"/>
+		<Parent Id="z7015_rx_sc_ctrl_0_synth_1"/>
+		<Parent Id="z7015_rx_util_ds_buf_0_0_synth_1"/>
+		<Parent Id="z7015_rx_gt_common_0_synth_1"/>
+		<Parent Id="z7015_rx_aurora_rx_0_synth_1"/>
+		<Parent Id="z7015_rx_util_ds_buf_1_0_synth_1"/>
+		<Parent Id="z7015_rx_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0_synth_1"/>
+		<Parent Id="z7015_rx_axi_dma_0_0_synth_1"/>
+		<Parent Id="z7015_rx_depkt_0_0_synth_1"/>
+		<Parent Id="z7015_rx_sc_mem_0_synth_1"/>
+		<Parent Id="z7015_rx_link_ctrl_0_0_synth_1"/>
+		<Parent Id="z7015_rx_axi_gpio_link_0_synth_1"/>
+		<Parent Id="z7015_rx_axi_interconnect_0_imp_auto_cc_0_synth_1"/>
+		<Parent Id="z7015_rx_ps7_0_synth_1"/>
+		<Parent Id="z7015_rx_rst_axi1_0_synth_1"/>
+		<Parent Id="z7015_rx_clk_wiz_0_0_synth_1"/>
+		<Parent Id="z7015_rx_vio_link_0_synth_1"/>
+		<Parent Id="z7015_rx_fifo_rx_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="z7015_rx_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="z7015_rx_prbs_check_0_0_synth_1"/>
+		<Parent Id="z7015_rx_axi_interconnect_0_imp_auto_pc_0_synth_1"/>
+		<Parent Id="z7015_rx_rst_axi_0_synth_1"/>
+		<Parent Id="z7015_rx_blk_mem_gen_0_0_synth_1"/>
+		<Parent Id="z7015_rx_rx_support_0_synth_1"/>
+		<Parent Id="z7015_rx_xdma_0_0_synth_1"/>
+		<Parent Id="z7015_rx_sc_ctrl_0_synth_1"/>
+		<Parent Id="z7015_rx_util_ds_buf_0_0_synth_1"/>
+		<Parent Id="z7015_rx_gt_common_0_synth_1"/>
+		<Parent Id="z7015_rx_aurora_rx_0_synth_1"/>
+		<Parent Id="z7015_rx_util_ds_buf_1_0_synth_1"/>
+		<Parent Id="z7015_rx_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0_synth_1"/>
+		<Parent Id="z7015_rx_axi_dma_0_0_synth_1"/>
+		<Parent Id="z7015_rx_depkt_0_0_synth_1"/>
+		<Parent Id="z7015_rx_sc_mem_0_synth_1"/>
+		<Parent Id="z7015_rx_link_ctrl_0_0_synth_1"/>
+		<Parent Id="z7015_rx_axi_gpio_link_0_synth_1"/>
+		<Parent Id="z7015_rx_axi_interconnect_0_imp_auto_cc_0_synth_1"/>
+		<Parent Id="z7015_rx_ps7_0_synth_1"/>
+		<Parent Id="z7015_rx_rst_axi1_0_synth_1"/>
+		<Parent Id="z7015_rx_clk_wiz_0_0_synth_1"/>
+		<Parent Id="z7015_rx_vio_link_0_synth_1"/>
+		<Parent Id="z7015_rx_fifo_rx_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+		<Parameter Name="general.usePosixSpawnForFork" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

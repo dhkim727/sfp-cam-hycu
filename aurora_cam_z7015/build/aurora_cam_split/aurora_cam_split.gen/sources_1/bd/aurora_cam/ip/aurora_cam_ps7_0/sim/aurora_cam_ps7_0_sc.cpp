@@ -105,7 +105,7 @@ aurora_cam_ps7_0_sc::aurora_cam_ps7_0_sc(const sc_core::sc_module_name& nm) : sc
     model_param_props.addLong("C_USE_S_AXI_GP1", "0");
     model_param_props.addLong("C_USE_S_AXI_HP0", "1");
     model_param_props.addLong("C_USE_S_AXI_HP1", "0");
-    model_param_props.addLong("C_USE_S_AXI_HP2", "0");
+    model_param_props.addLong("C_USE_S_AXI_HP2", "1");
     model_param_props.addLong("C_USE_S_AXI_HP3", "0");
     model_param_props.addLong("C_USE_S_AXI_ACP", "0");
     model_param_props.addLong("C_GP0_EN_MODIFIABLE_TXN", "1");
@@ -113,7 +113,7 @@ aurora_cam_ps7_0_sc::aurora_cam_ps7_0_sc(const sc_core::sc_module_name& nm) : sc
     model_param_props.addString("C_IRQ_F2P_MODE", "DIRECT");
     model_param_props.addString("C_PS7_SI_REV", "PRODUCTION");
     model_param_props.addString("C_FCLK_CLK0_BUF", "TRUE");
-    model_param_props.addString("C_FCLK_CLK1_BUF", "FALSE");
+    model_param_props.addString("C_FCLK_CLK1_BUF", "TRUE");
     model_param_props.addString("C_FCLK_CLK2_BUF", "FALSE");
     model_param_props.addString("C_FCLK_CLK3_BUF", "FALSE");
     model_param_props.addString("C_PACKAGE_NAME", "clg485");
@@ -126,6 +126,8 @@ aurora_cam_ps7_0_sc::aurora_cam_ps7_0_sc(const sc_core::sc_module_name& nm) : sc
   M_AXI_GP0_wr_socket = mp_impl->M_AXI_GP0_wr_socket;
   S_AXI_HP0_rd_socket = mp_impl->S_AXI_HP0_rd_socket;
   S_AXI_HP0_wr_socket = mp_impl->S_AXI_HP0_wr_socket;
+  S_AXI_HP2_rd_socket = mp_impl->S_AXI_HP2_rd_socket;
+  S_AXI_HP2_wr_socket = mp_impl->S_AXI_HP2_wr_socket;
 }
 
 aurora_cam_ps7_0_sc::~aurora_cam_ps7_0_sc()

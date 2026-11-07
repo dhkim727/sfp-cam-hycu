@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Sun Nov  1 17:41:31 2026
+| Date         : Sat Nov  7 14:32:54 2026
 | Host         : dhkim-home running 64-bit Ubuntu 24.04.5 LTS
 | Command      : report_utilization -file aurora_cam_ps7_0_utilization_synth.rpt -pb aurora_cam_ps7_0_utilization_synth.pb
 | Design       : aurora_cam_ps7_0
@@ -121,7 +121,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |          0 |        32 |  3.13 |
+| BUFGCTRL   |    2 |     0 |          0 |        32 |  6.25 |
 | BUFIO      |    0 |     0 |          0 |        12 |  0.00 |
 | MMCME2_ADV |    0 |     0 |          0 |         3 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         3 |  0.00 |
@@ -157,8 +157,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+----------------------+
 | BIBUF    |  130 |                   IO |
 | LUT1     |   24 |                  LUT |
+| BUFG     |    2 |                Clock |
 | PS7      |    1 | Specialized Resource |
-| BUFG     |    1 |                Clock |
 +----------+------+----------------------+
 
 

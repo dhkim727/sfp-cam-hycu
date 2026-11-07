@@ -1,0 +1,210 @@
+c0_ddr4_act_n                            AC17     
+c0_ddr4_adr0                             AH16     
+c0_ddr4_adr1                             AG14     
+c0_ddr4_adr2                             AG15     
+c0_ddr4_adr3                             AF15     
+c0_ddr4_adr4                             AF16     
+c0_ddr4_adr5                             AJ14     
+c0_ddr4_adr6                             AH14     
+c0_ddr4_adr7                             AF17     
+c0_ddr4_adr8                             AK17     
+c0_ddr4_adr9                             AJ17     
+c0_ddr4_adr10                            AK14     
+c0_ddr4_adr11                            AK15     
+c0_ddr4_adr12                            AL18     
+c0_ddr4_adr13                            AK18     
+c0_ddr4_adr14                            AA16     
+c0_ddr4_adr15                            AA14     
+c0_ddr4_adr16                            AD15     
+c0_ddr4_ba0                              AL15     
+c0_ddr4_ba1                              AL16     
+c0_ddr4_bg0                              AC16     
+c0_ddr4_bg1                              AB16     
+c0_ddr4_ck0_c                            AG18     
+c0_ddr4_ck0_t                            AF18     
+c0_ddr4_ck1_c                            AJ15     
+c0_ddr4_ck1_t                            AJ16     
+c0_ddr4_cke0                             AD17     
+c0_ddr4_cke1                             AM15     
+c0_ddr4_cs0_n                            AA15     
+c0_ddr4_cs1_n                            AL17     
+c0_ddr4_dm_dbi_n0                        AH22     
+c0_ddr4_dm_dbi_n1                        AE18     
+c0_ddr4_dm_dbi_n2                        AL20     
+c0_ddr4_dm_dbi_n3                        AP19     
+c0_ddr4_dm_dbi_n4                        AF11     
+c0_ddr4_dm_dbi_n5                        AH12     
+c0_ddr4_dm_dbi_n6                        AK13     
+c0_ddr4_dm_dbi_n7                        AN12     
+c0_ddr4_dq0                              AE24     
+c0_ddr4_dq1                              AE23     
+c0_ddr4_dq2                              AF22     
+c0_ddr4_dq3                              AF21     
+c0_ddr4_dq4                              AG20     
+c0_ddr4_dq5                              AG19     
+c0_ddr4_dq6                              AH21     
+c0_ddr4_dq7                              AG21     
+c0_ddr4_dq8                              AA20     
+c0_ddr4_dq9                              AA19     
+c0_ddr4_dq10                             AD19     
+c0_ddr4_dq11                             AC18     
+c0_ddr4_dq12                             AE20     
+c0_ddr4_dq13                             AD20     
+c0_ddr4_dq14                             AC19     
+c0_ddr4_dq15                             AB19     
+c0_ddr4_dq16                             AJ22     
+c0_ddr4_dq17                             AJ21     
+c0_ddr4_dq18                             AK20     
+c0_ddr4_dq19                             AJ20     
+c0_ddr4_dq20                             AK19     
+c0_ddr4_dq21                             AJ19     
+c0_ddr4_dq22                             AL23     
+c0_ddr4_dq23                             AL22     
+c0_ddr4_dq24                             AN23     
+c0_ddr4_dq25                             AM23     
+c0_ddr4_dq26                             AP23     
+c0_ddr4_dq27                             AN22     
+c0_ddr4_dq28                             AP22     
+c0_ddr4_dq29                             AP21     
+c0_ddr4_dq30                             AN19     
+c0_ddr4_dq31                             AM19     
+c0_ddr4_dq32                             AC13     
+c0_ddr4_dq33                             AB13     
+c0_ddr4_dq34                             AF12     
+c0_ddr4_dq35                             AE12     
+c0_ddr4_dq36                             AF13     
+c0_ddr4_dq37                             AE13     
+c0_ddr4_dq38                             AE14     
+c0_ddr4_dq39                             AD14     
+c0_ddr4_dq40                             AG8      
+c0_ddr4_dq41                             AF8      
+c0_ddr4_dq42                             AG10     
+c0_ddr4_dq43                             AG11     
+c0_ddr4_dq44                             AH13     
+c0_ddr4_dq45                             AG13     
+c0_ddr4_dq46                             AJ11     
+c0_ddr4_dq47                             AH11     
+c0_ddr4_dq48                             AK9      
+c0_ddr4_dq49                             AJ9      
+c0_ddr4_dq50                             AK10     
+c0_ddr4_dq51                             AJ10     
+c0_ddr4_dq52                             AL12     
+c0_ddr4_dq53                             AK12     
+c0_ddr4_dq54                             AL10     
+c0_ddr4_dq55                             AL11     
+c0_ddr4_dq56                             AM8      
+c0_ddr4_dq57                             AM9      
+c0_ddr4_dq58                             AM10     
+c0_ddr4_dq59                             AM11     
+c0_ddr4_dq60                             AP11     
+c0_ddr4_dq61                             AN11     
+c0_ddr4_dq62                             AP9      
+c0_ddr4_dq63                             AP10     
+c0_ddr4_dqs0_c                           AG23     
+c0_ddr4_dqs0_t                           AF23     
+c0_ddr4_dqs1_c                           AB18     
+c0_ddr4_dqs1_t                           AA18     
+c0_ddr4_dqs2_c                           AK23     
+c0_ddr4_dqs2_t                           AK22     
+c0_ddr4_dqs3_c                           AN21     
+c0_ddr4_dqs3_t                           AM21     
+c0_ddr4_dqs4_c                           AD12     
+c0_ddr4_dqs4_t                           AC12     
+c0_ddr4_dqs5_c                           AH9      
+c0_ddr4_dqs5_t                           AG9      
+c0_ddr4_dqs6_c                           AL8      
+c0_ddr4_dqs6_t                           AK8      
+c0_ddr4_dqs7_c                           AN8      
+c0_ddr4_dqs7_t                           AN9      
+c0_ddr4_odt0                             AE15     
+c0_ddr4_odt1                             AM16     
+c0_ddr4_reset_n                          AB14     LVCMOS12
+CLK_300_N                                AH17     DIFF_SSTL12
+CLK_300_P                                AH18     DIFF_SSTL12
+CPU_RESET                                M11      LVCMOS33
+fmc_lpc_clk0_m2c_n                       E14      LVCMOS18
+fmc_lpc_clk0_m2c_p                       E15      LVCMOS18
+fmc_lpc_la00_cc_n                        F16      LVCMOS18
+fmc_lpc_la00_cc_p                        F17      LVCMOS18
+fmc_lpc_la01_cc_n                        H17      LVCMOS18
+fmc_lpc_la01_cc_p                        H18      LVCMOS18
+fmc_lpc_la02_n                           K20      LVCMOS18
+fmc_lpc_la02_p                           L20      LVCMOS18
+fmc_lpc_la03_n                           K18      LVCMOS18
+fmc_lpc_la03_p                           K19      LVCMOS18
+fmc_lpc_la04_n                           L16      LVCMOS18
+fmc_lpc_la04_p                           L17      LVCMOS18
+fmc_lpc_la05_n                           J17      LVCMOS18
+fmc_lpc_la05_p                           K17      LVCMOS18
+fmc_lpc_la06_n                           G19      LVCMOS18
+fmc_lpc_la06_p                           H19      LVCMOS18
+fmc_lpc_la07_n                           J15      LVCMOS18
+fmc_lpc_la07_p                           J16      LVCMOS18
+fmc_lpc_la08_n                           E17      LVCMOS18
+fmc_lpc_la08_p                           E18      LVCMOS18
+fmc_lpc_la09_n                           G16      LVCMOS18
+fmc_lpc_la09_p                           H16      LVCMOS18
+fmc_lpc_la10_n                           K15      LVCMOS18
+fmc_lpc_la10_p                           L15      LVCMOS18
+fmc_lpc_la11_n                           A12      LVCMOS18
+fmc_lpc_la11_p                           A13      LVCMOS18
+fmc_lpc_la12_n                           F18      LVCMOS18
+fmc_lpc_la12_p                           G18      LVCMOS18
+fmc_lpc_la13_n                           F15      LVCMOS18
+fmc_lpc_la13_p                           G15      LVCMOS18
+fmc_lpc_la14_n                           C12      LVCMOS18
+fmc_lpc_la14_p                           C13      LVCMOS18
+fmc_lpc_la15_n                           C16      LVCMOS18
+fmc_lpc_la15_p                           D16      LVCMOS18
+fmc_lpc_la16_n                           C17      LVCMOS18
+fmc_lpc_la16_p                           D17      LVCMOS18
+fmc_lpc_la17_cc_n                        E10      LVCMOS18
+fmc_lpc_la17_cc_p                        F11      LVCMOS18
+fmc_lpc_la18_cc_n                        D10      LVCMOS18
+fmc_lpc_la18_cc_p                        D11      LVCMOS18
+fmc_lpc_la19_n                           C11      LVCMOS18
+fmc_lpc_la19_p                           D12      LVCMOS18
+fmc_lpc_la20_n                           E12      LVCMOS18
+fmc_lpc_la20_p                           F12      LVCMOS18
+fmc_lpc_la21_n                           A10      LVCMOS18
+fmc_lpc_la21_p                           B10      LVCMOS18
+fmc_lpc_la22_n                           H12      LVCMOS18
+fmc_lpc_la22_p                           H13      LVCMOS18
+fmc_lpc_la23_n                           A11      LVCMOS18
+fmc_lpc_la23_p                           B11      LVCMOS18
+fmc_lpc_la24_n                           A6       LVCMOS18
+fmc_lpc_la24_p                           B6       LVCMOS18
+fmc_lpc_la25_n                           C6       LVCMOS18
+fmc_lpc_la25_p                           C7       LVCMOS18
+fmc_lpc_la26_n                           B8       LVCMOS18
+fmc_lpc_la26_p                           B9       LVCMOS18
+fmc_lpc_la27_n                           A7       LVCMOS18
+fmc_lpc_la27_p                           A8       LVCMOS18
+fmc_lpc_la28_n                           L13      LVCMOS18
+fmc_lpc_la28_p                           M13      LVCMOS18
+fmc_lpc_la29_n                           J10      LVCMOS18
+fmc_lpc_la29_p                           K10      LVCMOS18
+fmc_lpc_la30_n                           D9       LVCMOS18
+fmc_lpc_la30_p                           E9       LVCMOS18
+fmc_lpc_la31_n                           E7       LVCMOS18
+fmc_lpc_la31_p                           F7       LVCMOS18
+fmc_lpc_la32_n                           E8       LVCMOS18
+fmc_lpc_la32_p                           F8       LVCMOS18
+fmc_lpc_la33_n                           C8       LVCMOS18
+fmc_lpc_la33_p                           C9       LVCMOS18
+GPIO_DIP_SW0                             E4       LVCMOS33
+GPIO_DIP_SW1                             D4       LVCMOS33
+GPIO_DIP_SW2                             F5       LVCMOS33
+GPIO_DIP_SW3                             F4       LVCMOS33
+GPIO_LED_0_LS                            D5       LVCMOS33
+GPIO_LED_1_LS                            D6       LVCMOS33
+GPIO_LED_2_LS                            A5       LVCMOS33
+GPIO_LED_3_LS                            B5       LVCMOS33
+GPIO_PB_SW0                              B4       LVCMOS33
+GPIO_PB_SW1                              C4       LVCMOS33
+GPIO_PB_SW2                              B3       LVCMOS33
+GPIO_PB_SW3                              C3       LVCMOS33
+IIC1_SCL_MAIN                            N12      LVCMOS33
+IIC1_SDA_MAIN                            P12      LVCMOS33
+uart2_PL_RX                              A20      LVCMOS18
+uart2_PL_TX                              C19      LVCMOS18

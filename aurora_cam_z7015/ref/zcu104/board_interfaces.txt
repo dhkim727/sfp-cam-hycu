@@ -1,0 +1,9 @@
+clk_300mhz                           xilinx.com:interface:diff_clock_rtl:1.0
+ddr4_sdram                           xilinx.com:interface:ddr4_rtl:1.0
+dip_switch_4bits                     xilinx.com:interface:gpio_rtl:1.0
+iic1_pl                              xilinx.com:interface:iic_rtl:1.0
+led_4bits                            xilinx.com:interface:gpio_rtl:1.0
+ps8_fixedio                          xilinx.com:zynq_ultra_ps_e:fixedio_rtl:1.0
+push_button_4bits                    xilinx.com:interface:gpio_rtl:1.0
+reset                                xilinx.com:signal:reset_rtl:1.0
+uart2_pl                             xilinx.com:interface:uart_rtl:1.0

@@ -112,7 +112,21 @@ module aurora_cam_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [0:0] SFP1_TXDISABLE,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [0:0] SFP2_TXDISABLE
+  output wire [0:0] SFP2_TXDISABLE,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire PCIE0_PERSTN,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [0:0] PCIE0_REFCLK_clk_n,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [0:0] PCIE0_REFCLK_clk_p,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [0:0] pcie_7x_mgt_rtl_0_rxn,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [0:0] pcie_7x_mgt_rtl_0_rxp,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [0:0] pcie_7x_mgt_rtl_0_txn,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [0:0] pcie_7x_mgt_rtl_0_txp
 );
 
   aurora_cam inst (
@@ -145,7 +159,14 @@ module aurora_cam_sv (
     .gt_rxn(gt_rxn),
     .clk_50m(clk_50m),
     .SFP1_TXDISABLE(SFP1_TXDISABLE),
-    .SFP2_TXDISABLE(SFP2_TXDISABLE)
+    .SFP2_TXDISABLE(SFP2_TXDISABLE),
+    .PCIE0_PERSTN(PCIE0_PERSTN),
+    .PCIE0_REFCLK_clk_n(PCIE0_REFCLK_clk_n),
+    .PCIE0_REFCLK_clk_p(PCIE0_REFCLK_clk_p),
+    .pcie_7x_mgt_rtl_0_rxn(pcie_7x_mgt_rtl_0_rxn),
+    .pcie_7x_mgt_rtl_0_rxp(pcie_7x_mgt_rtl_0_rxp),
+    .pcie_7x_mgt_rtl_0_txn(pcie_7x_mgt_rtl_0_txn),
+    .pcie_7x_mgt_rtl_0_txp(pcie_7x_mgt_rtl_0_txp)
   );
 
 endmodule

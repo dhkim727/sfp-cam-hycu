@@ -20,6 +20,54 @@ PS FCLK_CLK0 100 MHz ───────────────────�
   (refclk_buf ODIV2 → BUFG = free_clk) 가 만들어지므로 clk_wiz_0 / clk_50m 구성을 다시 해야 한다.
 - DMA 경로(PS DDR ↔ 링크)는 그대로 유지 → `sw/loopback_test.c` 로 실제 프레임 시험
 
+## 보드 분리 빌드 : ZCU104 (TX) → 광 → Z7015 (RX + XDMA)
+
+```
+ZCU104  DDR ─ HP0_FPD ─ DMA MM2S ─ fifo_tx ─ line_packetizer ─ prbs_gen ─ Aurora TX-only (GTH X0Y15)
+        CLK_300 ─ clk_wiz ─ 62.5 MHz init_clk                          FMC LPC DP0 ─ SFP 카드 ─┐
+        link_retrain (주기 / GPIO backchannel 재초기화) ─> link_ctrl.restart_req                │ 광
+Z7015   Aurora RX-only (GTP X0Y1, W8/Y8) ─ prbs_check ─ line_depacketizer ─ fifo_rx ─ DMA S2MM ◄┘
+        XDMA x1 (GTP X0Y0) ─ M_AXI → HP2, M_AXI_LITE → BRAM   (현재 BD 와 같은 설정)
+        gtp_common_shared : PLL0 = PCIe (U9/V9 100 MHz) → XDMA,  PLL1 = Aurora (U5/V5 125 MHz) → aurora_rx
+```
+
+```
+vivado -mode batch -source make_z7015_rx.tcl  -tclargs build            # build/aurora_cam_z7015_rx  (+ .xsa)
+vivado -mode batch -source make_zcu104_tx.tcl -tclargs build            # build/aurora_cam_zcu104_tx (+ .xsa)
+vivado -mode batch -source hw/split_link_test.tcl -tclargs secs=30      # 두 보드 PRBS BER (PS/C 불필요)
+```
+(`build` 를 빼면 프로젝트와 BD 만 만든다. `make z7015_rx_bit` / `make zcu104_tx_bit` / `make splittest` 도 같다.)
+
+| 옵션 | 기본 | 설명 |
+|---|---|---|
+| `bcpin=` (Z7015) | 없음 | backchannel 출력 `BC_LINK_OK` (= link_ok) 핀. 비어 있는 3.3 V 핀을 정해서 줄 것 |
+| `bcpin=` (ZCU104) | `G8` | backchannel 입력 `BC_RX_UP` (PULLDOWN). G8 = PMOD J55 pin 1 (bank 87, 3.3 V) 로 가정 — 보드에서 확인. `none` = 포트 없음 |
+| `period=` (ZCU104) | 1000 | link_retrain 기본 주기 ms |
+| `hbeats=` / `vlines=` | 640 / 720 | 두 보드가 같아야 한다 |
+
+- **PLL 정리 (Z7015)** : Quad 112 의 GTPE2_COMMON 하나를 `rtl/z7015/gtp_common_shared.v` 로 직접 둔다.
+  XDMA 는 `Shared_Logic_Gtc_7xG2 = true` (그 외 설정 동일) 로 PLL0 을, aurora_rx (SupportLevel 0) 는 PLL1 을 받는다.
+  Aurora 코어 GT 래퍼가 채널의 `RX/TXSYSCLKSEL` 을 PLL0 (00) 으로 묶어 두므로 impl_1 의 opt_design pre-hook
+  `bd_z7015_rx/eco_aurora_rx_pll1.tcl` 이 그 4 핀을 VCC (PLL1) 로 바꾼다 → `impl_1/eco_aurora_rx_pll1.rpt`.
+  연결이 예상과 다르면 구현을 멈추고, write_bitstream 직전 `eco_aurora_rx_pll1_check.tcl` 이 한 번 더 확인한다.
+- **Aurora** : 두 보드 공통 값은 `bd_common/aurora_link_cfg.tcl` 하나 (Timer, 1 lane, 4 B, 3.125 Gb/s, Framing,
+  CRC, byteswap). 빌드마다 `build/<project>/aurora_link.txt` 에 남으니 두 파일이 같아야 한다.
+  Z7015 클럭/리셋 공유 로직 (MMCM user_clk 78.125 / sync_clk 156.25, reset debounce) = `rtl/z7015/aurora_rx_support.v`.
+- **재초기화** : Timer 모드 TX 는 RX 상태를 모른다. RX 가 늦게 켜지면 TX 초기화를 다시 해야 하므로
+  `rtl/link_retrain.v` 가 기본으로 `PERIOD_MS` 마다 (TX 경로가 100 µs 이상 비어 있을 때만, PRBS 송신 중엔 안 함)
+  link_ctrl 재기동을 건다. GPIO2 `[10]` 끄기, `[11]` backchannel 모드 (BC_RX_UP 이 100 ms 내려가 있으면 재기동,
+  올라와 있으면 절대 안 함), `[15:12]` 주기 n×250 ms, `[9]` 즉시 재기동. TX 상태 워드 `[31:24]` = {bc_rx_up, 재기동 횟수}.
+- **SFP** : Z7015 `SFP1/2_TXDISABLE = 1` (송신 안 함). ZCU104 FMC SFP 카드 (IAM T0012) `TX_DISABLE` = LA15_N (C16, LVCMOS18) = 0.
+- **주소** : Z7015 DMA 0x4040_0000 (S2MM), GPIO 0x4120_0000 / ZCU104 DMA 0xA000_0000 (MM2S), GPIO 0xA001_0000.
+  VIO / GPIO / 상태 워드 비트는 기존과 같다.
+- **펌웨어** (Vitis 2025.2, platform = 각 `.xsa`, standalone, empty application 에 파일 2 개 추가)
+  - Z7015 : `ps7_cortexa9_0`, `sw/z7015_rx_test.c` + `sw/aurora_cam_common.h` — S2MM 버퍼 2 개를 번갈아 받고,
+    word 0..2 로 TX 프레임 번호를 알아내 전 word 비교, 잃어버린 프레임·길이·DMA 오류, 1 초 요약
+  - ZCU104 : `psu_cortexa53_0`, `sw/zcu104_tx_fw.c` + `sw/aurora_cam_common.h` — UART 메뉴
+    (`1`/`s` 송신, `c` 연속, `g` 간격, `r` 재기동, `a`/`b`/`p` 재초기화 모드, `t` 상태)
+- **확인할 것** : Z7015 backchannel 핀, ZCU104 PMOD 핀 (G8 가정), ZCU104 VADJ_FMC = 1.8 V
+  (카드 FRU 는 3.3 V 를 요청), SFP 카드의 TX_DISABLE / LOS 풀업 전압 (1.8 V I/O 에 3.3 V 가 걸리지 않는지)
+
 ## 파일
 
 | 경로 | 내용 |
@@ -31,6 +79,16 @@ PS FCLK_CLK0 100 MHz ───────────────────�
 | `sw/loopback_test.c` | Vitis standalone DMA 프레임 루프백 시험 |
 | `docs/system_overview.html` | 현재 BD 기준 블록도·클럭/리셋·데이터 경로·C 제어 흐름 도식 |
 | `sim/tb_link_loop.v` | self-checking testbench (DMA 경로, VIO 제어, PRBS) |
+| `make_z7015_rx.tcl` / `make_zcu104_tx.tcl` | 보드 분리 빌드 프로젝트 생성·(옵션) bitstream + .xsa |
+| `bd_z7015_rx/` | Z7015 BD (`create_z7015_rx_bd`), PS7 설정, XDC, PLL1 ECO hook |
+| `bd_zcu104_tx/` | ZCU104 BD (`create_zcu104_tx_bd`), XDC |
+| `bd_common/` | 두 BD 공통 : Aurora 링크 파라미터, BD 도우미 |
+| `rtl/z7015/` | `gtp_common_shared` (공용 GTPE2_COMMON), `aurora_rx_support` (RX 공유 로직) |
+| `rtl/link_retrain.v` | ZCU104 TX 재초기화 (주기 / GPIO backchannel) |
+| `hw/split_link_test.tcl` | 두 보드 PRBS 시험 (JTAG 케이블 2 개 / hw_server 2 개 가능) |
+| `sw/z7015_rx_test.c` / `sw/zcu104_tx_fw.c` / `sw/aurora_cam_common.h` | 보드 분리 펌웨어 |
+| `sim/tb_link_retrain.v` / `sim/tb_z7015_rx_clk.v` | link_retrain / Z7015 공유 로직 testbench |
+| `make_ref.tcl` → `ref/` | 분리 작업 기준 자료 (현재 BD 덤프, IP 예제, 보드 핀) |
 | `Makefile`, `*.bat` | Linux / Windows 래퍼 |
 
 ## 빠른 시작
@@ -128,3 +186,9 @@ AXI DMA 는 0x4040_0000 (IRQ_F2P[0]=MM2S, [1]=S2MM).
 - 실제 Vivado 2025.2 실행은 미검증 → 첫 실행 로그에서 `WARNING: [ac]`(IP 파라미터명),
   `[ac] ... not found`(핀 이름), `CRITICAL WARNING: [ac] Aurora has no single-ended refclk input`
   (이 경우 자동으로 FCLK1 기반으로 바뀌며 VIO 사용 전 PS 초기화 필요) 를 확인
+- 보드 분리 빌드 : `tb_link_retrain` / `tb_z7015_rx_clk` PASS (PLL 별 power-on override, PCIe refclk 없이도
+  PLL1 lock, XDMA / Aurora 가 서로의 PLL 을 건드리지 않음, DRP handshake, MMCM 클럭, reset debounce).
+  두 BD 스크립트는 IP 포트(ref/ 의 .veo)·RTL 포트를 읽는 mock 으로 연결 검사 (없는 핀 0, 다중 driver 0),
+  ECO hook 은 netlist mock 으로 (고침 / 다시 실행 / 확인만 / DONT_TOUCH / 잘못된 PLL 연결 시 중단),
+  `hw/split_link_test.tcl` 은 Hardware Manager mock 으로 (케이블 2 개, 한 체인) 확인.
+  실제 Vivado 첫 실행 때 볼 것 : `build/<project>/bd_build_report.txt`, `impl_1/eco_aurora_rx_pll1.rpt`

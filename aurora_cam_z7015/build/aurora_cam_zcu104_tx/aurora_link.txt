@@ -1,0 +1,1 @@
+zcu104_tx aurora_tx : Backchannel_mode=Timer C_AURORA_LANES=1 C_LANE_WIDTH=4 C_LINE_RATE=3.125 C_USE_CRC=true C_USE_BYTESWAP=true C_USE_SCRAMBLER=false Flow_Mode=None Interface_Mode=Framing

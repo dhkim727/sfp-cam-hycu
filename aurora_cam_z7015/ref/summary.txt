@@ -1,0 +1,22 @@
+make_ref.tcl  2026-11-07 16:22:46  Vivado 2025.2
+baseline : ref/baseline/aurora_cam_split_bd.tcl
+[baseline] OK
+xdma : 3 CONFIG differences -> ref/xdma/config_diff.txt
+xdma : Shared_Logic_Gtc_7xG2=true  qpll ports 0/14 : 
+xdma : example design 19 files -> ref/xdma/ex/ (GT lines: ref/xdma/gtp_lines.txt)
+[xdma] OK
+aurora_rx : SYSCLKSEL ties = 
+aurora_rx : Backchannel=Timer  sideband ports left: none
+aurora_rx : example design 28 files -> ref/aurora_rx/ex/
+[aurora_rx] OK
+aurora_tx : not applied: {DRP_FREQ: wanted '62.5' got '50.0000'}
+aurora_tx : quad='Quad_X0Y3' lane='X0Y15' refclk='MGTREFCLK0 of Quad X0Y3' (ref/aurora_tx/values.txt)
+aurora_tx : sideband ports left: none
+[aurora_tx] OK
+zcu104 : board_part = 'xilinx.com:zcu104:part0:1.1'
+zcu104 : 210 board part pins -> ref/zcu104/board_pins.txt
+zcu104 : 3 board files -> ref/zcu104/boardfiles/
+zcu104 : 40 GTH bank 226/227 package pins -> ref/zcu104/pkg_gth_226_227.txt
+[zcu104] OK
+z7015 : 21 GTP bank 112 package pins -> ref/z7015/pkg_gtp_112.txt
+[z7015pkg] OK

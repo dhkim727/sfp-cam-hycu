@@ -1,0 +1,159 @@
+pcie3_uscale_rp_core_top.v:3250: .GTW_DRPADDR                       ( ext_ch_gt_drpaddr ),
+pcie3_uscale_rp_core_top.v:8041: .DRPADDR (drp_addr),
+pcie3_uscale_rp_core_top.v:11680: input  wire   [9:0] DRPADDR,
+pcie3_uscale_rp_core_top.v:13119: .DRPADDR (DRPADDR),
+pcie3_uscale_rp_core_top.v:14642: input       [((PHY_LANE *  9)-1):0]    GTW_DRPADDR,
+pcie3_uscale_rp_core_top.v:15118: .GT_DRPADDR                     (9'b000000000),
+pcie3_uscale_rp_core_top.v:15218: .GTCOM_DRPADDR              (9'b000000000 ),
+pcie3_uscale_rp_core_top.v:15350: .GTCOM_DRPADDR                  ( {(((PHY_LANE)>>3)+1){9'b000000000}} ),
+pcie3_uscale_rp_core_top.v:15359: .GT_DRPADDR                     (GTW_DRPADDR ),
+pcie3_uscale_rp_core_top.v:17279: input      [ 8:0]                   GT_DRPADDR,
+pcie3_uscale_rp_core_top.v:17337: localparam [ 2:0] CPLLREFCLKSEL  = 3'd1;                                                        // Default
+pcie3_uscale_rp_core_top.v:17338: //localparam [ 2:0] CPLLREFCLKSEL  = (GT_LANE_NUM < 4) ? 3'd1 : (PHY_SIM_EN : 3'd1 : 3'd5);       // *** GTH 1.0 ***
+pcie3_uscale_rp_core_top.v:17391: //  [TX/RX]SYSCLKSEL - System Clock Select
+pcie3_uscale_rp_core_top.v:17398: localparam [ 1:0] SYSCLKSEL = (PHY_MAX_SPEED < 3) ? 2'b00 : 2'b11;
+pcie3_uscale_rp_core_top.v:18151: .TXSYSCLKSEL                        (SYSCLKSEL),
+pcie3_uscale_rp_core_top.v:18152: .RXSYSCLKSEL                        (SYSCLKSEL),
+pcie3_uscale_rp_core_top.v:18182: .CPLLREFCLKSEL                      (CPLLREFCLKSEL),                        // 3'd1 = select GTREFCLK0
+pcie3_uscale_rp_core_top.v:18605: .DRPADDR                            (GT_DRPADDR),
+pcie3_uscale_rp_core_top.v:18737: input       [ 8:0]                  GTCOM_DRPADDR,
+pcie3_uscale_rp_core_top.v:18750: //localparam [ 2:0] QPLLREFCLKSEL  = (GT_QUAD_NUM == 0) ? 3'd1 : (PHY_SIM_EN : 3'd1 : 3'd5);      // *** GTH 1.0 ***
+pcie3_uscale_rp_core_top.v:18751: localparam [ 2:0] QPLLREFCLKSEL  = 3'd1;                                                        // Default
+pcie3_uscale_rp_core_top.v:18929: .QPLL0REFCLKSEL                     ( 3'd1),                                // selects GTREFCLK00
+pcie3_uscale_rp_core_top.v:18946: .QPLL1REFCLKSEL                     (QPLLREFCLKSEL),                        // 1'd1 = selects GTREFCLK01
+pcie3_uscale_rp_core_top.v:18959: .DRPADDR                            (GTCOM_DRPADDR),
+pcie3_uscale_rp_core_top.v:19057: input       [((((PHY_LANE-1)>>2)+1)* 9)-1:0]    GTCOM_DRPADDR,
+pcie3_uscale_rp_core_top.v:19066: input       [((PHY_LANE *  9)-1):0]    GT_DRPADDR,
+pcie3_uscale_rp_core_top.v:24550: .GTHE3_COMMON_DRPADDR           (drpaddr_common_int    [f_ub_cm( 9,(4*cm)+3) : f_lb_cm( 9,4*cm)]),
+pcie3_uscale_rp_core_top.v:24576: .GTHE3_COMMON_QPLL0REFCLKSEL    (qpll0refclksel_int    [f_ub_cm( 3,(4*cm)+3) : f_lb_cm( 3,4*cm)]),
+pcie3_uscale_rp_core_top.v:24583: .GTHE3_COMMON_QPLL1REFCLKSEL    (qpll1refclksel_int    [f_ub_cm( 3,(4*cm)+3) : f_lb_cm( 3,4*cm)]),
+pcie3_uscale_rp_core_top.v:25333: .GTHE3_CHANNEL_CPLLREFCLKSEL        (cpllrefclksel_int        [f_ub_ch(  3,(4*ch)+3) : f_lb_ch(  3,4*ch)]),
+pcie3_uscale_rp_core_top.v:25337: .GTHE3_CHANNEL_DRPADDR              (drpaddr_ch_int           [f_ub_ch(  9,(4*ch)+3) : f_lb_ch(  9,4*ch)]),
+pcie3_uscale_rp_core_top.v:25485: .GTHE3_CHANNEL_RXSYSCLKSEL          (rxsysclksel_int          [f_ub_ch(  2,(4*ch)+3) : f_lb_ch(  2,4*ch)]),
+pcie3_uscale_rp_core_top.v:25555: .GTHE3_CHANNEL_TXSYSCLKSEL          (txsysclksel_int          [f_ub_ch(  2,(4*ch)+3) : f_lb_ch(  2,4*ch)]),
+pcie3_uscale_rp_core_top.v:25738: .USER_CHANNEL_DRPADDR_IN    (drpaddr_int[(9*cal)+8:9*cal]),
+pcie3_uscale_rp_core_top.v:25754: .GTHE3_CHANNEL_DRPADDR_OUT  (drpaddr_cpll_cal_int[(9*cal)+8:9*cal]),
+pcie3_uscale_rp_core_top.v:26989: input                                   [8:0] GTHE3_COMMON_DRPADDR,
+pcie3_uscale_rp_core_top.v:27015: input                                   [2:0] GTHE3_COMMON_QPLL0REFCLKSEL,
+pcie3_uscale_rp_core_top.v:27022: input                                   [2:0] GTHE3_COMMON_QPLL1REFCLKSEL,
+pcie3_uscale_rp_core_top.v:27073: .GTHE3_COMMON_DRPADDR_TIE_EN                  (1'b0),
+pcie3_uscale_rp_core_top.v:27074: .GTHE3_COMMON_DRPADDR_VAL                     (9'b000000000),
+pcie3_uscale_rp_core_top.v:27126: .GTHE3_COMMON_QPLL0REFCLKSEL_TIE_EN           (1'b0),
+pcie3_uscale_rp_core_top.v:27127: .GTHE3_COMMON_QPLL0REFCLKSEL_VAL              (3'b001),
+pcie3_uscale_rp_core_top.v:27161: .GTHE3_COMMON_QPLL1REFCLKSEL_TIE_EN           (1'b0),
+pcie3_uscale_rp_core_top.v:27162: .GTHE3_COMMON_QPLL1REFCLKSEL_VAL              (3'b001),
+pcie3_uscale_rp_core_top.v:27226: .GTHE3_COMMON_DRPADDR                         (GTHE3_COMMON_DRPADDR),
+pcie3_uscale_rp_core_top.v:27252: .GTHE3_COMMON_QPLL0REFCLKSEL                  (GTHE3_COMMON_QPLL0REFCLKSEL),
+pcie3_uscale_rp_core_top.v:27259: .GTHE3_COMMON_QPLL1REFCLKSEL                  (GTHE3_COMMON_QPLL1REFCLKSEL),
+pcie3_uscale_rp_core_top.v:27380: parameter   [8:0] GTHE3_COMMON_DRPADDR_VAL = 9'b0,
+pcie3_uscale_rp_core_top.v:27406: parameter   [2:0] GTHE3_COMMON_QPLL0REFCLKSEL_VAL = 3'b0,
+pcie3_uscale_rp_core_top.v:27413: parameter   [2:0] GTHE3_COMMON_QPLL1REFCLKSEL_VAL = 3'b0,
+pcie3_uscale_rp_core_top.v:27427: parameter   [0:0] GTHE3_COMMON_DRPADDR_TIE_EN = 1'b0,
+pcie3_uscale_rp_core_top.v:27453: parameter   [0:0] GTHE3_COMMON_QPLL0REFCLKSEL_TIE_EN = 1'b0,
+pcie3_uscale_rp_core_top.v:27460: parameter   [0:0] GTHE3_COMMON_QPLL1REFCLKSEL_TIE_EN = 1'b0,
+pcie3_uscale_rp_core_top.v:27481: input  wire [ 8:0] GTHE3_COMMON_DRPADDR,
+pcie3_uscale_rp_core_top.v:27507: input  wire [ 2:0] GTHE3_COMMON_QPLL0REFCLKSEL,
+pcie3_uscale_rp_core_top.v:27514: input  wire [ 2:0] GTHE3_COMMON_QPLL1REFCLKSEL,
+pcie3_uscale_rp_core_top.v:27559: wire [ 8:0] GTHE3_COMMON_DRPADDR_int;
+pcie3_uscale_rp_core_top.v:27585: wire [ 2:0] GTHE3_COMMON_QPLL0REFCLKSEL_int;
+pcie3_uscale_rp_core_top.v:27592: wire [ 2:0] GTHE3_COMMON_QPLL1REFCLKSEL_int;
+pcie3_uscale_rp_core_top.v:27626: if (GTHE3_COMMON_DRPADDR_TIE_EN == 1'b1)
+pcie3_uscale_rp_core_top.v:27627: assign GTHE3_COMMON_DRPADDR_int = GTHE3_COMMON_DRPADDR_VAL;
+pcie3_uscale_rp_core_top.v:27629: assign GTHE3_COMMON_DRPADDR_int = GTHE3_COMMON_DRPADDR;
+pcie3_uscale_rp_core_top.v:27756: if (GTHE3_COMMON_QPLL0REFCLKSEL_TIE_EN == 1'b1)
+pcie3_uscale_rp_core_top.v:27757: assign GTHE3_COMMON_QPLL0REFCLKSEL_int = GTHE3_COMMON_QPLL0REFCLKSEL_VAL;
+pcie3_uscale_rp_core_top.v:27759: assign GTHE3_COMMON_QPLL0REFCLKSEL_int = GTHE3_COMMON_QPLL0REFCLKSEL;
+pcie3_uscale_rp_core_top.v:27791: if (GTHE3_COMMON_QPLL1REFCLKSEL_TIE_EN == 1'b1)
+pcie3_uscale_rp_core_top.v:27792: assign GTHE3_COMMON_QPLL1REFCLKSEL_int = GTHE3_COMMON_QPLL1REFCLKSEL_VAL;
+pcie3_uscale_rp_core_top.v:27794: assign GTHE3_COMMON_QPLL1REFCLKSEL_int = GTHE3_COMMON_QPLL1REFCLKSEL;
+pcie3_uscale_rp_core_top.v:27907: .DRPADDR           (GTHE3_COMMON_DRPADDR_int           [ 8:0]),
+pcie3_uscale_rp_core_top.v:27933: .QPLL0REFCLKSEL    (GTHE3_COMMON_QPLL0REFCLKSEL_int    [ 2:0]),
+pcie3_uscale_rp_core_top.v:27940: .QPLL1REFCLKSEL    (GTHE3_COMMON_QPLL1REFCLKSEL_int    [ 2:0]),
+pcie3_uscale_rp_core_top.v:27987: input                  [(NUM_CHANNELS*3)-1:0] GTHE3_CHANNEL_CPLLREFCLKSEL,
+pcie3_uscale_rp_core_top.v:27991: input                  [(NUM_CHANNELS*9)-1:0] GTHE3_CHANNEL_DRPADDR,
+pcie3_uscale_rp_core_top.v:28139: input                  [(NUM_CHANNELS*2)-1:0] GTHE3_CHANNEL_RXSYSCLKSEL,
+pcie3_uscale_rp_core_top.v:28209: input                  [(NUM_CHANNELS*2)-1:0] GTHE3_CHANNEL_TXSYSCLKSEL,
+pcie3_uscale_rp_core_top.v:28377: .GTHE3_CHANNEL_CPLLREFCLKSEL_TIE_EN           (1'b0),
+pcie3_uscale_rp_core_top.v:28378: .GTHE3_CHANNEL_CPLLREFCLKSEL_VAL              (3'b001),
+pcie3_uscale_rp_core_top.v:28404: .GTHE3_CHANNEL_DRPADDR_TIE_EN                 (1'b0),
+pcie3_uscale_rp_core_top.v:28405: .GTHE3_CHANNEL_DRPADDR_VAL                    (9'b000000000),
+pcie3_uscale_rp_core_top.v:28876: .GTHE3_CHANNEL_RXSYSCLKSEL_TIE_EN             (1'b0),
+pcie3_uscale_rp_core_top.v:28877: .GTHE3_CHANNEL_RXSYSCLKSEL_VAL                (2'b11),
+pcie3_uscale_rp_core_top.v:29119: .GTHE3_CHANNEL_TXSYSCLKSEL_TIE_EN             (1'b0),
+pcie3_uscale_rp_core_top.v:29120: .GTHE3_CHANNEL_TXSYSCLKSEL_VAL                (2'b11),
+pcie3_uscale_rp_core_top.v:29177: .GTHE3_CHANNEL_CPLLREFCLKSEL                  (GTHE3_CHANNEL_CPLLREFCLKSEL),
+pcie3_uscale_rp_core_top.v:29181: .GTHE3_CHANNEL_DRPADDR                        (GTHE3_CHANNEL_DRPADDR),
+pcie3_uscale_rp_core_top.v:29329: .GTHE3_CHANNEL_RXSYSCLKSEL                    (GTHE3_CHANNEL_RXSYSCLKSEL),
+pcie3_uscale_rp_core_top.v:29399: .GTHE3_CHANNEL_TXSYSCLKSEL                    (GTHE3_CHANNEL_TXSYSCLKSEL),
+pcie3_uscale_rp_core_top.v:29915: parameter   [2:0] GTHE3_CHANNEL_CPLLREFCLKSEL_VAL = 3'b0,
+pcie3_uscale_rp_core_top.v:29919: parameter   [8:0] GTHE3_CHANNEL_DRPADDR_VAL = 9'b0,
+pcie3_uscale_rp_core_top.v:30067: parameter   [1:0] GTHE3_CHANNEL_RXSYSCLKSEL_VAL = 2'b0,
+pcie3_uscale_rp_core_top.v:30137: parameter   [1:0] GTHE3_CHANNEL_TXSYSCLKSEL_VAL = 2'b0,
+pcie3_uscale_rp_core_top.v:30149: parameter   [0:0] GTHE3_CHANNEL_CPLLREFCLKSEL_TIE_EN = 1'b0,
+pcie3_uscale_rp_core_top.v:30153: parameter   [0:0] GTHE3_CHANNEL_DRPADDR_TIE_EN = 1'b0,
+pcie3_uscale_rp_core_top.v:30301: parameter   [0:0] GTHE3_CHANNEL_RXSYSCLKSEL_TIE_EN = 1'b0,
+pcie3_uscale_rp_core_top.v:30371: parameter   [0:0] GTHE3_CHANNEL_TXSYSCLKSEL_TIE_EN = 1'b0,
+pcie3_uscale_rp_core_top.v:30390: input  wire [(NUM_CHANNELS*  3)-1:0] GTHE3_CHANNEL_CPLLREFCLKSEL,
+pcie3_uscale_rp_core_top.v:30394: input  wire [(NUM_CHANNELS*  9)-1:0] GTHE3_CHANNEL_DRPADDR,
+pcie3_uscale_rp_core_top.v:30542: input  wire [(NUM_CHANNELS*  2)-1:0] GTHE3_CHANNEL_RXSYSCLKSEL,
+pcie3_uscale_rp_core_top.v:30612: input  wire [(NUM_CHANNELS*  2)-1:0] GTHE3_CHANNEL_TXSYSCLKSEL,
+pcie3_uscale_rp_core_top.v:30732: wire [(NUM_CHANNELS*  3)-1:0] GTHE3_CHANNEL_CPLLREFCLKSEL_int;
+pcie3_uscale_rp_core_top.v:30736: wire [(NUM_CHANNELS*  9)-1:0] GTHE3_CHANNEL_DRPADDR_int;
+pcie3_uscale_rp_core_top.v:30884: wire [(NUM_CHANNELS*  2)-1:0] GTHE3_CHANNEL_RXSYSCLKSEL_int;
+pcie3_uscale_rp_core_top.v:30954: wire [(NUM_CHANNELS*  2)-1:0] GTHE3_CHANNEL_TXSYSCLKSEL_int;
+pcie3_uscale_rp_core_top.v:30990: if (GTHE3_CHANNEL_CPLLREFCLKSEL_TIE_EN == 1'b1)
+pcie3_uscale_rp_core_top.v:30991: assign GTHE3_CHANNEL_CPLLREFCLKSEL_int = {NUM_CHANNELS{GTHE3_CHANNEL_CPLLREFCLKSEL_VAL}};
+pcie3_uscale_rp_core_top.v:30993: assign GTHE3_CHANNEL_CPLLREFCLKSEL_int = {NUM_CHANNELS{GTHE3_CHANNEL_CPLLREFCLKSEL}};
+pcie3_uscale_rp_core_top.v:31010: if (GTHE3_CHANNEL_DRPADDR_TIE_EN == 1'b1)
+pcie3_uscale_rp_core_top.v:31011: assign GTHE3_CHANNEL_DRPADDR_int = {NUM_CHANNELS{GTHE3_CHANNEL_DRPADDR_VAL}};
+pcie3_uscale_rp_core_top.v:31013: assign GTHE3_CHANNEL_DRPADDR_int = {NUM_CHANNELS{GTHE3_CHANNEL_DRPADDR}};
+pcie3_uscale_rp_core_top.v:31750: if (GTHE3_CHANNEL_RXSYSCLKSEL_TIE_EN == 1'b1)
+pcie3_uscale_rp_core_top.v:31751: assign GTHE3_CHANNEL_RXSYSCLKSEL_int = {NUM_CHANNELS{GTHE3_CHANNEL_RXSYSCLKSEL_VAL}};
+pcie3_uscale_rp_core_top.v:31753: assign GTHE3_CHANNEL_RXSYSCLKSEL_int = {NUM_CHANNELS{GTHE3_CHANNEL_RXSYSCLKSEL}};
+pcie3_uscale_rp_core_top.v:32100: if (GTHE3_CHANNEL_TXSYSCLKSEL_TIE_EN == 1'b1)
+pcie3_uscale_rp_core_top.v:32101: assign GTHE3_CHANNEL_TXSYSCLKSEL_int = {NUM_CHANNELS{GTHE3_CHANNEL_TXSYSCLKSEL_VAL}};
+pcie3_uscale_rp_core_top.v:32103: assign GTHE3_CHANNEL_TXSYSCLKSEL_int = {NUM_CHANNELS{GTHE3_CHANNEL_TXSYSCLKSEL}};
+pcie3_uscale_rp_core_top.v:32519: .CPLLREFCLKSEL            (GTHE3_CHANNEL_CPLLREFCLKSEL_int       [((ch+1)*  3)-1:(ch*  3)]),
+pcie3_uscale_rp_core_top.v:32523: .DRPADDR                  (GTHE3_CHANNEL_DRPADDR_int             [((ch+1)*  9)-1:(ch*  9)]),
+pcie3_uscale_rp_core_top.v:32671: .RXSYSCLKSEL              (GTHE3_CHANNEL_RXSYSCLKSEL_int         [((ch+1)*  2)-1:(ch*  2)]),
+pcie3_uscale_rp_core_top.v:32741: .TXSYSCLKSEL              (GTHE3_CHANNEL_TXSYSCLKSEL_int         [((ch+1)*  2)-1:(ch*  2)]),
+pcie3_uscale_rp_core_top.v:32875: input wire  [8:0]  USER_CHANNEL_DRPADDR_IN,
+pcie3_uscale_rp_core_top.v:32893: output reg [8:0]   GTHE3_CHANNEL_DRPADDR_OUT,
+pcie3_uscale_rp_core_top.v:33459: GTHE3_CHANNEL_DRPADDR_OUT <= daddr;
+pcie3_uscale_rp_core_top.v:33467: GTHE3_CHANNEL_DRPADDR_OUT <= USER_CHANNEL_DRPADDR_IN;
+xdma_gtc_gt_common.v:160: .QPLL_DRPADDR                   (qpll_drp_addr),
+xdma_gtc_qpll_wrapper.v:97: input       [ 7:0]  QPLL_DRPADDR,
+xdma_gtc_qpll_wrapper.v:144: GTPE2_COMMON #
+xdma_gtc_qpll_wrapper.v:193: .PLL0REFCLKSEL                  ( 3'd1),                                // Optimized for IES
+xdma_gtc_qpll_wrapper.v:194: .PLL1REFCLKSEL                  ( 3'd1),                                // Optimized for IES
+xdma_gtc_qpll_wrapper.v:218: .DRPADDR                        (QPLL_DRPADDR),                         //
+xdma_gtc_qpll_wrapper.v:297: .QPLLREFCLKSEL                  ( 3'd1),                                //
+xdma_gtc_qpll_wrapper.v:315: .DRPADDR                        (QPLL_DRPADDR),                         //
+xdma_gtc_qpll_wrapper.v:389: .QPLLREFCLKSEL                  ( 3'd1),                                //
+xdma_gtc_qpll_wrapper.v:407: .DRPADDR                        (QPLL_DRPADDR),                         //
+xdma_gtc_pcie2_ip-PCIE_X0Y0.xdc:95: set_property LOC GTPE2_CHANNEL_X0Y3 [get_cells {inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/gtp_channel.gtpe2_channel_i}]
+xdma_gtc_pcie2_ip_gt_top.v:604: .EXT_CH_GT_DRPADDR         (ext_ch_gt_drpaddr),
+xdma_gtc_pcie2_ip_gt_wrapper.v:116: input       [ 1:0]  GT_TXSYSCLKSEL,
+xdma_gtc_pcie2_ip_gt_wrapper.v:117: input       [ 1:0]  GT_RXSYSCLKSEL,
+xdma_gtc_pcie2_ip_gt_wrapper.v:194: input       [ 8:0]  GT_DRPADDR,
+xdma_gtc_pcie2_ip_gt_wrapper.v:466: GTPE2_CHANNEL #
+xdma_gtc_pcie2_ip_gt_wrapper.v:775: .TXSYSCLKSEL                    (GT_TXSYSCLKSEL),                       //
+xdma_gtc_pcie2_ip_gt_wrapper.v:776: .RXSYSCLKSEL                    (GT_RXSYSCLKSEL),                       //
+xdma_gtc_pcie2_ip_gt_wrapper.v:855: .DRPADDR                        (GT_DRPADDR),                           //
+xdma_gtc_pcie2_ip_gt_wrapper.v:1432: .TXSYSCLKSEL                    (GT_TXSYSCLKSEL),                       //
+xdma_gtc_pcie2_ip_gt_wrapper.v:1433: .RXSYSCLKSEL                    (GT_RXSYSCLKSEL),                       //
+xdma_gtc_pcie2_ip_gt_wrapper.v:1436: .CPLLREFCLKSEL                  (3'd1),                                 //
+xdma_gtc_pcie2_ip_gt_wrapper.v:1521: .DRPADDR                        (GT_DRPADDR),                           //
+xdma_gtc_pcie2_ip_gt_wrapper.v:2064: .TXSYSCLKSEL                    (GT_TXSYSCLKSEL),                       //
+xdma_gtc_pcie2_ip_gt_wrapper.v:2065: .RXSYSCLKSEL                    (GT_RXSYSCLKSEL),                       //
+xdma_gtc_pcie2_ip_gt_wrapper.v:2068: .CPLLREFCLKSEL                  (3'd1),                                 //
+xdma_gtc_pcie2_ip_gt_wrapper.v:2150: .DRPADDR                        (GT_DRPADDR),                           //
+xdma_gtc_pcie2_ip_pipe_wrapper.v:73: //                  GTXE2_CHANNEL or GTHE2_CHANNEL or GTPE2_CHANNEL
+xdma_gtc_pcie2_ip_pipe_wrapper.v:74: //                  GTXE2_COMMON  or GTHE2_COMMON or GTPE2_CHANNEL
+xdma_gtc_pcie2_ip_pipe_wrapper.v:378: input        [(PCIE_LANE*9)-1:0] EXT_CH_GT_DRPADDR,
+xdma_gtc_pcie2_ip_pipe_wrapper.v:1004: //.RATE_SYSCLKSEL                 (rate_sysclksel[(2*i)+1:(2*i)]),    // removed for GTP
+xdma_gtc_pcie2_ip_pipe_wrapper.v:1082: .RATE_SYSCLKSEL                 (rate_sysclksel[(2*i)+1:(2*i)]),
+xdma_gtc_pcie2_ip_pipe_wrapper.v:1264: assign drp_mux_addr[(9*i)+8:(9*i)]  = (PIPE_JTAG_RDY[i] && EXT_CH_GT_DRP) ? EXT_CH_GT_DRPADDR[(9*i)+8:(9*i)] : drp_addr[(9*i)+8:(9*i)];
+xdma_gtc_pcie2_ip_pipe_wrapper.v:1499: .GT_TXSYSCLKSEL                 (rate_sysclksel[(2*i)+1:(2*i)]),
+xdma_gtc_pcie2_ip_pipe_wrapper.v:1500: .GT_RXSYSCLKSEL                 (rate_sysclksel[(2*i)+1:(2*i)]),
+xdma_gtc_pcie2_ip_pipe_wrapper.v:1579: .GT_DRPADDR                     (drp_mux_addr[(9*i)+8:(9*i)]),

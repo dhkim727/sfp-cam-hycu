@@ -1,0 +1,1019 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Nov  7 17:52:15 2026
+# Process ID         : 291655
+# Current directory  : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1
+# Command line       : vivado -log z7015_rx_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source z7015_rx_wrapper.tcl -notrace
+# Log file           : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1/z7015_rx_wrapper.vdi
+# Journal file       : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1/vivado.jou
+# Running On         : dhkim-home
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
+# CPU Frequency      : 5519.122 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 67058 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75648 MB
+# Available Virtual  : 60758 MB
+#-----------------------------------------------------------
+source z7015_rx_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+Command: link_design -top z7015_rx_wrapper -part xc7z015clg485-2
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_aurora_rx_0/z7015_rx_aurora_rx_0.dcp' for cell 'z7015_rx_i/aurora_rx'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_bram_ctrl_0_0/z7015_rx_axi_bram_ctrl_0_0.dcp' for cell 'z7015_rx_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_dma_0_0/z7015_rx_axi_dma_0_0.dcp' for cell 'z7015_rx_i/axi_dma_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_gpio_link_0/z7015_rx_axi_gpio_link_0.dcp' for cell 'z7015_rx_i/axi_gpio_link'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_blk_mem_gen_0_0/z7015_rx_blk_mem_gen_0_0.dcp' for cell 'z7015_rx_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_clk_wiz_0_0/z7015_rx_clk_wiz_0_0.dcp' for cell 'z7015_rx_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_depkt_0_0/z7015_rx_depkt_0_0.dcp' for cell 'z7015_rx_i/depkt_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_fifo_rx_0/z7015_rx_fifo_rx_0.dcp' for cell 'z7015_rx_i/fifo_rx'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_gt_common_0/z7015_rx_gt_common_0.dcp' for cell 'z7015_rx_i/gt_common'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_link_ctrl_0_0/z7015_rx_link_ctrl_0_0.dcp' for cell 'z7015_rx_i/link_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_prbs_check_0_0/z7015_rx_prbs_check_0_0.dcp' for cell 'z7015_rx_i/prbs_check_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_proc_sys_reset_0_0/z7015_rx_proc_sys_reset_0_0.dcp' for cell 'z7015_rx_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_ps7_0/z7015_rx_ps7_0.dcp' for cell 'z7015_rx_i/ps7'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rst_axi_0/z7015_rx_rst_axi_0.dcp' for cell 'z7015_rx_i/rst_axi'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rst_axi1_0/z7015_rx_rst_axi1_0.dcp' for cell 'z7015_rx_i/rst_axi1'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rx_support_0/z7015_rx_rx_support_0.dcp' for cell 'z7015_rx_i/rx_support'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_ctrl_0/z7015_rx_sc_ctrl_0.dcp' for cell 'z7015_rx_i/sc_ctrl'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_mem_0/z7015_rx_sc_mem_0.dcp' for cell 'z7015_rx_i/sc_mem'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_util_ds_buf_0_0/z7015_rx_util_ds_buf_0_0.dcp' for cell 'z7015_rx_i/util_ds_buf_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_util_ds_buf_1_0/z7015_rx_util_ds_buf_1_0.dcp' for cell 'z7015_rx_i/util_ds_buf_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_vio_link_0/z7015_rx_vio_link_0.dcp' for cell 'z7015_rx_i/vio_link'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/z7015_rx_xdma_0_0.dcp' for cell 'z7015_rx_i/xdma_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_auto_cc_0/z7015_rx_axi_interconnect_0_imp_auto_cc_0.dcp' for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_auto_pc_0/z7015_rx_axi_interconnect_0_imp_auto_pc_0.dcp' for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0.dcp' for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/s00_data_fifo'
+Netlist sorting complete. Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.27 . Memory (MB): peak = 1959.176 ; gain = 0.000 ; free physical = 35055 ; free virtual = 57275
+INFO: [Netlist 29-17] Analyzing 1483 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-1115] Found multi-term driver net: z7015_rx_i/util_ds_buf_1/U0/<const0>.
+WARNING: [Netlist 29-1115] Found multi-term driver net: z7015_rx_i/util_ds_buf_0/U0/<const0>.
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: z7015_rx_i/vio_link UUID: b4530db5-3b25-54db-83e7-9d00b0d9db71 
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_ps7_0/z7015_rx_ps7_0.xdc] for cell 'z7015_rx_i/ps7/inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_ps7_0/z7015_rx_ps7_0.xdc] for cell 'z7015_rx_i/ps7/inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rst_axi_0/z7015_rx_rst_axi_0_board.xdc] for cell 'z7015_rx_i/rst_axi/U0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rst_axi_0/z7015_rx_rst_axi_0_board.xdc] for cell 'z7015_rx_i/rst_axi/U0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rst_axi1_0/z7015_rx_rst_axi1_0_board.xdc] for cell 'z7015_rx_i/rst_axi1/U0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rst_axi1_0/z7015_rx_rst_axi1_0_board.xdc] for cell 'z7015_rx_i/rst_axi1/U0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_dma_0_0/z7015_rx_axi_dma_0_0.xdc] for cell 'z7015_rx_i/axi_dma_0/U0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_dma_0_0/z7015_rx_axi_dma_0_0.xdc] for cell 'z7015_rx_i/axi_dma_0/U0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_gpio_link_0/z7015_rx_axi_gpio_link_0_board.xdc] for cell 'z7015_rx_i/axi_gpio_link/U0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_gpio_link_0/z7015_rx_axi_gpio_link_0_board.xdc] for cell 'z7015_rx_i/axi_gpio_link/U0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_ctrl_0/bd_0/ip/ip_1/bd_2e53_psr_aclk_0_board.xdc] for cell 'z7015_rx_i/sc_ctrl/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_ctrl_0/bd_0/ip/ip_1/bd_2e53_psr_aclk_0_board.xdc] for cell 'z7015_rx_i/sc_ctrl/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_ctrl_0/smartconnect.xdc] for cell 'z7015_rx_i/sc_ctrl/inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_ctrl_0/smartconnect.xdc] for cell 'z7015_rx_i/sc_ctrl/inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_mem_0/bd_0/ip/ip_1/bd_7450_psr_aclk_0_board.xdc] for cell 'z7015_rx_i/sc_mem/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_mem_0/bd_0/ip/ip_1/bd_7450_psr_aclk_0_board.xdc] for cell 'z7015_rx_i/sc_mem/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_mem_0/smartconnect.xdc] for cell 'z7015_rx_i/sc_mem/inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_mem_0/smartconnect.xdc] for cell 'z7015_rx_i/sc_mem/inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_vio_link_0/z7015_rx_vio_link_0.xdc] for cell 'z7015_rx_i/vio_link'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_vio_link_0/z7015_rx_vio_link_0.xdc] for cell 'z7015_rx_i/vio_link'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_aurora_rx_0/z7015_rx_aurora_rx_0.xdc] for cell 'z7015_rx_i/aurora_rx/inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_aurora_rx_0/z7015_rx_aurora_rx_0.xdc] for cell 'z7015_rx_i/aurora_rx/inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_clk_wiz_0_0/z7015_rx_clk_wiz_0_0_board.xdc] for cell 'z7015_rx_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_clk_wiz_0_0/z7015_rx_clk_wiz_0_0_board.xdc] for cell 'z7015_rx_i/clk_wiz_0/inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_clk_wiz_0_0/z7015_rx_clk_wiz_0_0.xdc] for cell 'z7015_rx_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_clk_wiz_0_0/z7015_rx_clk_wiz_0_0.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_clk_wiz_0_0/z7015_rx_clk_wiz_0_0.xdc:54]
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_clk_wiz_0_0/z7015_rx_clk_wiz_0_0.xdc] for cell 'z7015_rx_i/clk_wiz_0/inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_util_ds_buf_0_0/z7015_rx_util_ds_buf_0_0_board.xdc] for cell 'z7015_rx_i/util_ds_buf_0/U0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_util_ds_buf_0_0/z7015_rx_util_ds_buf_0_0_board.xdc] for cell 'z7015_rx_i/util_ds_buf_0/U0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_util_ds_buf_1_0/z7015_rx_util_ds_buf_1_0_board.xdc] for cell 'z7015_rx_i/util_ds_buf_1/U0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_util_ds_buf_1_0/z7015_rx_util_ds_buf_1_0_board.xdc] for cell 'z7015_rx_i/util_ds_buf_1/U0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/ip_4/pcie2_fifo_generator_tgt_brdg.xdc] for cell 'z7015_rx_i/xdma_0/inst/z7015_rx_xdma_0_0_pcie2_to_pcie3_wrapper_i/z7015_rx_xdma_0_0_axi_stream_intf_i/z7015_rx_xdma_0_0_rx_demux_i/tgt_brdg_fifo_inst/U0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/ip_4/pcie2_fifo_generator_tgt_brdg.xdc] for cell 'z7015_rx_i/xdma_0/inst/z7015_rx_xdma_0_0_pcie2_to_pcie3_wrapper_i/z7015_rx_xdma_0_0_axi_stream_intf_i/z7015_rx_xdma_0_0_rx_demux_i/tgt_brdg_fifo_inst/U0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/ip_3/pcie2_fifo_generator_dma_cpl.xdc] for cell 'z7015_rx_i/xdma_0/inst/z7015_rx_xdma_0_0_pcie2_to_pcie3_wrapper_i/z7015_rx_xdma_0_0_axi_stream_intf_i/z7015_rx_xdma_0_0_rx_demux_i/dma_cpl_fifo_inst/U0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/ip_3/pcie2_fifo_generator_dma_cpl.xdc] for cell 'z7015_rx_i/xdma_0/inst/z7015_rx_xdma_0_0_pcie2_to_pcie3_wrapper_i/z7015_rx_xdma_0_0_axi_stream_intf_i/z7015_rx_xdma_0_0_rx_demux_i/dma_cpl_fifo_inst/U0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/ip_0/source/z7015_rx_xdma_0_0_pcie2_ip-PCIE_X0Y0.xdc] for cell 'z7015_rx_i/xdma_0/inst/z7015_rx_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/ip_0/source/z7015_rx_xdma_0_0_pcie2_ip-PCIE_X0Y0.xdc] for cell 'z7015_rx_i/xdma_0/inst/z7015_rx_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/z7015_rx_xdma_0_0_board.xdc] for cell 'z7015_rx_i/xdma_0/inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/z7015_rx_xdma_0_0_board.xdc] for cell 'z7015_rx_i/xdma_0/inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/source/z7015_rx_xdma_0_0_pcie3_7vx_ip.xdc] for cell 'z7015_rx_i/xdma_0/inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/source/z7015_rx_xdma_0_0_pcie3_7vx_ip.xdc] for cell 'z7015_rx_i/xdma_0/inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_proc_sys_reset_0_0/z7015_rx_proc_sys_reset_0_0_board.xdc] for cell 'z7015_rx_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_proc_sys_reset_0_0/z7015_rx_proc_sys_reset_0_0_board.xdc] for cell 'z7015_rx_i/proc_sys_reset_0/U0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_z7015_rx/z7015_rx.xdc]
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_z7015_rx/z7015_rx.xdc]
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_dma_0_0/z7015_rx_axi_dma_0_0_clocks.xdc] for cell 'z7015_rx_i/axi_dma_0/U0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_dma_0_0/z7015_rx_axi_dma_0_0_clocks.xdc] for cell 'z7015_rx_i/axi_dma_0/U0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_aurora_rx_0/z7015_rx_aurora_rx_0_clocks.xdc] for cell 'z7015_rx_i/aurora_rx/inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_aurora_rx_0/z7015_rx_aurora_rx_0_clocks.xdc] for cell 'z7015_rx_i/aurora_rx/inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/ip_0/source/ip_xilinx_pcie_2_1_7x_late.xdc] for cell 'z7015_rx_i/xdma_0/inst/z7015_rx_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/ip_0/source/ip_xilinx_pcie_2_1_7x_late.xdc] for cell 'z7015_rx_i/xdma_0/inst/z7015_rx_xdma_0_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0_clocks.xdc] for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/s00_data_fifo/inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0_clocks.xdc] for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/s00_data_fifo/inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_auto_cc_0/z7015_rx_axi_interconnect_0_imp_auto_cc_0_clocks.xdc] for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/auto_cc/inst'
+INFO: [Timing 38-2] Deriving generated clocks [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_auto_cc_0/z7015_rx_axi_interconnect_0_imp_auto_cc_0_clocks.xdc:16]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'LUTAR-1' object list specifies likely unusable hierarchical instance 'z7015_rx_i/axi_interconnect_0/s00_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi'. [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_auto_cc_0/z7015_rx_axi_interconnect_0_imp_auto_cc_0_clocks.xdc:30]
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_auto_cc_0/z7015_rx_axi_interconnect_0_imp_auto_cc_0_clocks.xdc] for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/auto_cc/inst'
+INFO: [Project 1-1714] 157 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2727.320 ; gain = 0.000 ; free physical = 34443 ; free virtual = 56663
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 556 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 20 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 499 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 28 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+
+41 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2727.355 ; gain = 1102.047 ; free physical = 34442 ; free virtual = 56662
+source /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_z7015_rx/eco_aurora_rx_pll1.tcl
+INFO: [eco_aurora_rx_pll1] Sat Nov 07 17:52:28 KST 2026  design design_1  verify_only=0
+INFO: [eco_aurora_rx_pll1] channel : z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/gtpe2_i
+INFO: [eco_aurora_rx_pll1] common  : z7015_rx_i/gt_common/inst/u_gtpe2_common
+INFO: [eco_aurora_rx_pll1]   PLL1CLK    <- GTPE2_COMMON/PLL1OUTCLK
+INFO: [eco_aurora_rx_pll1]   PLL1REFCLK <- GTPE2_COMMON/PLL1OUTREFCLK
+INFO: [eco_aurora_rx_pll1]   PLL0CLK    <- GTPE2_COMMON/PLL0OUTCLK
+INFO: [eco_aurora_rx_pll1]   PLL0REFCLK <- GTPE2_COMMON/PLL0OUTREFCLK
+INFO: [eco_aurora_rx_pll1]   RXSYSCLKSEL[1]   = 0
+INFO: [eco_aurora_rx_pll1]   RXSYSCLKSEL[0]   = 0
+INFO: [eco_aurora_rx_pll1]   TXSYSCLKSEL[1]   = 0
+INFO: [eco_aurora_rx_pll1]   TXSYSCLKSEL[0]   = 0
+INFO: [eco_aurora_rx_pll1] VCC net : z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/<const1>
+INFO: [eco_aurora_rx_pll1]   z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/gtpe2_i/RXSYSCLKSEL[1] -> VCC
+INFO: [eco_aurora_rx_pll1]   z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/gtpe2_i/RXSYSCLKSEL[0] -> VCC
+INFO: [eco_aurora_rx_pll1]   z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/gtpe2_i/TXSYSCLKSEL[1] -> VCC
+INFO: [eco_aurora_rx_pll1]   z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/gtpe2_i/TXSYSCLKSEL[0] -> VCC
+INFO: [eco_aurora_rx_pll1] aurora_rx GTPE2_CHANNEL now RXSYSCLKSEL = TXSYSCLKSEL = 2'b11 (PLL1)
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z015'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2727.355 ; gain = 0.000 ; free physical = 34418 ; free virtual = 56638
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 18b20602f
+
+Time (s): cpu = 00:00:00.92 ; elapsed = 00:00:00.39 . Memory (MB): peak = 2730.289 ; gain = 2.934 ; free physical = 34411 ; free virtual = 56632
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+
+Phase 1.1.1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = 5786df9a69c4bee4.
+Done building netlist checker database: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3112.914 ; gain = 0.000 ; free physical = 33863 ; free virtual = 56090
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3112.914 ; gain = 0.000 ; free physical = 33877 ; free virtual = 56105
+Phase 1.1.1 Generate And Synthesize Debug Cores | Checksum: 1992eb5f4
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3112.914 ; gain = 20.812 ; free physical = 33877 ; free virtual = 56105
+Phase 1.1 Core Generation And Design Setup | Checksum: 1992eb5f4
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3112.914 ; gain = 20.812 ; free physical = 33877 ; free virtual = 56105
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 1992eb5f4
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3112.914 ; gain = 20.812 ; free physical = 33878 ; free virtual = 56105
+Phase 1 Initialization | Checksum: 1992eb5f4
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3112.914 ; gain = 20.812 ; free physical = 33878 ; free virtual = 56105
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 1992eb5f4
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3128.914 ; gain = 36.812 ; free physical = 33862 ; free virtual = 56090
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 1992eb5f4
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 3128.914 ; gain = 36.812 ; free physical = 33862 ; free virtual = 56089
+
+Phase 2.3 Timing Data Collection
+Phase 2.3 Timing Data Collection | Checksum: 1992eb5f4
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 3128.914 ; gain = 36.812 ; free physical = 33854 ; free virtual = 56082
+Phase 2 Timer Update And Timing Data Collection | Checksum: 1992eb5f4
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 3128.914 ; gain = 36.812 ; free physical = 33854 ; free virtual = 56082
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 22 inverters resulting in an inversion of 154 pins
+INFO: [Opt 31-138] Pushed 19 inverter(s) to 103 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 201479b70
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3128.914 ; gain = 36.812 ; free physical = 33854 ; free virtual = 56081
+Retarget | Checksum: 201479b70
+INFO: [Opt 31-389] Phase Retarget created 65 cells and removed 1321 cells
+INFO: [Opt 31-1021] In phase Retarget, 428 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 8 load pin(s).
+Phase 4 Constant propagation | Checksum: 2ad3fa67a
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3128.914 ; gain = 36.812 ; free physical = 33853 ; free virtual = 56081
+Constant propagation | Checksum: 2ad3fa67a
+INFO: [Opt 31-389] Phase Constant propagation created 293 cells and removed 434 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 417 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.914 ; gain = 0.000 ; free physical = 33860 ; free virtual = 56088
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3128.914 ; gain = 0.000 ; free physical = 33861 ; free virtual = 56089
+Phase 5 Sweep | Checksum: 24d08a76a
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 3128.914 ; gain = 36.812 ; free physical = 33860 ; free virtual = 56088
+Sweep | Checksum: 24d08a76a
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2059 cells
+INFO: [Opt 31-1021] In phase Sweep, 1847 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 24d08a76a
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3160.930 ; gain = 68.828 ; free physical = 33860 ; free virtual = 56088
+BUFG optimization | Checksum: 24d08a76a
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 24d08a76a
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3160.930 ; gain = 68.828 ; free physical = 33860 ; free virtual = 56088
+Shift Register Optimization | Checksum: 24d08a76a
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 2b12ff5f3
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3160.930 ; gain = 68.828 ; free physical = 33860 ; free virtual = 56088
+Post Processing Netlist | Checksum: 2b12ff5f3
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 466 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 24bb8304b
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3160.930 ; gain = 68.828 ; free physical = 33860 ; free virtual = 56087
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3160.930 ; gain = 0.000 ; free physical = 33860 ; free virtual = 56087
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 24bb8304b
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3160.930 ; gain = 68.828 ; free physical = 33860 ; free virtual = 56087
+Phase 9 Finalization | Checksum: 24bb8304b
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3160.930 ; gain = 68.828 ; free physical = 33860 ; free virtual = 56087
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              65  |            1321  |                                            428  |
+|  Constant propagation         |             293  |             434  |                                            417  |
+|  Sweep                        |               0  |            2059  |                                           1847  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                            466  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 24bb8304b
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3160.930 ; gain = 68.828 ; free physical = 33868 ; free virtual = 56095
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 34 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 1 WE to EN ports
+Number of BRAM Ports augmented: 10 newly gated: 21 Total Ports: 68
+Number of Flops added for Enable Generation: 6
+
+Ending PowerOpt Patch Enables Task | Checksum: 28af447a5
+
+Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3394.781 ; gain = 0.000 ; free physical = 33789 ; free virtual = 56016
+Ending Power Optimization Task | Checksum: 28af447a5
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 3394.781 ; gain = 233.852 ; free physical = 33789 ; free virtual = 56016
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 264b0202e
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.84 . Memory (MB): peak = 3394.781 ; gain = 0.000 ; free physical = 33789 ; free virtual = 56016
+Ending Final Cleanup Task | Checksum: 264b0202e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3394.781 ; gain = 0.000 ; free physical = 33789 ; free virtual = 56016
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3394.781 ; gain = 0.000 ; free physical = 33789 ; free virtual = 56016
+INFO: [Common 17-83] Releasing license: Implementation
+80 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 3394.781 ; gain = 667.426 ; free physical = 33789 ; free virtual = 56016
+INFO: [Vivado 12-24828] Executing command : report_drc -file z7015_rx_wrapper_drc_opted.rpt -pb z7015_rx_wrapper_drc_opted.pb -rpx z7015_rx_wrapper_drc_opted.rpx
+Command: report_drc -file z7015_rx_wrapper_drc_opted.rpt -pb z7015_rx_wrapper_drc_opted.pb -rpx z7015_rx_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1/z7015_rx_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3394.781 ; gain = 0.000 ; free physical = 33788 ; free virtual = 56015
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3394.781 ; gain = 0.000 ; free physical = 33788 ; free virtual = 56015
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3394.781 ; gain = 0.000 ; free physical = 33786 ; free virtual = 56017
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3394.781 ; gain = 0.000 ; free physical = 33785 ; free virtual = 56016
+Wrote PlaceStorage: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3394.781 ; gain = 0.000 ; free physical = 33785 ; free virtual = 56016
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3394.781 ; gain = 0.000 ; free physical = 33785 ; free virtual = 56016
+Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3394.781 ; gain = 0.000 ; free physical = 33783 ; free virtual = 56016
+Write Physdb Complete: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3394.781 ; gain = 0.000 ; free physical = 33783 ; free virtual = 56017
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1/z7015_rx_wrapper_opt.dcp' has been generated.
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z015'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 31 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33771 ; free virtual = 56009
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 16dfbff91
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33771 ; free virtual = 56009
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33771 ; free virtual = 56009
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13d8911a3
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.99 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33780 ; free virtual = 56017
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 2e366c6f8
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33816 ; free virtual = 56054
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2e366c6f8
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33816 ; free virtual = 56054
+Phase 1 Placer Initialization | Checksum: 2e366c6f8
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33816 ; free virtual = 56054
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 2c14075c5
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33825 ; free virtual = 56063
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 2cfae77b6
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33827 ; free virtual = 56064
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 2cfae77b6
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33827 ; free virtual = 56064
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 312b55b0e
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:11 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33708 ; free virtual = 55946
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 28409599e
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:11 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33710 ; free virtual = 55948
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 1450 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 595 nets or LUTs. Breaked 0 LUT, combined 595 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33709 ; free virtual = 55947
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            595  |                   595  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            595  |                   595  |           0  |           4  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 18c5fc144
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:13 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33710 ; free virtual = 55950
+Phase 2.5 Global Place Phase2 | Checksum: 19296cf88
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:14 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33715 ; free virtual = 55954
+Phase 2 Global Placement | Checksum: 19296cf88
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:14 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33715 ; free virtual = 55954
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1f6434db4
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:14 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33719 ; free virtual = 55959
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1ece1981f
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:15 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33697 ; free virtual = 55943
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 266c0a6ff
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:15 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33698 ; free virtual = 55944
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 21dd7e8fa
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:15 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33698 ; free virtual = 55944
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 29f33b0fd
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:17 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33695 ; free virtual = 55944
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1822cb7e6
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:21 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33717 ; free virtual = 55970
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 16e8d7a99
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:22 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33724 ; free virtual = 55975
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1fd674f06
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:22 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33723 ; free virtual = 55975
+Phase 3 Detail Placement | Checksum: 1fd674f06
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:22 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33723 ; free virtual = 55975
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 2b723f762
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.138 | TNS=-0.138 |
+Phase 1 Physical Synthesis Initialization | Checksum: 294bb5a58
+
+Time (s): cpu = 00:00:00.78 ; elapsed = 00:00:00.2 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33717 ; free virtual = 55969
+INFO: [Place 46-33] Processed net z7015_rx_i/xdma_0/inst/udma_wrapper/dma_top/dma_pcie_req/dma_pcie_rc/u_dma_rc_mem_pfch/SR[0], BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 3044f70fe
+
+Time (s): cpu = 00:00:00.98 ; elapsed = 00:00:00.3 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33712 ; free virtual = 55964
+Phase 4.1.1.1 BUFG Insertion | Checksum: 2b723f762
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:24 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33721 ; free virtual = 55973
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.516. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 263a18264
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:25 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33728 ; free virtual = 55980
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:25 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33728 ; free virtual = 55980
+Phase 4.1 Post Commit Optimization | Checksum: 263a18264
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:25 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33728 ; free virtual = 55980
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 263a18264
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:25 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33728 ; free virtual = 55980
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                2x2|
+|___________|___________________|___________________|
+|      South|                1x1|                2x2|
+|___________|___________________|___________________|
+|       East|                2x2|                4x4|
+|___________|___________________|___________________|
+|       West|                2x2|                2x2|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 263a18264
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:25 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33727 ; free virtual = 55979
+Phase 4.3 Placer Reporting | Checksum: 263a18264
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:25 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33727 ; free virtual = 55979
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33727 ; free virtual = 55979
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:25 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33727 ; free virtual = 55979
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2455de899
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:26 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33726 ; free virtual = 55978
+Ending Placer Task | Checksum: 20d827643
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:26 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33726 ; free virtual = 55978
+117 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:09 ; elapsed = 00:00:27 . Memory (MB): peak = 3617.996 ; gain = 223.215 ; free physical = 33726 ; free virtual = 55978
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_io -file z7015_rx_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33719 ; free virtual = 55971
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file z7015_rx_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33712 ; free virtual = 55964
+INFO: [Vivado 12-24828] Executing command : report_utilization -file z7015_rx_wrapper_utilization_placed.rpt -pb z7015_rx_wrapper_utilization_placed.pb
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33696 ; free virtual = 55950
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33696 ; free virtual = 55950
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33689 ; free virtual = 55948
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33689 ; free virtual = 55948
+Wrote PlaceStorage: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.5 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33660 ; free virtual = 55953
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33659 ; free virtual = 55957
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33659 ; free virtual = 55958
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.58 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33659 ; free virtual = 55957
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1/z7015_rx_wrapper_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z015'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:01 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33556 ; free virtual = 55827
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 0.516 | TNS= 0.000 | 
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+128 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33554 ; free virtual = 55825
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33554 ; free virtual = 55825
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33555 ; free virtual = 55832
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33555 ; free virtual = 55832
+Wrote PlaceStorage: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.5 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33496 ; free virtual = 55811
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33498 ; free virtual = 55816
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33498 ; free virtual = 55818
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.58 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33498 ; free virtual = 55818
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1/z7015_rx_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z015'
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: a0b29913 ConstDB: 0 ShapeSum: f817f8f8 RouteDB: 74b7e438
+Post Restoration Checksum: NetGraph: 2fe64211 | NumContArr: bebb87fb | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 273f3bf46
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33397 ; free virtual = 55693
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 273f3bf46
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33394 ; free virtual = 55689
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 273f3bf46
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33394 ; free virtual = 55689
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 155e13884
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:11 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33516 ; free virtual = 55810
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.592  | TNS=0.000  | WHS=-0.521 | THS=-2182.425|
+
+
+Phase 2.4 Update Timing for Bus Skew
+
+Phase 2.4.1 Update Timing
+Phase 2.4.1 Update Timing | Checksum: 2391ca7ab
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:12 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33543 ; free virtual = 55837
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.592  | TNS=0.000  | WHS=-0.245 | THS=-15.496|
+
+Phase 2.4 Update Timing for Bus Skew | Checksum: 187133dcc
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:13 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33543 ; free virtual = 55837
+
+Phase 2.5 Soft Constraint Pins - Fast Budgeting
+Phase 2.5 Soft Constraint Pins - Fast Budgeting | Checksum: 187133dcc
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:13 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33527 ; free virtual = 55822
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 6.04631e-05 %
+  Global Horizontal Routing Utilization  = 0.000197394 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 35634
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 35634
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 2c1f31ae2
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:13 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33534 ; free virtual = 55829
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 2c1f31ae2
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:13 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33534 ; free virtual = 55829
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 1beca2359
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:14 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33546 ; free virtual = 55840
+Phase 4 Initial Routing | Checksum: 1beca2359
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:14 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33546 ; free virtual = 55840
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 2785
+ Number of Nodes with overlaps = 226
+ Number of Nodes with overlaps = 65
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.625  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 2dc3359d8
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:20 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33617 ; free virtual = 55915
+Phase 5 Rip-up And Reroute | Checksum: 2dc3359d8
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:20 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33617 ; free virtual = 55915
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 3021ed323
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:20 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33617 ; free virtual = 55915
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.721  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 6.1 Delay CleanUp | Checksum: 2ff83e203
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:20 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33617 ; free virtual = 55915
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 2ff83e203
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:20 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33617 ; free virtual = 55915
+Phase 6 Delay and Skew Optimization | Checksum: 2ff83e203
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:20 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33617 ; free virtual = 55915
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.721  | TNS=0.000  | WHS=0.023  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 2292253fb
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:21 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33616 ; free virtual = 55914
+Phase 7 Post Hold Fix | Checksum: 2292253fb
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:21 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33616 ; free virtual = 55914
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 8.03126 %
+  Global Horizontal Routing Utilization  = 11.6025 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 2292253fb
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:21 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33616 ; free virtual = 55914
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 2292253fb
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:21 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33616 ; free virtual = 55914
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 1a928895d
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:22 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33636 ; free virtual = 55934
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 1a928895d
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:22 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33636 ; free virtual = 55934
+
+Phase 12 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.721  | TNS=0.000  | WHS=0.023  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 12 Post Router Timing | Checksum: 1a928895d
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:22 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33636 ; free virtual = 55934
+Total Elapsed time in route_design: 21.61 secs
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 1e72f9b19
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:22 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33636 ; free virtual = 55934
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 1e72f9b19
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:22 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33636 ; free virtual = 55934
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+141 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:56 ; elapsed = 00:00:22 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33637 ; free virtual = 55935
+INFO: [Vivado 12-24828] Executing command : report_drc -file z7015_rx_wrapper_drc_routed.rpt -pb z7015_rx_wrapper_drc_routed.pb -rpx z7015_rx_wrapper_drc_routed.rpx
+Command: report_drc -file z7015_rx_wrapper_drc_routed.rpt -pb z7015_rx_wrapper_drc_routed.pb -rpx z7015_rx_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1/z7015_rx_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-24828] Executing command : report_methodology -file z7015_rx_wrapper_methodology_drc_routed.rpt -pb z7015_rx_wrapper_methodology_drc_routed.pb -rpx z7015_rx_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file z7015_rx_wrapper_methodology_drc_routed.rpt -pb z7015_rx_wrapper_methodology_drc_routed.pb -rpx z7015_rx_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1/z7015_rx_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file z7015_rx_wrapper_timing_summary_routed.rpt -pb z7015_rx_wrapper_timing_summary_routed.pb -rpx z7015_rx_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [Vivado 12-24838] Running report commands "report_bus_skew, report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file z7015_rx_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file z7015_rx_wrapper_bus_skew_routed.rpt -pb z7015_rx_wrapper_bus_skew_routed.pb -rpx z7015_rx_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Vivado 12-24828] Executing command : report_route_status -file z7015_rx_wrapper_route_status.rpt -pb z7015_rx_wrapper_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_power -file z7015_rx_wrapper_power_routed.rpt -pb z7015_rx_wrapper_power_summary_routed.pb -rpx z7015_rx_wrapper_power_routed.rpx
+Command: report_power -file z7015_rx_wrapper_power_routed.rpt -pb z7015_rx_wrapper_power_summary_routed.pb -rpx z7015_rx_wrapper_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+161 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file z7015_rx_wrapper_clock_utilization_routed.rpt
+generate_parallel_reports: Time (s): cpu = 00:00:29 ; elapsed = 00:00:09 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33579 ; free virtual = 55898
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33578 ; free virtual = 55898
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33578 ; free virtual = 55898
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33568 ; free virtual = 55895
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33555 ; free virtual = 55894
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.49 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33518 ; free virtual = 55884
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33509 ; free virtual = 55879
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33509 ; free virtual = 55880
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.65 . Memory (MB): peak = 3617.996 ; gain = 0.000 ; free physical = 33509 ; free virtual = 55880
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1/z7015_rx_wrapper_routed.dcp' has been generated.
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 17:53:47 2026...
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Nov  7 17:59:05 2026
+# Process ID         : 345632
+# Current directory  : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1
+# Command line       : vivado -log z7015_rx_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source z7015_rx_wrapper.tcl -notrace
+# Log file           : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1/z7015_rx_wrapper.vdi
+# Journal file       : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/impl_1/vivado.jou
+# Running On         : dhkim-home
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
+# CPU Frequency      : 5530.422 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 67058 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75648 MB
+# Available Virtual  : 60581 MB
+#-----------------------------------------------------------
+source z7015_rx_wrapper.tcl -notrace
+Command: open_checkpoint z7015_rx_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1557.434 ; gain = 0.000 ; free physical = 34882 ; free virtual = 57357
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+Netlist sorting complete. Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.24 . Memory (MB): peak = 1844.812 ; gain = 0.000 ; free physical = 34590 ; free virtual = 57065
+INFO: [Netlist 29-17] Analyzing 1459 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1976.258 ; gain = 12.008 ; free physical = 34459 ; free virtual = 56934
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2587.734 ; gain = 0.000 ; free physical = 33914 ; free virtual = 56389
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2587.734 ; gain = 0.000 ; free physical = 33914 ; free virtual = 56389
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2587.734 ; gain = 0.000 ; free physical = 33914 ; free virtual = 56389
+Read placeStorage: Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.37 . Memory (MB): peak = 2598.734 ; gain = 11.000 ; free physical = 33909 ; free virtual = 56383
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2598.734 ; gain = 0.000 ; free physical = 33909 ; free virtual = 56383
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2621.844 ; gain = 23.109 ; free physical = 33885 ; free virtual = 56359
+Read Physdb Files: Time (s): cpu = 00:00:00.68 ; elapsed = 00:00:00.5 . Memory (MB): peak = 2621.844 ; gain = 34.109 ; free physical = 33885 ; free virtual = 56359
+Restored from archive | CPU: 0.710000 secs | Memory: 33.618126 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.52 . Memory (MB): peak = 2621.844 ; gain = 34.109 ; free physical = 33885 ; free virtual = 56359
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2628.844 ; gain = 0.000 ; free physical = 33876 ; free virtual = 56351
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 534 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 20 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 479 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 26 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2025.2 (64-bit) build 6299465
+open_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2636.879 ; gain = 1211.539 ; free physical = 33876 ; free virtual = 56351
+source /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_z7015_rx/eco_aurora_rx_pll1_check.tcl
+INFO: [eco_aurora_rx_pll1] Sat Nov 07 17:59:13 KST 2026  design checkpoint_z7015_rx_wrapper_routed  verify_only=1
+INFO: [eco_aurora_rx_pll1] channel : z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/gtpe2_i
+INFO: [eco_aurora_rx_pll1] common  : z7015_rx_i/gt_common/inst/u_gtpe2_common
+INFO: [eco_aurora_rx_pll1]   PLL1CLK    <- GTPE2_COMMON/PLL1OUTCLK
+INFO: [eco_aurora_rx_pll1]   PLL1REFCLK <- GTPE2_COMMON/PLL1OUTREFCLK
+INFO: [eco_aurora_rx_pll1]   PLL0CLK    <- GTPE2_COMMON/PLL0OUTCLK
+INFO: [eco_aurora_rx_pll1]   PLL0REFCLK <- GTPE2_COMMON/PLL0OUTREFCLK
+INFO: [eco_aurora_rx_pll1]   RXSYSCLKSEL[1]   = 1
+INFO: [eco_aurora_rx_pll1]   RXSYSCLKSEL[0]   = 1
+INFO: [eco_aurora_rx_pll1]   TXSYSCLKSEL[1]   = 1
+INFO: [eco_aurora_rx_pll1]   TXSYSCLKSEL[0]   = 1
+INFO: [eco_aurora_rx_pll1] RX/TXSYSCLKSEL already 2'b11 : aurora_rx uses PLL1
+INFO: [Memdata 28-208] The XPM instance: <z7015_rx_i/xdma_0/inst/ram_top/mas_bridge_ram_write_512.MASTER_WRITE_FIFO/xpm_memory_sdpram_inst_loop[0].xpm_memory_sdpram_inst/xpm_memory_base_inst> is part of IP: <z7015_rx_i/xdma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <z7015_rx_i/xdma_0/inst/ram_top/gen_h2c_bram.H2C_DAT0_FIFO/xpm_memory_sdpram_inst_loop[1].xpm_memory_sdpram_inst/xpm_memory_base_inst> is part of IP: <z7015_rx_i/xdma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <z7015_rx_i/xdma_0/inst/ram_top/gen_h2c_bram.H2C_DAT0_FIFO/xpm_memory_sdpram_inst_loop[0].xpm_memory_sdpram_inst/xpm_memory_base_inst> is part of IP: <z7015_rx_i/xdma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <z7015_rx_i/xdma_0/inst/ram_top/gen_c2h_bram.C2H_DAT0_FIFO/xpm_memory_sdpram_inst_loop[1].xpm_memory_sdpram_inst/xpm_memory_base_inst> is part of IP: <z7015_rx_i/xdma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <z7015_rx_i/xdma_0/inst/ram_top/gen_c2h_bram.C2H_DAT0_FIFO/xpm_memory_sdpram_inst_loop[0].xpm_memory_sdpram_inst/xpm_memory_base_inst> is part of IP: <z7015_rx_i/xdma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <z7015_rx_i/xdma_0/inst/ram_top/MASTER_READ_BRAM/xpm_memory_sdpram_inst_loop[0].xpm_memory_sdpram_inst/xpm_memory_base_inst> is part of IP: <z7015_rx_i/xdma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-167] Found XPM memory block z7015_rx_i/sc_mem/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the z7015_rx_i/sc_mem/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block z7015_rx_i/sc_mem/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the z7015_rx_i/sc_mem/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block z7015_rx_i/sc_mem/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the z7015_rx_i/sc_mem/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-208] The XPM instance: <z7015_rx_i/fifo_rx/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <z7015_rx_i/fifo_rx>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-167] Found XPM memory block z7015_rx_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the z7015_rx_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-208] The XPM instance: <z7015_rx_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <z7015_rx_i/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+Command: write_bitstream -force z7015_rx_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z015'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Integrating Hard IP ELF/MEM with the PDI.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 14029664 bits.
+Writing bitstream ./z7015_rx_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+34 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 3166.078 ; gain = 513.359 ; free physical = 33139 ; free virtual = 55634
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 17:59:38 2026...

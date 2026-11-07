@@ -8,6 +8,8 @@
 ################################################################################
 create_clock -name clk_50m -period 20 [get_ports clk_50m]
 create_clock -name GT_REFCLK_clk_p -period 8 [get_ports GT_REFCLK_clk_p]
+create_clock -name PCIE0_REFCLK_clk_p -period 10 [get_ports PCIE0_REFCLK_clk_p]
 create_clock -name ps7_FCLK_CLK0 -period 10 [get_pins ps7/FCLK_CLK0]
+create_clock -name ps7_FCLK_CLK1 -period 7 [get_pins ps7/FCLK_CLK1]
 
 ################################################################################

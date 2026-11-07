@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z015clg485-2" LaunchTime="1794028026">
+<GenRun Id="impl_1" LaunchPart="xc7z015clg485-2" LaunchTime="1794029556">
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="aurora_cam_wrapper_postroute_physopted.rqs"/>
@@ -223,10 +223,19 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_link_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_prbs_gen_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_prbs_check_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_pkt_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_depkt_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_axi_interconnect_0_imp_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_axi_interconnect_0_imp_auto_cc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_util_ds_buf_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_axi_bram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_rst_axi_1"/>
   <BlockFileSet Type="BlockSrcs" Name="aurora_cam_ps7_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_depkt_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_pkt_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_prbs_check_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_prbs_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_link_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="aurora_cam_xdma_0_0"/>
 </GenRun>

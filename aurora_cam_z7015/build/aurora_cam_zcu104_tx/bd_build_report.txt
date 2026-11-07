@@ -1,0 +1,15 @@
+create_zcu104_tx_bd zcu104_tx bc_in 1 period_ms 1000 h_beats 640 v_lines 720  Sat Nov 07 17:44:18 KST 2026
+stage ports
+stage ps
+stage dma_path
+stage aurora_tx
+aurora_tx : Backchannel_mode=Timer C_AURORA_LANES=1 C_LANE_WIDTH=4 C_LINE_RATE=3.125 C_USE_CRC=true C_USE_BYTESWAP=true C_USE_SCRAMBLER=false Flow_Mode=None Interface_Mode=Framing
+stage clocks
+stage constants
+stage connect_axi
+stage connect_clk_rst
+stage connect_aurora
+stage connect_ctrl
+stage addresses
+stage validate
+BD zcu104_tx OK (bc_in=1 period_ms=1000 h_beats=640 v_lines=720)

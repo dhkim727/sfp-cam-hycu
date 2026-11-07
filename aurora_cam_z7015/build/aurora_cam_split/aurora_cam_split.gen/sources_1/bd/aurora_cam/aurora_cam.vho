@@ -82,7 +82,14 @@ COMPONENT aurora_cam
     gt_rxn : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     clk_50m : IN STD_LOGIC;
     SFP1_TXDISABLE : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    SFP2_TXDISABLE : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
+    SFP2_TXDISABLE : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    PCIE0_PERSTN : IN STD_LOGIC;
+    PCIE0_REFCLK_clk_n : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    PCIE0_REFCLK_clk_p : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pcie_7x_mgt_rtl_0_rxn : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pcie_7x_mgt_rtl_0_rxp : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pcie_7x_mgt_rtl_0_txn : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    pcie_7x_mgt_rtl_0_txp : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -122,7 +129,14 @@ your_instance_name : aurora_cam
     gt_rxn => gt_rxn,
     clk_50m => clk_50m,
     SFP1_TXDISABLE => SFP1_TXDISABLE,
-    SFP2_TXDISABLE => SFP2_TXDISABLE
+    SFP2_TXDISABLE => SFP2_TXDISABLE,
+    PCIE0_PERSTN => PCIE0_PERSTN,
+    PCIE0_REFCLK_clk_n => PCIE0_REFCLK_clk_n,
+    PCIE0_REFCLK_clk_p => PCIE0_REFCLK_clk_p,
+    pcie_7x_mgt_rtl_0_rxn => pcie_7x_mgt_rtl_0_rxn,
+    pcie_7x_mgt_rtl_0_rxp => pcie_7x_mgt_rtl_0_rxp,
+    pcie_7x_mgt_rtl_0_txn => pcie_7x_mgt_rtl_0_txn,
+    pcie_7x_mgt_rtl_0_txp => pcie_7x_mgt_rtl_0_txp
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

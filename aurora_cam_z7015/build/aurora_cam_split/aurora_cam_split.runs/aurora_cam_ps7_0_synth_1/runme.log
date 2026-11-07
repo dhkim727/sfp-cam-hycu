@@ -7,7 +7,7 @@
   **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sun Nov  1 17:41:16 2026
+  **** Start of session at: Sat Nov  7 14:32:38 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -19,9 +19,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015
 INFO: [Device 21-403] Loading part xc7z015clg485-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 135144
+INFO: [Synth 8-7075] Helper process launched with PID 185973
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2242.176 ; gain = 482.125 ; free physical = 32405 ; free virtual = 51366
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2242.609 ; gain = 482.156 ; free physical = 30849 ; free virtual = 46577
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'aurora_cam_ps7_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
@@ -32,20 +32,20 @@ INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (0#1) [/tools/Xilinx/2025.
 INFO: [Synth 8-6157] synthesizing module 'PS7' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:140294]
 INFO: [Synth 8-6155] done synthesizing module 'PS7' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:140294]
 INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
-INFO: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
-INFO: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:476]
+INFO: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
+INFO: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:627]
 INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_ps7_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_ps7_0/synth/aurora_cam_ps7_0.v:53]
 INFO: [Synth 8-7129] Port ENET0_GMII_COL in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 INFO: [Synth 8-7129] Port ENET0_GMII_CRS in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
@@ -127,18 +127,18 @@ INFO: [Synth 8-7129] Port FTMD_TRACEIN_ATID[2] in module processing_system7_v5_5
 INFO: [Synth 8-7129] Port FTMD_TRACEIN_ATID[1] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 INFO: [Synth 8-7129] Port FTMD_TRACEIN_ATID[0] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2339.145 ; gain = 579.094 ; free physical = 31722 ; free virtual = 50679
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2339.578 ; gain = 579.125 ; free physical = 29986 ; free virtual = 45720
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2339.145 ; gain = 579.094 ; free physical = 31714 ; free virtual = 50671
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2348.484 ; gain = 588.031 ; free physical = 29976 ; free virtual = 45710
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2339.145 ; gain = 579.094 ; free physical = 31714 ; free virtual = 50671
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2348.484 ; gain = 588.031 ; free physical = 29976 ; free virtual = 45710
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2342.113 ; gain = 0.000 ; free physical = 31702 ; free virtual = 50659
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2351.453 ; gain = 0.000 ; free physical = 29954 ; free virtual = 45688
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -151,30 +151,30 @@ Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_ca
 Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/aurora_cam_ps7_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2389.766 ; gain = 0.000 ; free physical = 31075 ; free virtual = 50048
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2394.441 ; gain = 0.000 ; free physical = 29560 ; free virtual = 45294
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2389.801 ; gain = 0.000 ; free physical = 31075 ; free virtual = 50048
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2394.477 ; gain = 0.000 ; free physical = 29567 ; free virtual = 45302
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2389.801 ; gain = 629.750 ; free physical = 31428 ; free virtual = 50401
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2394.477 ; gain = 634.023 ; free physical = 28695 ; free virtual = 44433
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z015clg485-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2397.770 ; gain = 637.719 ; free physical = 31428 ; free virtual = 50401
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2402.445 ; gain = 641.992 ; free physical = 28695 ; free virtual = 44433
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2397.770 ; gain = 637.719 ; free physical = 31419 ; free virtual = 50393
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2402.445 ; gain = 641.992 ; free physical = 28664 ; free virtual = 44403
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2397.770 ; gain = 637.719 ; free physical = 31408 ; free virtual = 50386
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2402.445 ; gain = 641.992 ; free physical = 28601 ; free virtual = 44341
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -218,25 +218,25 @@ INFO: [Synth 8-7129] Port ENET1_GMII_RXD[4] in module processing_system7_v5_5_pr
 INFO: [Synth 8-7129] Port ENET1_GMII_RXD[3] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2397.770 ; gain = 637.719 ; free physical = 31407 ; free virtual = 50383
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2402.445 ; gain = 641.992 ; free physical = 28608 ; free virtual = 44350
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2663.770 ; gain = 903.719 ; free physical = 30844 ; free virtual = 49820
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2663.445 ; gain = 902.992 ; free physical = 27766 ; free virtual = 43511
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2683.777 ; gain = 923.727 ; free physical = 30829 ; free virtual = 49805
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2684.453 ; gain = 924.000 ; free physical = 27734 ; free virtual = 43479
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2691.785 ; gain = 931.734 ; free physical = 30805 ; free virtual = 49782
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2692.461 ; gain = 932.008 ; free physical = 27719 ; free virtual = 43464
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -254,37 +254,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2872.598 ; gain = 1112.547 ; free physical = 33339 ; free virtual = 52312
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2873.273 ; gain = 1112.820 ; free physical = 27636 ; free virtual = 43391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2872.598 ; gain = 1112.547 ; free physical = 33339 ; free virtual = 52312
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2873.273 ; gain = 1112.820 ; free physical = 27636 ; free virtual = 43391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2872.598 ; gain = 1112.547 ; free physical = 33339 ; free virtual = 52313
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2873.273 ; gain = 1112.820 ; free physical = 27636 ; free virtual = 43391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2872.598 ; gain = 1112.547 ; free physical = 33339 ; free virtual = 52313
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2873.273 ; gain = 1112.820 ; free physical = 27636 ; free virtual = 43391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2872.598 ; gain = 1112.547 ; free physical = 33339 ; free virtual = 52313
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2873.273 ; gain = 1112.820 ; free physical = 27636 ; free virtual = 43391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2872.598 ; gain = 1112.547 ; free physical = 33339 ; free virtual = 52313
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2873.273 ; gain = 1112.820 ; free physical = 27636 ; free virtual = 43391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -301,32 +301,32 @@ Report Cell Usage:
 |      |Cell  |Count |
 +------+------+------+
 |1     |BIBUF |   130|
-|2     |BUFG  |     1|
+|2     |BUFG  |     2|
 |3     |LUT1  |    24|
 |4     |PS7   |     1|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2872.598 ; gain = 1112.547 ; free physical = 33339 ; free virtual = 52313
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2873.273 ; gain = 1112.820 ; free physical = 27636 ; free virtual = 43391
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2872.598 ; gain = 1061.891 ; free physical = 33339 ; free virtual = 52312
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2872.605 ; gain = 1112.547 ; free physical = 33339 ; free virtual = 52312
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2873.273 ; gain = 1066.828 ; free physical = 27629 ; free virtual = 43383
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2873.281 ; gain = 1112.820 ; free physical = 27629 ; free virtual = 43383
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2872.605 ; gain = 0.000 ; free physical = 33506 ; free virtual = 52479
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00 . Memory (MB): peak = 2873.281 ; gain = 0.000 ; free physical = 27829 ; free virtual = 43584
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2872.605 ; gain = 0.000 ; free physical = 35197 ; free virtual = 54170
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2873.281 ; gain = 0.000 ; free physical = 32195 ; free virtual = 47946
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: fb8662a3
+Synth Design complete | Checksum: c34ad840
 INFO: [Common 17-83] Releasing license: Synthesis
 139 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2872.633 ; gain = 1248.473 ; free physical = 35234 ; free virtual = 54205
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1893.454; main = 1837.501; forked = 201.803
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3766.027; main = 2872.602; forked = 994.238
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2896.609 ; gain = 0.000 ; free physical = 35235 ; free virtual = 54205
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2873.309 ; gain = 1247.746 ; free physical = 32181 ; free virtual = 47932
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1824.841; main = 1752.112; forked = 183.383
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3752.699; main = 2873.277; forked = 994.234
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2897.285 ; gain = 0.000 ; free physical = 32179 ; free virtual = 47929
 INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/aurora_cam_ps7_0_synth_1/aurora_cam_ps7_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file aurora_cam_ps7_0_utilization_synth.rpt -pb aurora_cam_ps7_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Nov  1 17:41:31 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 14:32:54 2026...

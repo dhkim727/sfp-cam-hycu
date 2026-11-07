@@ -17,15 +17,25 @@
 //     [4]   power_down (GPIO 전용)         [11:4] sticky: hard soft frame crc
 //     [5]   aux_off (aux_out = ~bit5)            tx_len rx_seq rx_len rx_ovf
 //     [8]   err_clear                     [12] emulated link   [13] run_ack
-//                                         [14] ctrl by VIO     [15] PRBS mode
-//                                         [23:16] tx frames    [31:24] rx frames
+//     [9]   restart (상승 에지, 소유권 무관) [14] ctrl by VIO     [15] PRBS mode
+//     [15:10] link_retrain 이 사용 (TX 빌드) [23:16] tx frames    [31:24] rx frames
+//       [10] auto_dis [11] bc_en [15:12] period code (0 = PERIOD_MS, n = n*250 ms)
+//                                         (RXC_INIT=1: [31:24] = rx_frame_cnt 입력 그대로,
+//                                          ZCU104 TX 빌드 = {bc_rx_up, retrain_cnt[6:0]})
+//
+//   재기동(restart) : GPIO2[9] 상승 에지 또는 restart_req 상승 에지 (link_retrain)
+//                     -> 워치독과 같은 전체 리셋 시퀀스 (RETRY_HOLD 동안 gt_reset+reset, 이후 PG046 순서)
+//                     run=1 일 때만 의미 있음 (run=0 이면 이미 리셋 상태)
+//   link_ok         : init_clk 도메인 registered (channel_up & pll locked & reset 해제)
+//                     -> Z7015 RX 빌드에서 보드 간 backchannel 핀 (ZCU104 link_retrain.bc_rx_up)
 //==============================================================================
 module link_ctrl #(
     parameter integer EMULATED  = 0,
     parameter integer RST_DELAY = 16384,  // init_clk cycles: gt_reset release -> reset release (<= 65535)
     parameter integer TXRST_DLY = 255,    // axi cycles link must be stable before TX FIFO leaves reset (<= 511)
     parameter integer RETRY_TMO = 6250000, // init_clk cycles: run=1 & link down -> full restart, 0=off (<= 8388607)
-    parameter integer RETRY_HOLD = 1024   // init_clk cycles: restart reset-assert width (<= 2047)
+    parameter integer RETRY_HOLD = 1024,  // init_clk cycles: restart reset-assert width (<= 2047)
+    parameter integer RXC_INIT  = 0       // 1: rx_frame_cnt is an init_clk-domain status byte (no gray CDC)
 )(
     // ---------------- AXI (GPIO) domain
     (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axi_aclk CLK" *)
@@ -59,6 +69,8 @@ module link_ctrl #(
     output wire [2:0]  au_loopback,
     output wire        au_power_down,
     output wire        aux_out,
+    input  wire        restart_req,       // rising edge -> full restart (tie 0 if unused)
+    output wire        link_ok,           // registered: channel_up & pll locked & reset released
 
     // ---------------- Aurora user_clk domain
     (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 user_clk CLK" *)
@@ -88,14 +100,22 @@ module link_ctrl #(
     //--------------------------------------------------------------------------
     // GPIO control -> init domain, effective control (registered, init domain)
     //--------------------------------------------------------------------------
-    wire [6:0] g_i;    // {clr, aux_off, pd, lb[2:0], run}
+    wire [7:0] g_i;    // {restart, clr, aux_off, pd, lb[2:0], run}
     xpm_cdc_array_single #(
-        .DEST_SYNC_FF(4), .INIT_SYNC_FF(1), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0), .WIDTH(7)
+        .DEST_SYNC_FF(4), .INIT_SYNC_FF(1), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0), .WIDTH(8)
     ) u_gctl (
         .src_clk(axi_aclk),
-        .src_in({gpio_ctrl[8], gpio_ctrl[5], gpio_ctrl[4], gpio_ctrl[3:1], gpio_ctrl[0]}),
+        .src_in({gpio_ctrl[9], gpio_ctrl[8], gpio_ctrl[5], gpio_ctrl[4], gpio_ctrl[3:1], gpio_ctrl[0]}),
         .dest_clk(init_clk), .dest_out(g_i)
     );
+
+    // restart requests (GPIO2[9] edge, restart_req edge), init domain
+    reg g_rs_d = 1'b0, rq_d = 1'b0;
+    always @(posedge init_clk) begin
+        g_rs_d <= g_i[7];
+        rq_d   <= restart_req;
+    end
+    wire restart_ev = (g_i[7] && !g_rs_d) || (restart_req && !rq_d);
 
     reg       run_e = 1'b0, pd_e = 1'b0, aux_e = 1'b1, clr_e = 1'b0;
     reg [2:0] lb_e  = 3'd0;
@@ -194,12 +214,18 @@ module link_ctrl #(
     ) u_txc (
         .src_clk(user_clk), .src_in_bin(tx_frame_cnt), .dest_clk(init_clk), .dest_out_bin(txc_i)
     );
-    xpm_cdc_gray #(
-        .DEST_SYNC_FF(4), .INIT_SYNC_FF(1), .REG_OUTPUT(1), .SIM_ASSERT_CHK(0),
-        .SIM_LOSSLESS_GRAY_CHK(0), .WIDTH(8)
-    ) u_rxc (
-        .src_clk(user_clk), .src_in_bin(rx_frame_cnt), .dest_clk(init_clk), .dest_out_bin(rxc_i)
-    );
+    generate
+        if (RXC_INIT != 0) begin : g_rxc_init
+            assign rxc_i = rx_frame_cnt;            // already init_clk domain (link_retrain status)
+        end else begin : g_rxc_cdc
+            xpm_cdc_gray #(
+                .DEST_SYNC_FF(4), .INIT_SYNC_FF(1), .REG_OUTPUT(1), .SIM_ASSERT_CHK(0),
+                .SIM_LOSSLESS_GRAY_CHK(0), .WIDTH(8)
+            ) u_rxc (
+                .src_clk(user_clk), .src_in_bin(rx_frame_cnt), .dest_clk(init_clk), .dest_out_bin(rxc_i)
+            );
+        end
+    endgenerate
 
     //--------------------------------------------------------------------------
     // link-down watchdog: run=1 & !channel_up for RETRY_TMO -> full restart.
@@ -207,16 +233,20 @@ module link_ctrl #(
     // core's gt_reset issues (shared PLL), so re-assert gt_reset+reset (hold_cnt)
     // and rerun the whole PG046 power-on sequence.
     //--------------------------------------------------------------------------
-    wire link_ok = lnk_i[0] & locked_i;
+    wire lnk_locked = lnk_i[0] & locked_i;
     reg [22:0] wd_cnt = 23'd0;
     always @(posedge init_clk) begin
-        if (RETRY_TMO == 0 || !run_e || au_reset || link_ok) wd_cnt <= 23'd0;
-        else if (wd_cnt != RETRY_TMO)                        wd_cnt <= wd_cnt + 1'b1;
+        if (RETRY_TMO == 0 || !run_e || au_reset || lnk_locked) wd_cnt <= 23'd0;
+        else if (wd_cnt != RETRY_TMO)                           wd_cnt <= wd_cnt + 1'b1;
     end
     always @(posedge init_clk) begin
-        if (RETRY_TMO != 0 && wd_cnt == RETRY_TMO) hold_cnt <= RETRY_HOLD;
-        else if (hold_cnt != 11'd0)                 hold_cnt <= hold_cnt - 1'b1;
+        if ((RETRY_TMO != 0 && wd_cnt == RETRY_TMO) || restart_ev) hold_cnt <= RETRY_HOLD;
+        else if (hold_cnt != 11'd0)                                 hold_cnt <= hold_cnt - 1'b1;
     end
+
+    reg link_ok_r = 1'b0;
+    always @(posedge init_clk) link_ok_r <= lnk_locked & ~au_reset;
+    assign link_ok = link_ok_r;
 
     wire emu_bit = (EMULATED != 0);
     initial vio_status = 32'd0;

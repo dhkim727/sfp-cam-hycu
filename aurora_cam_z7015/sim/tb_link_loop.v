@@ -12,11 +12,12 @@
 //   2) VIO 소유  : vio_run 으로 링크 down/up
 //   3) PRBS      : lock, 무오류 구간, 1-bit 주입 -> err_bits == 1, 디패킷타이저 무영향
 //   4) PRBS 해제 후 f10 정상 / f11 FIFO full -> overflow 검출
+//   5) 재기동: GPIO2[9] (VIO 소유 중에도) / restart_req -> link_ok 하강·상승, f12 정상, packetizer busy
 //==============================================================================
 module tb_link_loop;
     localparam integer H = 16;
     localparam integer V = 8;
-    localparam integer N_FRAMES = 12;
+    localparam integer N_FRAMES = 13;
     localparam integer PRBS_FW = 32;
 
     // ---------------------------------------------------------------- clocks
@@ -42,6 +43,8 @@ module tb_link_loop;
     wire ch_up, ln_up, h_err, s_err, f_err, crc_v, crc_pf, sys_rst, pll_nl;
     wire [7:0] tx_fcnt, rx_fcnt;
     wire tx_err, rx_seq, rx_len, rx_ovf;
+    reg  restart_req = 1'b0;
+    wire link_ok, pkt_busy;
 
     link_ctrl #(.EMULATED(1), .RST_DELAY(32), .TXRST_DLY(8)) u_ctrl (
         .axi_aclk(axi_clk), .axi_aresetn(axi_aresetn),
@@ -50,6 +53,7 @@ module tb_link_loop;
         .vio_clr(vio_clr), .vio_prbs_en(vio_prbs_en), .vio_status(vio_status),
         .au_reset(au_reset), .au_gt_reset(au_gt_reset), .au_loopback(au_lb),
         .au_power_down(au_pd), .aux_out(aux_out),
+        .restart_req(restart_req), .link_ok(link_ok),
         .user_clk(usr_clk), .user_aresetn(user_aresetn), .link_sys_reset(sys_rst),
         .channel_up(ch_up), .lane_up(ln_up), .hard_err(h_err), .soft_err(s_err),
         .frame_err(f_err), .crc_valid(crc_v), .crc_pass_fail_n(crc_pf),
@@ -111,7 +115,7 @@ module tb_link_loop;
         .s_axis_tvalid(s_valid), .s_axis_tready(s_ready),
         .m_axis_tdata(p_data), .m_axis_tkeep(p_keep), .m_axis_tlast(p_last),
         .m_axis_tvalid(p_valid), .m_axis_tready(p_ready),
-        .frame_cnt(tx_fcnt), .err_pulse(tx_err)
+        .frame_cnt(tx_fcnt), .err_pulse(tx_err), .busy(pkt_busy)
     );
 
     wire [31:0] g_data; wire [3:0] g_keep; wire g_last, g_valid, g_ready, prbs_active;
@@ -389,6 +393,37 @@ module tb_link_loop;
         sink_ready <= 1'b1;
         settle;
         check(gpio_status[11] == 1'b1, "FIFO-full overflow detected (rx_ovf sticky)");
+
+        // ======================= 5) restart (GPIO2[9] / restart_req) =======
+        //   VIO still owns run/loopback here: restart must work regardless of ownership
+        check(link_ok === 1'b1 && !pkt_busy, "link_ok = 1 while up, packetizer idle -> busy = 0");
+        gpio_ctrl[9] = 1'b1;
+        wait (au_gt_reset === 1'b1);
+        check(gpio_status[14] && vio_run, "GPIO2[9] restart while VIO owns control : gt_reset asserted");
+        gpio_ctrl[9] = 1'b0;
+        wait (link_ok === 1'b0);
+        wait (link_ok === 1'b1);
+        wait (tx_fifo_aresetn === 1'b1);
+        settle;
+        check(gpio_status[0] && gpio_status[13], "after GPIO2[9] restart : link up again");
+
+        @(posedge free_clk) restart_req <= 1'b1;
+        @(posedge free_clk) restart_req <= 1'b0;
+        wait (au_gt_reset === 1'b1);
+        wait (link_ok === 1'b0);
+        wait (link_ok === 1'b1);
+        wait (tx_fifo_aresetn === 1'b1);
+        settle;
+        check(gpio_status[0], "restart_req pulse : full restart, link up again");
+
+        // f11 lost its TLAST in the overflow test, so the S2MM model still has an open
+        // transfer; SW does dma_reset() in that case -> drop the partial transfer here
+        f_len = 0;
+        fg0 = f_good;
+        release_frames(13);                                     // f12
+        wait (pkt_busy === 1'b1);
+        wait_src_idle;
+        check(f_good == fg0 + 1 && !pkt_busy, "after restarts : f12 received OK, busy seen and cleared");
 
         $display("==================================================");
         if (errors == 0) $display("TB RESULT: PASS");

@@ -42,7 +42,8 @@ module line_packetizer #(
 
     // status (aclk domain)
     output reg  [7:0]  frame_cnt,        // frames sent with correct length
-    output reg         err_pulse         // DMA frame length mismatch
+    output reg         err_pulse,        // DMA frame length mismatch
+    output wire        busy              // line in progress or data waiting (link_retrain idle gate)
 );
     localparam [3:0] TYPE_VIDEO = 4'h1;
     localparam       ST_HDR  = 1'b0;
@@ -64,6 +65,7 @@ module line_packetizer #(
     assign m_axis_tvalid = s_axis_tvalid;
     assign m_axis_tlast  = (state == ST_DATA) && (last_beat || s_axis_tlast);
     assign s_axis_tready = (state == ST_DATA) && m_axis_tready;
+    assign busy          = (state == ST_DATA) || s_axis_tvalid;
 
     wire hs        = m_axis_tvalid && m_axis_tready;
     wire line_end  = last_beat || s_axis_tlast;

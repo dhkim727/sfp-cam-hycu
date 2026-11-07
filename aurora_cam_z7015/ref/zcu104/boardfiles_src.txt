@@ -1,0 +1,3 @@
+/tools/Xilinx/2025.2/Vivado/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml
+/tools/Xilinx/2025.2/Vivado/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/part0_pins.xml
+/tools/Xilinx/2025.2/Vivado/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/preset.xml

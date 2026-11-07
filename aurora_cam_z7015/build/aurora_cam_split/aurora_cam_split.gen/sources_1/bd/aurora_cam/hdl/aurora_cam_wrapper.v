@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Sat Nov  7 14:06:36 2026
+//Date        : Sat Nov  7 14:32:24 2026
 //Host        : dhkim-home running 64-bit Ubuntu 24.04.5 LTS
 //Command     : generate_target aurora_cam_wrapper.bd
 //Design      : aurora_cam_wrapper
@@ -34,13 +34,20 @@ module aurora_cam_wrapper
     FIXED_IO_ps_srstb,
     GT_REFCLK_clk_n,
     GT_REFCLK_clk_p,
+    PCIE0_PERSTN,
+    PCIE0_REFCLK_clk_n,
+    PCIE0_REFCLK_clk_p,
     SFP1_TXDISABLE,
     SFP2_TXDISABLE,
     clk_50m,
     gt_rxn,
     gt_rxp,
     gt_txn,
-    gt_txp);
+    gt_txp,
+    pcie_7x_mgt_rtl_0_rxn,
+    pcie_7x_mgt_rtl_0_rxp,
+    pcie_7x_mgt_rtl_0_txn,
+    pcie_7x_mgt_rtl_0_txp);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -64,6 +71,9 @@ module aurora_cam_wrapper
   inout FIXED_IO_ps_srstb;
   input GT_REFCLK_clk_n;
   input GT_REFCLK_clk_p;
+  input PCIE0_PERSTN;
+  input [0:0]PCIE0_REFCLK_clk_n;
+  input [0:0]PCIE0_REFCLK_clk_p;
   output [0:0]SFP1_TXDISABLE;
   output [0:0]SFP2_TXDISABLE;
   input clk_50m;
@@ -71,6 +81,10 @@ module aurora_cam_wrapper
   input [0:0]gt_rxp;
   output [0:0]gt_txn;
   output [0:0]gt_txp;
+  input [0:0]pcie_7x_mgt_rtl_0_rxn;
+  input [0:0]pcie_7x_mgt_rtl_0_rxp;
+  output [0:0]pcie_7x_mgt_rtl_0_txn;
+  output [0:0]pcie_7x_mgt_rtl_0_txp;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -95,6 +109,9 @@ module aurora_cam_wrapper
   wire FIXED_IO_ps_srstb;
   wire GT_REFCLK_clk_n;
   wire GT_REFCLK_clk_p;
+  wire PCIE0_PERSTN;
+  wire [0:0]PCIE0_REFCLK_clk_n;
+  wire [0:0]PCIE0_REFCLK_clk_p;
   wire [0:0]SFP1_TXDISABLE;
   wire [0:0]SFP2_TXDISABLE;
   wire clk_50m;
@@ -102,6 +119,10 @@ module aurora_cam_wrapper
   wire [0:0]gt_rxp;
   wire [0:0]gt_txn;
   wire [0:0]gt_txp;
+  wire [0:0]pcie_7x_mgt_rtl_0_rxn;
+  wire [0:0]pcie_7x_mgt_rtl_0_rxp;
+  wire [0:0]pcie_7x_mgt_rtl_0_txn;
+  wire [0:0]pcie_7x_mgt_rtl_0_txp;
 
   aurora_cam aurora_cam_i
        (.DDR_addr(DDR_addr),
@@ -127,11 +148,18 @@ module aurora_cam_wrapper
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .GT_REFCLK_clk_n(GT_REFCLK_clk_n),
         .GT_REFCLK_clk_p(GT_REFCLK_clk_p),
+        .PCIE0_PERSTN(PCIE0_PERSTN),
+        .PCIE0_REFCLK_clk_n(PCIE0_REFCLK_clk_n),
+        .PCIE0_REFCLK_clk_p(PCIE0_REFCLK_clk_p),
         .SFP1_TXDISABLE(SFP1_TXDISABLE),
         .SFP2_TXDISABLE(SFP2_TXDISABLE),
         .clk_50m(clk_50m),
         .gt_rxn(gt_rxn),
         .gt_rxp(gt_rxp),
         .gt_txn(gt_txn),
-        .gt_txp(gt_txp));
+        .gt_txp(gt_txp),
+        .pcie_7x_mgt_rtl_0_rxn(pcie_7x_mgt_rtl_0_rxn),
+        .pcie_7x_mgt_rtl_0_rxp(pcie_7x_mgt_rtl_0_rxp),
+        .pcie_7x_mgt_rtl_0_txn(pcie_7x_mgt_rtl_0_txn),
+        .pcie_7x_mgt_rtl_0_txp(pcie_7x_mgt_rtl_0_txp));
 endmodule

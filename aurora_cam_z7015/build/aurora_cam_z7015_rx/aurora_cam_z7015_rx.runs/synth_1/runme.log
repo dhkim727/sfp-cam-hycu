@@ -1,0 +1,556 @@
+
+*** Running vivado
+    with args -log z7015_rx_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source z7015_rx_wrapper.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Nov  7 17:51:58 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source z7015_rx_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+INFO: [Project 1-5698] Found the below utility IPs instantiated in block design /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.srcs/sources_1/bd/z7015_rx/z7015_rx.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994.
+Utility IP Component Instances:
+ z7015_rx_irq_concat_0
+Command: read_checkpoint -auto_incremental -incremental /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.srcs/utils_1/imports/synth_1/z7015_rx_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.srcs/utils_1/imports/synth_1/z7015_rx_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top z7015_rx_wrapper -part xc7z015clg485-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 291396
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2312.312 ; gain = 416.934 ; free physical = 34285 ; free virtual = 56502
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_wrapper' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/hdl/z7015_rx_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:568]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_aurora_rx_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_aurora_rx_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_aurora_rx_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_aurora_rx_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rx_resetdone_out' of module 'z7015_rx_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:979]
+WARNING: [Synth 8-7071] port 'link_reset_out' of module 'z7015_rx_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:979]
+WARNING: [Synth 8-7071] port 'drprdy_out' of module 'z7015_rx_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:979]
+WARNING: [Synth 8-7071] port 'drpdo_out' of module 'z7015_rx_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:979]
+WARNING: [Synth 8-7023] instance 'aurora_rx' of module 'z7015_rx_aurora_rx_0' has 41 connections declared, but only 37 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:979]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_axi_bram_ctrl_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_axi_bram_ctrl_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_axi_dma_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_axi_dma_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'z7015_rx_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1046]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'z7015_rx_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1046]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'z7015_rx_axi_dma_0_0' has 43 connections declared, but only 41 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1046]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_axi_gpio_link_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_axi_gpio_link_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_axi_gpio_link_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_axi_gpio_link_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_axi_interconnect_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1719]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_QR83GM' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:13]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_axi_interconnect_0_imp_auto_cc_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_axi_interconnect_0_imp_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_axi_interconnect_0_imp_auto_cc_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_axi_interconnect_0_imp_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_axi_interconnect_0_imp_auto_pc_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_axi_interconnect_0_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_axi_interconnect_0_imp_auto_pc_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_axi_interconnect_0_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_QR83GM' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_axi_interconnect_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1719]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_blk_mem_gen_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_blk_mem_gen_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_blk_mem_gen_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'z7015_rx_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1190]
+WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'z7015_rx_blk_mem_gen_0_0' has 8 connections declared, but only 7 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1190]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_clk_wiz_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_clk_wiz_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_depkt_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_depkt_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_depkt_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_depkt_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_fifo_rx_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_fifo_rx_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_fifo_rx_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_fifo_rx_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tuser' of module 'z7015_rx_fifo_rx_0' is unconnected for instance 'fifo_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1225]
+WARNING: [Synth 8-7023] instance 'fifo_rx' of module 'z7015_rx_fifo_rx_0' has 15 connections declared, but only 14 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1225]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_gt_common_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_gt_common_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_gt_common_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_gt_common_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'pcie_pll_lock' of module 'z7015_rx_gt_common_0' is unconnected for instance 'gt_common' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1240]
+WARNING: [Synth 8-7023] instance 'gt_common' of module 'z7015_rx_gt_common_0' has 25 connections declared, but only 24 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1240]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_irq_concat_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_irq_concat_0/synth/z7015_rx_irq_concat_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_7_xlconcat' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_7_xlconcat' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_irq_concat_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_irq_concat_0/synth/z7015_rx_irq_concat_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_link_ctrl_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_link_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_link_ctrl_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_link_ctrl_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'tx_fifo_aresetn' of module 'z7015_rx_link_ctrl_0_0' is unconnected for instance 'link_ctrl_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1270]
+WARNING: [Synth 8-7071] port 'au_loopback' of module 'z7015_rx_link_ctrl_0_0' is unconnected for instance 'link_ctrl_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1270]
+WARNING: [Synth 8-7071] port 'aux_out' of module 'z7015_rx_link_ctrl_0_0' is unconnected for instance 'link_ctrl_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1270]
+WARNING: [Synth 8-7071] port 'link_ok' of module 'z7015_rx_link_ctrl_0_0' is unconnected for instance 'link_ctrl_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1270]
+WARNING: [Synth 8-7023] instance 'link_ctrl_0' of module 'z7015_rx_link_ctrl_0_0' has 36 connections declared, but only 32 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1270]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_prbs_check_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_prbs_check_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_prbs_check_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_prbs_check_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_proc_sys_reset_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_proc_sys_reset_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'z7015_rx_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1322]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'z7015_rx_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1322]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'z7015_rx_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1322]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'z7015_rx_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1322]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'z7015_rx_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1322]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_ps7_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_ps7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_ps7_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_ps7_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARREADY' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RLAST' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RVALID' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RRESP' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RDATA' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RCOUNT' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WCOUNT' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RACOUNT' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WACOUNT' of module 'z7015_rx_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+WARNING: [Synth 8-7023] instance 'ps7' of module 'z7015_rx_ps7_0' has 158 connections declared, but only 141 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1329]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_rst_axi_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_rst_axi_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_rst_axi_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_rst_axi_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'z7015_rx_rst_axi_0' is unconnected for instance 'rst_axi' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1471]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'z7015_rx_rst_axi_0' is unconnected for instance 'rst_axi' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1471]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'z7015_rx_rst_axi_0' is unconnected for instance 'rst_axi' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1471]
+WARNING: [Synth 8-7023] instance 'rst_axi' of module 'z7015_rx_rst_axi_0' has 10 connections declared, but only 7 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1471]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_rst_axi1_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_rst_axi1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_rst_axi1_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_rst_axi1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'z7015_rx_rst_axi1_0' is unconnected for instance 'rst_axi1' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1479]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'z7015_rx_rst_axi1_0' is unconnected for instance 'rst_axi1' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1479]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'z7015_rx_rst_axi1_0' is unconnected for instance 'rst_axi1' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1479]
+WARNING: [Synth 8-7023] instance 'rst_axi1' of module 'z7015_rx_rst_axi1_0' has 10 connections declared, but only 7 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1479]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_rx_support_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_rx_support_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_rx_support_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_rx_support_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_sc_ctrl_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_sc_ctrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_sc_ctrl_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_sc_ctrl_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'z7015_rx_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1498]
+WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'z7015_rx_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1498]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'z7015_rx_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1498]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'z7015_rx_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1498]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'z7015_rx_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1498]
+WARNING: [Synth 8-7023] instance 'sc_ctrl' of module 'z7015_rx_sc_ctrl_0' has 78 connections declared, but only 73 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1498]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_sc_mem_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_sc_mem_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_sc_mem_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_sc_mem_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_util_ds_buf_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_util_ds_buf_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_util_ds_buf_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'IBUF_DS_ODIV2' of module 'z7015_rx_util_ds_buf_0_0' is unconnected for instance 'util_ds_buf_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1611]
+WARNING: [Synth 8-7023] instance 'util_ds_buf_0' of module 'z7015_rx_util_ds_buf_0_0' has 4 connections declared, but only 3 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1611]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_util_ds_buf_1_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_util_ds_buf_1_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_util_ds_buf_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'IBUF_DS_ODIV2' of module 'z7015_rx_util_ds_buf_1_0' is unconnected for instance 'util_ds_buf_1' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1615]
+WARNING: [Synth 8-7023] instance 'util_ds_buf_1' of module 'z7015_rx_util_ds_buf_1_0' has 4 connections declared, but only 3 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1615]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_vio_link_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_vio_link_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_vio_link_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_vio_link_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_xdma_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_xdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_xdma_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/.Xil/Vivado-291309-dhkim-home/realtime/z7015_rx_xdma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'user_lnk_up' of module 'z7015_rx_xdma_0_0' is unconnected for instance 'xdma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1633]
+WARNING: [Synth 8-7071] port 'usr_irq_ack' of module 'z7015_rx_xdma_0_0' is unconnected for instance 'xdma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1633]
+WARNING: [Synth 8-7071] port 'msix_enable' of module 'z7015_rx_xdma_0_0' is unconnected for instance 'xdma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1633]
+WARNING: [Synth 8-7071] port 'cfg_mgmt_read_data' of module 'z7015_rx_xdma_0_0' is unconnected for instance 'xdma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1633]
+WARNING: [Synth 8-7071] port 'cfg_mgmt_read_write_done' of module 'z7015_rx_xdma_0_0' is unconnected for instance 'xdma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1633]
+WARNING: [Synth 8-7023] instance 'xdma_0' of module 'z7015_rx_xdma_0_0' has 88 connections declared, but only 83 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1633]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:568]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_wrapper' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/hdl/z7015_rx_wrapper.v:13]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_link'. This will prevent further optimization [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1619]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'link_ctrl_0'. This will prevent further optimization [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1270]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'prbs_check_0'. This will prevent further optimization [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/synth/z7015_rx.v:1303]
+WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2413.250 ; gain = 517.871 ; free physical = 34160 ; free virtual = 56379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2413.250 ; gain = 517.871 ; free physical = 34160 ; free virtual = 56379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2413.250 ; gain = 517.871 ; free physical = 34160 ; free virtual = 56379
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2413.250 ; gain = 0.000 ; free physical = 34160 ; free virtual = 56379
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_ps7_0/z7015_rx_ps7_0/z7015_rx_ps7_0_in_context.xdc] for cell 'z7015_rx_i/ps7'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_ps7_0/z7015_rx_ps7_0/z7015_rx_ps7_0_in_context.xdc] for cell 'z7015_rx_i/ps7'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rst_axi_0/z7015_rx_rst_axi_0/z7015_rx_rst_axi_0_in_context.xdc] for cell 'z7015_rx_i/rst_axi'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rst_axi_0/z7015_rx_rst_axi_0/z7015_rx_rst_axi_0_in_context.xdc] for cell 'z7015_rx_i/rst_axi'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rst_axi1_0/z7015_rx_rst_axi1_0/z7015_rx_rst_axi1_0_in_context.xdc] for cell 'z7015_rx_i/rst_axi1'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rst_axi1_0/z7015_rx_rst_axi1_0/z7015_rx_rst_axi1_0_in_context.xdc] for cell 'z7015_rx_i/rst_axi1'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_dma_0_0/z7015_rx_axi_dma_0_0/z7015_rx_axi_dma_0_0_in_context.xdc] for cell 'z7015_rx_i/axi_dma_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_dma_0_0/z7015_rx_axi_dma_0_0/z7015_rx_axi_dma_0_0_in_context.xdc] for cell 'z7015_rx_i/axi_dma_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_gpio_link_0/z7015_rx_axi_gpio_link_0/z7015_rx_axi_gpio_link_0_in_context.xdc] for cell 'z7015_rx_i/axi_gpio_link'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_gpio_link_0/z7015_rx_axi_gpio_link_0/z7015_rx_axi_gpio_link_0_in_context.xdc] for cell 'z7015_rx_i/axi_gpio_link'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_ctrl_0/z7015_rx_sc_ctrl_0/z7015_rx_sc_ctrl_0_in_context.xdc] for cell 'z7015_rx_i/sc_ctrl'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_ctrl_0/z7015_rx_sc_ctrl_0/z7015_rx_sc_ctrl_0_in_context.xdc] for cell 'z7015_rx_i/sc_ctrl'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_mem_0/z7015_rx_sc_mem_0/z7015_rx_sc_mem_0_in_context.xdc] for cell 'z7015_rx_i/sc_mem'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_sc_mem_0/z7015_rx_sc_mem_0/z7015_rx_sc_mem_0_in_context.xdc] for cell 'z7015_rx_i/sc_mem'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_fifo_rx_0/z7015_rx_fifo_rx_0/z7015_rx_fifo_rx_0_in_context.xdc] for cell 'z7015_rx_i/fifo_rx'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_fifo_rx_0/z7015_rx_fifo_rx_0/z7015_rx_fifo_rx_0_in_context.xdc] for cell 'z7015_rx_i/fifo_rx'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_depkt_0_0/z7015_rx_depkt_0_0/z7015_rx_depkt_0_0_in_context.xdc] for cell 'z7015_rx_i/depkt_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_depkt_0_0/z7015_rx_depkt_0_0/z7015_rx_depkt_0_0_in_context.xdc] for cell 'z7015_rx_i/depkt_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_prbs_check_0_0/z7015_rx_prbs_check_0_0/z7015_rx_prbs_check_0_0_in_context.xdc] for cell 'z7015_rx_i/prbs_check_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_prbs_check_0_0/z7015_rx_prbs_check_0_0/z7015_rx_prbs_check_0_0_in_context.xdc] for cell 'z7015_rx_i/prbs_check_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_link_ctrl_0_0/z7015_rx_link_ctrl_0_0/z7015_rx_link_ctrl_0_0_in_context.xdc] for cell 'z7015_rx_i/link_ctrl_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_link_ctrl_0_0/z7015_rx_link_ctrl_0_0/z7015_rx_link_ctrl_0_0_in_context.xdc] for cell 'z7015_rx_i/link_ctrl_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_vio_link_0/z7015_rx_vio_link_0/z7015_rx_vio_link_0_in_context.xdc] for cell 'z7015_rx_i/vio_link'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_vio_link_0/z7015_rx_vio_link_0/z7015_rx_vio_link_0_in_context.xdc] for cell 'z7015_rx_i/vio_link'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_aurora_rx_0/z7015_rx_aurora_rx_0/z7015_rx_aurora_rx_0_in_context.xdc] for cell 'z7015_rx_i/aurora_rx'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_aurora_rx_0/z7015_rx_aurora_rx_0/z7015_rx_aurora_rx_0_in_context.xdc] for cell 'z7015_rx_i/aurora_rx'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rx_support_0/z7015_rx_rx_support_0/z7015_rx_rx_support_0_in_context.xdc] for cell 'z7015_rx_i/rx_support'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_rx_support_0/z7015_rx_rx_support_0/z7015_rx_rx_support_0_in_context.xdc] for cell 'z7015_rx_i/rx_support'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_gt_common_0/z7015_rx_gt_common_0/z7015_rx_gt_common_0_in_context.xdc] for cell 'z7015_rx_i/gt_common'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_gt_common_0/z7015_rx_gt_common_0/z7015_rx_gt_common_0_in_context.xdc] for cell 'z7015_rx_i/gt_common'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_clk_wiz_0_0/z7015_rx_clk_wiz_0_0/z7015_rx_clk_wiz_0_0_in_context.xdc] for cell 'z7015_rx_i/clk_wiz_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_clk_wiz_0_0/z7015_rx_clk_wiz_0_0/z7015_rx_clk_wiz_0_0_in_context.xdc] for cell 'z7015_rx_i/clk_wiz_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_util_ds_buf_0_0/z7015_rx_util_ds_buf_0_0/z7015_rx_util_ds_buf_0_0_in_context.xdc] for cell 'z7015_rx_i/util_ds_buf_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_util_ds_buf_0_0/z7015_rx_util_ds_buf_0_0/z7015_rx_util_ds_buf_0_0_in_context.xdc] for cell 'z7015_rx_i/util_ds_buf_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_util_ds_buf_1_0/z7015_rx_util_ds_buf_1_0/z7015_rx_util_ds_buf_1_0_in_context.xdc] for cell 'z7015_rx_i/util_ds_buf_1'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_util_ds_buf_1_0/z7015_rx_util_ds_buf_1_0/z7015_rx_util_ds_buf_1_0_in_context.xdc] for cell 'z7015_rx_i/util_ds_buf_1'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/z7015_rx_xdma_0_0/z7015_rx_xdma_0_0_in_context.xdc] for cell 'z7015_rx_i/xdma_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_xdma_0_0/z7015_rx_xdma_0_0/z7015_rx_xdma_0_0_in_context.xdc] for cell 'z7015_rx_i/xdma_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0_in_context.xdc] for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/s00_data_fifo'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0/z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0_in_context.xdc] for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/s00_data_fifo'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_auto_cc_0/z7015_rx_axi_interconnect_0_imp_auto_cc_0/z7015_rx_axi_interconnect_0_imp_auto_cc_0_in_context.xdc] for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/auto_cc'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_auto_cc_0/z7015_rx_axi_interconnect_0_imp_auto_cc_0/z7015_rx_axi_interconnect_0_imp_auto_cc_0_in_context.xdc] for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/auto_cc'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_auto_pc_0/z7015_rx_axi_interconnect_0_imp_auto_pc_0/z7015_rx_axi_interconnect_0_imp_auto_pc_0_in_context.xdc] for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_interconnect_0_imp_auto_pc_0/z7015_rx_axi_interconnect_0_imp_auto_pc_0/z7015_rx_axi_interconnect_0_imp_auto_pc_0_in_context.xdc] for cell 'z7015_rx_i/axi_interconnect_0/s00_couplers/auto_pc'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_bram_ctrl_0_0/z7015_rx_axi_bram_ctrl_0_0/z7015_rx_axi_bram_ctrl_0_0_in_context.xdc] for cell 'z7015_rx_i/axi_bram_ctrl_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_axi_bram_ctrl_0_0/z7015_rx_axi_bram_ctrl_0_0/z7015_rx_axi_bram_ctrl_0_0_in_context.xdc] for cell 'z7015_rx_i/axi_bram_ctrl_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_blk_mem_gen_0_0/z7015_rx_blk_mem_gen_0_0/z7015_rx_blk_mem_gen_0_0_in_context.xdc] for cell 'z7015_rx_i/blk_mem_gen_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_blk_mem_gen_0_0/z7015_rx_blk_mem_gen_0_0/z7015_rx_blk_mem_gen_0_0_in_context.xdc] for cell 'z7015_rx_i/blk_mem_gen_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_proc_sys_reset_0_0/z7015_rx_proc_sys_reset_0_0/z7015_rx_proc_sys_reset_0_0_in_context.xdc] for cell 'z7015_rx_i/proc_sys_reset_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_proc_sys_reset_0_0/z7015_rx_proc_sys_reset_0_0/z7015_rx_proc_sys_reset_0_0_in_context.xdc] for cell 'z7015_rx_i/proc_sys_reset_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_z7015_rx/z7015_rx.xdc]
+WARNING: [Vivado 12-508] No pins matched 'z7015_rx_i/link_ctrl_0/inst/au_reset_reg/C'. [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_z7015_rx/z7015_rx.xdc:8]
+WARNING: [Vivado 12-508] No pins matched 'z7015_rx_i/rx_support/inst/sys_rst_deb_reg[*]/D'. [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_z7015_rx/z7015_rx.xdc:8]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {IS_SEQUENTIAL && NAME =~ */link_ctrl_0/inst/pd_e_reg*}'. [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_z7015_rx/z7015_rx.xdc:37]
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_z7015_rx/z7015_rx.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_z7015_rx/z7015_rx.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/z7015_rx_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_z7015_rx/z7015_rx.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/z7015_rx_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/z7015_rx_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2460.902 ; gain = 0.000 ; free physical = 34197 ; free virtual = 56414
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2460.938 ; gain = 0.000 ; free physical = 34197 ; free virtual = 56414
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'z7015_rx_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '8.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2460.938 ; gain = 565.559 ; free physical = 34226 ; free virtual = 56442
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2468.906 ; gain = 573.527 ; free physical = 34226 ; free virtual = 56442
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2468.906 ; gain = 573.527 ; free physical = 34225 ; free virtual = 56443
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2468.906 ; gain = 573.527 ; free physical = 34216 ; free virtual = 56436
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2468.906 ; gain = 573.527 ; free physical = 34215 ; free virtual = 56440
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2568.906 ; gain = 673.527 ; free physical = 34183 ; free virtual = 56406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2569.906 ; gain = 674.527 ; free physical = 34183 ; free virtual = 56406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2579.914 ; gain = 684.535 ; free physical = 34167 ; free virtual = 56390
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2765.727 ; gain = 870.348 ; free physical = 34007 ; free virtual = 56234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2765.727 ; gain = 870.348 ; free physical = 34007 ; free virtual = 56234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2765.727 ; gain = 870.348 ; free physical = 34007 ; free virtual = 56234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2765.727 ; gain = 870.348 ; free physical = 34007 ; free virtual = 56234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2765.727 ; gain = 870.348 ; free physical = 34007 ; free virtual = 56234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2765.727 ; gain = 870.348 ; free physical = 34007 ; free virtual = 56234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------------------------+----------+
+|      |BlackBox name                                   |Instances |
++------+------------------------------------------------+----------+
+|1     |z7015_rx_aurora_rx_0                            |         1|
+|2     |z7015_rx_axi_bram_ctrl_0_0                      |         1|
+|3     |z7015_rx_axi_dma_0_0                            |         1|
+|4     |z7015_rx_axi_gpio_link_0                        |         1|
+|5     |z7015_rx_axi_interconnect_0_imp_auto_cc_0       |         1|
+|6     |z7015_rx_axi_interconnect_0_imp_auto_pc_0       |         1|
+|7     |z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0 |         1|
+|8     |z7015_rx_blk_mem_gen_0_0                        |         1|
+|9     |z7015_rx_clk_wiz_0_0                            |         1|
+|10    |z7015_rx_depkt_0_0                              |         1|
+|11    |z7015_rx_fifo_rx_0                              |         1|
+|12    |z7015_rx_gt_common_0                            |         1|
+|13    |z7015_rx_link_ctrl_0_0                          |         1|
+|14    |z7015_rx_prbs_check_0_0                         |         1|
+|15    |z7015_rx_proc_sys_reset_0_0                     |         1|
+|16    |z7015_rx_ps7_0                                  |         1|
+|17    |z7015_rx_rst_axi_0                              |         1|
+|18    |z7015_rx_rst_axi1_0                             |         1|
+|19    |z7015_rx_rx_support_0                           |         1|
+|20    |z7015_rx_sc_ctrl_0                              |         1|
+|21    |z7015_rx_sc_mem_0                               |         1|
+|22    |z7015_rx_util_ds_buf_0_0                        |         1|
+|23    |z7015_rx_util_ds_buf_1_0                        |         1|
+|24    |z7015_rx_vio_link_0                             |         1|
+|25    |z7015_rx_xdma_0_0                               |         1|
++------+------------------------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------------------------+------+
+|      |Cell                                          |Count |
++------+----------------------------------------------+------+
+|1     |z7015_rx_aurora_rx                            |     1|
+|2     |z7015_rx_axi_bram_ctrl_0                      |     1|
+|3     |z7015_rx_axi_dma_0                            |     1|
+|4     |z7015_rx_axi_gpio_link                        |     1|
+|5     |z7015_rx_axi_interconnect_0_imp_auto_cc       |     1|
+|6     |z7015_rx_axi_interconnect_0_imp_auto_pc       |     1|
+|7     |z7015_rx_axi_interconnect_0_imp_s00_data_fifo |     1|
+|8     |z7015_rx_blk_mem_gen_0                        |     1|
+|9     |z7015_rx_clk_wiz_0                            |     1|
+|10    |z7015_rx_depkt_0                              |     1|
+|11    |z7015_rx_fifo_rx                              |     1|
+|12    |z7015_rx_gt_common                            |     1|
+|13    |z7015_rx_link_ctrl_0                          |     1|
+|14    |z7015_rx_prbs_check_0                         |     1|
+|15    |z7015_rx_proc_sys_reset_0                     |     1|
+|16    |z7015_rx_ps7                                  |     1|
+|17    |z7015_rx_rst_axi1                             |     1|
+|18    |z7015_rx_rst_axi                              |     1|
+|19    |z7015_rx_rx_support                           |     1|
+|20    |z7015_rx_sc_ctrl                              |     1|
+|21    |z7015_rx_sc_mem                               |     1|
+|22    |z7015_rx_util_ds_buf_0                        |     1|
+|23    |z7015_rx_util_ds_buf_1                        |     1|
+|24    |z7015_rx_vio_link                             |     1|
+|25    |z7015_rx_xdma_0                               |     1|
+|26    |IBUF                                          |     5|
+|27    |OBUF                                          |     4|
++------+----------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2765.727 ; gain = 870.348 ; free physical = 34007 ; free virtual = 56234
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2765.727 ; gain = 822.660 ; free physical = 34008 ; free virtual = 56235
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2765.734 ; gain = 870.348 ; free physical = 34008 ; free virtual = 56235
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2765.734 ; gain = 0.000 ; free physical = 34178 ; free virtual = 56405
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2765.734 ; gain = 0.000 ; free physical = 34182 ; free virtual = 56409
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: ef78896a
+INFO: [Common 17-83] Releasing license: Synthesis
+89 Infos, 171 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2765.762 ; gain = 1141.449 ; free physical = 34186 ; free virtual = 56413
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2112.064; main = 1896.620; forked = 280.414
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3730.156; main = 2765.730; forked = 994.238
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2789.738 ; gain = 0.000 ; free physical = 34186 ; free virtual = 56413
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/synth_1/z7015_rx_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file z7015_rx_wrapper_utilization_synth.rpt -pb z7015_rx_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 17:52:15 2026...

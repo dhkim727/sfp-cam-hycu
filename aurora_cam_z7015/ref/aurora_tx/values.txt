@@ -1,0 +1,13 @@
+C_START_QUAD : current='Quad_X0Y0'  allowed={}
+C_START_LANE : current='X0Y0'  allowed={}
+C_REFCLK_SOURCE : current='MGTREFCLK0 of Quad X0Y0'  allowed={}
+C_REFCLK_FREQUENCY : current='125'  allowed={}
+PLL_TYPE : current='CPLL'  allowed={}
+C_GT_TYPE : current='GTH'  allowed={}
+C_INIT_CLK : current='62.5'  allowed={}
+SupportLevel : current='1'  allowed={}
+Backchannel_mode : current='Timer'  allowed={}
+after quad/lane : C_REFCLK_SOURCE allowed={}
+chosen : C_START_QUAD='Quad_X0Y3'  C_START_LANE='X0Y15'  C_REFCLK_SOURCE='MGTREFCLK0 of Quad X0Y3'  refclk 125.000 ok
+after : C_REFCLK_FREQUENCY allowed={}
+        PLL_TYPE='CPLL'

@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/app_tx/build",
+  "command": "/tools/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-gcc -I/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/app_tx/src -I/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/app_tx/src/../../../sw -isystem /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/platform_tx/export/platform_tx/sw/standalone_psu_cortexa53_0/include -isystem /tools/Xilinx/2025.2/gnu/aarch64/lin/aarch64-none/x86_64-oesdk-linux/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include -isystem /tools/Xilinx/2025.2/gnu/aarch64/lin/aarch64-none/x86_64-oesdk-linux/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include-fixed -isystem /tools/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/include  -DSDT  -MMD -MP -specs=/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/platform_tx/export/platform_tx/sw/standalone_psu_cortexa53_0/Xilinx.spec -I/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/platform_tx/export/platform_tx/sw/standalone_psu_cortexa53_0/include -Wall -Wextra      -O0  -g3     -U__clang__ -o CMakeFiles/app_tx.elf.dir/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sw/zcu104_tx_fw.c.obj -c /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sw/zcu104_tx_fw.c",
+  "file": "/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sw/zcu104_tx_fw.c"
+}
+]

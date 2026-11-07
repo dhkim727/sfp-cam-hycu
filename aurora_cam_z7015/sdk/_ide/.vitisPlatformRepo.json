@@ -1,4 +1,6 @@
 [
   "/home/dhkim/work/aurora_cam_z7015/sdk/platform/export/platform",
-  "/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/platform/export/platform"
+  "/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/platform/export/platform",
+  "/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/platform_rx/export/platform_rx",
+  "/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/platform_tx/export/platform_tx"
 ]

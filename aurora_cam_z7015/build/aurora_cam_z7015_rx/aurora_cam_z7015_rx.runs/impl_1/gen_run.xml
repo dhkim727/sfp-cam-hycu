@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z015clg485-2" LaunchTime="1794041517">
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="z7015_rx_wrapper_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="z7015_rx_wrapper_routed.rqs"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="z7015_rx_wrapper.vdi"/>
+  <File Type="BG-DRC" Name="z7015_rx_wrapper.drc"/>
+  <File Type="BG-BGN" Name="z7015_rx_wrapper.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="z7015_rx_wrapper.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="z7015_rx_wrapper.ltx"/>
+  <File Type="PL-LTX-FILE" Name="z7015_rx_wrapper_pld.ltx"/>
+  <File Type="BOOT-LTX-FILE" Name="z7015_rx_wrapper_boot.ltx"/>
+  <File Type="LTX-FILE" Name="z7015_rx_wrapper.ltx"/>
+  <File Type="PL-BIF-FILE" Name="z7015_rx_wrapper_pld.bif"/>
+  <File Type="BOOT-BIF-FILE" Name="z7015_rx_wrapper_boot.bif"/>
+  <File Type="BIF-FILE" Name="z7015_rx_wrapper.bif"/>
+  <File Type="MMI-FILE" Name="z7015_rx_wrapper.mmi"/>
+  <File Type="RBD_FILE" Name="z7015_rx_wrapper.rbd"/>
+  <File Type="NPI_FILE" Name="z7015_rx_wrapper.npi"/>
+  <File Type="PL_UNMASK_RCDO_FILE" Name="z7015_rx_wrapper_pld_unmask.rcdo"/>
+  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="z7015_rx_wrapper_pld_unmask_markers.rcdo"/>
+  <File Type="PL_MASK_RCDO_FILE" Name="z7015_rx_wrapper_pld_mask.rcdo"/>
+  <File Type="PL_MARKER_RCDO_FILE" Name="z7015_rx_wrapper_pld_markers.rcdo"/>
+  <File Type="PL-CLEAR-RCDO-FILE" Name="z7015_rx_wrapper_pld_clear.rcdo"/>
+  <File Type="PL-RCDO-FILE" Name="z7015_rx_wrapper_pld.rcdo"/>
+  <File Type="PL_UNMASK_RNPI_FILE" Name="z7015_rx_wrapper_pld_unmask.rnpi"/>
+  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="z7015_rx_wrapper_pld_shutdown.rnpi"/>
+  <File Type="PL_MASK_RNPI_FILE" Name="z7015_rx_wrapper_pld_mask.rnpi"/>
+  <File Type="PL_MARKER_RNPI_FILE" Name="z7015_rx_wrapper_pld_markers.rnpi"/>
+  <File Type="PL_RNPI_FILE" Name="z7015_rx_wrapper_pld.rnpi"/>
+  <File Type="BOOT_MARKER_RNPI_FILE" Name="z7015_rx_wrapper_boot_markers.rnpi"/>
+  <File Type="BOOT_RNPI_FILE" Name="z7015_rx_wrapper_boot.rnpi"/>
+  <File Type="MARKER-RCDO-FILE" Name="z7015_rx_wrapper_markers.rcdo"/>
+  <File Type="MARKER-RNPI-FILE" Name="z7015_rx_wrapper_markers.rnpi"/>
+  <File Type="RCDO-FILE" Name="z7015_rx_wrapper.rcdo"/>
+  <File Type="RNPI_FILE" Name="z7015_rx_wrapper.rnpi"/>
+  <File Type="CFI_FILE" Name="z7015_rx_wrapper.cfi"/>
+  <File Type="RCFI_FILE" Name="z7015_rx_wrapper.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="z7015_rx_wrapper_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="z7015_rx_wrapper_boot.pdi"/>
+  <File Type="PDI-FILE" Name="z7015_rx_wrapper.pdi"/>
+  <File Type="BITSTR-MMI" Name="z7015_rx_wrapper.mmi"/>
+  <File Type="BITSTR-BMM" Name="z7015_rx_wrapper_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="z7015_rx_wrapper.nky"/>
+  <File Type="BITSTR-RBT" Name="z7015_rx_wrapper.rbt"/>
+  <File Type="BITSTR-MSK" Name="z7015_rx_wrapper.msk"/>
+  <File Type="BG-BIN" Name="z7015_rx_wrapper.bin"/>
+  <File Type="BG-BIT" Name="z7015_rx_wrapper.bit"/>
+  <File Type="NOC_SOLUTION_FILE" Name="z7015_rx_wrapper.ncr"/>
+  <File Type="NOC_TRAFFIC_SPEC_FILE" Name="z7015_rx_wrapper.nts"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="z7015_rx_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="z7015_rx_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="z7015_rx_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="z7015_rx_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="z7015_rx_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="z7015_rx_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="z7015_rx_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="z7015_rx_wrapper_postroute_physopt.dcp"/>
+  <File Type="ROUTE-RQS-PB" Name="z7015_rx_wrapper_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="z7015_rx_wrapper_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="z7015_rx_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="z7015_rx_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="z7015_rx_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="z7015_rx_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="z7015_rx_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="z7015_rx_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="z7015_rx_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="z7015_rx_wrapper_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="z7015_rx_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="z7015_rx_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="z7015_rx_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="z7015_rx_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="z7015_rx_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="z7015_rx_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="z7015_rx_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="z7015_rx_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="z7015_rx_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="z7015_rx_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-UTIL-PB" Name="z7015_rx_wrapper_utilization_routed.pb"/>
+  <File Type="ROUTE-UTIL" Name="z7015_rx_wrapper_utilization_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="z7015_rx_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="z7015_rx_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="z7015_rx_wrapper_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="z7015_rx_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="z7015_rx_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="z7015_rx_wrapper_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="z7015_rx_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="z7015_rx_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="z7015_rx_wrapper_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="z7015_rx_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="z7015_rx_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="z7015_rx_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="z7015_rx_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="z7015_rx_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="z7015_rx_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="z7015_rx_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="z7015_rx_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="z7015_rx_wrapper_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="z7015_rx_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="z7015_rx_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="z7015_rx_wrapper_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="z7015_rx_wrapper_rqa_opted.pb"/>
+  <File Type="OPT-TIMING" Name="z7015_rx_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="z7015_rx_wrapper.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="z7015_rx_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-UTIL-PB" Name="z7015_rx_wrapper_utilization_opted.pb"/>
+  <File Type="OPT-UTIL" Name="z7015_rx_wrapper_utilization_opted.rpt"/>
+  <File Type="OPT-DRC" Name="z7015_rx_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="z7015_rx_wrapper_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="z7015_rx_wrapper_timing_summary_init.rpt"/>
+  <File Type="REPORTS-TCL" Name="z7015_rx_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="z7015_rx_wrapper.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../rtl/line_depacketizer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/prbs_check.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/link_ctrl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/z7015/aurora_rx_support.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../rtl/z7015/gtp_common_shared.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/z7015_rx/z7015_rx.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/z7015_rx/hdl/z7015_rx_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="z7015_rx_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../bd_z7015_rx/z7015_rx.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/z7015_rx_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design" PreStepTclHook="$PPRDIR/../../bd_z7015_rx/eco_aurora_rx_pll1.tcl"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream" PreStepTclHook="$PPRDIR/../../bd_z7015_rx/eco_aurora_rx_pll1_check.tcl"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_vio_link_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_ps7_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_rst_axi1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_axi_interconnect_0_imp_auto_cc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_link_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_sc_mem_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_axi_gpio_link_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_depkt_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_axi_interconnect_0_imp_s00_data_fifo_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_util_ds_buf_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_aurora_rx_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_util_ds_buf_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_sc_ctrl_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_xdma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_fifo_rx_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_rx_support_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_rst_axi_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_axi_interconnect_0_imp_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_gt_common_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_prbs_check_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="z7015_rx_axi_bram_ctrl_0_0"/>
+</GenRun>

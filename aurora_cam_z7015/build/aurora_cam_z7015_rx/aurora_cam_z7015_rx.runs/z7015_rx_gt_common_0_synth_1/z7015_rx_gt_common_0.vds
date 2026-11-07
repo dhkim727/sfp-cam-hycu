@@ -1,0 +1,321 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Nov  7 17:46:47 2026
+# Process ID         : 228054
+# Current directory  : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_gt_common_0_synth_1
+# Command line       : vivado -log z7015_rx_gt_common_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source z7015_rx_gt_common_0.tcl
+# Log file           : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_gt_common_0_synth_1/z7015_rx_gt_common_0.vds
+# Journal file       : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_gt_common_0_synth_1/vivado.jou
+# Running On         : dhkim-home
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
+# CPU Frequency      : 5217.537 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 67058 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75648 MB
+# Available Virtual  : 61382 MB
+#-----------------------------------------------------------
+source z7015_rx_gt_common_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+Command: synth_design -top z7015_rx_gt_common_0 -part xc7z015clg485-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 229885
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2236.051 ; gain = 482.594 ; free physical = 14616 ; free virtual = 36598
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'z7015_rx_gt_common_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_gt_common_0/synth/z7015_rx_gt_common_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'gtp_common_shared' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/rtl/z7015/gtp_common_shared.v:36]
+	Parameter SIM_RESET_SPEEDUP bound to: FALSE - type: string 
+	Parameter PLL0_FBDIV bound to: 5 - type: integer 
+	Parameter PLL0_FBDIV_45 bound to: 5 - type: integer 
+	Parameter PLL0_REFCLK_DIV bound to: 1 - type: integer 
+	Parameter PLL1_FBDIV bound to: 5 - type: integer 
+	Parameter PLL1_FBDIV_45 bound to: 5 - type: integer 
+	Parameter PLL1_REFCLK_DIV bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6157] synthesizing module 'GTPE2_COMMON' [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:60056]
+	Parameter BIAS_CFG bound to: 64'b0000000000000000000000000000000000000000000001010000000000000001 
+	Parameter COMMON_CFG bound to: 0 - type: integer 
+	Parameter PLL0_CFG bound to: 27'b000000111110000001001001100 
+	Parameter PLL0_DMON_CFG bound to: 1'b0 
+	Parameter PLL0_FBDIV bound to: 5 - type: integer 
+	Parameter PLL0_FBDIV_45 bound to: 5 - type: integer 
+	Parameter PLL0_INIT_CFG bound to: 24'b000000000000000000011110 
+	Parameter PLL0_LOCK_CFG bound to: 9'b111101000 
+	Parameter PLL0_REFCLK_DIV bound to: 1 - type: integer 
+	Parameter PLL1_CFG bound to: 27'b000000111110000001111011100 
+	Parameter PLL1_DMON_CFG bound to: 1'b0 
+	Parameter PLL1_FBDIV bound to: 5 - type: integer 
+	Parameter PLL1_FBDIV_45 bound to: 5 - type: integer 
+	Parameter PLL1_INIT_CFG bound to: 24'b000000000000000000011110 
+	Parameter PLL1_LOCK_CFG bound to: 9'b111101000 
+	Parameter PLL1_REFCLK_DIV bound to: 1 - type: integer 
+	Parameter PLL_CLKOUT_CFG bound to: 8'b00000000 
+	Parameter RSVD_ATTR0 bound to: 16'b0000000000000000 
+	Parameter RSVD_ATTR1 bound to: 16'b0000000000000000 
+	Parameter SIM_PLL0REFCLK_SEL bound to: 3'b001 
+	Parameter SIM_PLL1REFCLK_SEL bound to: 3'b010 
+	Parameter SIM_RESET_SPEEDUP bound to: FALSE - type: string 
+	Parameter SIM_VERSION bound to: 2.0 - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'GTPE2_COMMON' (0#1) [/tools/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:60056]
+INFO: [Synth 8-6155] done synthesizing module 'gtp_common_shared' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/rtl/z7015/gtp_common_shared.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'z7015_rx_gt_common_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.gen/sources_1/bd/z7015_rx/ip/z7015_rx_gt_common_0/synth/z7015_rx_gt_common_0.v:53]
+INFO: [Synth 8-7129] Port qpll_qpllreset[1] in module gtp_common_shared is either unconnected or has no load
+INFO: [Synth 8-7129] Port qpll_drp_ovrd in module gtp_common_shared is either unconnected or has no load
+INFO: [Synth 8-7129] Port qpll_drp_gen3 in module gtp_common_shared is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2327.988 ; gain = 574.531 ; free physical = 13963 ; free virtual = 35955
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2336.895 ; gain = 583.438 ; free physical = 13947 ; free virtual = 35939
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2336.895 ; gain = 583.438 ; free physical = 13947 ; free virtual = 35939
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2342.832 ; gain = 0.000 ; free physical = 13930 ; free virtual = 35921
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2448.633 ; gain = 0.000 ; free physical = 13646 ; free virtual = 35637
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2448.668 ; gain = 0.000 ; free physical = 13638 ; free virtual = 35629
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2448.668 ; gain = 695.211 ; free physical = 13074 ; free virtual = 35087
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2456.637 ; gain = 703.180 ; free physical = 13074 ; free virtual = 35087
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2456.637 ; gain = 703.180 ; free physical = 13074 ; free virtual = 35082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2456.637 ; gain = 703.180 ; free physical = 13065 ; free virtual = 35073
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 2     
+	               96 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_crscode[11] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_crscode[10] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_crscode[9] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_crscode[8] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_crscode[7] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_crscode[6] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_crscode[5] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_crscode[4] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_crscode[3] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_crscode[2] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_crscode[1] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_crscode[0] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[17] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[16] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[15] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[14] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[13] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[12] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[11] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[10] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[9] driven by constant 1
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[8] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[7] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[6] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[5] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[4] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[3] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_fsm[2] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_done[1] driven by constant 1
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_reset[1] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_drp_reset[0] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_qplloutclk[1] driven by constant 0
+INFO: [Synth 8-3917] design z7015_rx_gt_common_0 has port qpll_qplloutrefclk[1] driven by constant 0
+INFO: [Synth 8-7129] Port qpll_qpllreset[1] in module z7015_rx_gt_common_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port qpll_drp_ovrd in module z7015_rx_gt_common_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port qpll_drp_gen3 in module z7015_rx_gt_common_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2456.637 ; gain = 703.180 ; free physical = 13013 ; free virtual = 35021
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2456.637 ; gain = 703.180 ; free physical = 13004 ; free virtual = 35013
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2456.637 ; gain = 703.180 ; free physical = 12988 ; free virtual = 34996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2547.449 ; gain = 793.992 ; free physical = 11745 ; free virtual = 33760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2547.449 ; gain = 793.992 ; free physical = 11745 ; free virtual = 33760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2547.449 ; gain = 793.992 ; free physical = 11745 ; free virtual = 33760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2547.449 ; gain = 793.992 ; free physical = 11745 ; free virtual = 33760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2547.449 ; gain = 793.992 ; free physical = 11745 ; free virtual = 33760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2547.449 ; gain = 793.992 ; free physical = 11745 ; free virtual = 33760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------------+-----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name          | RTL Name                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------+-----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|z7015_rx_gt_common_0 | inst/pll0_pd_wait_reg[95]   | 96     | 1     | NO           | NO                 | YES               | 0      | 3       | 
+|z7015_rx_gt_common_0 | inst/pll0_rst_wait_reg[127] | 128    | 1     | NO           | NO                 | YES               | 0      | 4       | 
+|z7015_rx_gt_common_0 | inst/pll1_pd_wait_reg[95]   | 96     | 1     | NO           | NO                 | YES               | 0      | 3       | 
+|z7015_rx_gt_common_0 | inst/pll1_rst_wait_reg[127] | 128    | 1     | NO           | NO                 | YES               | 0      | 4       | 
++---------------------+-----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |BUFG         |     2|
+|2     |GTPE2_COMMON |     1|
+|3     |LUT1         |     2|
+|4     |LUT2         |     5|
+|5     |LUT3         |     2|
+|6     |LUT4         |     2|
+|7     |LUT6         |     1|
+|8     |SRLC32E      |    14|
+|9     |FDRE         |    12|
++------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2547.449 ; gain = 793.992 ; free physical = 11745 ; free virtual = 33760
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2547.449 ; gain = 682.219 ; free physical = 11722 ; free virtual = 33736
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2547.457 ; gain = 793.992 ; free physical = 11722 ; free virtual = 33736
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2547.457 ; gain = 0.000 ; free physical = 11711 ; free virtual = 33726
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2711.977 ; gain = 0.000 ; free physical = 11331 ; free virtual = 33407
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: e85e30ae
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2712.012 ; gain = 1130.289 ; free physical = 11299 ; free virtual = 33377
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1514.879; main = 1514.879; forked = 0.000
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2711.980; main = 2711.980; forked = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2735.988 ; gain = 0.000 ; free physical = 11291 ; free virtual = 33369
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.runs/z7015_rx_gt_common_0_synth_1/z7015_rx_gt_common_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file z7015_rx_gt_common_0_utilization_synth.rpt -pb z7015_rx_gt_common_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 17:47:04 2026...

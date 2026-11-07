@@ -9,6 +9,17 @@
 ################################################################################
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 
+set_property -dict {PACKAGE_PIN J2 IOSTANDARD LVCMOS33} [get_ports PCIE0_PERSTN]
+
+
+create_clock -period 10.000 -name PCIE_REFCLK -waveform {0.000 5.000} [get_ports PCIE0_REFCLK_clk_p]
+
+set_property PACKAGE_PIN U9 [get_ports PCIE0_REFCLK_clk_p]
+set_property PACKAGE_PIN V9 [get_ports PCIE0_REFCLK_clk_n]
+
+# PCIE는 Lane0를 사용
+set_property LOC GTPE2_CHANNEL_X0Y0 [get_cells -hier -filter {REF_NAME == GTPE2_CHANNEL && NAME =~ *xdma*}]
+
 ## GT refclk 125 MHz : MGTREFCLK1_112 (U5/V5) - 현재 빌드와 동일 (aurora_cam_wrapper_io_placed.rpt)
 ##   aurora_tx 의 IBUFDS_GTE2 -> GTPE2_COMMON(PLL0) -> aurora_tx / aurora_rx 두 채널이 공유
 set_property PACKAGE_PIN U5 [get_ports GT_REFCLK_clk_p]

@@ -1,0 +1,17 @@
+Sat Nov 07 17:52:28 KST 2026  design design_1  verify_only=0
+channel : z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/gtpe2_i
+common  : z7015_rx_i/gt_common/inst/u_gtpe2_common
+  PLL1CLK    <- GTPE2_COMMON/PLL1OUTCLK
+  PLL1REFCLK <- GTPE2_COMMON/PLL1OUTREFCLK
+  PLL0CLK    <- GTPE2_COMMON/PLL0OUTCLK
+  PLL0REFCLK <- GTPE2_COMMON/PLL0OUTREFCLK
+  RXSYSCLKSEL[1]   = 0
+  RXSYSCLKSEL[0]   = 0
+  TXSYSCLKSEL[1]   = 0
+  TXSYSCLKSEL[0]   = 0
+VCC net : z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/<const1>
+  z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/gtpe2_i/RXSYSCLKSEL[1] -> VCC
+  z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/gtpe2_i/RXSYSCLKSEL[0] -> VCC
+  z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/gtpe2_i/TXSYSCLKSEL[1] -> VCC
+  z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/gtpe2_i/TXSYSCLKSEL[0] -> VCC
+aurora_rx GTPE2_CHANNEL now RXSYSCLKSEL = TXSYSCLKSEL = 2'b11 (PLL1)

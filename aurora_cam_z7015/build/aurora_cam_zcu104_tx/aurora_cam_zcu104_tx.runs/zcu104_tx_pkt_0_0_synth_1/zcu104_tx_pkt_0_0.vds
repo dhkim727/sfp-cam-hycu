@@ -1,0 +1,249 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Nov  7 18:15:53 2026
+# Process ID         : 363423
+# Current directory  : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_zcu104_tx/aurora_cam_zcu104_tx.runs/zcu104_tx_pkt_0_0_synth_1
+# Command line       : vivado -log zcu104_tx_pkt_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zcu104_tx_pkt_0_0.tcl
+# Log file           : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_zcu104_tx/aurora_cam_zcu104_tx.runs/zcu104_tx_pkt_0_0_synth_1/zcu104_tx_pkt_0_0.vds
+# Journal file       : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_zcu104_tx/aurora_cam_zcu104_tx.runs/zcu104_tx_pkt_0_0_synth_1/vivado.jou
+# Running On         : dhkim-home
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
+# CPU Frequency      : 5401.749 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 67058 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75648 MB
+# Available Virtual  : 61621 MB
+#-----------------------------------------------------------
+source zcu104_tx_pkt_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+Command: synth_design -top zcu104_tx_pkt_0_0 -part xczu7ev-ffvc1156-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 363767
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2890.680 ; gain = 147.688 ; free physical = 28177 ; free virtual = 50824
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'zcu104_tx_pkt_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_zcu104_tx/aurora_cam_zcu104_tx.gen/sources_1/bd/zcu104_tx/ip/zcu104_tx_pkt_0_0/synth/zcu104_tx_pkt_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'line_packetizer' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/rtl/line_packetizer.v:17]
+	Parameter H_BEATS bound to: 640 - type: integer 
+	Parameter V_LINES bound to: 720 - type: integer 
+	Parameter FMT bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'line_packetizer' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/rtl/line_packetizer.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'zcu104_tx_pkt_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_zcu104_tx/aurora_cam_zcu104_tx.gen/sources_1/bd/zcu104_tx/ip/zcu104_tx_pkt_0_0/synth/zcu104_tx_pkt_0_0.v:53]
+INFO: [Synth 8-7129] Port s_axis_tkeep[3] in module line_packetizer is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tkeep[2] in module line_packetizer is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tkeep[1] in module line_packetizer is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tkeep[0] in module line_packetizer is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2980.617 ; gain = 237.625 ; free physical = 27749 ; free virtual = 50400
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2980.617 ; gain = 237.625 ; free physical = 27749 ; free virtual = 50399
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2980.617 ; gain = 237.625 ; free physical = 27749 ; free virtual = 50399
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2980.617 ; gain = 0.000 ; free physical = 27749 ; free virtual = 50399
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3047.270 ; gain = 0.000 ; free physical = 27740 ; free virtual = 50389
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3047.305 ; gain = 0.000 ; free physical = 27739 ; free virtual = 50388
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3047.305 ; gain = 304.312 ; free physical = 27834 ; free virtual = 50491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3055.273 ; gain = 312.281 ; free physical = 27834 ; free virtual = 50489
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3055.273 ; gain = 312.281 ; free physical = 27834 ; free virtual = 50489
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3055.273 ; gain = 312.281 ; free physical = 27831 ; free virtual = 50486
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3917] design zcu104_tx_pkt_0_0 has port m_axis_tkeep[3] driven by constant 1
+INFO: [Synth 8-3917] design zcu104_tx_pkt_0_0 has port m_axis_tkeep[2] driven by constant 1
+INFO: [Synth 8-3917] design zcu104_tx_pkt_0_0 has port m_axis_tkeep[1] driven by constant 1
+INFO: [Synth 8-3917] design zcu104_tx_pkt_0_0 has port m_axis_tkeep[0] driven by constant 1
+INFO: [Synth 8-7129] Port s_axis_tkeep[3] in module zcu104_tx_pkt_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tkeep[2] in module zcu104_tx_pkt_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tkeep[1] in module zcu104_tx_pkt_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tkeep[0] in module zcu104_tx_pkt_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3055.273 ; gain = 312.281 ; free physical = 27803 ; free virtual = 50458
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3055.273 ; gain = 312.281 ; free physical = 27803 ; free virtual = 50458
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3055.273 ; gain = 312.281 ; free physical = 27795 ; free virtual = 50450
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3189.086 ; gain = 446.094 ; free physical = 26867 ; free virtual = 49522
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3189.086 ; gain = 446.094 ; free physical = 26867 ; free virtual = 49522
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3189.086 ; gain = 446.094 ; free physical = 26868 ; free virtual = 49523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3189.086 ; gain = 446.094 ; free physical = 26868 ; free virtual = 49523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3189.086 ; gain = 446.094 ; free physical = 26868 ; free virtual = 49523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3189.086 ; gain = 446.094 ; free physical = 26868 ; free virtual = 49523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     2|
+|2     |LUT1   |     4|
+|3     |LUT2   |    22|
+|4     |LUT3   |    28|
+|5     |LUT4   |     7|
+|6     |LUT5   |     8|
+|7     |LUT6   |    17|
+|8     |FDRE   |    41|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3189.086 ; gain = 446.094 ; free physical = 26868 ; free virtual = 49523
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3189.086 ; gain = 379.406 ; free physical = 26860 ; free virtual = 49515
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3189.094 ; gain = 446.094 ; free physical = 26860 ; free virtual = 49515
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3212.930 ; gain = 0.000 ; free physical = 26966 ; free virtual = 49621
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3343.488 ; gain = 0.000 ; free physical = 26718 ; free virtual = 49373
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c18f2095
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 3343.523 ; gain = 1748.641 ; free physical = 26655 ; free virtual = 49310
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2222.839; main = 2222.839; forked = 0.000
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3343.492; main = 3343.492; forked = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3367.500 ; gain = 0.000 ; free physical = 26655 ; free virtual = 49310
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_zcu104_tx/aurora_cam_zcu104_tx.runs/zcu104_tx_pkt_0_0_synth_1/zcu104_tx_pkt_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file zcu104_tx_pkt_0_0_utilization_synth.rpt -pb zcu104_tx_pkt_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 18:16:07 2026...

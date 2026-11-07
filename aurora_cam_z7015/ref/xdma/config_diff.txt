@@ -1,0 +1,4 @@
+## xdma_base (현재 BD 설정) -> xdma_gtc (Advanced + Shared_Logic_Gtc_7xG2)
+  CONFIG.Component_Name : 'xdma_base' -> 'xdma_gtc'
+  CONFIG.Shared_Logic_Gtc_7xG2 : 'false' -> 'true'
+  CONFIG.mode_selection : 'Basic' -> 'Advanced'

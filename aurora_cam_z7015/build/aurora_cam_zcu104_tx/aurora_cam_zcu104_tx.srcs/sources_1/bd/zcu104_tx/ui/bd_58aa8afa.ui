@@ -1,0 +1,98 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.494636",
+   "Default View_TopLeft":"386,-388",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port CLK_300 -pg 1 -lvl 0 -x -10 -y 1090 -defaultsOSRD
+preplace port GT_REFCLK -pg 1 -lvl 0 -x -10 -y 710 -defaultsOSRD
+preplace port port-id_BC_RX_UP -pg 1 -lvl 0 -x -10 -y 570 -defaultsOSRD
+preplace portBus gt_txp -pg 1 -lvl 14 -x 4710 -y 820 -defaultsOSRD
+preplace portBus gt_txn -pg 1 -lvl 14 -x 4710 -y 790 -defaultsOSRD
+preplace portBus SFP_TX_DISABLE -pg 1 -lvl 14 -x 4710 -y 740 -defaultsOSRD
+preplace portBus LED -pg 1 -lvl 14 -x 4710 -y 660 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -x 1040 -y 190 -defaultsOSRD
+preplace inst rst_ps -pg 1 -lvl 1 -x 190 -y 190 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1850 -y 410 -defaultsOSRD
+preplace inst axi_gpio_link -pg 1 -lvl 5 -x 1850 -y 230 -defaultsOSRD
+preplace inst sc_ctrl -pg 1 -lvl 4 -x 1520 -y 200 -defaultsOSRD
+preplace inst sc_mem -pg 1 -lvl 2 -x 550 -y 160 -defaultsOSRD
+preplace inst irq_concat -pg 1 -lvl 2 -x 550 -y 440 -defaultsOSRD
+preplace inst fifo_tx -pg 1 -lvl 6 -x 2170 -y 430 -defaultsOSRD
+preplace inst pkt_0 -pg 1 -lvl 7 -x 2430 -y 450 -defaultsOSRD
+preplace inst prbs_gen_0 -pg 1 -lvl 8 -x 2740 -y 460 -defaultsOSRD
+preplace inst link_ctrl_0 -pg 1 -lvl 12 -x 4260 -y 320 -defaultsOSRD
+preplace inst link_retrain_0 -pg 1 -lvl 10 -x 3460 -y 480 -defaultsOSRD
+preplace inst vio_link -pg 1 -lvl 11 -x 3800 -y 220 -defaultsOSRD
+preplace inst or_tx_busy -pg 1 -lvl 9 -x 3110 -y 420 -defaultsOSRD
+preplace inst led_concat -pg 1 -lvl 13 -x 4590 -y 660 -defaultsOSRD
+preplace inst aurora_tx -pg 1 -lvl 9 -x 3110 -y 810 -defaultsOSRD
+preplace inst clk_wiz_init -pg 1 -lvl 8 -x 2740 -y 1090 -defaultsOSRD
+preplace inst c_zero -pg 1 -lvl 12 -x 4260 -y 740 -defaultsOSRD
+preplace inst c_one -pg 1 -lvl 11 -x 3800 -y 410 -defaultsOSRD
+preplace inst lb_off -pg 1 -lvl 8 -x 2740 -y 990 -defaultsOSRD
+preplace inst c_drpaddr -pg 1 -lvl 8 -x 2740 -y 770 -defaultsOSRD
+preplace inst c_drpdi -pg 1 -lvl 8 -x 2740 -y 890 -defaultsOSRD
+preplace netloc au_sys_reset_out 1 9 3 NJ 860 NJ 860 4050
+preplace netloc bc_rx_up 1 0 10 NJ 570 NJ 570 NJ 570 NJ 570 NJ 570 NJ 570 NJ 570 NJ 570 NJ 570 3300J
+preplace netloc bc_rx_up_s 1 10 3 3610 620 3950J 670 4490J
+preplace netloc drpaddr_zero 1 8 1 2860J 750n
+preplace netloc drpdi_zero 1 8 1 2900J 790n
+preplace netloc gpio_ctrl 1 5 7 NJ 260 NJ 260 NJ 260 NJ 260 3320 100 NJ 100 3970J
+preplace netloc gpio_status 1 5 8 2030J 90 NJ 90 NJ 90 NJ 90 NJ 90 NJ 90 3940J 10 4420
+preplace netloc gt_txn_1 1 9 5 NJ 800 NJ 800 NJ 800 NJ 800 4690J
+preplace netloc gt_txp_1 1 9 5 NJ 820 NJ 820 NJ 820 NJ 820 NJ
+preplace netloc init_clk 1 8 4 2890 560 3310 570 3620 330 3960
+preplace netloc irq_pl_ps 1 2 1 720 220n
+preplace netloc lb_off_dout 1 8 1 2910J 850n
+preplace netloc led 1 13 1 NJ 660
+preplace netloc link_ctrl_au_gt_reset 1 8 5 2900 1020 NJ 1020 NJ 1020 NJ 1020 4460
+preplace netloc link_ctrl_au_power_down 1 8 5 2930 1000 NJ 1000 NJ 1000 NJ 1000 4440
+preplace netloc link_ctrl_au_reset 1 8 5 2920 1010 NJ 1010 NJ 1010 NJ 1010 4470
+preplace netloc link_ok 1 12 1 4490 390n
+preplace netloc link_status 1 10 3 3660 470 4010J 630 4430
+preplace netloc mm2s_introut 1 1 5 410 510 NJ 510 NJ 510 NJ 510 2020
+preplace netloc one 1 11 1 4010J 410n
+preplace netloc pkt_busy 1 7 2 2570 360 2860J
+preplace netloc pkt_err 1 7 5 2560J 590 NJ 590 NJ 590 NJ 590 4090
+preplace netloc pkt_frame_cnt 1 7 5 2580J 580 NJ 580 NJ 580 NJ 580 4040
+preplace netloc pl_clk0 1 0 12 10 90 390 240 740 290 1350 110 1660 500 2030 270 NJ 270 NJ 270 NJ 270 NJ 270 3610J 110 3960J
+preplace netloc pl_resetn0 1 0 4 10 290 NJ 290 730J 300 1340
+preplace netloc pll_not_locked 1 9 3 NJ 700 NJ 700 4080
+preplace netloc prbs_active 1 8 1 2860 430n
+preplace netloc retrain_mode 1 10 3 3630 630 3940J 680 NJ
+preplace netloc retrain_req 1 10 2 3650J 480 4000
+preplace netloc retrain_status 1 10 2 3640J 490 3940
+preplace netloc rst_ps_ic_aresetn 1 1 3 380 310 700J 320 1370J
+preplace netloc rst_ps_periph_aresetn 1 1 11 370 300 710J 310 1360J 120 1680 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 3970
+preplace netloc tx_busy 1 9 1 3290 420n
+preplace netloc tx_channel_up 1 9 3 NJ 720 NJ 720 4020
+preplace netloc tx_fifo_aresetn 1 5 8 2040 610 NJ 610 NJ 610 NJ 610 NJ 610 NJ 610 3960J 660 4450
+preplace netloc tx_hard_err 1 9 3 NJ 740 NJ 740 4070
+preplace netloc tx_lane_up 1 9 3 NJ 760 NJ 760 4060
+preplace netloc user_aresetn 1 6 7 2300 550 2590 600 NJ 600 NJ 600 NJ 600 3970J 650 4420
+preplace netloc user_clk 1 5 7 2050 520 2290 540 2600 560 2860J 550 3290 830 NJ 830 4030
+preplace netloc vio_ctrl_sel 1 11 1 3940 150n
+preplace netloc vio_err_clear 1 11 1 3980 210n
+preplace netloc vio_loopback 1 11 1 3970 190n
+preplace netloc vio_prbs_en 1 7 5 2610 340 NJ 340 NJ 340 NJ 340 3990
+preplace netloc vio_prbs_inject 1 7 5 2620 350 NJ 350 NJ 350 NJ 350 3940
+preplace netloc vio_run 1 11 1 3950 170n
+preplace netloc zero 1 1 13 400 830 NJ 830 NJ 830 NJ 830 NJ 830 NJ 830 NJ 830 2880 620 NJ 620 3600J 640 4100 640 4480 740 NJ
+preplace netloc CLK_300_1 1 0 8 NJ 1090 NJ 1090 NJ 1090 NJ 1090 NJ 1090 NJ 1090 NJ 1090 NJ
+preplace netloc GT_REFCLK_1 1 0 9 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ
+preplace netloc dma_mm2s 1 1 5 410 320 690J 330 1380J 320 NJ 320 2020
+preplace netloc dma_mm2s_axis 1 5 1 N 400
+preplace netloc fifo_tx_m 1 6 1 N 430
+preplace netloc hpm0_fpd 1 3 1 1370 170n
+preplace netloc pkt_m 1 7 1 N 420
+preplace netloc prbs_gen_m 1 8 1 2870 450n
+preplace netloc sc_ctrl_M00 1 4 1 1670 190n
+preplace netloc sc_ctrl_M01 1 4 1 N 210
+preplace netloc sc_mem_M00 1 2 1 N 160
+levelinfo -pg 1 -10 190 550 1040 1520 1850 2170 2430 2740 3110 3460 3800 4260 4590 4710
+pagesize -pg 1 -db -bbox -sgen -140 0 4900 1150
+"
+}
+

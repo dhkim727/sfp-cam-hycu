@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Sat Nov  7 14:07:07 2026
-# Process ID         : 121453
+# Start of session at: Sat Nov  7 14:33:52 2026
+# Process ID         : 189685
 # Current directory  : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1
 # Command line       : vivado -log aurora_cam_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source aurora_cam_wrapper.tcl
 # Log file           : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/aurora_cam_wrapper.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.5 LTS
 # Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
-# CPU Frequency      : 5453.651 MHz
+# CPU Frequency      : 5587.586 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 67058 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 75648 MB
-# Available Virtual  : 64776 MB
+# Available Virtual  : 63523 MB
 #-----------------------------------------------------------
 source aurora_cam_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -42,101 +42,146 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 121522
+INFO: [Synth 8-7075] Helper process launched with PID 189784
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2296.301 ; gain = 481.969 ; free physical = 44989 ; free virtual = 60350
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2313.551 ; gain = 401.867 ; free physical = 42774 ; free virtual = 59102
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'aurora_cam_wrapper' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/hdl/aurora_cam_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'aurora_cam' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:13]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_rx_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_aurora_rx_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_rx_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_aurora_rx_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'sys_reset_out' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:347]
-WARNING: [Synth 8-7071] port 'tx_lock' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:347]
-WARNING: [Synth 8-7071] port 'rx_resetdone_out' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:347]
-WARNING: [Synth 8-7071] port 'link_reset_out' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:347]
-WARNING: [Synth 8-7071] port 'drprdy_out' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:347]
-WARNING: [Synth 8-7071] port 'drpdo_out' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:347]
-WARNING: [Synth 8-7071] port 'gt_common_reset_out' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:347]
-WARNING: [Synth 8-7071] port 'tx_out_clk' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:347]
-WARNING: [Synth 8-7023] instance 'aurora_rx' of module 'aurora_cam_aurora_rx_0' has 44 connections declared, but only 36 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:347]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_tx_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_aurora_tx_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_tx_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_aurora_tx_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'tx_lock' of module 'aurora_cam_aurora_tx_0' is unconnected for instance 'aurora_tx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:384]
-WARNING: [Synth 8-7071] port 'tx_resetdone_out' of module 'aurora_cam_aurora_tx_0' is unconnected for instance 'aurora_tx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:384]
-WARNING: [Synth 8-7071] port 'link_reset_out' of module 'aurora_cam_aurora_tx_0' is unconnected for instance 'aurora_tx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:384]
-WARNING: [Synth 8-7071] port 'drprdy_out' of module 'aurora_cam_aurora_tx_0' is unconnected for instance 'aurora_tx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:384]
-WARNING: [Synth 8-7071] port 'drpdo_out' of module 'aurora_cam_aurora_tx_0' is unconnected for instance 'aurora_tx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:384]
-WARNING: [Synth 8-7023] instance 'aurora_tx' of module 'aurora_cam_aurora_tx_0' has 42 connections declared, but only 37 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:384]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_axi_dma_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_axi_dma_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_axi_dma_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'aurora_cam_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:422]
-WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'aurora_cam_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:422]
-WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'aurora_cam_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:422]
-WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'aurora_cam_axi_dma_0_0' has 64 connections declared, but only 61 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:422]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_axi_gpio_link_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_axi_gpio_link_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_axi_gpio_link_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_axi_gpio_link_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_clk_wiz_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_clk_wiz_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_depkt_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_depkt_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_depkt_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_depkt_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_fifo_rx_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_fifo_rx_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_fifo_rx_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_fifo_rx_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axis_tuser' of module 'aurora_cam_fifo_rx_0' is unconnected for instance 'fifo_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:528]
-WARNING: [Synth 8-7023] instance 'fifo_rx' of module 'aurora_cam_fifo_rx_0' has 15 connections declared, but only 14 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:528]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_fifo_tx_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_fifo_tx_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_fifo_tx_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_fifo_tx_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_rx_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_aurora_rx_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_rx_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_aurora_rx_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'sys_reset_out' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:476]
+WARNING: [Synth 8-7071] port 'tx_lock' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:476]
+WARNING: [Synth 8-7071] port 'rx_resetdone_out' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:476]
+WARNING: [Synth 8-7071] port 'link_reset_out' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:476]
+WARNING: [Synth 8-7071] port 'drprdy_out' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:476]
+WARNING: [Synth 8-7071] port 'drpdo_out' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:476]
+WARNING: [Synth 8-7071] port 'gt_common_reset_out' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:476]
+WARNING: [Synth 8-7071] port 'tx_out_clk' of module 'aurora_cam_aurora_rx_0' is unconnected for instance 'aurora_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:476]
+WARNING: [Synth 8-7023] instance 'aurora_rx' of module 'aurora_cam_aurora_rx_0' has 44 connections declared, but only 36 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:476]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_aurora_tx_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_aurora_tx_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_aurora_tx_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_aurora_tx_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'tx_lock' of module 'aurora_cam_aurora_tx_0' is unconnected for instance 'aurora_tx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:513]
+WARNING: [Synth 8-7071] port 'tx_resetdone_out' of module 'aurora_cam_aurora_tx_0' is unconnected for instance 'aurora_tx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:513]
+WARNING: [Synth 8-7071] port 'link_reset_out' of module 'aurora_cam_aurora_tx_0' is unconnected for instance 'aurora_tx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:513]
+WARNING: [Synth 8-7071] port 'drprdy_out' of module 'aurora_cam_aurora_tx_0' is unconnected for instance 'aurora_tx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:513]
+WARNING: [Synth 8-7071] port 'drpdo_out' of module 'aurora_cam_aurora_tx_0' is unconnected for instance 'aurora_tx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:513]
+WARNING: [Synth 8-7023] instance 'aurora_tx' of module 'aurora_cam_aurora_tx_0' has 42 connections declared, but only 37 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:513]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_axi_bram_ctrl_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_axi_bram_ctrl_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_axi_dma_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_axi_dma_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'aurora_cam_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:580]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'aurora_cam_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:580]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'aurora_cam_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:580]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'aurora_cam_axi_dma_0_0' has 64 connections declared, but only 61 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:580]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_axi_gpio_link_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_axi_gpio_link_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_axi_gpio_link_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_axi_gpio_link_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_axi_interconnect_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1300]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1GRKE53' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1618]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_axi_interconnect_0_imp_auto_cc_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_axi_interconnect_0_imp_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_axi_interconnect_0_imp_auto_cc_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_axi_interconnect_0_imp_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_axi_interconnect_0_imp_auto_pc_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_axi_interconnect_0_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_axi_interconnect_0_imp_auto_pc_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_axi_interconnect_0_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1GRKE53' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1618]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_axi_interconnect_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1300]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_blk_mem_gen_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_blk_mem_gen_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_blk_mem_gen_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'aurora_cam_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:744]
+WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'aurora_cam_blk_mem_gen_0_0' has 8 connections declared, but only 7 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:744]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_clk_wiz_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_clk_wiz_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_depkt_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_depkt_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_depkt_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_depkt_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_fifo_rx_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_fifo_rx_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_fifo_rx_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_fifo_rx_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tuser' of module 'aurora_cam_fifo_rx_0' is unconnected for instance 'fifo_rx' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:774]
+WARNING: [Synth 8-7023] instance 'fifo_rx' of module 'aurora_cam_fifo_rx_0' has 15 connections declared, but only 14 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:774]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_fifo_tx_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_fifo_tx_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_fifo_tx_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_fifo_tx_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'aurora_cam_irq_concat_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_irq_concat_0/synth/aurora_cam_irq_concat_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_7_xlconcat' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_7_xlconcat' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_irq_concat_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_irq_concat_0/synth/aurora_cam_irq_concat_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_link_ctrl_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_link_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_link_ctrl_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_link_ctrl_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'au_loopback' of module 'aurora_cam_link_ctrl_0_0' is unconnected for instance 'link_ctrl_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:566]
-WARNING: [Synth 8-7071] port 'aux_out' of module 'aurora_cam_link_ctrl_0_0' is unconnected for instance 'link_ctrl_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:566]
-WARNING: [Synth 8-7023] instance 'link_ctrl_0' of module 'aurora_cam_link_ctrl_0_0' has 34 connections declared, but only 32 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:566]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_pkt_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_pkt_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_pkt_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_pkt_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_prbs_check_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_prbs_check_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_prbs_check_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_prbs_check_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_prbs_gen_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_prbs_gen_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_prbs_gen_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_prbs_gen_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'prbs_active' of module 'aurora_cam_prbs_gen_0_0' is unconnected for instance 'prbs_gen_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:634]
-WARNING: [Synth 8-7023] instance 'prbs_gen_0' of module 'aurora_cam_prbs_gen_0_0' has 15 connections declared, but only 14 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:634]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_ps7_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_ps7_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_ps7_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_ps7_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:649]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:649]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:649]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:649]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:649]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:649]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:649]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:649]
-WARNING: [Synth 8-7023] instance 'ps7' of module 'aurora_cam_ps7_0' has 111 connections declared, but only 103 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:649]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_rst_axi_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_rst_axi_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_rst_axi_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_rst_axi_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'aurora_cam_rst_axi_0' is unconnected for instance 'rst_axi' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:753]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'aurora_cam_rst_axi_0' is unconnected for instance 'rst_axi' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:753]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'aurora_cam_rst_axi_0' is unconnected for instance 'rst_axi' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:753]
-WARNING: [Synth 8-7023] instance 'rst_axi' of module 'aurora_cam_rst_axi_0' has 10 connections declared, but only 7 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:753]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_sc_ctrl_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_sc_ctrl_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_sc_ctrl_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_sc_ctrl_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'aurora_cam_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:761]
-WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'aurora_cam_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:761]
-WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'aurora_cam_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:761]
-WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'aurora_cam_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:761]
-WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'aurora_cam_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:761]
-WARNING: [Synth 8-7023] instance 'sc_ctrl' of module 'aurora_cam_sc_ctrl_0' has 78 connections declared, but only 73 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:761]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_sc_mem_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_sc_mem_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_sc_mem_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_sc_mem_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'aurora_cam_vio_link_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_vio_link_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_vio_link_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-121453-dhkim-home/realtime/aurora_cam_vio_link_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_link_ctrl_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_link_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_link_ctrl_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_link_ctrl_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'au_loopback' of module 'aurora_cam_link_ctrl_0_0' is unconnected for instance 'link_ctrl_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:813]
+WARNING: [Synth 8-7071] port 'aux_out' of module 'aurora_cam_link_ctrl_0_0' is unconnected for instance 'link_ctrl_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:813]
+WARNING: [Synth 8-7023] instance 'link_ctrl_0' of module 'aurora_cam_link_ctrl_0_0' has 34 connections declared, but only 32 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:813]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_pkt_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_pkt_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_pkt_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_pkt_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_prbs_check_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_prbs_check_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_prbs_check_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_prbs_check_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_prbs_gen_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_prbs_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_prbs_gen_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_prbs_gen_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'prbs_active' of module 'aurora_cam_prbs_gen_0_0' is unconnected for instance 'prbs_gen_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:881]
+WARNING: [Synth 8-7023] instance 'prbs_gen_0' of module 'aurora_cam_prbs_gen_0_0' has 15 connections declared, but only 14 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:881]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_proc_sys_reset_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_proc_sys_reset_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'aurora_cam_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:896]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'aurora_cam_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:896]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'aurora_cam_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:896]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'aurora_cam_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:896]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'aurora_cam_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:896]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_ps7_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_ps7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_ps7_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_ps7_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RCOUNT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WCOUNT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RACOUNT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WACOUNT' of module 'aurora_cam_ps7_0' is unconnected for instance 'ps7' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+WARNING: [Synth 8-7023] instance 'ps7' of module 'aurora_cam_ps7_0' has 158 connections declared, but only 146 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:903]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_rst_axi_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_rst_axi_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_rst_axi_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_rst_axi_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'aurora_cam_rst_axi_0' is unconnected for instance 'rst_axi' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1050]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'aurora_cam_rst_axi_0' is unconnected for instance 'rst_axi' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1050]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'aurora_cam_rst_axi_0' is unconnected for instance 'rst_axi' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1050]
+WARNING: [Synth 8-7023] instance 'rst_axi' of module 'aurora_cam_rst_axi_0' has 10 connections declared, but only 7 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1050]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_rst_axi_1' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_rst_axi_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_rst_axi_1' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_rst_axi_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'aurora_cam_rst_axi_1' is unconnected for instance 'rst_axi1' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1058]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'aurora_cam_rst_axi_1' is unconnected for instance 'rst_axi1' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1058]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'aurora_cam_rst_axi_1' is unconnected for instance 'rst_axi1' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1058]
+WARNING: [Synth 8-7023] instance 'rst_axi1' of module 'aurora_cam_rst_axi_1' has 10 connections declared, but only 7 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1058]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_sc_ctrl_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_sc_ctrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_sc_ctrl_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_sc_ctrl_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'aurora_cam_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1066]
+WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'aurora_cam_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1066]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'aurora_cam_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1066]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'aurora_cam_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1066]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'aurora_cam_sc_ctrl_0' is unconnected for instance 'sc_ctrl' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1066]
+WARNING: [Synth 8-7023] instance 'sc_ctrl' of module 'aurora_cam_sc_ctrl_0' has 78 connections declared, but only 73 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1066]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_sc_mem_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_sc_mem_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_sc_mem_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_sc_mem_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_util_ds_buf_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_util_ds_buf_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_util_ds_buf_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'IBUF_DS_ODIV2' of module 'aurora_cam_util_ds_buf_0_0' is unconnected for instance 'util_ds_buf_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1209]
+WARNING: [Synth 8-7023] instance 'util_ds_buf_0' of module 'aurora_cam_util_ds_buf_0_0' has 4 connections declared, but only 3 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1209]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_vio_link_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_vio_link_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_vio_link_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_vio_link_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_xdma_0_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_xdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_xdma_0_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/.Xil/Vivado-189685-dhkim-home/realtime/aurora_cam_xdma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'user_lnk_up' of module 'aurora_cam_xdma_0_0' is unconnected for instance 'xdma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1228]
+WARNING: [Synth 8-7071] port 'usr_irq_ack' of module 'aurora_cam_xdma_0_0' is unconnected for instance 'xdma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1228]
+WARNING: [Synth 8-7071] port 'msix_enable' of module 'aurora_cam_xdma_0_0' is unconnected for instance 'xdma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1228]
+WARNING: [Synth 8-7071] port 'cfg_mgmt_read_data' of module 'aurora_cam_xdma_0_0' is unconnected for instance 'xdma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1228]
+WARNING: [Synth 8-7071] port 'cfg_mgmt_read_write_done' of module 'aurora_cam_xdma_0_0' is unconnected for instance 'xdma_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1228]
+WARNING: [Synth 8-7023] instance 'xdma_0' of module 'aurora_cam_xdma_0_0' has 74 connections declared, but only 69 given [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1228]
 INFO: [Synth 8-6155] done synthesizing module 'aurora_cam' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_wrapper' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/hdl/aurora_cam_wrapper.v:13]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_link'. This will prevent further optimization [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:904]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'link_ctrl_0'. This will prevent further optimization [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:566]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'prbs_check_0'. This will prevent further optimization [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:615]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'prbs_gen_0'. This will prevent further optimization [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:634]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_link'. This will prevent further optimization [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:1213]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'link_ctrl_0'. This will prevent further optimization [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:813]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'prbs_check_0'. This will prevent further optimization [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:862]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'prbs_gen_0'. This will prevent further optimization [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/synth/aurora_cam.v:881]
 WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
@@ -239,18 +284,18 @@ WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_7_xlconcat is eith
 WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2392.238 ; gain = 577.906 ; free physical = 44874 ; free virtual = 60235
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2423.520 ; gain = 511.836 ; free physical = 43174 ; free virtual = 58997
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2392.238 ; gain = 577.906 ; free physical = 44874 ; free virtual = 60235
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2429.457 ; gain = 517.773 ; free physical = 43174 ; free virtual = 58997
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2392.238 ; gain = 577.906 ; free physical = 44874 ; free virtual = 60235
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2429.457 ; gain = 517.773 ; free physical = 43174 ; free virtual = 58997
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2392.238 ; gain = 0.000 ; free physical = 44874 ; free virtual = 60235
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2429.457 ; gain = 0.000 ; free physical = 43174 ; free virtual = 58997
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -289,8 +334,26 @@ Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_ca
 Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_aurora_rx_0/aurora_cam_aurora_rx_0/aurora_cam_aurora_rx_0_in_context.xdc] for cell 'aurora_cam_i/aurora_rx'
 Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_clk_wiz_0_0/aurora_cam_clk_wiz_0_0/aurora_cam_clk_wiz_0_0_in_context.xdc] for cell 'aurora_cam_i/clk_wiz_0'
 Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_clk_wiz_0_0/aurora_cam_clk_wiz_0_0/aurora_cam_clk_wiz_0_0_in_context.xdc] for cell 'aurora_cam_i/clk_wiz_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_xdma_0_0/aurora_cam_xdma_0_0/aurora_cam_xdma_0_0_in_context.xdc] for cell 'aurora_cam_i/xdma_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_xdma_0_0/aurora_cam_xdma_0_0/aurora_cam_xdma_0_0_in_context.xdc] for cell 'aurora_cam_i/xdma_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_util_ds_buf_0_0/aurora_cam_util_ds_buf_0_0/aurora_cam_util_ds_buf_0_0_in_context.xdc] for cell 'aurora_cam_i/util_ds_buf_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_util_ds_buf_0_0/aurora_cam_util_ds_buf_0_0/aurora_cam_util_ds_buf_0_0_in_context.xdc] for cell 'aurora_cam_i/util_ds_buf_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_proc_sys_reset_0_0/aurora_cam_proc_sys_reset_0_0/aurora_cam_proc_sys_reset_0_0_in_context.xdc] for cell 'aurora_cam_i/proc_sys_reset_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_proc_sys_reset_0_0/aurora_cam_proc_sys_reset_0_0/aurora_cam_proc_sys_reset_0_0_in_context.xdc] for cell 'aurora_cam_i/proc_sys_reset_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_blk_mem_gen_0_0/aurora_cam_blk_mem_gen_0_0/aurora_cam_blk_mem_gen_0_0_in_context.xdc] for cell 'aurora_cam_i/blk_mem_gen_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_blk_mem_gen_0_0/aurora_cam_blk_mem_gen_0_0/aurora_cam_blk_mem_gen_0_0_in_context.xdc] for cell 'aurora_cam_i/blk_mem_gen_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_bram_ctrl_0_0/aurora_cam_axi_bram_ctrl_0_0/aurora_cam_axi_bram_ctrl_0_0_in_context.xdc] for cell 'aurora_cam_i/axi_bram_ctrl_0'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_bram_ctrl_0_0/aurora_cam_axi_bram_ctrl_0_0/aurora_cam_axi_bram_ctrl_0_0_in_context.xdc] for cell 'aurora_cam_i/axi_bram_ctrl_0'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0/aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0/aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0_in_context.xdc] for cell 'aurora_cam_i/axi_interconnect_0/s00_couplers/s00_data_fifo'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0/aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0/aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0_in_context.xdc] for cell 'aurora_cam_i/axi_interconnect_0/s00_couplers/s00_data_fifo'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_auto_cc_0/aurora_cam_axi_interconnect_0_imp_auto_cc_0/aurora_cam_axi_interconnect_0_imp_auto_cc_0_in_context.xdc] for cell 'aurora_cam_i/axi_interconnect_0/s00_couplers/auto_cc'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_auto_cc_0/aurora_cam_axi_interconnect_0_imp_auto_cc_0/aurora_cam_axi_interconnect_0_imp_auto_cc_0_in_context.xdc] for cell 'aurora_cam_i/axi_interconnect_0/s00_couplers/auto_cc'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_auto_pc_0/aurora_cam_axi_interconnect_0_imp_auto_pc_0/aurora_cam_axi_interconnect_0_imp_auto_pc_0_in_context.xdc] for cell 'aurora_cam_i/axi_interconnect_0/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_auto_pc_0/aurora_cam_axi_interconnect_0_imp_auto_pc_0/aurora_cam_axi_interconnect_0_imp_auto_pc_0_in_context.xdc] for cell 'aurora_cam_i/axi_interconnect_0/s00_couplers/auto_pc'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_rst_axi_1/aurora_cam_rst_axi_1/aurora_cam_rst_axi_1_in_context.xdc] for cell 'aurora_cam_i/rst_axi1'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_rst_axi_1/aurora_cam_rst_axi_1/aurora_cam_rst_axi_1_in_context.xdc] for cell 'aurora_cam_i/rst_axi1'
 Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_split/z7015_aurora_cam_split.xdc]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {IS_SEQUENTIAL && NAME =~ */link_ctrl_0/inst/pd_e_reg*}'. [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_split/z7015_aurora_cam_split.xdc:42]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {IS_SEQUENTIAL && NAME =~ */link_ctrl_0/inst/pd_e_reg*}'. [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_split/z7015_aurora_cam_split.xdc:53]
 Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_split/z7015_aurora_cam_split.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_split/z7015_aurora_cam_split.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/aurora_cam_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/bd_split/z7015_aurora_cam_split.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/aurora_cam_wrapper_propImpl.xdc].
@@ -299,31 +362,32 @@ Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_ca
 Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2438.195 ; gain = 0.000 ; free physical = 44873 ; free virtual = 60235
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2480.078 ; gain = 0.000 ; free physical = 43168 ; free virtual = 58993
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2438.230 ; gain = 0.000 ; free physical = 44873 ; free virtual = 60235
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2480.113 ; gain = 0.000 ; free physical = 43168 ; free virtual = 58993
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'aurora_cam_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '8.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2438.230 ; gain = 623.898 ; free physical = 44891 ; free virtual = 60253
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2480.113 ; gain = 568.430 ; free physical = 43203 ; free virtual = 59025
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z015clg485-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2446.199 ; gain = 631.867 ; free physical = 44891 ; free virtual = 60253
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2488.082 ; gain = 576.398 ; free physical = 43203 ; free virtual = 59025
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2446.199 ; gain = 631.867 ; free physical = 44891 ; free virtual = 60253
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2488.082 ; gain = 576.398 ; free physical = 43233 ; free virtual = 59055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2446.199 ; gain = 631.867 ; free physical = 44882 ; free virtual = 60246
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2488.082 ; gain = 576.398 ; free physical = 43227 ; free virtual = 59051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -345,25 +409,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2454.207 ; gain = 639.875 ; free physical = 44875 ; free virtual = 60243
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2488.082 ; gain = 576.398 ; free physical = 43244 ; free virtual = 59073
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2567.207 ; gain = 752.875 ; free physical = 44782 ; free virtual = 60150
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2587.082 ; gain = 675.398 ; free physical = 43152 ; free virtual = 58983
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2567.207 ; gain = 752.875 ; free physical = 44782 ; free virtual = 60150
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2588.082 ; gain = 676.398 ; free physical = 43152 ; free virtual = 58983
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2578.215 ; gain = 763.883 ; free physical = 44767 ; free virtual = 60135
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2601.098 ; gain = 689.414 ; free physical = 43143 ; free virtual = 58975
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -381,112 +445,129 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2762.027 ; gain = 947.695 ; free physical = 44619 ; free virtual = 59987
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2784.910 ; gain = 873.227 ; free physical = 43074 ; free virtual = 58903
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2762.027 ; gain = 947.695 ; free physical = 44619 ; free virtual = 59987
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2784.910 ; gain = 873.227 ; free physical = 43074 ; free virtual = 58903
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2762.027 ; gain = 947.695 ; free physical = 44619 ; free virtual = 59987
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2784.910 ; gain = 873.227 ; free physical = 43074 ; free virtual = 58903
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2762.027 ; gain = 947.695 ; free physical = 44619 ; free virtual = 59987
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2784.910 ; gain = 873.227 ; free physical = 43074 ; free virtual = 58903
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2762.027 ; gain = 947.695 ; free physical = 44619 ; free virtual = 59987
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2784.910 ; gain = 873.227 ; free physical = 43074 ; free virtual = 58903
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2762.027 ; gain = 947.695 ; free physical = 44619 ; free virtual = 59987
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2784.910 ; gain = 873.227 ; free physical = 43066 ; free virtual = 58895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+---------------------------+----------+
-|      |BlackBox name              |Instances |
-+------+---------------------------+----------+
-|1     |aurora_cam_aurora_rx_0     |         1|
-|2     |aurora_cam_aurora_tx_0     |         1|
-|3     |aurora_cam_axi_dma_0_0     |         1|
-|4     |aurora_cam_axi_gpio_link_0 |         1|
-|5     |aurora_cam_clk_wiz_0_0     |         1|
-|6     |aurora_cam_depkt_0_0       |         1|
-|7     |aurora_cam_fifo_rx_0       |         1|
-|8     |aurora_cam_fifo_tx_0       |         1|
-|9     |aurora_cam_link_ctrl_0_0   |         1|
-|10    |aurora_cam_pkt_0_0         |         1|
-|11    |aurora_cam_prbs_check_0_0  |         1|
-|12    |aurora_cam_prbs_gen_0_0    |         1|
-|13    |aurora_cam_ps7_0           |         1|
-|14    |aurora_cam_rst_axi_0       |         1|
-|15    |aurora_cam_sc_ctrl_0       |         1|
-|16    |aurora_cam_sc_mem_0        |         1|
-|17    |aurora_cam_vio_link_0      |         1|
-+------+---------------------------+----------+
++------+--------------------------------------------------+----------+
+|      |BlackBox name                                     |Instances |
++------+--------------------------------------------------+----------+
+|1     |aurora_cam_aurora_rx_0                            |         1|
+|2     |aurora_cam_aurora_tx_0                            |         1|
+|3     |aurora_cam_axi_bram_ctrl_0_0                      |         1|
+|4     |aurora_cam_axi_dma_0_0                            |         1|
+|5     |aurora_cam_axi_gpio_link_0                        |         1|
+|6     |aurora_cam_axi_interconnect_0_imp_auto_cc_0       |         1|
+|7     |aurora_cam_axi_interconnect_0_imp_auto_pc_0       |         1|
+|8     |aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0 |         1|
+|9     |aurora_cam_blk_mem_gen_0_0                        |         1|
+|10    |aurora_cam_clk_wiz_0_0                            |         1|
+|11    |aurora_cam_depkt_0_0                              |         1|
+|12    |aurora_cam_fifo_rx_0                              |         1|
+|13    |aurora_cam_fifo_tx_0                              |         1|
+|14    |aurora_cam_link_ctrl_0_0                          |         1|
+|15    |aurora_cam_pkt_0_0                                |         1|
+|16    |aurora_cam_prbs_check_0_0                         |         1|
+|17    |aurora_cam_prbs_gen_0_0                           |         1|
+|18    |aurora_cam_proc_sys_reset_0_0                     |         1|
+|19    |aurora_cam_ps7_0                                  |         1|
+|20    |aurora_cam_rst_axi_0                              |         1|
+|21    |aurora_cam_rst_axi_1                              |         1|
+|22    |aurora_cam_sc_ctrl_0                              |         1|
+|23    |aurora_cam_sc_mem_0                               |         1|
+|24    |aurora_cam_util_ds_buf_0_0                        |         1|
+|25    |aurora_cam_vio_link_0                             |         1|
+|26    |aurora_cam_xdma_0_0                               |         1|
++------+--------------------------------------------------+----------+
 
 Report Cell Usage: 
-+------+-------------------------+------+
-|      |Cell                     |Count |
-+------+-------------------------+------+
-|1     |aurora_cam_aurora_rx     |     1|
-|2     |aurora_cam_aurora_tx     |     1|
-|3     |aurora_cam_axi_dma_0     |     1|
-|4     |aurora_cam_axi_gpio_link |     1|
-|5     |aurora_cam_clk_wiz_0     |     1|
-|6     |aurora_cam_depkt_0       |     1|
-|7     |aurora_cam_fifo_rx       |     1|
-|8     |aurora_cam_fifo_tx       |     1|
-|9     |aurora_cam_link_ctrl_0   |     1|
-|10    |aurora_cam_pkt_0         |     1|
-|11    |aurora_cam_prbs_check_0  |     1|
-|12    |aurora_cam_prbs_gen_0    |     1|
-|13    |aurora_cam_ps7           |     1|
-|14    |aurora_cam_rst_axi       |     1|
-|15    |aurora_cam_sc_ctrl       |     1|
-|16    |aurora_cam_sc_mem        |     1|
-|17    |aurora_cam_vio_link      |     1|
-|18    |LUT2                     |     3|
-|19    |IBUF                     |     4|
-|20    |OBUF                     |     4|
-+------+-------------------------+------+
++------+------------------------------------------------+------+
+|      |Cell                                            |Count |
++------+------------------------------------------------+------+
+|1     |aurora_cam_aurora_rx                            |     1|
+|2     |aurora_cam_aurora_tx                            |     1|
+|3     |aurora_cam_axi_bram_ctrl_0                      |     1|
+|4     |aurora_cam_axi_dma_0                            |     1|
+|5     |aurora_cam_axi_gpio_link                        |     1|
+|6     |aurora_cam_axi_interconnect_0_imp_auto_cc       |     1|
+|7     |aurora_cam_axi_interconnect_0_imp_auto_pc       |     1|
+|8     |aurora_cam_axi_interconnect_0_imp_s00_data_fifo |     1|
+|9     |aurora_cam_blk_mem_gen_0                        |     1|
+|10    |aurora_cam_clk_wiz_0                            |     1|
+|11    |aurora_cam_depkt_0                              |     1|
+|12    |aurora_cam_fifo_rx                              |     1|
+|13    |aurora_cam_fifo_tx                              |     1|
+|14    |aurora_cam_link_ctrl_0                          |     1|
+|15    |aurora_cam_pkt_0                                |     1|
+|16    |aurora_cam_prbs_check_0                         |     1|
+|17    |aurora_cam_prbs_gen_0                           |     1|
+|18    |aurora_cam_proc_sys_reset_0                     |     1|
+|19    |aurora_cam_ps7                                  |     1|
+|20    |aurora_cam_rst_axi                              |     2|
+|22    |aurora_cam_sc_ctrl                              |     1|
+|23    |aurora_cam_sc_mem                               |     1|
+|24    |aurora_cam_util_ds_buf_0                        |     1|
+|25    |aurora_cam_vio_link                             |     1|
+|26    |aurora_cam_xdma_0                               |     1|
+|27    |LUT2                                            |     3|
+|28    |IBUF                                            |     7|
+|29    |OBUF                                            |     6|
++------+------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2762.027 ; gain = 947.695 ; free physical = 44619 ; free virtual = 59987
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2784.910 ; gain = 873.227 ; free physical = 43066 ; free virtual = 58895
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2762.027 ; gain = 901.703 ; free physical = 44619 ; free virtual = 59987
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2762.035 ; gain = 947.695 ; free physical = 44619 ; free virtual = 59987
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2784.910 ; gain = 822.570 ; free physical = 43066 ; free virtual = 58895
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2784.918 ; gain = 873.227 ; free physical = 43066 ; free virtual = 58895
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2762.035 ; gain = 0.000 ; free physical = 44794 ; free virtual = 60162
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2784.918 ; gain = 0.000 ; free physical = 43230 ; free virtual = 59060
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2762.035 ; gain = 0.000 ; free physical = 44797 ; free virtual = 60165
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2784.918 ; gain = 0.000 ; free physical = 43228 ; free virtual = 59057
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 34e52b2e
+Synth Design complete | Checksum: 328cd9db
 INFO: [Common 17-83] Releasing license: Synthesis
-70 Infos, 147 Warnings, 0 Critical Warnings and 0 Errors encountered.
+92 Infos, 171 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2762.062 ; gain = 1140.535 ; free physical = 44797 ; free virtual = 60165
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1893.284; main = 1893.284; forked = 0.000
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2762.031; main = 2762.031; forked = 0.000
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2786.039 ; gain = 0.000 ; free physical = 44797 ; free virtual = 60165
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2784.945 ; gain = 1151.332 ; free physical = 43228 ; free virtual = 59057
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2124.796; main = 1913.698; forked = 274.781
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3749.336; main = 2784.914; forked = 994.234
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2808.922 ; gain = 0.000 ; free physical = 43228 ; free virtual = 59057
 INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/synth_1/aurora_cam_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file aurora_cam_wrapper_utilization_synth.rpt -pb aurora_cam_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 14:07:22 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 14:34:08 2026...

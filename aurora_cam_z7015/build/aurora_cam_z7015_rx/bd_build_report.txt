@@ -1,0 +1,16 @@
+create_z7015_rx_bd z7015_rx bc_out 0 h_beats 640 v_lines 720  Sat Nov 07 17:42:27 KST 2026
+stage ports
+stage ps7
+stage dma_path
+stage aurora_rx
+aurora_rx : Backchannel_mode=Timer C_AURORA_LANES=1 C_LANE_WIDTH=4 C_LINE_RATE=3.125 C_USE_CRC=true C_USE_BYTESWAP=true C_USE_SCRAMBLER=false Flow_Mode=None Interface_Mode=Framing
+stage clocks_pcie
+stage constants
+stage connect_axi
+stage connect_clk_rst
+stage connect_gt_common
+stage connect_aurora
+stage connect_ctrl
+stage addresses
+stage validate
+BD z7015_rx OK (bc_out=0 h_beats=640 v_lines=720)

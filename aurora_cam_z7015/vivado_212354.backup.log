@@ -1,0 +1,576 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Nov  7 17:23:10 2026
+# Process ID         : 212354
+# Current directory  : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015
+# Command line       : vivado -mode batch -source make_zcu104_tx.tcl -tclargs build
+# Log file           : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/vivado.log
+# Journal file       : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/vivado.jou
+# Running On         : dhkim-home
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
+# CPU Frequency      : 5551.113 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 67058 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75648 MB
+# Available Virtual  : 64485 MB
+#-----------------------------------------------------------
+source make_zcu104_tx.tcl
+# set script_dir [file normalize [file dirname [info script]]]
+# set PART      xczu7ev-ffvc1156-2-e
+# set BOARD_PAT *zcu104*
+# set BC_PIN    G8
+# set BC_IOSTD  LVCMOS33
+# set PERIOD    1000
+# set H_BEATS   640
+# set V_LINES   720
+# set DO_BUILD  0
+# set JOBS      4
+# catch {set JOBS [exec nproc]}
+# foreach a $argv {
+#     if {[string tolower $a] eq "build"} { set DO_BUILD 1; continue }
+#     if {![regexp {^([A-Za-z0-9_]+)=(.*)$} $a -> k v]} {
+#         puts "WARNING: \[make_zcu104_tx\] unknown option '$a' ignored"; continue
+#     }
+#     switch -- [string tolower $k] {
+#         part    { set PART $v }
+#         board   { set BOARD_PAT $v }
+#         bcpin   { set BC_PIN [expr {[string tolower $v] in {none off 0 {}} ? "" : $v}] }
+#         bciostd { set BC_IOSTD $v }
+#         period  { set PERIOD $v }
+#         hbeats  { set H_BEATS $v }
+#         vlines  { set V_LINES $v }
+#         jobs    { set JOBS $v }
+#         default { puts "WARNING: \[make_zcu104_tx\] unknown option '$k' ignored" }
+#     }
+# }
+# set proj_name aurora_cam_zcu104_tx
+# set proj_dir  [file join $script_dir build $proj_name]
+# set bd_name   zcu104_tx
+# puts "INFO: \[make_zcu104_tx\] Vivado [version -short] part=$PART bcpin='$BC_PIN' period=$PERIOD build=$DO_BUILD"
+INFO: [make_zcu104_tx] Vivado 2025.2 part=xczu7ev-ffvc1156-2-e bcpin='G8' period=1000 build=1
+# if {![string match "2025.2*" [version -short]]} {
+#     puts "WARNING: \[make_zcu104_tx\] these scripts target Vivado 2025.2"
+# }
+# if {[llength [get_projects -quiet]]} { close_project }
+# create_project $proj_name $proj_dir -part $PART -force
+# set bp ""
+# if {[catch {set bp [lindex [lsort -dictionary [get_board_parts -quiet -latest_file_version $BOARD_PAT]] end]}]} {
+#     set bp [lindex [lsort -dictionary [get_board_parts -quiet $BOARD_PAT]] end]
+# }
+# if {$bp eq ""} { error "\[make_zcu104_tx\] no installed board part matches '$BOARD_PAT' (ZCU104 board files)" }
+# set_property board_part $bp [current_project]
+# puts "INFO: \[make_zcu104_tx\] board_part = $bp"
+INFO: [make_zcu104_tx] board_part = xilinx.com:zcu104:part0:1.1
+# set_property target_language    Verilog [current_project]
+# set_property simulator_language Mixed   [current_project]
+# catch {set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]}
+# set rtl {}
+# foreach f {line_packetizer.v prbs_gen.v link_ctrl.v link_retrain.v} {
+#     set p [file join $script_dir rtl $f]
+#     if {![file exists $p]} { error "\[make_zcu104_tx\] missing RTL $p" }
+#     lappend rtl $p
+# }
+# add_files -norecurse $rtl
+# update_compile_order -fileset sources_1
+# source [file join $script_dir bd_zcu104_tx bd_zcu104_tx.tcl]
+## set ::ZUTX_DIR [file normalize [file dirname [info script]]]
+## source [file join $::ZUTX_DIR .. bd_common bd_util.tcl]
+### namespace eval ::bdu {
+###     variable tag    bd
+###     variable report {}
+### }
+### proc ::bdu::begin {tag head} {
+###     variable report
+###     set ::bdu::tag $tag
+###     set report [list $head]
+### }
+### proc ::bdu::log {msg} {
+###     variable report
+###     variable tag
+###     lappend report $msg
+###     puts "INFO: \[$tag\] $msg"
+### }
+### proc ::bdu::write_report {path} {
+###     variable report
+###     if {[catch {set f [open $path w]}]} { return }
+###     puts $f [join $report \n]
+###     close $f
+### }
+### proc ::bdu::vlnv {want} {
+###     if {[get_ipdefs -quiet -all $want] ne ""} { return $want }
+###     set base [join [lrange [split $want :] 0 2] :]
+###     set all [lsort -dictionary [get_ipdefs -quiet -all ${base}:*]]
+###     if {$all eq ""} {
+###         # inline_hdl cells may not be listed by get_ipdefs : let create_bd_cell decide
+###         return $want
+###     }
+###     set v [lindex $all end]
+###     ::bdu::log "VLNV $want not in the catalog, using $v"
+###     return $v
+### }
+### proc ::bdu::ip {name vlnv {cfg {}}} {
+###     create_bd_cell -type ip -vlnv [::bdu::vlnv $vlnv] $name
+###     if {[llength $cfg]} { set_property -dict $cfg [get_bd_cells /$name] }
+### }
+### proc ::bdu::mod {name module {cfg {}}} {
+###     if {[catch {create_bd_cell -type module -reference $module $name} e]} {
+###         error "module reference '$module' failed ($e) - is its RTL file in the project?"
+###     }
+###     if {[llength $cfg]} { set_property -dict $cfg [get_bd_cells /$name] }
+### }
+### proc ::bdu::const {name width val} {
+###     create_bd_cell -type inline_hdl -vlnv [::bdu::vlnv xilinx.com:inline_hdl:ilconstant:1.0] $name
+###     set_property -dict [list CONFIG.CONST_WIDTH $width CONFIG.CONST_VAL $val] [get_bd_cells /$name]
+### }
+### proc ::bdu::logic {name op width} {
+###     create_bd_cell -type inline_hdl -vlnv [::bdu::vlnv xilinx.com:inline_hdl:ilvector_logic:1.0] $name
+###     set_property -dict [list CONFIG.C_OPERATION $op CONFIG.C_SIZE $width] [get_bd_cells /$name]
+### }
+### proc ::bdu::P {path} {
+###     if {[string first / $path] >= 0} {
+###         set o [get_bd_pins -quiet /$path]
+###         if {$o ne ""} { return $o }
+###         set cell [file dirname $path]
+###         set have {}
+###         foreach p [get_bd_pins -quiet -of_objects [get_bd_cells -quiet /$cell]] { lappend have [file tail $p] }
+###         foreach p [get_bd_intf_pins -quiet -of_objects [get_bd_cells -quiet /$cell]] { lappend have "\[intf\][file tail $p]" }
+###         error "pin /$path not found. /$cell has: [lsort $have]"
+###     }
+###     set o [get_bd_ports -quiet /$path]
+###     if {$o ne ""} { return $o }
+###     error "port /$path not found"
+### }
+### proc ::bdu::IP {path} {
+###     if {[string first / $path] >= 0} {
+###         set o [get_bd_intf_pins -quiet /$path]
+###         if {$o ne ""} { return $o }
+###         set cell [file dirname $path]
+###         set have {}
+###         foreach p [get_bd_intf_pins -quiet -of_objects [get_bd_cells -quiet /$cell]] { lappend have [file tail $p] }
+###         error "interface pin /$path not found. /$cell has: [lsort $have]"
+###     }
+###     set o [get_bd_intf_ports -quiet /$path]
+###     if {$o ne ""} { return $o }
+###     error "interface port /$path not found"
+### }
+### proc ::bdu::has_pin {path} { return [expr {[get_bd_pins -quiet /$path] ne ""}] }
+### proc ::bdu::net {name src args} {
+###     connect_bd_net -net $name [::bdu::P $src] [::bdu::P [lindex $args 0]]
+###     foreach d [lrange $args 1 end] {
+###         connect_bd_net [get_bd_nets /$name] [::bdu::P $d]
+###     }
+### }
+### proc ::bdu::inet {name a b} {
+###     connect_bd_intf_net -intf_net $name [::bdu::IP $a] [::bdu::IP $b]
+### }
+### proc ::bdu::stage {name body} {
+###     ::bdu::log "stage $name"
+###     if {[catch {uplevel 1 $body} err]} {
+###         catch {save_bd_design}
+###         error "stage '$name' : $err"
+###     }
+### }
+### proc ::bdu::follow_freq {ip_pin mod_pin} {
+###     set want [get_property -quiet CONFIG.FREQ_HZ [get_bd_pins /$ip_pin]]
+###     set have [get_property -quiet CONFIG.FREQ_HZ [get_bd_pins /$mod_pin]]
+###     if {$want eq "" || $want eq $have} { return }
+###     if {[catch {set_property CONFIG.FREQ_HZ $want [get_bd_pins /$mod_pin]} e]} {
+###         ::bdu::log "WARNING: $mod_pin FREQ_HZ '$have' but $ip_pin expects '$want' ($e)"
+###     } else {
+###         ::bdu::log "$mod_pin FREQ_HZ $have -> $want (follows $ip_pin)"
+###     }
+### }
+## source [file join $::ZUTX_DIR .. bd_common aurora_link_cfg.tcl]
+### namespace eval ::aurora_link {
+###     # 선로 위에서 양쪽이 같아야 하는 값
+###     variable LINK {
+###         Backchannel_mode   Timer
+###         C_AURORA_LANES     1
+###         C_LANE_WIDTH       4
+###         C_LINE_RATE        3.125
+###         C_USE_CRC          true
+###         C_USE_BYTESWAP     true
+###         C_USE_SCRAMBLER    false
+###         Flow_Mode          None
+###         Interface_Mode     Framing
+###     }
+###     # 링크와는 무관하지만 기존(동작 확인된) 디자인과 같게 두는 값
+###     variable LOCAL {
+###         TransceiverControl false
+###         C_DRP_IF           true
+###     }
+### }
+### proc ::aurora_link::set_cfg {cell kv} {
+###     if {![llength $kv]} { return {} }
+###     set l {}
+###     foreach {k v} $kv { lappend l CONFIG.$k $v }
+###     if {[catch {set_property -dict $l $cell} e]} {
+###         puts "WARNING: \[aurora_link\] dict set failed on $cell ($e) - retrying one by one"
+###         foreach {k v} $kv {
+###             if {[catch {set_property CONFIG.$k $v $cell} e2]} {
+###                 puts "WARNING: \[aurora_link\] $cell CONFIG.$k = $v rejected: $e2"
+###             }
+###         }
+###     }
+###     return [::aurora_link::diff $cell $kv]
+### }
+### proc ::aurora_link::same {a b} {
+###     if {$a eq $b} { return 1 }
+###     if {[string is double -strict $a] && [string is double -strict $b] && abs($a - $b) < 1e-6} { return 1 }
+###     return [string equal -nocase $a $b]
+### }
+### proc ::aurora_link::diff {cell kv} {
+###     set bad {}
+###     foreach {k v} $kv {
+###         set got [get_property -quiet CONFIG.$k $cell]
+###         if {![::aurora_link::same $got $v]} { lappend bad "$k: wanted '$v' got '$got'" }
+###     }
+###     return $bad
+### }
+### proc ::aurora_link::apply {cell pre post {ignore {}}} {
+###     variable LINK
+###     variable LOCAL
+###     ::aurora_link::set_cfg $cell $pre
+###     ::aurora_link::set_cfg $cell [concat $LINK $LOCAL]
+###     # GT location / refclk : one at a time, in order (allowed values depend on the previous one)
+###     foreach {k v} $post { ::aurora_link::set_cfg $cell [list $k $v] }
+###     set bad {}
+###     foreach item [::aurora_link::diff $cell [concat $pre $LINK $LOCAL $post]] {
+###         if {[lsearch -exact $ignore [lindex [split $item :] 0]] < 0} { lappend bad $item }
+###     }
+###     if {[llength $bad]} {
+###         error "\[aurora_link\] $cell : IP did not accept\n    [join $bad "\n    "]"
+###     }
+###     puts "INFO: \[aurora_link\] $cell : [::aurora_link::signature $cell]"
+### }
+### proc ::aurora_link::signature {cell} {
+###     variable LINK
+###     set s {}
+###     foreach {k v} $LINK { lappend s "$k=[get_property -quiet CONFIG.$k $cell]" }
+###     return [join $s " "]
+### }
+## proc create_zcu104_tx_bd {design_name {opts {}}} {
+##     ::bdu::begin zcu104_tx "create_zcu104_tx_bd $design_name $opts  [clock format [clock seconds]]"
+##     array set o {bc_in 1 period_ms 1000 h_beats 640 v_lines 720 prbs_frame 256}
+##     array set o $opts
+## 
+##     create_bd_design $design_name
+##     current_bd_design $design_name
+## 
+##     ::bdu::stage ports {
+##         create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 CLK_300
+##         set_property CONFIG.FREQ_HZ 300000000 [get_bd_intf_ports /CLK_300]
+##         create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 GT_REFCLK
+##         set_property CONFIG.FREQ_HZ 125000000 [get_bd_intf_ports /GT_REFCLK]
+##         create_bd_port -dir O -from 0 -to 0 gt_txp
+##         create_bd_port -dir O -from 0 -to 0 gt_txn
+##         create_bd_port -dir O SFP_TX_DISABLE
+##         create_bd_port -dir O -from 3 -to 0 LED
+##         if {$o(bc_in)} { create_bd_port -dir I BC_RX_UP }
+##     }
+## 
+##     ::bdu::stage ps {
+##         ::bdu::ip zynq_ultra_ps_e_0 xilinx.com:ip:zynq_ultra_ps_e:3.5
+##         if {[get_property -quiet board_part [current_project]] ne ""} {
+##             apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e \
+##                 -config {apply_board_preset "1"} [get_bd_cells /zynq_ultra_ps_e_0]
+##         } else {
+##             ::bdu::log "WARNING: no board_part - PS DDR/MIO preset NOT applied"
+##         }
+##         # HPM0_FPD (control), HP0_FPD (DMA), pl_clk0 100 MHz, pl_ps_irq0 ; everything else off
+##         set_property -dict {
+##             CONFIG.PSU__USE__M_AXI_GP0 {1}
+##             CONFIG.PSU__USE__M_AXI_GP1 {0}
+##             CONFIG.PSU__USE__M_AXI_GP2 {0}
+##             CONFIG.PSU__USE__S_AXI_GP2 {1}
+##             CONFIG.PSU__FPGA_PL0_ENABLE {1}
+##             CONFIG.PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ {100}
+##             CONFIG.PSU__USE__IRQ0 {1}
+##         } [get_bd_cells /zynq_ultra_ps_e_0]
+##         ::bdu::ip rst_ps xilinx.com:ip:proc_sys_reset:5.0
+##     }
+## 
+##     ::bdu::stage dma_path {
+##         ::bdu::ip axi_dma_0 xilinx.com:ip:axi_dma:7.1 {
+##             CONFIG.c_include_mm2s {1} CONFIG.c_include_s2mm {0} CONFIG.c_include_sg {0}
+##             CONFIG.c_addr_width {32} CONFIG.c_sg_length_width {24}
+##             CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_mm2s_burst_size {64}
+##             CONFIG.c_m_axis_mm2s_tdata_width {32}
+##         }
+##         ::bdu::ip axi_gpio_link xilinx.com:ip:axi_gpio:2.0 {
+##             CONFIG.C_IS_DUAL {1} CONFIG.C_ALL_INPUTS {1} CONFIG.C_GPIO_WIDTH {32}
+##             CONFIG.C_ALL_OUTPUTS_2 {1} CONFIG.C_GPIO2_WIDTH {32} CONFIG.C_DOUT_DEFAULT_2 {0x00000001}
+##         }
+##         ::bdu::ip sc_ctrl xilinx.com:ip:smartconnect:1.0 {CONFIG.NUM_SI {1} CONFIG.NUM_MI {2}}
+##         ::bdu::ip sc_mem  xilinx.com:ip:smartconnect:1.0 {CONFIG.NUM_SI {1} CONFIG.NUM_MI {1}}
+##         ::bdu::ip irq_concat xilinx.com:ip:xlconcat:2.1 {CONFIG.NUM_PORTS {2}}
+##         ::bdu::ip fifo_tx xilinx.com:ip:axis_data_fifo:2.0 {CONFIG.FIFO_DEPTH {1024} CONFIG.IS_ACLK_ASYNC {1}}
+##         ::bdu::mod pkt_0 line_packetizer [list CONFIG.H_BEATS $o(h_beats) CONFIG.V_LINES $o(v_lines) CONFIG.FMT 0]
+##         ::bdu::mod prbs_gen_0 prbs_gen [list CONFIG.FRAME_WORDS $o(prbs_frame)]
+##         # RXC_INIT=1 : status [31:24] = link_retrain status (init_clk domain, no gray CDC)
+##         ::bdu::mod link_ctrl_0 link_ctrl {CONFIG.EMULATED {0} CONFIG.RXC_INIT {1}}
+##         ::bdu::mod link_retrain_0 link_retrain [list \
+##             CONFIG.CLK_HZ 62500000 CONFIG.PERIOD_MS $o(period_ms) CONFIG.IDLE_US 100 \
+##             CONFIG.BC_PRESENT [expr {$o(bc_in) ? 1 : 0}] CONFIG.BC_DOWN_MS 100 \
+##             CONFIG.HOLDOFF_MS 500 CONFIG.BC_DEB_US 20]
+##         ::bdu::ip vio_link xilinx.com:ip:vio:3.0 {
+##             CONFIG.C_EN_PROBE_IN_ACTIVITY {0}
+##             CONFIG.C_NUM_PROBE_IN {2}  CONFIG.C_NUM_PROBE_OUT {6}
+##             CONFIG.C_PROBE_IN0_WIDTH {32} CONFIG.C_PROBE_IN1_WIDTH {2}
+##             CONFIG.C_PROBE_OUT0_WIDTH {1} CONFIG.C_PROBE_OUT0_INIT_VAL {0x1}
+##             CONFIG.C_PROBE_OUT1_WIDTH {1} CONFIG.C_PROBE_OUT1_INIT_VAL {0x1}
+##             CONFIG.C_PROBE_OUT2_WIDTH {3} CONFIG.C_PROBE_OUT2_INIT_VAL {0x0}
+##             CONFIG.C_PROBE_OUT3_WIDTH {1} CONFIG.C_PROBE_OUT3_INIT_VAL {0x0}
+##             CONFIG.C_PROBE_OUT4_WIDTH {1} CONFIG.C_PROBE_OUT4_INIT_VAL {0x0}
+##             CONFIG.C_PROBE_OUT5_WIDTH {1} CONFIG.C_PROBE_OUT5_INIT_VAL {0x0}
+##         }
+##         ::bdu::logic or_tx_busy or 1
+##         ::bdu::ip led_concat xilinx.com:ip:xlconcat:2.1 {CONFIG.NUM_PORTS {3} CONFIG.IN2_WIDTH {2}}
+##     }
+## 
+##     ::bdu::stage aurora_tx {
+##         create_bd_cell -type ip -vlnv [::bdu::vlnv xilinx.com:ip:aurora_8b10b:11.1] aurora_tx
+##         # GTH : FMC LPC DP0 = bank 226 lane 3 = GTHE4_CHANNEL_X0Y15 (Quad_X0Y3),
+##         #       GBTCLK0_M2C = MGTREFCLK0_226 (V8/V7) 125 MHz (make_ref.tcl 로 확인한 값)
+##         # DRP_FREQ : UltraScale+ 코어는 DRP 를 init_clk 로 돌려 값이 50 으로 남는다 (무관)
+##         ::aurora_link::apply [get_bd_cells /aurora_tx] \
+##             {Dataflow_Config TX-only_Simplex SupportLevel 1} \
+##             {SINGLEEND_INITCLK true C_INIT_CLK 62.5
+##              C_START_QUAD Quad_X0Y3 C_START_LANE X0Y15 C_REFCLK_SOURCE {MGTREFCLK0 of Quad X0Y3}
+##              C_REFCLK_FREQUENCY 125} \
+##             {DRP_FREQ}
+##         ::bdu::log "aurora_tx : [::aurora_link::signature [get_bd_cells /aurora_tx]]"
+##     }
+## 
+##     ::bdu::stage clocks {
+##         ::bdu::ip clk_wiz_init xilinx.com:ip:clk_wiz:6.0 {
+##             CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} CONFIG.PRIM_IN_FREQ {300.000}
+##             CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {62.5}
+##             CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false}
+##         }
+##     }
+## 
+##     ::bdu::stage constants {
+##         ::bdu::const c_zero   1 0
+##         ::bdu::const c_one    1 1
+##         ::bdu::const lb_off   3 0
+##         if {[::bdu::has_pin aurora_tx/gt0_drpaddr]} {
+##             ::bdu::const c_drpaddr 10 0
+##             ::bdu::const c_drpdi   16 0
+##         }
+##     }
+## 
+##     ::bdu::stage connect_axi {
+##         ::bdu::inet hpm0_fpd  zynq_ultra_ps_e_0/M_AXI_HPM0_FPD sc_ctrl/S00_AXI
+##         ::bdu::inet sc_ctrl_M00 sc_ctrl/M00_AXI axi_dma_0/S_AXI_LITE
+##         ::bdu::inet sc_ctrl_M01 sc_ctrl/M01_AXI axi_gpio_link/S_AXI
+##         ::bdu::inet dma_mm2s  axi_dma_0/M_AXI_MM2S sc_mem/S00_AXI
+##         ::bdu::inet sc_mem_M00 sc_mem/M00_AXI zynq_ultra_ps_e_0/S_AXI_HP0_FPD
+##         ::bdu::inet dma_mm2s_axis axi_dma_0/M_AXIS_MM2S fifo_tx/S_AXIS
+##         ::bdu::inet fifo_tx_m fifo_tx/M_AXIS pkt_0/s_axis
+##         ::bdu::inet pkt_m     pkt_0/m_axis prbs_gen_0/s_axis
+##         ::bdu::inet prbs_gen_m prbs_gen_0/m_axis aurora_tx/USER_DATA_S_AXI_TX
+##         ::bdu::inet GT_REFCLK_1 GT_REFCLK aurora_tx/GT_DIFF_REFCLK1
+##         ::bdu::inet CLK_300_1   CLK_300   clk_wiz_init/CLK_IN1_D
+##     }
+## 
+##     ::bdu::stage connect_clk_rst {
+##         ::bdu::net pl_clk0 zynq_ultra_ps_e_0/pl_clk0 \
+##             zynq_ultra_ps_e_0/maxihpm0_fpd_aclk zynq_ultra_ps_e_0/saxihp0_fpd_aclk rst_ps/slowest_sync_clk \
+##             axi_dma_0/s_axi_lite_aclk axi_dma_0/m_axi_mm2s_aclk axi_gpio_link/s_axi_aclk \
+##             sc_ctrl/aclk sc_mem/aclk fifo_tx/s_axis_aclk link_ctrl_0/axi_aclk
+##         ::bdu::net pl_resetn0 zynq_ultra_ps_e_0/pl_resetn0 rst_ps/ext_reset_in
+##         ::bdu::net rst_ps_ic_aresetn rst_ps/interconnect_aresetn sc_ctrl/aresetn sc_mem/aresetn
+##         ::bdu::net rst_ps_periph_aresetn rst_ps/peripheral_aresetn \
+##             axi_dma_0/axi_resetn axi_gpio_link/s_axi_aresetn link_ctrl_0/axi_aresetn
+##         ::bdu::net init_clk clk_wiz_init/clk_out1 \
+##             aurora_tx/init_clk_in link_ctrl_0/init_clk link_retrain_0/init_clk vio_link/clk
+##         ::bdu::net user_clk aurora_tx/user_clk_out \
+##             fifo_tx/m_axis_aclk pkt_0/aclk prbs_gen_0/aclk link_ctrl_0/user_clk
+##     }
+## 
+##     ::bdu::stage connect_aurora {
+##         ::bdu::net gt_txp_1 aurora_tx/txp gt_txp
+##         ::bdu::net gt_txn_1 aurora_tx/txn gt_txn
+##         ::bdu::net link_ctrl_au_reset    link_ctrl_0/au_reset    aurora_tx/tx_system_reset
+##         ::bdu::net link_ctrl_au_gt_reset link_ctrl_0/au_gt_reset aurora_tx/gt_reset
+##         ::bdu::net link_ctrl_au_power_down link_ctrl_0/au_power_down aurora_tx/power_down
+##         ::bdu::net lb_off_dout lb_off/dout aurora_tx/loopback
+##         ::bdu::net au_sys_reset_out aurora_tx/sys_reset_out link_ctrl_0/link_sys_reset
+##         ::bdu::net pll_not_locked aurora_tx/pll_not_locked_out link_ctrl_0/pll_not_locked
+##         ::bdu::net tx_channel_up aurora_tx/tx_channel_up link_ctrl_0/channel_up
+##         ::bdu::net tx_lane_up    aurora_tx/tx_lane_up    link_ctrl_0/lane_up
+##         ::bdu::net tx_hard_err   aurora_tx/tx_hard_err   link_ctrl_0/hard_err
+##         if {[::bdu::has_pin aurora_tx/gt0_drpaddr]} {
+##             ::bdu::net drpaddr_zero c_drpaddr/dout aurora_tx/gt0_drpaddr
+##             ::bdu::net drpdi_zero   c_drpdi/dout   aurora_tx/gt0_drpdi
+##         }
+##     }
+## 
+##     ::bdu::stage connect_ctrl {
+##         # SFP_TX_DISABLE = 0 : laser on (FMC LA15_N)
+##         set zero_sinks {link_ctrl_0/soft_err link_ctrl_0/frame_err link_ctrl_0/crc_valid
+##                         link_ctrl_0/rx_err_seq link_ctrl_0/rx_err_len link_ctrl_0/rx_err_ovf irq_concat/In1
+##                         SFP_TX_DISABLE}
+##         foreach p {aurora_tx/gt0_drpen aurora_tx/gt0_drpwe} {
+##             if {[::bdu::has_pin $p]} { lappend zero_sinks $p }
+##         }
+##         if {!$o(bc_in)} { lappend zero_sinks link_retrain_0/bc_rx_up }
+##         ::bdu::net zero c_zero/dout {*}$zero_sinks
+##         ::bdu::net one  c_one/dout  link_ctrl_0/crc_pass_fail_n
+##         ::bdu::net mm2s_introut axi_dma_0/mm2s_introut irq_concat/In0
+##         ::bdu::net irq_pl_ps irq_concat/dout zynq_ultra_ps_e_0/pl_ps_irq0
+##         ::bdu::net tx_fifo_aresetn link_ctrl_0/tx_fifo_aresetn fifo_tx/s_axis_aresetn
+##         ::bdu::net user_aresetn link_ctrl_0/user_aresetn pkt_0/aresetn prbs_gen_0/aresetn
+##         ::bdu::net pkt_frame_cnt pkt_0/frame_cnt link_ctrl_0/tx_frame_cnt
+##         ::bdu::net pkt_err pkt_0/err_pulse link_ctrl_0/tx_err
+##         ::bdu::net gpio_ctrl axi_gpio_link/gpio2_io_o link_ctrl_0/gpio_ctrl link_retrain_0/gpio_ctrl
+##         ::bdu::net gpio_status link_ctrl_0/gpio_status axi_gpio_link/gpio_io_i
+##         # link_retrain : idle gate = packetizer busy OR PRBS frames running
+##         ::bdu::net pkt_busy pkt_0/busy or_tx_busy/Op1
+##         ::bdu::net prbs_active prbs_gen_0/prbs_active or_tx_busy/Op2
+##         ::bdu::net tx_busy or_tx_busy/Res link_retrain_0/tx_busy
+##         ::bdu::net retrain_req link_retrain_0/restart link_ctrl_0/restart_req
+##         ::bdu::net retrain_status link_retrain_0/status link_ctrl_0/rx_frame_cnt
+##         if {$o(bc_in)} { ::bdu::net bc_rx_up BC_RX_UP link_retrain_0/bc_rx_up }
+##         # VIO : net names = probe names used by hw/*.tcl
+##         ::bdu::net link_status   link_ctrl_0/vio_status vio_link/probe_in0
+##         ::bdu::net retrain_mode  link_retrain_0/mode vio_link/probe_in1 led_concat/In2
+##         ::bdu::net vio_ctrl_sel  vio_link/probe_out0 link_ctrl_0/vio_ctrl_sel
+##         ::bdu::net vio_run       vio_link/probe_out1 link_ctrl_0/vio_run
+##         ::bdu::net vio_loopback  vio_link/probe_out2 link_ctrl_0/vio_loopback
+##         ::bdu::net vio_err_clear vio_link/probe_out3 link_ctrl_0/vio_clr
+##         ::bdu::net vio_prbs_en   vio_link/probe_out4 prbs_gen_0/enable link_ctrl_0/vio_prbs_en
+##         ::bdu::net vio_prbs_inject vio_link/probe_out5 prbs_gen_0/inject
+##         # LEDs
+##         ::bdu::net link_ok link_ctrl_0/link_ok led_concat/In0
+##         ::bdu::net bc_rx_up_s link_retrain_0/bc_rx_up_s led_concat/In1
+##         ::bdu::net led led_concat/dout LED
+##     }
+## 
+##     ::bdu::stage addresses {
+##         set ps_data [get_bd_addr_spaces /zynq_ultra_ps_e_0/Data]
+##         assign_bd_address -offset 0xA0000000 -range 0x00010000 -target_address_space $ps_data [get_bd_addr_segs /axi_dma_0/S_AXI_LITE/Reg] -force
+##         assign_bd_address -offset 0xA0010000 -range 0x00010000 -target_address_space [get_bd_addr_spaces /zynq_ultra_ps_e_0/Data] [get_bd_addr_segs /axi_gpio_link/S_AXI/Reg] -force
+##         set ddr [get_bd_addr_segs -quiet /zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW]
+##         if {$ddr ne ""} {
+##             assign_bd_address -offset 0x00000000 -range 0x80000000 -target_address_space [get_bd_addr_spaces /axi_dma_0/Data_MM2S] [get_bd_addr_segs /zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW] -force
+##         } else {
+##             ::bdu::log "HP0_DDR_LOW segment not found by name - auto-assigning the DMA address space"
+##             assign_bd_address -target_address_space [get_bd_addr_spaces /axi_dma_0/Data_MM2S]
+##         }
+##     }
+## 
+##     ::bdu::stage validate {
+##         catch {regenerate_bd_layout}
+##         validate_bd_design
+##         save_bd_design
+##     }
+##     ::bdu::log "BD $design_name OK (bc_in=$o(bc_in) period_ms=$o(period_ms) h_beats=$o(h_beats) v_lines=$o(v_lines))"
+##     return [get_files -quiet ${design_name}.bd]
+## }
+# set bd_opts [list bc_in [expr {$BC_PIN ne ""}] period_ms $PERIOD h_beats $H_BEATS v_lines $V_LINES]
+# if {[catch {create_zcu104_tx_bd $bd_name $bd_opts} err]} {
+#     ::bdu::log "FAILED: $err"
+#     ::bdu::write_report [file join $proj_dir bd_build_report.txt]
+#     catch {open_bd_design [get_files ${bd_name}.bd]}
+#     puts "ERROR: \[make_zcu104_tx\] $err"
+#     error "\[make_zcu104_tx\] block design build failed - see [file join $proj_dir bd_build_report.txt]"
+# }
+Wrote  : </home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_zcu104_tx/aurora_cam_zcu104_tx.srcs/sources_1/bd/zcu104_tx/zcu104_tx.bd> 
+INFO: [zcu104_tx] stage ports
+INFO: [zcu104_tx] stage ps
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [zcu104_tx] stage dma_path
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconcat:1.0 for the IP type xilinx.com:ip:xlconcat:2.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconcat:2.1 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-11770] Clock interface 'aclk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-11770] Clock interface 'aclk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'tx_fifo_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'tx_fifo_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'init_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'init_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'au_reset' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'au_reset' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'au_gt_reset' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'au_gt_reset' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'link_sys_reset' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'link_sys_reset' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'axi_aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'user_aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'tx_fifo_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'init_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'au_reset'.
+INFO: [IP_Flow 19-4728] Bus Interface 'au_reset': Added interface parameter 'POLARITY' with value 'ACTIVE_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'au_gt_reset': Added interface parameter 'POLARITY' with value 'ACTIVE_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'link_sys_reset': Added interface parameter 'POLARITY' with value 'ACTIVE_HIGH'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'axi_aclk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'axi_aclk' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-5661] Bus Interface 'init_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'init_clk' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-5661] Bus Interface 'user_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'user_clk' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'fire_per' has a dependency on the module local parameter or undefined parameter 'IDLE_CYC'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'init_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'init_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+WARNING: [IP_Flow 19-5661] Bus Interface 'init_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'init_clk' has no FREQ_HZ parameter.
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconcat:1.0 for the IP type xilinx.com:ip:xlconcat:2.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconcat:2.1 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+INFO: [zcu104_tx] stage aurora_tx
+INFO: [xilinx.com:ip:aurora_8b10b:11.1-5911] /aurora_tx Executing the post_config_ip from bd
+INFO: [xilinx.com:ip:aurora_8b10b:11.1-5911] /aurora_tx Executing the post_config_ip from bd
+INFO: [xilinx.com:ip:aurora_8b10b:11.1-5911] /aurora_tx Executing the post_config_ip from bd
+WARNING: [BD 41-721] Attempt to set value 'true' on disabled parameter 'SINGLEEND_INITCLK' of cell '/aurora_tx' is ignored
+CRITICAL WARNING: [BD 41-737] Cannot set the parameter C_INIT_CLK on /aurora_tx. It is read-only.
+INFO: [xilinx.com:ip:aurora_8b10b:11.1-5911] /aurora_tx Executing the post_config_ip from bd
+INFO: [xilinx.com:ip:aurora_8b10b:11.1-5911] /aurora_tx Executing the post_config_ip from bd
+INFO: [xilinx.com:ip:aurora_8b10b:11.1-5911] /aurora_tx Executing the post_config_ip from bd
+INFO: [xilinx.com:ip:aurora_8b10b:11.1-5911] /aurora_tx Executing the post_config_ip from bd
+Wrote  : </home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_zcu104_tx/aurora_cam_zcu104_tx.srcs/sources_1/bd/zcu104_tx/zcu104_tx.bd> 
+INFO: [zcu104_tx] FAILED: stage 'aurora_tx' : [aurora_link] /aurora_tx : IP did not accept
+    C_INIT_CLK: wanted '62.5' got '78.125'
+ERROR: [make_zcu104_tx] stage 'aurora_tx' : [aurora_link] /aurora_tx : IP did not accept
+    C_INIT_CLK: wanted '62.5' got '78.125'
+[make_zcu104_tx] block design build failed - see /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_zcu104_tx/bd_build_report.txt
+    while executing
+"error "\[make_zcu104_tx\] block design build failed - see [file join $proj_dir bd_build_report.txt]""
+    invoked from within
+"if {[catch {create_zcu104_tx_bd $bd_name $bd_opts} err]} {
+    ::bdu::log "FAILED: $err"
+    ::bdu::write_report [file join $proj_dir bd_build_report...."
+    (file "make_zcu104_tx.tcl" line 92)
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 17:23:30 2026...

@@ -1,0 +1,1245 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Nov  7 17:33:27 2026
+# Process ID         : 213601
+# Current directory  : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015
+# Command line       : vivado -mode batch -source make_z7015_rx.tcl -tclargs build
+# Log file           : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/vivado.log
+# Journal file       : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/vivado.jou
+# Running On         : dhkim-home
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
+# CPU Frequency      : 5488.614 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 67058 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75648 MB
+# Available Virtual  : 64271 MB
+#-----------------------------------------------------------
+source make_z7015_rx.tcl
+# set script_dir [file normalize [file dirname [info script]]]
+# set PART     xc7z015clg485-2
+# set BC_PIN   ""
+# set BC_IOSTD LVCMOS33
+# set H_BEATS  640
+# set V_LINES  720
+# set DO_BUILD 0
+# set JOBS     4
+# catch {set JOBS [exec nproc]}
+# foreach a $argv {
+#     if {[string tolower $a] eq "build"} { set DO_BUILD 1; continue }
+#     if {![regexp {^([A-Za-z0-9_]+)=(.*)$} $a -> k v]} {
+#         puts "WARNING: \[make_z7015_rx\] unknown option '$a' ignored"; continue
+#     }
+#     switch -- [string tolower $k] {
+#         part    { set PART $v }
+#         bcpin   { set BC_PIN [expr {[string tolower $v] in {none off 0 {}} ? "" : $v}] }
+#         bciostd { set BC_IOSTD $v }
+#         hbeats  { set H_BEATS $v }
+#         vlines  { set V_LINES $v }
+#         jobs    { set JOBS $v }
+#         default { puts "WARNING: \[make_z7015_rx\] unknown option '$k' ignored" }
+#     }
+# }
+# set proj_name aurora_cam_z7015_rx
+# set proj_dir  [file join $script_dir build $proj_name]
+# set bd_name   z7015_rx
+# puts "INFO: \[make_z7015_rx\] Vivado [version -short] part=$PART bcpin='$BC_PIN' build=$DO_BUILD"
+INFO: [make_z7015_rx] Vivado 2025.2 part=xc7z015clg485-2 bcpin='' build=1
+# if {![string match "2025.2*" [version -short]]} {
+#     puts "WARNING: \[make_z7015_rx\] these scripts target Vivado 2025.2"
+# }
+# if {[llength [get_projects -quiet]]} { close_project }
+# create_project $proj_name $proj_dir -part $PART -force
+# set_property target_language    Verilog [current_project]
+# set_property simulator_language Mixed   [current_project]
+# catch {set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]}
+# set rtl {}
+# foreach f {line_depacketizer.v prbs_check.v link_ctrl.v z7015/gtp_common_shared.v z7015/aurora_rx_support.v} {
+#     set p [file join $script_dir rtl $f]
+#     if {![file exists $p]} { error "\[make_z7015_rx\] missing RTL $p" }
+#     lappend rtl $p
+# }
+# add_files -norecurse $rtl
+# update_compile_order -fileset sources_1
+# source [file join $script_dir bd_z7015_rx bd_z7015_rx.tcl]
+## set ::Z7RX_DIR [file normalize [file dirname [info script]]]
+## source [file join $::Z7RX_DIR .. bd_common bd_util.tcl]
+### namespace eval ::bdu {
+###     variable tag    bd
+###     variable report {}
+### }
+### proc ::bdu::begin {tag head} {
+###     variable report
+###     set ::bdu::tag $tag
+###     set report [list $head]
+### }
+### proc ::bdu::log {msg} {
+###     variable report
+###     variable tag
+###     lappend report $msg
+###     puts "INFO: \[$tag\] $msg"
+### }
+### proc ::bdu::write_report {path} {
+###     variable report
+###     if {[catch {set f [open $path w]}]} { return }
+###     puts $f [join $report \n]
+###     close $f
+### }
+### proc ::bdu::vlnv {want} {
+###     if {[get_ipdefs -quiet -all $want] ne ""} { return $want }
+###     set base [join [lrange [split $want :] 0 2] :]
+###     set all [lsort -dictionary [get_ipdefs -quiet -all ${base}:*]]
+###     if {$all eq ""} {
+###         # inline_hdl cells may not be listed by get_ipdefs : let create_bd_cell decide
+###         return $want
+###     }
+###     set v [lindex $all end]
+###     ::bdu::log "VLNV $want not in the catalog, using $v"
+###     return $v
+### }
+### proc ::bdu::ip {name vlnv {cfg {}}} {
+###     create_bd_cell -type ip -vlnv [::bdu::vlnv $vlnv] $name
+###     if {[llength $cfg]} { set_property -dict $cfg [get_bd_cells /$name] }
+### }
+### proc ::bdu::mod {name module {cfg {}}} {
+###     if {[catch {create_bd_cell -type module -reference $module $name} e]} {
+###         error "module reference '$module' failed ($e) - is its RTL file in the project?"
+###     }
+###     if {[llength $cfg]} { set_property -dict $cfg [get_bd_cells /$name] }
+### }
+### proc ::bdu::const {name width val} {
+###     create_bd_cell -type inline_hdl -vlnv [::bdu::vlnv xilinx.com:inline_hdl:ilconstant:1.0] $name
+###     set_property -dict [list CONFIG.CONST_WIDTH $width CONFIG.CONST_VAL $val] [get_bd_cells /$name]
+### }
+### proc ::bdu::logic {name op width} {
+###     create_bd_cell -type inline_hdl -vlnv [::bdu::vlnv xilinx.com:inline_hdl:ilvector_logic:1.0] $name
+###     set_property -dict [list CONFIG.C_OPERATION $op CONFIG.C_SIZE $width] [get_bd_cells /$name]
+### }
+### proc ::bdu::P {path} {
+###     if {[string first / $path] >= 0} {
+###         set o [get_bd_pins -quiet /$path]
+###         if {$o ne ""} { return $o }
+###         set cell [file dirname $path]
+###         set have {}
+###         foreach p [get_bd_pins -quiet -of_objects [get_bd_cells -quiet /$cell]] { lappend have [file tail $p] }
+###         foreach p [get_bd_intf_pins -quiet -of_objects [get_bd_cells -quiet /$cell]] { lappend have "\[intf\][file tail $p]" }
+###         error "pin /$path not found. /$cell has: [lsort $have]"
+###     }
+###     set o [get_bd_ports -quiet /$path]
+###     if {$o ne ""} { return $o }
+###     error "port /$path not found"
+### }
+### proc ::bdu::IP {path} {
+###     if {[string first / $path] >= 0} {
+###         set o [get_bd_intf_pins -quiet /$path]
+###         if {$o ne ""} { return $o }
+###         set cell [file dirname $path]
+###         set have {}
+###         foreach p [get_bd_intf_pins -quiet -of_objects [get_bd_cells -quiet /$cell]] { lappend have [file tail $p] }
+###         error "interface pin /$path not found. /$cell has: [lsort $have]"
+###     }
+###     set o [get_bd_intf_ports -quiet /$path]
+###     if {$o ne ""} { return $o }
+###     error "interface port /$path not found"
+### }
+### proc ::bdu::has_pin {path} { return [expr {[get_bd_pins -quiet /$path] ne ""}] }
+### proc ::bdu::intf_of {cell name vlnv_pat} {
+###     if {[get_bd_intf_pins -quiet /$cell/$name] ne ""} { return $cell/$name }
+###     set hits {}
+###     foreach p [get_bd_intf_pins -quiet -of_objects [get_bd_cells /$cell]] {
+###         if {[string match $vlnv_pat [get_property -quiet VLNV [get_bd_intf_pins $p]]]} { lappend hits [file tail $p] }
+###     }
+###     if {[llength $hits] == 1} {
+###         ::bdu::log "$cell/$name not found, using $cell/[lindex $hits 0] ($vlnv_pat)"
+###         return $cell/[lindex $hits 0]
+###     }
+###     set have {}
+###     foreach p [get_bd_intf_pins -quiet -of_objects [get_bd_cells /$cell]] {
+###         lappend have "[file tail $p]([get_property -quiet VLNV [get_bd_intf_pins $p]])"
+###     }
+###     error "interface /$cell/$name not found and $vlnv_pat matches [llength $hits]: $have"
+### }
+### proc ::bdu::net {name src args} {
+###     connect_bd_net -net $name [::bdu::P $src] [::bdu::P [lindex $args 0]]
+###     foreach d [lrange $args 1 end] {
+###         connect_bd_net [get_bd_nets /$name] [::bdu::P $d]
+###     }
+### }
+### proc ::bdu::inet {name a b} {
+###     connect_bd_intf_net -intf_net $name [::bdu::IP $a] [::bdu::IP $b]
+### }
+### proc ::bdu::stage {name body} {
+###     ::bdu::log "stage $name"
+###     if {[catch {uplevel 1 $body} err]} {
+###         catch {save_bd_design}
+###         error "stage '$name' : $err"
+###     }
+### }
+### proc ::bdu::follow_freq {ip_pin mod_pin} {
+###     set want [get_property -quiet CONFIG.FREQ_HZ [get_bd_pins /$ip_pin]]
+###     set have [get_property -quiet CONFIG.FREQ_HZ [get_bd_pins /$mod_pin]]
+###     if {$want eq "" || $want eq $have} { return }
+###     if {[catch {set_property CONFIG.FREQ_HZ $want [get_bd_pins /$mod_pin]} e]} {
+###         ::bdu::log "WARNING: $mod_pin FREQ_HZ '$have' but $ip_pin expects '$want' ($e)"
+###     } else {
+###         ::bdu::log "$mod_pin FREQ_HZ $have -> $want (follows $ip_pin)"
+###     }
+### }
+## source [file join $::Z7RX_DIR .. bd_common aurora_link_cfg.tcl]
+### namespace eval ::aurora_link {
+###     # 선로 위에서 양쪽이 같아야 하는 값
+###     variable LINK {
+###         Backchannel_mode   Timer
+###         C_AURORA_LANES     1
+###         C_LANE_WIDTH       4
+###         C_LINE_RATE        3.125
+###         C_USE_CRC          true
+###         C_USE_BYTESWAP     true
+###         C_USE_SCRAMBLER    false
+###         Flow_Mode          None
+###         Interface_Mode     Framing
+###     }
+###     # 링크와는 무관하지만 기존(동작 확인된) 디자인과 같게 두는 값
+###     variable LOCAL {
+###         TransceiverControl false
+###         C_DRP_IF           true
+###     }
+### }
+### proc ::aurora_link::set_cfg {cell kv} {
+###     if {![llength $kv]} { return {} }
+###     set l {}
+###     foreach {k v} $kv { lappend l CONFIG.$k $v }
+###     if {[catch {set_property -dict $l $cell} e]} {
+###         puts "WARNING: \[aurora_link\] dict set failed on $cell ($e) - retrying one by one"
+###         foreach {k v} $kv {
+###             if {[catch {set_property CONFIG.$k $v $cell} e2]} {
+###                 puts "WARNING: \[aurora_link\] $cell CONFIG.$k = $v rejected: $e2"
+###             }
+###         }
+###     }
+###     return [::aurora_link::diff $cell $kv]
+### }
+### proc ::aurora_link::same {a b} {
+###     if {$a eq $b} { return 1 }
+###     if {[string is double -strict $a] && [string is double -strict $b] && abs($a - $b) < 1e-6} { return 1 }
+###     return [string equal -nocase $a $b]
+### }
+### proc ::aurora_link::diff {cell kv} {
+###     set bad {}
+###     foreach {k v} $kv {
+###         set got [get_property -quiet CONFIG.$k $cell]
+###         if {![::aurora_link::same $got $v]} { lappend bad "$k: wanted '$v' got '$got'" }
+###     }
+###     return $bad
+### }
+### proc ::aurora_link::apply {cell pre post_groups {ignore {}}} {
+###     variable LINK
+###     variable LOCAL
+###     ::aurora_link::set_cfg $cell $pre
+###     ::aurora_link::set_cfg $cell [concat $LINK $LOCAL]
+###     # GT location / refclk : group by group, each group in one set_property -dict
+###     set post {}
+###     foreach g $post_groups {
+###         ::aurora_link::set_cfg $cell $g
+###         set post [concat $post $g]
+###     }
+###     set bad {}
+###     foreach item [::aurora_link::diff $cell [concat $pre $LINK $LOCAL $post]] {
+###         if {[lsearch -exact $ignore [lindex [split $item :] 0]] < 0} { lappend bad $item }
+###     }
+###     if {[llength $bad]} {
+###         error "\[aurora_link\] $cell : IP did not accept\n    [join $bad "\n    "]"
+###     }
+###     puts "INFO: \[aurora_link\] $cell : [::aurora_link::signature $cell]"
+### }
+### proc ::aurora_link::signature {cell} {
+###     variable LINK
+###     set s {}
+###     foreach {k v} $LINK { lappend s "$k=[get_property -quiet CONFIG.$k $cell]" }
+###     return [join $s " "]
+### }
+### proc ::aurora_link::check_init_clk {cell mhz} {
+###     set v [get_property -quiet CONFIG.C_INIT_CLK $cell]
+###     if {[::aurora_link::same $v $mhz]} {
+###         puts "INFO: \[aurora_link\] $cell : C_INIT_CLK = $v MHz (from init_clk_in)"
+###         return 1
+###     }
+###     puts "WARNING: \[aurora_link\] $cell : C_INIT_CLK = '$v', init_clk is $mhz MHz - check the init_clk_in FREQ_HZ"
+###     return 0
+### }
+## source [file join $::Z7RX_DIR ps7_cfg.tcl]
+### set ::Z7RX_PS7_VLNV xilinx.com:ip:processing_system7:5.5
+### proc z7015_ps7_config {} {
+###     return [list \
+###         CONFIG.PCW_ACT_APU_PERIPHERAL_FREQMHZ {766.666687} \
+###         CONFIG.PCW_ACT_CAN0_PERIPHERAL_FREQMHZ {23.8095} \
+###         CONFIG.PCW_ACT_CAN1_PERIPHERAL_FREQMHZ {23.8095} \
+###         CONFIG.PCW_ACT_CAN_PERIPHERAL_FREQMHZ {10.000000} \
+###         CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.158730} \
+###         CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {125.000000} \
+###         CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} \
+###         CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {100.000000} \
+###         CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {142.857132} \
+###         CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} \
+###         CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} \
+###         CONFIG.PCW_ACT_I2C_PERIPHERAL_FREQMHZ {50} \
+###         CONFIG.PCW_ACT_PCAP_PERIPHERAL_FREQMHZ {200.000000} \
+###         CONFIG.PCW_ACT_QSPI_PERIPHERAL_FREQMHZ {200.000000} \
+###         CONFIG.PCW_ACT_SDIO_PERIPHERAL_FREQMHZ {100.000000} \
+###         CONFIG.PCW_ACT_SMC_PERIPHERAL_FREQMHZ {10.000000} \
+###         CONFIG.PCW_ACT_SPI_PERIPHERAL_FREQMHZ {10.000000} \
+###         CONFIG.PCW_ACT_TPIU_PERIPHERAL_FREQMHZ {200.000000} \
+###         CONFIG.PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ {127.777786} \
+###         CONFIG.PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ {127.777786} \
+###         CONFIG.PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ {127.777786} \
+###         CONFIG.PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ {127.777786} \
+###         CONFIG.PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ {127.777786} \
+###         CONFIG.PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ {127.777786} \
+###         CONFIG.PCW_ACT_TTC_PERIPHERAL_FREQMHZ {50} \
+###         CONFIG.PCW_ACT_UART_PERIPHERAL_FREQMHZ {100.000000} \
+###         CONFIG.PCW_ACT_USB0_PERIPHERAL_FREQMHZ {60} \
+###         CONFIG.PCW_ACT_USB1_PERIPHERAL_FREQMHZ {60} \
+###         CONFIG.PCW_ACT_WDT_PERIPHERAL_FREQMHZ {127.777786} \
+###         CONFIG.PCW_APU_CLK_RATIO_ENABLE {6:2:1} \
+###         CONFIG.PCW_APU_PERIPHERAL_FREQMHZ {766.666666} \
+###         CONFIG.PCW_CAN0_PERIPHERAL_CLKSRC {External} \
+###         CONFIG.PCW_CAN0_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_CAN1_PERIPHERAL_CLKSRC {External} \
+###         CONFIG.PCW_CAN1_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_CAN_PERIPHERAL_CLKSRC {IO PLL} \
+###         CONFIG.PCW_CAN_PERIPHERAL_VALID {0} \
+###         CONFIG.PCW_CLK0_FREQ {100000000} \
+###         CONFIG.PCW_CLK1_FREQ {142857132} \
+###         CONFIG.PCW_CLK2_FREQ {10000000} \
+###         CONFIG.PCW_CLK3_FREQ {10000000} \
+###         CONFIG.PCW_CPU_CPU_6X4X_MAX_RANGE {767} \
+###         CONFIG.PCW_CPU_PERIPHERAL_CLKSRC {ARM PLL} \
+###         CONFIG.PCW_CRYSTAL_PERIPHERAL_FREQMHZ {33.333333} \
+###         CONFIG.PCW_DCI_PERIPHERAL_CLKSRC {DDR PLL} \
+###         CONFIG.PCW_DCI_PERIPHERAL_FREQMHZ {10.159} \
+###         CONFIG.PCW_DDR_HPR_TO_CRITICAL_PRIORITY_LEVEL {15} \
+###         CONFIG.PCW_DDR_LPR_TO_CRITICAL_PRIORITY_LEVEL {2} \
+###         CONFIG.PCW_DDR_PERIPHERAL_CLKSRC {DDR PLL} \
+###         CONFIG.PCW_DDR_PORT0_HPR_ENABLE {0} \
+###         CONFIG.PCW_DDR_PORT1_HPR_ENABLE {0} \
+###         CONFIG.PCW_DDR_PORT2_HPR_ENABLE {0} \
+###         CONFIG.PCW_DDR_PORT3_HPR_ENABLE {0} \
+###         CONFIG.PCW_DDR_PRIORITY_READPORT_0 {Low} \
+###         CONFIG.PCW_DDR_PRIORITY_READPORT_1 {Low} \
+###         CONFIG.PCW_DDR_PRIORITY_READPORT_2 {Low} \
+###         CONFIG.PCW_DDR_PRIORITY_READPORT_3 {Low} \
+###         CONFIG.PCW_DDR_PRIORITY_WRITEPORT_0 {Low} \
+###         CONFIG.PCW_DDR_PRIORITY_WRITEPORT_1 {Low} \
+###         CONFIG.PCW_DDR_PRIORITY_WRITEPORT_2 {Low} \
+###         CONFIG.PCW_DDR_PRIORITY_WRITEPORT_3 {Low} \
+###         CONFIG.PCW_DDR_RAM_BASEADDR {0x00100000} \
+###         CONFIG.PCW_DDR_RAM_HIGHADDR {0x3FFFFFFF} \
+###         CONFIG.PCW_DDR_WRITE_TO_CRITICAL_PRIORITY_LEVEL {2} \
+###         CONFIG.PCW_DM_WIDTH {4} \
+###         CONFIG.PCW_DQS_WIDTH {4} \
+###         CONFIG.PCW_DQ_WIDTH {32} \
+###         CONFIG.PCW_ENET0_BASEADDR {0xE000B000} \
+###         CONFIG.PCW_ENET0_ENET0_IO {MIO 16 .. 27} \
+###         CONFIG.PCW_ENET0_GRP_MDIO_ENABLE {1} \
+###         CONFIG.PCW_ENET0_GRP_MDIO_IO {MIO 52 .. 53} \
+###         CONFIG.PCW_ENET0_HIGHADDR {0xE000BFFF} \
+###         CONFIG.PCW_ENET0_PERIPHERAL_CLKSRC {IO PLL} \
+###         CONFIG.PCW_ENET0_PERIPHERAL_ENABLE {1} \
+###         CONFIG.PCW_ENET0_PERIPHERAL_FREQMHZ {1000 Mbps} \
+###         CONFIG.PCW_ENET0_RESET_ENABLE {1} \
+###         CONFIG.PCW_ENET0_RESET_IO {MIO 7} \
+###         CONFIG.PCW_ENET1_PERIPHERAL_CLKSRC {IO PLL} \
+###         CONFIG.PCW_ENET1_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_ENET_RESET_ENABLE {1} \
+###         CONFIG.PCW_ENET_RESET_POLARITY {Active Low} \
+###         CONFIG.PCW_ENET_RESET_SELECT {Share reset pin} \
+###         CONFIG.PCW_EN_4K_TIMER {0} \
+###         CONFIG.PCW_EN_CAN0 {0} \
+###         CONFIG.PCW_EN_CAN1 {0} \
+###         CONFIG.PCW_EN_CLK0_PORT {1} \
+###         CONFIG.PCW_EN_CLK1_PORT {1} \
+###         CONFIG.PCW_EN_CLK2_PORT {0} \
+###         CONFIG.PCW_EN_CLK3_PORT {0} \
+###         CONFIG.PCW_EN_CLKTRIG0_PORT {0} \
+###         CONFIG.PCW_EN_CLKTRIG1_PORT {0} \
+###         CONFIG.PCW_EN_CLKTRIG2_PORT {0} \
+###         CONFIG.PCW_EN_CLKTRIG3_PORT {0} \
+###         CONFIG.PCW_EN_DDR {1} \
+###         CONFIG.PCW_EN_EMIO_CAN0 {0} \
+###         CONFIG.PCW_EN_EMIO_CAN1 {0} \
+###         CONFIG.PCW_EN_EMIO_CD_SDIO0 {0} \
+###         CONFIG.PCW_EN_EMIO_CD_SDIO1 {0} \
+###         CONFIG.PCW_EN_EMIO_ENET0 {0} \
+###         CONFIG.PCW_EN_EMIO_ENET1 {0} \
+###         CONFIG.PCW_EN_EMIO_GPIO {0} \
+###         CONFIG.PCW_EN_EMIO_I2C0 {0} \
+###         CONFIG.PCW_EN_EMIO_I2C1 {0} \
+###         CONFIG.PCW_EN_EMIO_MODEM_UART0 {0} \
+###         CONFIG.PCW_EN_EMIO_MODEM_UART1 {0} \
+###         CONFIG.PCW_EN_EMIO_PJTAG {0} \
+###         CONFIG.PCW_EN_EMIO_SDIO0 {0} \
+###         CONFIG.PCW_EN_EMIO_SDIO1 {0} \
+###         CONFIG.PCW_EN_EMIO_SPI0 {0} \
+###         CONFIG.PCW_EN_EMIO_SPI1 {0} \
+###         CONFIG.PCW_EN_EMIO_SRAM_INT {0} \
+###         CONFIG.PCW_EN_EMIO_TRACE {0} \
+###         CONFIG.PCW_EN_EMIO_TTC0 {0} \
+###         CONFIG.PCW_EN_EMIO_TTC1 {0} \
+###         CONFIG.PCW_EN_EMIO_UART0 {0} \
+###         CONFIG.PCW_EN_EMIO_UART1 {0} \
+###         CONFIG.PCW_EN_EMIO_WDT {0} \
+###         CONFIG.PCW_EN_EMIO_WP_SDIO0 {0} \
+###         CONFIG.PCW_EN_EMIO_WP_SDIO1 {0} \
+###         CONFIG.PCW_EN_ENET0 {1} \
+###         CONFIG.PCW_EN_ENET1 {0} \
+###         CONFIG.PCW_EN_GPIO {1} \
+###         CONFIG.PCW_EN_I2C0 {0} \
+###         CONFIG.PCW_EN_I2C1 {0} \
+###         CONFIG.PCW_EN_MODEM_UART0 {0} \
+###         CONFIG.PCW_EN_MODEM_UART1 {0} \
+###         CONFIG.PCW_EN_PJTAG {0} \
+###         CONFIG.PCW_EN_PTP_ENET0 {0} \
+###         CONFIG.PCW_EN_PTP_ENET1 {0} \
+###         CONFIG.PCW_EN_QSPI {1} \
+###         CONFIG.PCW_EN_RST0_PORT {1} \
+###         CONFIG.PCW_EN_RST1_PORT {1} \
+###         CONFIG.PCW_EN_RST2_PORT {0} \
+###         CONFIG.PCW_EN_RST3_PORT {0} \
+###         CONFIG.PCW_EN_SDIO0 {1} \
+###         CONFIG.PCW_EN_SDIO1 {0} \
+###         CONFIG.PCW_EN_SMC {0} \
+###         CONFIG.PCW_EN_SPI0 {0} \
+###         CONFIG.PCW_EN_SPI1 {0} \
+###         CONFIG.PCW_EN_TRACE {0} \
+###         CONFIG.PCW_EN_TTC0 {0} \
+###         CONFIG.PCW_EN_TTC1 {0} \
+###         CONFIG.PCW_EN_UART0 {1} \
+###         CONFIG.PCW_EN_UART1 {0} \
+###         CONFIG.PCW_EN_USB0 {1} \
+###         CONFIG.PCW_EN_USB1 {0} \
+###         CONFIG.PCW_EN_WDT {0} \
+###         CONFIG.PCW_FCLK0_PERIPHERAL_CLKSRC {IO PLL} \
+###         CONFIG.PCW_FCLK2_PERIPHERAL_CLKSRC {IO PLL} \
+###         CONFIG.PCW_FCLK3_PERIPHERAL_CLKSRC {IO PLL} \
+###         CONFIG.PCW_FCLK_CLK0_BUF {TRUE} \
+###         CONFIG.PCW_FCLK_CLK1_BUF {TRUE} \
+###         CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} \
+###         CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {140} \
+###         CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {50} \
+###         CONFIG.PCW_FPGA3_PERIPHERAL_FREQMHZ {50} \
+###         CONFIG.PCW_FPGA_FCLK0_ENABLE {1} \
+###         CONFIG.PCW_FPGA_FCLK1_ENABLE {1} \
+###         CONFIG.PCW_GP0_EN_MODIFIABLE_TXN {1} \
+###         CONFIG.PCW_GP0_NUM_READ_THREADS {4} \
+###         CONFIG.PCW_GP0_NUM_WRITE_THREADS {4} \
+###         CONFIG.PCW_GP1_EN_MODIFIABLE_TXN {1} \
+###         CONFIG.PCW_GP1_NUM_READ_THREADS {4} \
+###         CONFIG.PCW_GP1_NUM_WRITE_THREADS {4} \
+###         CONFIG.PCW_GPIO_BASEADDR {0xE000A000} \
+###         CONFIG.PCW_GPIO_EMIO_GPIO_ENABLE {0} \
+###         CONFIG.PCW_GPIO_HIGHADDR {0xE000AFFF} \
+###         CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {1} \
+###         CONFIG.PCW_GPIO_MIO_GPIO_IO {MIO} \
+###         CONFIG.PCW_GPIO_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_I2C0_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_I2C1_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_I2C_RESET_ENABLE {0} \
+###         CONFIG.PCW_I2C_RESET_POLARITY {Active Low} \
+###         CONFIG.PCW_IMPORT_BOARD_PRESET {None} \
+###         CONFIG.PCW_INCLUDE_ACP_TRANS_CHECK {0} \
+###         CONFIG.PCW_IRQ_F2P_INTR {1} \
+###         CONFIG.PCW_MIO_0_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_0_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_0_SLEW {slow} \
+###         CONFIG.PCW_MIO_10_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_10_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_10_SLEW {slow} \
+###         CONFIG.PCW_MIO_11_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_11_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_11_SLEW {slow} \
+###         CONFIG.PCW_MIO_12_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_12_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_12_SLEW {slow} \
+###         CONFIG.PCW_MIO_13_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_13_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_13_SLEW {slow} \
+###         CONFIG.PCW_MIO_14_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_14_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_14_SLEW {slow} \
+###         CONFIG.PCW_MIO_15_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_15_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_15_SLEW {slow} \
+###         CONFIG.PCW_MIO_16_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_16_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_16_SLEW {slow} \
+###         CONFIG.PCW_MIO_17_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_17_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_17_SLEW {slow} \
+###         CONFIG.PCW_MIO_18_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_18_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_18_SLEW {slow} \
+###         CONFIG.PCW_MIO_19_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_19_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_19_SLEW {slow} \
+###         CONFIG.PCW_MIO_1_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_1_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_1_SLEW {slow} \
+###         CONFIG.PCW_MIO_20_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_20_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_20_SLEW {slow} \
+###         CONFIG.PCW_MIO_21_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_21_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_21_SLEW {slow} \
+###         CONFIG.PCW_MIO_22_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_22_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_22_SLEW {slow} \
+###         CONFIG.PCW_MIO_23_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_23_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_23_SLEW {slow} \
+###         CONFIG.PCW_MIO_24_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_24_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_24_SLEW {slow} \
+###         CONFIG.PCW_MIO_25_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_25_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_25_SLEW {slow} \
+###         CONFIG.PCW_MIO_26_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_26_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_26_SLEW {slow} \
+###         CONFIG.PCW_MIO_27_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_27_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_27_SLEW {slow} \
+###         CONFIG.PCW_MIO_28_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_28_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_28_SLEW {slow} \
+###         CONFIG.PCW_MIO_29_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_29_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_29_SLEW {slow} \
+###         CONFIG.PCW_MIO_2_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_2_SLEW {slow} \
+###         CONFIG.PCW_MIO_30_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_30_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_30_SLEW {slow} \
+###         CONFIG.PCW_MIO_31_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_31_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_31_SLEW {slow} \
+###         CONFIG.PCW_MIO_32_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_32_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_32_SLEW {slow} \
+###         CONFIG.PCW_MIO_33_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_33_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_33_SLEW {slow} \
+###         CONFIG.PCW_MIO_34_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_34_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_34_SLEW {slow} \
+###         CONFIG.PCW_MIO_35_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_35_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_35_SLEW {slow} \
+###         CONFIG.PCW_MIO_36_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_36_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_36_SLEW {slow} \
+###         CONFIG.PCW_MIO_37_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_37_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_37_SLEW {slow} \
+###         CONFIG.PCW_MIO_38_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_38_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_38_SLEW {slow} \
+###         CONFIG.PCW_MIO_39_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_39_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_39_SLEW {slow} \
+###         CONFIG.PCW_MIO_3_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_3_SLEW {slow} \
+###         CONFIG.PCW_MIO_40_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_40_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_40_SLEW {slow} \
+###         CONFIG.PCW_MIO_41_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_41_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_41_SLEW {slow} \
+###         CONFIG.PCW_MIO_42_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_42_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_42_SLEW {slow} \
+###         CONFIG.PCW_MIO_43_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_43_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_43_SLEW {slow} \
+###         CONFIG.PCW_MIO_44_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_44_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_44_SLEW {slow} \
+###         CONFIG.PCW_MIO_45_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_45_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_45_SLEW {slow} \
+###         CONFIG.PCW_MIO_46_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_46_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_46_SLEW {slow} \
+###         CONFIG.PCW_MIO_47_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_47_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_47_SLEW {slow} \
+###         CONFIG.PCW_MIO_48_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_48_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_48_SLEW {slow} \
+###         CONFIG.PCW_MIO_49_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_49_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_49_SLEW {slow} \
+###         CONFIG.PCW_MIO_4_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_4_SLEW {slow} \
+###         CONFIG.PCW_MIO_50_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_50_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_50_SLEW {slow} \
+###         CONFIG.PCW_MIO_51_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_51_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_51_SLEW {slow} \
+###         CONFIG.PCW_MIO_52_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_52_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_52_SLEW {slow} \
+###         CONFIG.PCW_MIO_53_IOTYPE {LVCMOS 1.8V} \
+###         CONFIG.PCW_MIO_53_PULLUP {disabled} \
+###         CONFIG.PCW_MIO_53_SLEW {slow} \
+###         CONFIG.PCW_MIO_5_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_5_SLEW {slow} \
+###         CONFIG.PCW_MIO_6_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_6_SLEW {slow} \
+###         CONFIG.PCW_MIO_7_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_7_SLEW {slow} \
+###         CONFIG.PCW_MIO_8_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_8_SLEW {slow} \
+###         CONFIG.PCW_MIO_9_IOTYPE {LVCMOS 3.3V} \
+###         CONFIG.PCW_MIO_9_PULLUP {enabled} \
+###         CONFIG.PCW_MIO_9_SLEW {slow} \
+###         CONFIG.PCW_MIO_PRIMITIVE {54} \
+###         CONFIG.PCW_MIO_TREE_PERIPHERALS {GPIO#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#ENET Reset#USB Reset#GPIO#GPIO#GPIO#GPIO#GPIO#UART 0#UART 0#Enet 0#Enet\
+###         0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#Enet\
+###         0#Enet 0} \
+###         CONFIG.PCW_MIO_TREE_SIGNALS {gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]/HOLD_B#qspi0_sclk#reset#reset#gpio[9]#gpio[10]#gpio[11]#gpio[12]#gpio[13]#rx#tx#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#gpio[46]#gpio[47]#gpio[48]#gpio[49]#gpio[50]#gpio[51]#mdc#mdio}\
+###         \
+###         CONFIG.PCW_M_AXI_GP0_ENABLE_STATIC_REMAP {0} \
+###         CONFIG.PCW_M_AXI_GP0_ID_WIDTH {12} \
+###         CONFIG.PCW_M_AXI_GP0_SUPPORT_NARROW_BURST {0} \
+###         CONFIG.PCW_M_AXI_GP0_THREAD_ID_WIDTH {12} \
+###         CONFIG.PCW_NAND_CYCLES_T_AR {1} \
+###         CONFIG.PCW_NAND_CYCLES_T_CLR {1} \
+###         CONFIG.PCW_NAND_CYCLES_T_RC {11} \
+###         CONFIG.PCW_NAND_CYCLES_T_REA {1} \
+###         CONFIG.PCW_NAND_CYCLES_T_RR {1} \
+###         CONFIG.PCW_NAND_CYCLES_T_WC {11} \
+###         CONFIG.PCW_NAND_CYCLES_T_WP {1} \
+###         CONFIG.PCW_NOR_CS0_T_CEOE {1} \
+###         CONFIG.PCW_NOR_CS0_T_PC {1} \
+###         CONFIG.PCW_NOR_CS0_T_RC {11} \
+###         CONFIG.PCW_NOR_CS0_T_TR {1} \
+###         CONFIG.PCW_NOR_CS0_T_WC {11} \
+###         CONFIG.PCW_NOR_CS0_T_WP {1} \
+###         CONFIG.PCW_NOR_CS0_WE_TIME {0} \
+###         CONFIG.PCW_NOR_CS1_T_CEOE {1} \
+###         CONFIG.PCW_NOR_CS1_T_PC {1} \
+###         CONFIG.PCW_NOR_CS1_T_RC {11} \
+###         CONFIG.PCW_NOR_CS1_T_TR {1} \
+###         CONFIG.PCW_NOR_CS1_T_WC {11} \
+###         CONFIG.PCW_NOR_CS1_T_WP {1} \
+###         CONFIG.PCW_NOR_CS1_WE_TIME {0} \
+###         CONFIG.PCW_NOR_SRAM_CS0_T_CEOE {1} \
+###         CONFIG.PCW_NOR_SRAM_CS0_T_PC {1} \
+###         CONFIG.PCW_NOR_SRAM_CS0_T_RC {11} \
+###         CONFIG.PCW_NOR_SRAM_CS0_T_TR {1} \
+###         CONFIG.PCW_NOR_SRAM_CS0_T_WC {11} \
+###         CONFIG.PCW_NOR_SRAM_CS0_T_WP {1} \
+###         CONFIG.PCW_NOR_SRAM_CS0_WE_TIME {0} \
+###         CONFIG.PCW_NOR_SRAM_CS1_T_CEOE {1} \
+###         CONFIG.PCW_NOR_SRAM_CS1_T_PC {1} \
+###         CONFIG.PCW_NOR_SRAM_CS1_T_RC {11} \
+###         CONFIG.PCW_NOR_SRAM_CS1_T_TR {1} \
+###         CONFIG.PCW_NOR_SRAM_CS1_T_WC {11} \
+###         CONFIG.PCW_NOR_SRAM_CS1_T_WP {1} \
+###         CONFIG.PCW_NOR_SRAM_CS1_WE_TIME {0} \
+###         CONFIG.PCW_OVERRIDE_BASIC_CLOCK {0} \
+###         CONFIG.PCW_PACKAGE_DDR_BOARD_DELAY0 {0.075} \
+###         CONFIG.PCW_PACKAGE_DDR_BOARD_DELAY1 {0.070} \
+###         CONFIG.PCW_PACKAGE_DDR_BOARD_DELAY2 {0.077} \
+###         CONFIG.PCW_PACKAGE_DDR_BOARD_DELAY3 {0.094} \
+###         CONFIG.PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_0 {-0.000} \
+###         CONFIG.PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_1 {-0.001} \
+###         CONFIG.PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_2 {0.004} \
+###         CONFIG.PCW_PACKAGE_DDR_DQS_TO_CLK_DELAY_3 {-0.035} \
+###         CONFIG.PCW_PACKAGE_NAME {clg485} \
+###         CONFIG.PCW_PCAP_PERIPHERAL_CLKSRC {IO PLL} \
+###         CONFIG.PCW_PCAP_PERIPHERAL_FREQMHZ {200} \
+###         CONFIG.PCW_PERIPHERAL_BOARD_PRESET {None} \
+###         CONFIG.PCW_PJTAG_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_PLL_BYPASSMODE_ENABLE {0} \
+###         CONFIG.PCW_PRESET_BANK0_VOLTAGE {LVCMOS 3.3V} \
+###         CONFIG.PCW_PRESET_BANK1_VOLTAGE {LVCMOS 1.8V} \
+###         CONFIG.PCW_PS7_SI_REV {PRODUCTION} \
+###         CONFIG.PCW_QSPI_GRP_FBCLK_ENABLE {0} \
+###         CONFIG.PCW_QSPI_GRP_IO1_ENABLE {0} \
+###         CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} \
+###         CONFIG.PCW_QSPI_GRP_SINGLE_SS_IO {MIO 1 .. 6} \
+###         CONFIG.PCW_QSPI_GRP_SS1_ENABLE {0} \
+###         CONFIG.PCW_QSPI_INTERNAL_HIGHADDRESS {0xFCFFFFFF} \
+###         CONFIG.PCW_QSPI_PERIPHERAL_CLKSRC {IO PLL} \
+###         CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {1} \
+###         CONFIG.PCW_QSPI_PERIPHERAL_FREQMHZ {200} \
+###         CONFIG.PCW_QSPI_QSPI_IO {MIO 1 .. 6} \
+###         CONFIG.PCW_SD0_GRP_CD_ENABLE {0} \
+###         CONFIG.PCW_SD0_GRP_POW_ENABLE {0} \
+###         CONFIG.PCW_SD0_GRP_WP_ENABLE {0} \
+###         CONFIG.PCW_SD0_PERIPHERAL_ENABLE {1} \
+###         CONFIG.PCW_SD0_SD0_IO {MIO 40 .. 45} \
+###         CONFIG.PCW_SD1_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_SDIO0_BASEADDR {0xE0100000} \
+###         CONFIG.PCW_SDIO0_HIGHADDR {0xE0100FFF} \
+###         CONFIG.PCW_SDIO_PERIPHERAL_CLKSRC {IO PLL} \
+###         CONFIG.PCW_SDIO_PERIPHERAL_FREQMHZ {100} \
+###         CONFIG.PCW_SDIO_PERIPHERAL_VALID {1} \
+###         CONFIG.PCW_SINGLE_QSPI_DATA_MODE {x4} \
+###         CONFIG.PCW_SMC_CYCLE_T0 {NA} \
+###         CONFIG.PCW_SMC_CYCLE_T1 {NA} \
+###         CONFIG.PCW_SMC_CYCLE_T2 {NA} \
+###         CONFIG.PCW_SMC_CYCLE_T3 {NA} \
+###         CONFIG.PCW_SMC_CYCLE_T4 {NA} \
+###         CONFIG.PCW_SMC_CYCLE_T5 {NA} \
+###         CONFIG.PCW_SMC_CYCLE_T6 {NA} \
+###         CONFIG.PCW_SMC_PERIPHERAL_CLKSRC {IO PLL} \
+###         CONFIG.PCW_SMC_PERIPHERAL_VALID {0} \
+###         CONFIG.PCW_SPI0_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_SPI1_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_SPI_PERIPHERAL_CLKSRC {IO PLL} \
+###         CONFIG.PCW_SPI_PERIPHERAL_VALID {0} \
+###         CONFIG.PCW_S_AXI_HP0_DATA_WIDTH {64} \
+###         CONFIG.PCW_S_AXI_HP0_ID_WIDTH {6} \
+###         CONFIG.PCW_TPIU_PERIPHERAL_CLKSRC {External} \
+###         CONFIG.PCW_TRACE_INTERNAL_WIDTH {2} \
+###         CONFIG.PCW_TRACE_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_TTC0_CLK0_PERIPHERAL_CLKSRC {CPU_1X} \
+###         CONFIG.PCW_TTC0_CLK0_PERIPHERAL_DIVISOR0 {1} \
+###         CONFIG.PCW_TTC0_CLK1_PERIPHERAL_CLKSRC {CPU_1X} \
+###         CONFIG.PCW_TTC0_CLK1_PERIPHERAL_DIVISOR0 {1} \
+###         CONFIG.PCW_TTC0_CLK2_PERIPHERAL_CLKSRC {CPU_1X} \
+###         CONFIG.PCW_TTC0_CLK2_PERIPHERAL_DIVISOR0 {1} \
+###         CONFIG.PCW_TTC0_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_TTC1_CLK0_PERIPHERAL_CLKSRC {CPU_1X} \
+###         CONFIG.PCW_TTC1_CLK0_PERIPHERAL_DIVISOR0 {1} \
+###         CONFIG.PCW_TTC1_CLK1_PERIPHERAL_CLKSRC {CPU_1X} \
+###         CONFIG.PCW_TTC1_CLK1_PERIPHERAL_DIVISOR0 {1} \
+###         CONFIG.PCW_TTC1_CLK2_PERIPHERAL_CLKSRC {CPU_1X} \
+###         CONFIG.PCW_TTC1_CLK2_PERIPHERAL_DIVISOR0 {1} \
+###         CONFIG.PCW_TTC1_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_UART0_BASEADDR {0xE0000000} \
+###         CONFIG.PCW_UART0_BAUD_RATE {115200} \
+###         CONFIG.PCW_UART0_GRP_FULL_ENABLE {0} \
+###         CONFIG.PCW_UART0_HIGHADDR {0xE0000FFF} \
+###         CONFIG.PCW_UART0_PERIPHERAL_ENABLE {1} \
+###         CONFIG.PCW_UART0_UART0_IO {MIO 14 .. 15} \
+###         CONFIG.PCW_UART1_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_UART_PERIPHERAL_CLKSRC {IO PLL} \
+###         CONFIG.PCW_UART_PERIPHERAL_FREQMHZ {100} \
+###         CONFIG.PCW_UART_PERIPHERAL_VALID {1} \
+###         CONFIG.PCW_UIPARAM_ACT_DDR_FREQ_MHZ {533.333374} \
+###         CONFIG.PCW_UIPARAM_DDR_ADV_ENABLE {1} \
+###         CONFIG.PCW_UIPARAM_DDR_AL {0} \
+###         CONFIG.PCW_UIPARAM_DDR_BANK_ADDR_COUNT {3} \
+###         CONFIG.PCW_UIPARAM_DDR_BL {8} \
+###         CONFIG.PCW_UIPARAM_DDR_BOARD_DELAY0 {0.075} \
+###         CONFIG.PCW_UIPARAM_DDR_BOARD_DELAY1 {0.070} \
+###         CONFIG.PCW_UIPARAM_DDR_BOARD_DELAY2 {0.077} \
+###         CONFIG.PCW_UIPARAM_DDR_BOARD_DELAY3 {0.094} \
+###         CONFIG.PCW_UIPARAM_DDR_BUS_WIDTH {32 Bit} \
+###         CONFIG.PCW_UIPARAM_DDR_CL {7} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_0_LENGTH_MM {0} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_0_PACKAGE_LENGTH {76.428} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_0_PROPOGATION_DELAY {160} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_1_LENGTH_MM {0} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_1_PACKAGE_LENGTH {76.428} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_1_PROPOGATION_DELAY {160} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_2_LENGTH_MM {0} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_2_PACKAGE_LENGTH {76.428} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_2_PROPOGATION_DELAY {160} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_3_LENGTH_MM {0} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_3_PACKAGE_LENGTH {76.428} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_3_PROPOGATION_DELAY {160} \
+###         CONFIG.PCW_UIPARAM_DDR_CLOCK_STOP_EN {0} \
+###         CONFIG.PCW_UIPARAM_DDR_COL_ADDR_COUNT {10} \
+###         CONFIG.PCW_UIPARAM_DDR_CWL {6} \
+###         CONFIG.PCW_UIPARAM_DDR_DEVICE_CAPACITY {4096 MBits} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_0_LENGTH_MM {0} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_0_PACKAGE_LENGTH {76.687} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_0_PROPOGATION_DELAY {160} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_1_LENGTH_MM {0} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_1_PACKAGE_LENGTH {77.8025} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_1_PROPOGATION_DELAY {160} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_2_LENGTH_MM {0} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_2_PACKAGE_LENGTH {72.8405} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_2_PROPOGATION_DELAY {160} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_3_LENGTH_MM {0} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_3_PACKAGE_LENGTH {111.904} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_3_PROPOGATION_DELAY {160} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 {0.0} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 {0.0} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 {0.0} \
+###         CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 {0.0} \
+###         CONFIG.PCW_UIPARAM_DDR_DQ_0_LENGTH_MM {0} \
+###         CONFIG.PCW_UIPARAM_DDR_DQ_0_PACKAGE_LENGTH {73.119} \
+###         CONFIG.PCW_UIPARAM_DDR_DQ_0_PROPOGATION_DELAY {160} \
+###         CONFIG.PCW_UIPARAM_DDR_DQ_1_LENGTH_MM {0} \
+###         CONFIG.PCW_UIPARAM_DDR_DQ_1_PACKAGE_LENGTH {63.8935} \
+###         CONFIG.PCW_UIPARAM_DDR_DQ_1_PROPOGATION_DELAY {160} \
+###         CONFIG.PCW_UIPARAM_DDR_DQ_2_LENGTH_MM {0} \
+###         CONFIG.PCW_UIPARAM_DDR_DQ_2_PACKAGE_LENGTH {77.045} \
+###         CONFIG.PCW_UIPARAM_DDR_DQ_2_PROPOGATION_DELAY {160} \
+###         CONFIG.PCW_UIPARAM_DDR_DQ_3_LENGTH_MM {0} \
+###         CONFIG.PCW_UIPARAM_DDR_DQ_3_PACKAGE_LENGTH {111.903} \
+###         CONFIG.PCW_UIPARAM_DDR_DQ_3_PROPOGATION_DELAY {160} \
+###         CONFIG.PCW_UIPARAM_DDR_DRAM_WIDTH {16 Bits} \
+###         CONFIG.PCW_UIPARAM_DDR_ENABLE {1} \
+###         CONFIG.PCW_UIPARAM_DDR_FREQ_MHZ {533.333333} \
+###         CONFIG.PCW_UIPARAM_DDR_HIGH_TEMP {Normal (0-85)} \
+###         CONFIG.PCW_UIPARAM_DDR_MEMORY_TYPE {DDR 3 (Low Voltage)} \
+###         CONFIG.PCW_UIPARAM_DDR_PARTNO {Custom} \
+###         CONFIG.PCW_UIPARAM_DDR_ROW_ADDR_COUNT {15} \
+###         CONFIG.PCW_UIPARAM_DDR_SPEED_BIN {DDR3_1066F} \
+###         CONFIG.PCW_UIPARAM_DDR_TRAIN_DATA_EYE {1} \
+###         CONFIG.PCW_UIPARAM_DDR_TRAIN_READ_GATE {1} \
+###         CONFIG.PCW_UIPARAM_DDR_TRAIN_WRITE_LEVEL {1} \
+###         CONFIG.PCW_UIPARAM_DDR_T_FAW {50.625} \
+###         CONFIG.PCW_UIPARAM_DDR_T_RAS_MIN {37.5} \
+###         CONFIG.PCW_UIPARAM_DDR_T_RC {50.625} \
+###         CONFIG.PCW_UIPARAM_DDR_T_RCD {7} \
+###         CONFIG.PCW_UIPARAM_DDR_T_RP {7} \
+###         CONFIG.PCW_UIPARAM_DDR_USE_INTERNAL_VREF {0} \
+###         CONFIG.PCW_UIPARAM_GENERATE_SUMMARY {NA} \
+###         CONFIG.PCW_USB0_BASEADDR {0xE0102000} \
+###         CONFIG.PCW_USB0_HIGHADDR {0xE0102fff} \
+###         CONFIG.PCW_USB0_PERIPHERAL_ENABLE {1} \
+###         CONFIG.PCW_USB0_RESET_ENABLE {1} \
+###         CONFIG.PCW_USB0_RESET_IO {MIO 8} \
+###         CONFIG.PCW_USB0_USB0_IO {MIO 28 .. 39} \
+###         CONFIG.PCW_USB1_PERIPHERAL_ENABLE {0} \
+###         CONFIG.PCW_USB_RESET_ENABLE {1} \
+###         CONFIG.PCW_USB_RESET_POLARITY {Active Low} \
+###         CONFIG.PCW_USB_RESET_SELECT {Share reset pin} \
+###         CONFIG.PCW_USE_AXI_FABRIC_IDLE {0} \
+###         CONFIG.PCW_USE_AXI_NONSECURE {0} \
+###         CONFIG.PCW_USE_CORESIGHT {0} \
+###         CONFIG.PCW_USE_CROSS_TRIGGER {0} \
+###         CONFIG.PCW_USE_CR_FABRIC {1} \
+###         CONFIG.PCW_USE_DDR_BYPASS {0} \
+###         CONFIG.PCW_USE_DEBUG {0} \
+###         CONFIG.PCW_USE_DMA0 {0} \
+###         CONFIG.PCW_USE_DMA1 {0} \
+###         CONFIG.PCW_USE_DMA2 {0} \
+###         CONFIG.PCW_USE_DMA3 {0} \
+###         CONFIG.PCW_USE_EXPANDED_IOP {0} \
+###         CONFIG.PCW_USE_FABRIC_INTERRUPT {1} \
+###         CONFIG.PCW_USE_HIGH_OCM {0} \
+###         CONFIG.PCW_USE_M_AXI_GP0 {1} \
+###         CONFIG.PCW_USE_M_AXI_GP1 {0} \
+###         CONFIG.PCW_USE_PROC_EVENT_BUS {0} \
+###         CONFIG.PCW_USE_PS_SLCR_REGISTERS {0} \
+###         CONFIG.PCW_USE_S_AXI_ACP {0} \
+###         CONFIG.PCW_USE_S_AXI_GP0 {0} \
+###         CONFIG.PCW_USE_S_AXI_GP1 {0} \
+###         CONFIG.PCW_USE_S_AXI_HP0 {1} \
+###         CONFIG.PCW_USE_S_AXI_HP1 {0} \
+###         CONFIG.PCW_USE_S_AXI_HP2 {1} \
+###         CONFIG.PCW_USE_S_AXI_HP3 {0} \
+###         CONFIG.PCW_USE_TRACE {0} \
+###         CONFIG.PCW_VALUE_SILVERSION {3} \
+###         CONFIG.PCW_WDT_PERIPHERAL_CLKSRC {CPU_1X} \
+###         CONFIG.PCW_WDT_PERIPHERAL_DIVISOR0 {1} \
+###         CONFIG.PCW_WDT_PERIPHERAL_ENABLE {0} \
+###     ]
+### }
+## proc create_z7015_rx_bd {design_name {opts {}}} {
+##     ::bdu::begin z7015_rx "create_z7015_rx_bd $design_name $opts  [clock format [clock seconds]]"
+##     array set o {bc_out 0 h_beats 640 v_lines 720 prbs_frame 256}
+##     array set o $opts
+## 
+##     create_bd_design $design_name
+##     current_bd_design $design_name
+## 
+##     ::bdu::stage ports {
+##         create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 DDR
+##         create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO
+##         create_bd_intf_port -mode Slave  -vlnv xilinx.com:interface:diff_clock_rtl:1.0 PCIE0_REFCLK
+##         set_property CONFIG.FREQ_HZ 100000000 [get_bd_intf_ports /PCIE0_REFCLK]
+##         create_bd_intf_port -mode Slave  -vlnv xilinx.com:interface:diff_clock_rtl:1.0 GT_REFCLK
+##         set_property CONFIG.FREQ_HZ 125000000 [get_bd_intf_ports /GT_REFCLK]
+##         create_bd_intf_port -mode Master -vlnv xilinx.com:interface:pcie_7x_mgt_rtl:1.0 pcie_7x_mgt_rtl_0
+##         create_bd_port -dir I -from 0 -to 0 gt_rxp
+##         create_bd_port -dir I -from 0 -to 0 gt_rxn
+##         create_bd_port -dir I -type clk -freq_hz 50000000 clk_50m
+##         create_bd_port -dir O -from 0 -to 0 SFP1_TXDISABLE
+##         create_bd_port -dir O -from 0 -to 0 SFP2_TXDISABLE
+##         create_bd_port -dir I PCIE0_PERSTN
+##         if {$o(bc_out)} { create_bd_port -dir O BC_LINK_OK }
+##     }
+## 
+##     ::bdu::stage ps7 {
+##         ::bdu::ip ps7 $::Z7RX_PS7_VLNV [z7015_ps7_config]
+##         ::bdu::ip rst_axi  xilinx.com:ip:proc_sys_reset:5.0
+##         ::bdu::ip rst_axi1 xilinx.com:ip:proc_sys_reset:5.0
+##     }
+## 
+##     ::bdu::stage dma_path {
+##         ::bdu::ip axi_dma_0 xilinx.com:ip:axi_dma:7.1 {
+##             CONFIG.c_include_mm2s {0} CONFIG.c_include_s2mm {1} CONFIG.c_include_sg {0}
+##             CONFIG.c_addr_width {32} CONFIG.c_sg_length_width {24}
+##             CONFIG.c_m_axi_s2mm_data_width {64} CONFIG.c_s2mm_burst_size {64}
+##             CONFIG.c_s_axis_s2mm_tdata_width {32}
+##         }
+##         ::bdu::ip axi_gpio_link xilinx.com:ip:axi_gpio:2.0 {
+##             CONFIG.C_IS_DUAL {1} CONFIG.C_ALL_INPUTS {1} CONFIG.C_GPIO_WIDTH {32}
+##             CONFIG.C_ALL_OUTPUTS_2 {1} CONFIG.C_GPIO2_WIDTH {32} CONFIG.C_DOUT_DEFAULT_2 {0x00000001}
+##         }
+##         ::bdu::ip sc_ctrl xilinx.com:ip:smartconnect:1.0 {CONFIG.NUM_SI {1} CONFIG.NUM_MI {2}}
+##         ::bdu::ip sc_mem  xilinx.com:ip:smartconnect:1.0 {CONFIG.NUM_SI {1} CONFIG.NUM_MI {1}}
+##         ::bdu::ip irq_concat xilinx.com:ip:xlconcat:2.1 {CONFIG.NUM_PORTS {2}}
+##         ::bdu::ip fifo_rx xilinx.com:ip:axis_data_fifo:2.0 {CONFIG.FIFO_DEPTH {4096} CONFIG.IS_ACLK_ASYNC {1}}
+##         ::bdu::mod depkt_0 line_depacketizer [list CONFIG.H_BEATS $o(h_beats) CONFIG.V_LINES $o(v_lines) CONFIG.TLAST_PER_LINE 0]
+##         ::bdu::mod prbs_check_0 prbs_check [list CONFIG.FRAME_WORDS $o(prbs_frame)]
+##         # RETRY_TMO=0 : the RX core retries by itself (its gt_common_reset_out now reaches PLL1);
+##         # a restart is only useful on the TX side (link_retrain on the ZCU104).
+##         ::bdu::mod link_ctrl_0 link_ctrl {CONFIG.EMULATED {0} CONFIG.RETRY_TMO {0}}
+##         ::bdu::ip vio_link xilinx.com:ip:vio:3.0 {
+##             CONFIG.C_EN_PROBE_IN_ACTIVITY {0}
+##             CONFIG.C_NUM_PROBE_IN {6}  CONFIG.C_NUM_PROBE_OUT {6}
+##             CONFIG.C_PROBE_IN0_WIDTH {32} CONFIG.C_PROBE_IN1_WIDTH {1} CONFIG.C_PROBE_IN2_WIDTH {32}
+##             CONFIG.C_PROBE_IN3_WIDTH {32} CONFIG.C_PROBE_IN4_WIDTH {32} CONFIG.C_PROBE_IN5_WIDTH {16}
+##             CONFIG.C_PROBE_OUT0_WIDTH {1} CONFIG.C_PROBE_OUT0_INIT_VAL {0x1}
+##             CONFIG.C_PROBE_OUT1_WIDTH {1} CONFIG.C_PROBE_OUT1_INIT_VAL {0x1}
+##             CONFIG.C_PROBE_OUT2_WIDTH {3} CONFIG.C_PROBE_OUT2_INIT_VAL {0x0}
+##             CONFIG.C_PROBE_OUT3_WIDTH {1} CONFIG.C_PROBE_OUT3_INIT_VAL {0x0}
+##             CONFIG.C_PROBE_OUT4_WIDTH {1} CONFIG.C_PROBE_OUT4_INIT_VAL {0x0}
+##             CONFIG.C_PROBE_OUT5_WIDTH {1} CONFIG.C_PROBE_OUT5_INIT_VAL {0x0}
+##         }
+##     }
+## 
+##     ::bdu::stage aurora_rx {
+##         create_bd_cell -type ip -vlnv [::bdu::vlnv xilinx.com:ip:aurora_8b10b:11.1] aurora_rx
+##         # lane move X0Y0 -> X0Y1 (C_GT_LOC_2) must be one set_property -dict (as the current BD)
+##         ::aurora_link::apply [get_bd_cells /aurora_rx] \
+##             {Dataflow_Config RX-only_Simplex SupportLevel 0} \
+##             [list {C_GT_CLOCK_1 GTPQ0 C_GT_LOC_1 X C_GT_LOC_2 1 C_GT_LOC_3 X C_GT_LOC_4 X
+##                    C_REFCLK_FREQUENCY 125.000 DRP_FREQ 62.5}]
+##         ::bdu::log "aurora_rx : [::aurora_link::signature [get_bd_cells /aurora_rx]]"
+##         ::bdu::mod rx_support aurora_rx_support
+##         ::bdu::mod gt_common  gtp_common_shared
+##         # aurora_8b10b declares user_clk / sync_clk as 156.25 MHz in BD metadata: follow it
+##         ::bdu::follow_freq aurora_rx/user_clk rx_support/user_clk
+##         ::bdu::follow_freq aurora_rx/sync_clk rx_support/sync_clk
+##     }
+## 
+##     ::bdu::stage clocks_pcie {
+##         # clk_50m (Y14) -> 62.5 MHz init_clk : same values as the current BD (input freq propagates)
+##         ::bdu::ip clk_wiz_0 xilinx.com:ip:clk_wiz:6.0 {
+##             CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT1_JITTER {181.275}
+##             CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {62.5} CONFIG.MMCM_CLKOUT0_DIVIDE_F {16.000}
+##             CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin}
+##             CONFIG.USE_LOCKED {false} CONFIG.USE_PHASE_ALIGNMENT {false} CONFIG.USE_RESET {false}
+##         }
+##         ::bdu::ip util_ds_buf_0 xilinx.com:ip:util_ds_buf:2.2 {CONFIG.C_BUF_TYPE {IBUFDSGTE}}
+##         ::bdu::ip util_ds_buf_1 xilinx.com:ip:util_ds_buf:2.2 {CONFIG.C_BUF_TYPE {IBUFDSGTE}}
+##         # XDMA : current BD settings + external (shared) GT_COMMON
+##         create_bd_cell -type ip -vlnv [::bdu::vlnv xilinx.com:ip:xdma:4.2] xdma_0
+##         set xcfg {
+##             mode_selection Advanced
+##             axilite_master_en true  axilite_master_scale Kilobytes  axilite_master_size 4
+##             axisten_freq 125  pf0_interrupt_pin NONE  pf0_msi_enabled false  pf0_msix_enabled true
+##             xdma_axi_intf_mm AXI_Memory_Mapped
+##             Shared_Logic_Gtc_7xG2 true
+##         }
+##         set bad [::aurora_link::set_cfg [get_bd_cells /xdma_0] $xcfg]
+##         if {[llength $bad]} { error "xdma_0 did not accept: $bad" }
+##         ::bdu::ip axi_interconnect_0 xilinx.com:ip:axi_interconnect:2.1 {CONFIG.NUM_MI {1} CONFIG.S00_HAS_DATA_FIFO {2}}
+##         ::bdu::ip axi_bram_ctrl_0 xilinx.com:ip:axi_bram_ctrl:4.1 {CONFIG.PROTOCOL {AXI4LITE} CONFIG.SINGLE_PORT_BRAM {1}}
+##         ::bdu::ip blk_mem_gen_0 xilinx.com:ip:blk_mem_gen:8.4
+##         ::bdu::ip proc_sys_reset_0 xilinx.com:ip:proc_sys_reset:5.0
+##     }
+## 
+##     ::bdu::stage constants {
+##         ::bdu::const c_zero    1 0
+##         ::bdu::const c_one     1 1
+##         ::bdu::const c_zero8   8 0
+##         ::bdu::const lb_off    3 0
+##         ::bdu::const c_drpaddr 9 0
+##         ::bdu::const c_drpdi  16 0
+##     }
+## 
+##     ::bdu::stage connect_axi {
+##         ::bdu::inet ps7_DDR       ps7/DDR      DDR
+##         ::bdu::inet ps7_FIXED_IO  ps7/FIXED_IO FIXED_IO
+##         ::bdu::inet ps7_M_AXI_GP0 ps7/M_AXI_GP0 sc_ctrl/S00_AXI
+##         ::bdu::inet sc_ctrl_M00   sc_ctrl/M00_AXI axi_dma_0/S_AXI_LITE
+##         ::bdu::inet sc_ctrl_M01   sc_ctrl/M01_AXI axi_gpio_link/S_AXI
+##         ::bdu::inet dma_s2mm      axi_dma_0/M_AXI_S2MM sc_mem/S00_AXI
+##         ::bdu::inet sc_mem_M00    sc_mem/M00_AXI ps7/S_AXI_HP0
+##         ::bdu::inet aurora_rx_data aurora_rx/USER_DATA_M_AXI_RX prbs_check_0/s_axis
+##         ::bdu::inet prbs_check_m  prbs_check_0/m_axis depkt_0/s_axis
+##         ::bdu::inet depkt_m       depkt_0/m_axis fifo_rx/S_AXIS
+##         ::bdu::inet fifo_rx_m     fifo_rx/M_AXIS axi_dma_0/S_AXIS_S2MM
+##         ::bdu::inet PCIE0_REFCLK_1 PCIE0_REFCLK util_ds_buf_0/CLK_IN_D
+##         ::bdu::inet GT_REFCLK_1   GT_REFCLK util_ds_buf_1/CLK_IN_D
+##         ::bdu::inet xdma_pcie_mgt xdma_0/pcie_mgt pcie_7x_mgt_rtl_0
+##         ::bdu::inet xdma_M_AXI    xdma_0/M_AXI axi_interconnect_0/S00_AXI
+##         ::bdu::inet axi_ic_M00    axi_interconnect_0/M00_AXI ps7/S_AXI_HP2
+##         ::bdu::inet xdma_M_AXI_LITE xdma_0/M_AXI_LITE axi_bram_ctrl_0/S_AXI
+##         ::bdu::inet bram_porta    axi_bram_ctrl_0/BRAM_PORTA blk_mem_gen_0/BRAM_PORTA
+##     }
+## 
+##     ::bdu::stage connect_clk_rst {
+##         ::bdu::net fclk0 ps7/FCLK_CLK0 \
+##             ps7/M_AXI_GP0_ACLK ps7/S_AXI_HP0_ACLK rst_axi/slowest_sync_clk \
+##             axi_dma_0/m_axi_s2mm_aclk axi_dma_0/s_axi_lite_aclk axi_gpio_link/s_axi_aclk \
+##             sc_ctrl/aclk sc_mem/aclk fifo_rx/m_axis_aclk link_ctrl_0/axi_aclk
+##         ::bdu::net fclk1 ps7/FCLK_CLK1 \
+##             ps7/S_AXI_HP2_ACLK rst_axi1/slowest_sync_clk axi_interconnect_0/ACLK axi_interconnect_0/M00_ACLK
+##         ::bdu::net fclk_reset0_n ps7/FCLK_RESET0_N rst_axi/ext_reset_in
+##         ::bdu::net fclk_reset1_n ps7/FCLK_RESET1_N rst_axi1/ext_reset_in
+##         ::bdu::net rst_axi_ic_aresetn rst_axi/interconnect_aresetn sc_ctrl/aresetn sc_mem/aresetn
+##         ::bdu::net rst_axi_periph_aresetn rst_axi/peripheral_aresetn \
+##             axi_dma_0/axi_resetn axi_gpio_link/s_axi_aresetn link_ctrl_0/axi_aresetn
+##         ::bdu::net rst_axi1_ic_aresetn rst_axi1/interconnect_aresetn axi_interconnect_0/ARESETN
+##         ::bdu::net rst_axi1_periph_aresetn rst_axi1/peripheral_aresetn axi_interconnect_0/M00_ARESETN
+##         ::bdu::net xdma_axi_aclk xdma_0/axi_aclk \
+##             proc_sys_reset_0/slowest_sync_clk axi_bram_ctrl_0/s_axi_aclk axi_interconnect_0/S00_ACLK
+##         ::bdu::net xdma_axi_aresetn xdma_0/axi_aresetn proc_sys_reset_0/ext_reset_in
+##         ::bdu::net xdma_periph_aresetn proc_sys_reset_0/peripheral_aresetn \
+##             axi_bram_ctrl_0/s_axi_aresetn axi_interconnect_0/S00_ARESETN
+##         ::bdu::net PCIE0_PERSTN_1 PCIE0_PERSTN xdma_0/sys_rst_n
+##         ::bdu::net clk_50m_1 clk_50m clk_wiz_0/clk_in1
+##         ::bdu::net init_clk clk_wiz_0/clk_out1 \
+##             gt_common/init_clk rx_support/init_clk aurora_rx/init_clk_in aurora_rx/drpclk_in \
+##             link_ctrl_0/init_clk vio_link/clk prbs_check_0/stat_clk
+##         ::bdu::net pcie_refclk util_ds_buf_0/IBUF_OUT xdma_0/sys_clk gt_common/pcie_refclk
+##         ::bdu::net aurora_refclk util_ds_buf_1/IBUF_OUT gt_common/aurora_refclk aurora_rx/gt_refclk1
+##     }
+## 
+##     ::bdu::stage connect_gt_common {
+##         # XDMA <-> shared GT_COMMON (PLL0)
+##         foreach p {qpll_qplld qpll_qpllreset qpll_drp_clk qpll_drp_rst_n qpll_drp_ovrd qpll_drp_gen3 qpll_drp_start} {
+##             ::bdu::net xdma_$p xdma_0/$p gt_common/$p
+##         }
+##         foreach p {qpll_drp_crscode qpll_drp_fsm qpll_drp_done qpll_drp_reset qpll_qplllock qpll_qplloutclk qpll_qplloutrefclk} {
+##             ::bdu::net gtc_$p gt_common/$p xdma_0/$p
+##         }
+##         # Aurora RX <-> shared GT_COMMON (PLL1; channel switched to PLL1 by the impl ECO)
+##         ::bdu::net au_gt_common_reset aurora_rx/gt_common_reset_out gt_common/aurora_pll_reset
+##         ::bdu::net au_pll1_lock     gt_common/aurora_pll_lock   aurora_rx/quad1_common_lock_in
+##         ::bdu::net au_pll1_refclklost gt_common/aurora_refclklost aurora_rx/gt0_pll0refclklost_in
+##         ::bdu::net gtc_pll0_outclk    gt_common/pll0_outclk    aurora_rx/gt0_pll0outclk_in
+##         ::bdu::net gtc_pll0_outrefclk gt_common/pll0_outrefclk aurora_rx/gt0_pll0outrefclk_in
+##         ::bdu::net gtc_pll1_outclk    gt_common/pll1_outclk    aurora_rx/gt0_pll1outclk_in
+##         ::bdu::net gtc_pll1_outrefclk gt_common/pll1_outrefclk aurora_rx/gt0_pll1outrefclk_in
+##     }
+## 
+##     ::bdu::stage connect_aurora {
+##         ::bdu::net au_tx_out_clk aurora_rx/tx_out_clk rx_support/tx_out_clk
+##         ::bdu::net au_tx_lock    aurora_rx/tx_lock    rx_support/tx_lock
+##         ::bdu::net user_clk rx_support/user_clk \
+##             aurora_rx/user_clk depkt_0/aclk prbs_check_0/aclk fifo_rx/s_axis_aclk link_ctrl_0/user_clk
+##         ::bdu::net sync_clk rx_support/sync_clk aurora_rx/sync_clk
+##         ::bdu::net pll_not_locked rx_support/pll_not_locked aurora_rx/pll_not_locked link_ctrl_0/pll_not_locked
+##         ::bdu::net au_rx_system_reset rx_support/rx_system_reset aurora_rx/rx_system_reset
+##         ::bdu::net au_gt_reset_deb rx_support/gt_reset aurora_rx/gt_reset
+##         ::bdu::net link_ctrl_au_reset    link_ctrl_0/au_reset    rx_support/reset_in
+##         ::bdu::net link_ctrl_au_gt_reset link_ctrl_0/au_gt_reset rx_support/gt_reset_in
+##         ::bdu::net link_ctrl_au_power_down link_ctrl_0/au_power_down aurora_rx/power_down
+##         ::bdu::net au_sys_reset_out aurora_rx/sys_reset_out link_ctrl_0/link_sys_reset
+##         ::bdu::net rx_channel_up aurora_rx/rx_channel_up link_ctrl_0/channel_up depkt_0/link_up
+##         ::bdu::net rx_lane_up    aurora_rx/rx_lane_up    link_ctrl_0/lane_up
+##         ::bdu::net rx_hard_err   aurora_rx/rx_hard_err   link_ctrl_0/hard_err
+##         ::bdu::net rx_soft_err   aurora_rx/soft_err      link_ctrl_0/soft_err
+##         ::bdu::net rx_frame_err  aurora_rx/frame_err     link_ctrl_0/frame_err depkt_0/rx_frame_err
+##         ::bdu::net rx_crc_valid  aurora_rx/crc_valid     link_ctrl_0/crc_valid
+##         ::bdu::net rx_crc_pass_fail_n aurora_rx/crc_pass_fail_n link_ctrl_0/crc_pass_fail_n
+##         ::bdu::net gt_rxp_1 gt_rxp aurora_rx/rxp
+##         ::bdu::net gt_rxn_1 gt_rxn aurora_rx/rxn
+##         ::bdu::net lb_off_dout lb_off/dout aurora_rx/loopback
+##         ::bdu::net drpaddr_zero c_drpaddr/dout aurora_rx/drpaddr_in
+##         ::bdu::net drpdi_zero   c_drpdi/dout   aurora_rx/drpdi_in
+##     }
+## 
+##     ::bdu::stage connect_ctrl {
+##         ::bdu::net zero c_zero/dout \
+##             aurora_rx/drpen_in aurora_rx/drpwe_in link_ctrl_0/tx_err link_ctrl_0/restart_req \
+##             xdma_0/usr_irq_req irq_concat/In0
+##         ::bdu::net one c_one/dout SFP1_TXDISABLE SFP2_TXDISABLE
+##         ::bdu::net tx_frames_zero c_zero8/dout link_ctrl_0/tx_frame_cnt
+##         ::bdu::net s2mm_introut axi_dma_0/s2mm_introut irq_concat/In1
+##         ::bdu::net irq_f2p irq_concat/dout ps7/IRQ_F2P
+##         ::bdu::net user_aresetn link_ctrl_0/user_aresetn \
+##             depkt_0/aresetn prbs_check_0/aresetn fifo_rx/s_axis_aresetn
+##         ::bdu::net depkt_err_len depkt_0/err_len link_ctrl_0/rx_err_len
+##         ::bdu::net depkt_err_ovf depkt_0/err_ovf link_ctrl_0/rx_err_ovf
+##         ::bdu::net depkt_err_seq depkt_0/err_seq link_ctrl_0/rx_err_seq
+##         ::bdu::net depkt_frame_cnt depkt_0/frame_cnt link_ctrl_0/rx_frame_cnt
+##         ::bdu::net gpio_ctrl   axi_gpio_link/gpio2_io_o link_ctrl_0/gpio_ctrl
+##         ::bdu::net gpio_status link_ctrl_0/gpio_status axi_gpio_link/gpio_io_i
+##         # VIO : net names = probe names used by hw/*.tcl
+##         ::bdu::net link_status    link_ctrl_0/vio_status        vio_link/probe_in0
+##         ::bdu::net prbs_locked    prbs_check_0/stat_locked      vio_link/probe_in1
+##         ::bdu::net prbs_kwords    prbs_check_0/stat_kwords      vio_link/probe_in2
+##         ::bdu::net prbs_err_bits  prbs_check_0/stat_err_bits    vio_link/probe_in3
+##         ::bdu::net prbs_err_words prbs_check_0/stat_err_words   vio_link/probe_in4
+##         ::bdu::net prbs_len_errs  prbs_check_0/stat_len_errs    vio_link/probe_in5
+##         ::bdu::net vio_ctrl_sel   vio_link/probe_out0 link_ctrl_0/vio_ctrl_sel
+##         ::bdu::net vio_run        vio_link/probe_out1 link_ctrl_0/vio_run
+##         ::bdu::net vio_loopback   vio_link/probe_out2 link_ctrl_0/vio_loopback
+##         ::bdu::net vio_err_clear  vio_link/probe_out3 link_ctrl_0/vio_clr
+##         ::bdu::net vio_prbs_en    vio_link/probe_out4 prbs_check_0/enable link_ctrl_0/vio_prbs_en
+##         ::bdu::net vio_prbs_clear vio_link/probe_out5 prbs_check_0/clear
+##         if {$o(bc_out)} { ::bdu::net bc_link_ok link_ctrl_0/link_ok BC_LINK_OK }
+##     }
+## 
+##     ::bdu::stage addresses {
+##         assign_bd_address -offset 0x40400000 -range 0x00010000 -target_address_space [get_bd_addr_spaces /ps7/Data] [get_bd_addr_segs /axi_dma_0/S_AXI_LITE/Reg] -force
+##         assign_bd_address -offset 0x41200000 -range 0x00010000 -target_address_space [get_bd_addr_spaces /ps7/Data] [get_bd_addr_segs /axi_gpio_link/S_AXI/Reg] -force
+##         assign_bd_address -offset 0x00000000 -range 0x40000000 -target_address_space [get_bd_addr_spaces /axi_dma_0/Data_S2MM] [get_bd_addr_segs /ps7/S_AXI_HP0/HP0_DDR_LOWOCM] -force
+##         assign_bd_address -offset 0x00000000 -range 0x40000000 -target_address_space [get_bd_addr_spaces /xdma_0/M_AXI] [get_bd_addr_segs /ps7/S_AXI_HP2/HP2_DDR_LOWOCM] -force
+##         assign_bd_address -offset 0xC0000000 -range 0x00001000 -target_address_space [get_bd_addr_spaces /xdma_0/M_AXI_LITE] [get_bd_addr_segs /axi_bram_ctrl_0/S_AXI/Mem0] -force
+##     }
+## 
+##     ::bdu::stage validate {
+##         catch {regenerate_bd_layout}
+##         validate_bd_design
+##         save_bd_design
+##         ::aurora_link::check_init_clk [get_bd_cells /aurora_rx] 62.5
+##     }
+##     ::bdu::log "BD $design_name OK (bc_out=$o(bc_out) h_beats=$o(h_beats) v_lines=$o(v_lines))"
+##     return [get_files -quiet ${design_name}.bd]
+## }
+# set bd_opts [list bc_out [expr {$BC_PIN ne ""}] h_beats $H_BEATS v_lines $V_LINES]
+# if {[catch {create_z7015_rx_bd $bd_name $bd_opts} err]} {
+#     ::bdu::log "FAILED: $err"
+#     ::bdu::write_report [file join $proj_dir bd_build_report.txt]
+#     catch {open_bd_design [get_files ${bd_name}.bd]}
+#     puts "ERROR: \[make_z7015_rx\] $err"
+#     error "\[make_z7015_rx\] block design build failed - see [file join $proj_dir bd_build_report.txt]"
+# }
+Wrote  : </home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.srcs/sources_1/bd/z7015_rx/z7015_rx.bd> 
+INFO: [z7015_rx] stage ports
+INFO: [z7015_rx] stage ps7
+INFO: [z7015_rx] stage dma_path
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconcat:1.0 for the IP type xilinx.com:ip:xlconcat:2.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconcat:2.1 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-11770] Clock interface 'aclk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'stat_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'stat_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-11770] Clock interface 'aclk' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-5661] Bus Interface 'stat_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'stat_clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'tx_fifo_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'tx_fifo_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'init_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'init_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'au_reset' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'au_reset' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'au_gt_reset' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'au_gt_reset' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'link_sys_reset' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'link_sys_reset' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'axi_aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'user_aresetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'tx_fifo_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'init_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'au_reset'.
+INFO: [IP_Flow 19-4728] Bus Interface 'au_reset': Added interface parameter 'POLARITY' with value 'ACTIVE_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'au_gt_reset': Added interface parameter 'POLARITY' with value 'ACTIVE_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'link_sys_reset': Added interface parameter 'POLARITY' with value 'ACTIVE_HIGH'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'axi_aclk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'axi_aclk' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-5661] Bus Interface 'init_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'init_clk' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-5661] Bus Interface 'user_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'user_clk' has no FREQ_HZ parameter.
+INFO: [z7015_rx] stage aurora_rx
+INFO: [xilinx.com:ip:aurora_8b10b:11.1-5911] /aurora_rx Executing the post_config_ip from bd
+INFO: [xilinx.com:ip:aurora_8b10b:11.1-5911] /aurora_rx Executing the post_config_ip from bd
+INFO: [xilinx.com:ip:aurora_8b10b:11.1-5911] /aurora_rx Executing the post_config_ip from bd
+INFO: [xilinx.com:ip:aurora_8b10b:11.1-5911] /aurora_rx Executing the post_config_ip from bd
+INFO: [aurora_link] /aurora_rx : Backchannel_mode=Timer C_AURORA_LANES=1 C_LANE_WIDTH=4 C_LINE_RATE=3.125 C_USE_CRC=true C_USE_BYTESWAP=true C_USE_SCRAMBLER=false Flow_Mode=None Interface_Mode=Framing
+INFO: [z7015_rx] aurora_rx : Backchannel_mode=Timer C_AURORA_LANES=1 C_LANE_WIDTH=4 C_LINE_RATE=3.125 C_USE_CRC=true C_USE_BYTESWAP=true C_USE_SCRAMBLER=false Flow_Mode=None Interface_Mode=Framing
+INFO: [IP_Flow 19-5107] Inferred bus interface 'init_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'init_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'tx_out_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'tx_out_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_in' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_in' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'gt_reset_in' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'gt_reset_in' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'sync_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'sync_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_system_reset' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_system_reset' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'gt_reset' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'gt_reset' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-4728] Bus Interface 'init_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'gt_reset_in'.
+INFO: [IP_Flow 19-4728] Bus Interface 'reset_in': Added interface parameter 'POLARITY' with value 'ACTIVE_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'gt_reset_in': Added interface parameter 'POLARITY' with value 'ACTIVE_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_clk': Added interface parameter 'FREQ_HZ' with value '156250000'.
+INFO: [IP_Flow 19-4728] Bus Interface 'user_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rx_system_reset'.
+INFO: [IP_Flow 19-4728] Bus Interface 'sync_clk': Added interface parameter 'FREQ_HZ' with value '156250000'.
+INFO: [IP_Flow 19-4728] Bus Interface 'rx_system_reset': Added interface parameter 'POLARITY' with value 'ACTIVE_HIGH'.
+INFO: [IP_Flow 19-4728] Bus Interface 'gt_reset': Added interface parameter 'POLARITY' with value 'ACTIVE_HIGH'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'init_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'init_clk' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-5661] Bus Interface 'tx_out_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'tx_out_clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-7067] Note that bus interface 'user_clk' has a fixed FREQ_HZ of '156250000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [IP_Flow 19-7067] Note that bus interface 'sync_clk' has a fixed FREQ_HZ of '156250000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+INFO: [z7015_rx] stage clocks_pcie
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'Legacy_Interrupt' from 'INTA' to 'NONE' has been ignored for IP 'z7015_rx_xdma_0_0/z7015_rx_xdma_0_0_pcie2_ip'
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] z7015_rx_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] z7015_rx_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] z7015_rx_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] z7015_rx_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+INFO: [z7015_rx] stage constants
+INFO: [z7015_rx] stage connect_axi
+INFO: [z7015_rx] stage connect_clk_rst
+ERROR: [BD 41-701] connect_bd_net requires at least two pins/ports, or one pin/port and a net
+ERROR: [BD 5-4] Error: running connect_bd_net.
+Wrote  : </home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/aurora_cam_z7015_rx.srcs/sources_1/bd/z7015_rx/z7015_rx.bd> 
+INFO: [z7015_rx] FAILED: stage 'connect_clk_rst' : ERROR: [Common 17-39] 'connect_bd_net' failed due to earlier errors.
+
+ERROR: [make_z7015_rx] stage 'connect_clk_rst' : ERROR: [Common 17-39] 'connect_bd_net' failed due to earlier errors.
+
+[make_z7015_rx] block design build failed - see /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015_rx/bd_build_report.txt
+    while executing
+"error "\[make_z7015_rx\] block design build failed - see [file join $proj_dir bd_build_report.txt]""
+    invoked from within
+"if {[catch {create_z7015_rx_bd $bd_name $bd_opts} err]} {
+    ::bdu::log "FAILED: $err"
+    ::bdu::write_report [file join $proj_dir bd_build_report.t..."
+    (file "make_z7015_rx.tcl" line 80)
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 17:33:36 2026...

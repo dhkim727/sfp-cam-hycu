@@ -95,7 +95,14 @@ aurora_cam_sv your_instance_name (
   .gt_rxn(gt_rxn), // input wire [0:0] gt_rxn
   .clk_50m(clk_50m), // input wire clk_50m
   .SFP1_TXDISABLE(SFP1_TXDISABLE), // output wire [0:0] SFP1_TXDISABLE
-  .SFP2_TXDISABLE(SFP2_TXDISABLE) // output wire [0:0] SFP2_TXDISABLE
+  .SFP2_TXDISABLE(SFP2_TXDISABLE), // output wire [0:0] SFP2_TXDISABLE
+  .PCIE0_PERSTN(PCIE0_PERSTN), // input wire PCIE0_PERSTN
+  .PCIE0_REFCLK_clk_n(PCIE0_REFCLK_clk_n), // input wire [0:0] PCIE0_REFCLK_clk_n
+  .PCIE0_REFCLK_clk_p(PCIE0_REFCLK_clk_p), // input wire [0:0] PCIE0_REFCLK_clk_p
+  .pcie_7x_mgt_rtl_0_rxn(pcie_7x_mgt_rtl_0_rxn), // input wire [0:0] pcie_7x_mgt_rtl_0_rxn
+  .pcie_7x_mgt_rtl_0_rxp(pcie_7x_mgt_rtl_0_rxp), // input wire [0:0] pcie_7x_mgt_rtl_0_rxp
+  .pcie_7x_mgt_rtl_0_txn(pcie_7x_mgt_rtl_0_txn), // output wire [0:0] pcie_7x_mgt_rtl_0_txn
+  .pcie_7x_mgt_rtl_0_txp(pcie_7x_mgt_rtl_0_txp) // output wire [0:0] pcie_7x_mgt_rtl_0_txp
 );
 // INST_TAG_END ------  End cut for WRAPPER INSTANTIATION Template  ------
 

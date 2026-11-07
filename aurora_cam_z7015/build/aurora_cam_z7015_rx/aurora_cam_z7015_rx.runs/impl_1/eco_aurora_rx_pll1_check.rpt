@@ -1,0 +1,12 @@
+Sat Nov 07 17:59:13 KST 2026  design checkpoint_z7015_rx_wrapper_routed  verify_only=1
+channel : z7015_rx_i/aurora_rx/inst/gt_wrapper_i/z7015_rx_aurora_rx_0_multi_gt_i/gt0_z7015_rx_aurora_rx_0_i/gtpe2_i
+common  : z7015_rx_i/gt_common/inst/u_gtpe2_common
+  PLL1CLK    <- GTPE2_COMMON/PLL1OUTCLK
+  PLL1REFCLK <- GTPE2_COMMON/PLL1OUTREFCLK
+  PLL0CLK    <- GTPE2_COMMON/PLL0OUTCLK
+  PLL0REFCLK <- GTPE2_COMMON/PLL0OUTREFCLK
+  RXSYSCLKSEL[1]   = 1
+  RXSYSCLKSEL[0]   = 1
+  TXSYSCLKSEL[1]   = 1
+  TXSYSCLKSEL[0]   = 1
+RX/TXSYSCLKSEL already 2'b11 : aurora_rx uses PLL1

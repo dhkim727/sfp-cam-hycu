@@ -232,6 +232,24 @@
             },
             "V5": {
                 "VT": "AC",
+                "BA": "0x0000000000000000",
+                "HA": "0x000000003FFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/xdma_0",
+                "MI": "M_AXI",
+                "MS": "SEG_ps7_HP2_DDR_LOWOCM",
+                "MV": "xilinx.com:ip:xdma:4.2",
+                "SX": "/ps7",
+                "SI": "S_AXI_HP2",
+                "SS": "HP2_DDR_LOWOCM",
+                "SV": "xilinx.com:ip:processing_system7:5.5",
+                "TM": "both",
+                "TU": "memory"
+            },
+            "V6": {
+                "VT": "AC",
                 "BA": "0x40400000",
                 "HA": "0x4040FFFF",
                 "BP": "C_BASEADDR",
@@ -248,7 +266,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V6": {
+            "V7": {
                 "VT": "AC",
                 "BA": "0x41200000",
                 "HA": "0x4120FFFF",
@@ -265,6 +283,24 @@
                 "SV": "xilinx.com:ip:axi_gpio:2.0",
                 "TM": "both",
                 "TU": "register"
+            },
+            "V8": {
+                "VT": "AC",
+                "BA": "0xC0000000",
+                "HA": "0xC0000FFF",
+                "BP": "C_S_AXI_BASEADDR",
+                "HP": "C_S_AXI_HIGHADDR",
+                "MA": "M_AXI_LITE",
+                "MX": "/xdma_0",
+                "MI": "M_AXI_LITE",
+                "MS": "SEG_axi_bram_ctrl_0_Mem0",
+                "MV": "xilinx.com:ip:xdma:4.2",
+                "SX": "/axi_bram_ctrl_0",
+                "SI": "S_AXI",
+                "SS": "Mem0",
+                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
+                "TM": "both",
+                "TU": "memory"
             }
         },
         "edges": [
@@ -293,6 +329,16 @@
             },
             {
                 "src": "V6",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V7",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V8",
                 "trg": "V2",
                 "EH": "2"
             }

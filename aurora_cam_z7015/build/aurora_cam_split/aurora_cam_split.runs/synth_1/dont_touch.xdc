@@ -60,4 +60,34 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_
 # IP: bd/aurora_cam/ip/aurora_cam_clk_wiz_0_0/aurora_cam_clk_wiz_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_clk_wiz_0_0 || ORIG_REF_NAME==aurora_cam_clk_wiz_0_0} -quiet] -quiet
 
+# IP: bd/aurora_cam/ip/aurora_cam_xdma_0_0/aurora_cam_xdma_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_xdma_0_0 || ORIG_REF_NAME==aurora_cam_xdma_0_0} -quiet] -quiet
+
+# IP: bd/aurora_cam/ip/aurora_cam_util_ds_buf_0_0/aurora_cam_util_ds_buf_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_util_ds_buf_0_0 || ORIG_REF_NAME==aurora_cam_util_ds_buf_0_0} -quiet] -quiet
+
+# IP: bd/aurora_cam/ip/aurora_cam_proc_sys_reset_0_0/aurora_cam_proc_sys_reset_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_proc_sys_reset_0_0 || ORIG_REF_NAME==aurora_cam_proc_sys_reset_0_0} -quiet] -quiet
+
+# IP: bd/aurora_cam/ip/aurora_cam_blk_mem_gen_0_0/aurora_cam_blk_mem_gen_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_blk_mem_gen_0_0 || ORIG_REF_NAME==aurora_cam_blk_mem_gen_0_0} -quiet] -quiet
+
+# IP: bd/aurora_cam/ip/aurora_cam_axi_bram_ctrl_0_0/aurora_cam_axi_bram_ctrl_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_axi_bram_ctrl_0_0 || ORIG_REF_NAME==aurora_cam_axi_bram_ctrl_0_0} -quiet] -quiet
+
+# IP: bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_0/aurora_cam_axi_interconnect_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_axi_interconnect_0_0 || ORIG_REF_NAME==aurora_cam_axi_interconnect_0_0} -quiet] -quiet
+
+# IP: bd/aurora_cam/ip/aurora_cam_rst_axi_1/aurora_cam_rst_axi_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_rst_axi_1 || ORIG_REF_NAME==aurora_cam_rst_axi_1} -quiet] -quiet
+
+# IP: bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0/aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0 || ORIG_REF_NAME==aurora_cam_axi_interconnect_0_imp_s00_data_fifo_0} -quiet] -quiet
+
+# IP: bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_auto_cc_0/aurora_cam_axi_interconnect_0_imp_auto_cc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_axi_interconnect_0_imp_auto_cc_0 || ORIG_REF_NAME==aurora_cam_axi_interconnect_0_imp_auto_cc_0} -quiet] -quiet
+
+# IP: bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_auto_pc_0/aurora_cam_axi_interconnect_0_imp_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==aurora_cam_axi_interconnect_0_imp_auto_pc_0 || ORIG_REF_NAME==aurora_cam_axi_interconnect_0_imp_auto_pc_0} -quiet] -quiet
+
 # XDC: /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/aurora_cam_ooc.xdc

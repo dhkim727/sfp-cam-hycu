@@ -1,0 +1,367 @@
+
+*** Running vivado
+    with args -log aurora_cam_axi_interconnect_0_imp_auto_pc_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source aurora_cam_axi_interconnect_0_imp_auto_pc_0.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Nov  7 14:32:38 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source aurora_cam_axi_interconnect_0_imp_auto_pc_0.tcl -notrace
+Command: synth_design -top aurora_cam_axi_interconnect_0_imp_auto_pc_0 -part xc7z015clg485-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z015'
+INFO: [Device 21-403] Loading part xc7z015clg485-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 186246
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2238.320 ; gain = 482.875 ; free physical = 29976 ; free virtual = 45710
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'aurora_cam_axi_interconnect_0_imp_auto_pc_0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_auto_pc_0/synth/aurora_cam_axi_interconnect_0_imp_auto_pc_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_37_axi_protocol_converter' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_37_axi3_conv' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:951]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_37_b_downsizer' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2269]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_37_b_downsizer' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2269]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_37_a_axi3_conv' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_36_axic_fifo' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/fb46/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_36_fifo_gen' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/fb46/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [/tools/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_36_fifo_gen' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/fb46/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_36_axic_fifo' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/fb46/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_36_axic_fifo__parameterized0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/fb46/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_36_fifo_gen__parameterized0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/fb46/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_36_fifo_gen__parameterized0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/fb46/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_36_axic_fifo__parameterized0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/fb46/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_37_a_axi3_conv' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_37_w_axi3_conv' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1998]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_37_w_axi3_conv' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1998]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_37_a_axi3_conv__parameterized0' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_36_axic_fifo__parameterized1' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/fb46/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_36_fifo_gen__parameterized1' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/fb46/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_36_fifo_gen__parameterized1' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/fb46/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_36_axic_fifo__parameterized1' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/fb46/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_37_a_axi3_conv__parameterized0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_37_r_axi3_conv' [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1784]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_37_r_axi3_conv' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1784]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_37_axi3_conv' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:951]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_37_axi_protocol_converter' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_cam_axi_interconnect_0_imp_auto_pc_0' (0#1) [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_auto_pc_0/synth/aurora_cam_axi_interconnect_0_imp_auto_pc_0.v:53]
+INFO: [Synth 8-6014] Unused sequential element S_AXI_AUSER_Q_reg was removed.  [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:280]
+INFO: [Synth 8-6014] Unused sequential element NO_B_CHANNEL.cmd_b_depth_reg was removed.  [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:852]
+INFO: [Synth 8-6014] Unused sequential element S_AXI_AUSER_Q_reg was removed.  [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:280]
+INFO: [Synth 8-6014] Unused sequential element cmd_b_push_block_reg was removed.  [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ipshared/d98a/hdl/axi_protocol_converter_v2_1_vl_rfs.v:636]
+INFO: [Synth 8-7129] Port ACLK in module axi_protocol_converter_v2_1_37_r_axi3_conv is either unconnected or has no load
+INFO: [Synth 8-7129] Port ARESET in module axi_protocol_converter_v2_1_37_r_axi3_conv is either unconnected or has no load
+INFO: [Synth 8-7129] Port ALMOST_FULL_I in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_I in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port ALMOST_EMPTY_I in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_I in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_ACK_I in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port VALID_I in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port OVERFLOW_I in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port UNDERFLOW_I in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[5] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[4] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[3] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[2] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[1] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[0] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[5] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[4] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[3] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[2] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[1] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[0] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[5] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[4] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[3] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[2] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[1] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[0] in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SBITERR_I in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DBITERR_I in module output_blk__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST_FULL_FF in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_RST in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port SAFETY_CKT_WR_RST in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS2[4] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS2[3] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS2[2] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS2[1] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS2[0] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[4] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[3] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[2] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[1] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[0] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST in module wr_bin_cntr is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_EN_INTO_LOGIC in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_RST_INTO_LOGIC in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_EN in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_RST_BUSY in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port EMPTY in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port ALMOST_EMPTY in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[4] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[3] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[2] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[1] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[0] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[4] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[3] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[2] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[1] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[0] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[4] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[3] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[2] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[1] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[0] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST in module rd_fwft is either unconnected or has no load
+INFO: [Synth 8-7129] Port SAFETY_CKT_RD_RST in module rd_fwft is either unconnected or has no load
+INFO: [Synth 8-7129] Port RAM_ALMOST_EMPTY in module rd_fwft is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port SAFETY_CKT_RD_RST in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_PNTR_PLUS2[4] in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_PNTR_PLUS2[3] in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_PNTR_PLUS2[2] in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_PNTR_PLUS2[1] in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_PNTR_PLUS2[0] in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST in module rd_bin_cntr is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_EN_INTO_LOGIC in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_RST_INTO_LOGIC in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_RST_BUSY in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port RST_FULL_FF in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port ALMOST_FULL_FB in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port FULL in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS1_RD[4] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS1_RD[3] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS1_RD[2] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS1_RD[1] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS1_RD[0] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH[4] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH[3] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH[2] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH[1] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH[0] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_ASSERT[4] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_ASSERT[3] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_ASSERT[2] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_ASSERT[1] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_ASSERT[0] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_NEGATE[4] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_NEGATE[3] in module rd_logic is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2455.258 ; gain = 699.812 ; free physical = 28880 ; free virtual = 44615
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2455.258 ; gain = 699.812 ; free physical = 28864 ; free virtual = 44603
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2455.258 ; gain = 699.812 ; free physical = 28864 ; free virtual = 44603
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2455.258 ; gain = 0.000 ; free physical = 28855 ; free virtual = 44592
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_auto_pc_0/aurora_cam_axi_interconnect_0_imp_auto_pc_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/bd/aurora_cam/ip/aurora_cam_axi_interconnect_0_imp_auto_pc_0/aurora_cam_axi_interconnect_0_imp_auto_pc_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/aurora_cam_axi_interconnect_0_imp_auto_pc_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/aurora_cam_axi_interconnect_0_imp_auto_pc_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-1714] 3 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2511.121 ; gain = 0.000 ; free physical = 28687 ; free virtual = 44426
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2511.156 ; gain = 0.000 ; free physical = 28686 ; free virtual = 44425
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2511.156 ; gain = 755.711 ; free physical = 28545 ; free virtual = 44288
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z015clg485-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2519.125 ; gain = 763.680 ; free physical = 28544 ; free virtual = 44288
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2519.125 ; gain = 763.680 ; free physical = 28544 ; free virtual = 44288
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
+INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               10 |                               10
+       both_stages_valid |                               11 |                               11
+            stage2_valid |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2519.125 ; gain = 763.680 ; free physical = 28268 ; free virtual = 44014
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 160 (col length:60)
+BRAMs: 190 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2519.125 ; gain = 763.680 ; free physical = 27343 ; free virtual = 43094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2527.125 ; gain = 771.680 ; free physical = 32326 ; free virtual = 48075
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2572.172 ; gain = 816.727 ; free physical = 35341 ; free virtual = 51089
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2572.172 ; gain = 816.727 ; free physical = 35310 ; free virtual = 51058
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2733.953 ; gain = 978.508 ; free physical = 37129 ; free virtual = 52876
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2733.953 ; gain = 978.508 ; free physical = 37129 ; free virtual = 52876
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2733.953 ; gain = 978.508 ; free physical = 37129 ; free virtual = 52876
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2733.953 ; gain = 978.508 ; free physical = 37129 ; free virtual = 52876
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2733.953 ; gain = 978.508 ; free physical = 37129 ; free virtual = 52876
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2733.953 ; gain = 978.508 ; free physical = 37129 ; free virtual = 52876
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    32|
+|2     |LUT1     |    51|
+|3     |LUT2     |    52|
+|4     |LUT3     |    54|
+|5     |LUT4     |    68|
+|6     |LUT5     |   296|
+|7     |LUT6     |    98|
+|8     |RAM32M   |     2|
+|9     |RAM32X1D |     3|
+|10    |FDCE     |    69|
+|11    |FDPE     |    33|
+|12    |FDRE     |   469|
+|13    |FDSE     |     5|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2733.953 ; gain = 978.508 ; free physical = 37129 ; free virtual = 52876
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2733.953 ; gain = 922.609 ; free physical = 37120 ; free virtual = 52867
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2733.961 ; gain = 978.508 ; free physical = 37120 ; free virtual = 52867
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2733.961 ; gain = 0.000 ; free physical = 37299 ; free virtual = 53046
+INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2789.980 ; gain = 0.000 ; free physical = 37350 ; free virtual = 53099
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 3 instances
+
+Synth Design complete | Checksum: 4c8e6ad4
+INFO: [Common 17-83] Releasing license: Synthesis
+153 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2790.016 ; gain = 1169.461 ; free physical = 37345 ; free virtual = 53096
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1683.531; main = 1683.531; forked = 183.431
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3513.363; main = 2789.984; forked = 994.234
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2813.992 ; gain = 0.000 ; free physical = 37345 ; free virtual = 53096
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/aurora_cam_axi_interconnect_0_imp_auto_pc_0_synth_1/aurora_cam_axi_interconnect_0_imp_auto_pc_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP aurora_cam_axi_interconnect_0_imp_auto_pc_0, cache-ID = 70362510a7f3c19a
+INFO: [Coretcl 2-1174] Renamed 57 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2813.992 ; gain = 0.000 ; free physical = 38875 ; free virtual = 54627
+INFO: [Common 17-1381] The checkpoint '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.runs/aurora_cam_axi_interconnect_0_imp_auto_pc_0_synth_1/aurora_cam_axi_interconnect_0_imp_auto_pc_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file aurora_cam_axi_interconnect_0_imp_auto_pc_0_utilization_synth.rpt -pb aurora_cam_axi_interconnect_0_imp_auto_pc_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 14:32:58 2026...

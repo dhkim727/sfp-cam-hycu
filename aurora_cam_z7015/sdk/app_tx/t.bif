@@ -1,0 +1,7 @@
+//arch = zynqmp; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader, destination_cpu = a53-0]/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/platform_tx/export/platform_tx/sw/boot/fsbl.elf
+	[destination_device = pl]/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/app_tx/_ide/bitstream/zcu104_tx_wrapper.bit
+	[destination_cpu = a53-0, exception_level = el-3]/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/app_tx/build/app_tx.elf
+}

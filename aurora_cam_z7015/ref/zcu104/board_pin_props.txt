@@ -1,0 +1,24 @@
+Property           Type     Read-only  Value
+CLASS              string   true       board_component_pin
+DIFF_TERM          string   true       
+DIFF_TERM_ADV      string   true       
+DQS_BIAS           string   true       
+DRIVE              string   true       
+EQUALIZATION       string   true       
+IBUF_LOW_PWR       string   true       
+INTERFACES         string*  true       clk_300mhz
+INTERNAL_VREF      string   true       
+IOSTANDARD         string   true       DIFF_SSTL12
+LOC                string   true       AH17
+LVDS_PRE_EMPHASIS  string   true       
+NAME               string   true       CLK_300_N
+ODT                string   true       
+OUTPUT_IMPEDANCE   string   true       
+PCB_MAX_DELAY      string   true       
+PCB_MIN_DELAY      string   true       
+PIN_INDEX          string   true       1
+PORT.clk_300mhz    string   true       CLK_300_N
+PRE_EMPHASIS       string   true       
+PULL_TYPE          string   true       
+SLEW               string   true       
+VOH                string   true       
