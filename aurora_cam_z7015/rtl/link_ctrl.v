@@ -23,7 +23,9 @@
 module link_ctrl #(
     parameter integer EMULATED  = 0,
     parameter integer RST_DELAY = 16384,  // init_clk cycles: gt_reset release -> reset release (<= 65535)
-    parameter integer TXRST_DLY = 255     // axi cycles link must be stable before TX FIFO leaves reset (<= 511)
+    parameter integer TXRST_DLY = 255,    // axi cycles link must be stable before TX FIFO leaves reset (<= 511)
+    parameter integer RETRY_TMO = 6250000, // init_clk cycles: run=1 & link down -> full restart, 0=off (<= 8388607)
+    parameter integer RETRY_HOLD = 1024   // init_clk cycles: restart reset-assert width (<= 2047)
 )(
     // ---------------- AXI (GPIO) domain
     (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axi_aclk CLK" *)
@@ -111,13 +113,14 @@ module link_ctrl #(
     //--------------------------------------------------------------------------
     // Aurora power-on reset sequence (PG046): gt_reset first, reset RST_DELAY later
     //--------------------------------------------------------------------------
-    reg [15:0] rst_cnt = 16'd0;
+    reg [15:0] rst_cnt  = 16'd0;
+    reg [10:0] hold_cnt = 11'd0;
     initial begin
         au_gt_reset = 1'b1;
         au_reset    = 1'b1;
     end
     always @(posedge init_clk) begin
-        if (!run_e) begin
+        if (!run_e || hold_cnt != 11'd0) begin
             au_gt_reset <= 1'b1;
             au_reset    <= 1'b1;
             rst_cnt     <= 16'd0;
@@ -197,6 +200,23 @@ module link_ctrl #(
     ) u_rxc (
         .src_clk(user_clk), .src_in_bin(rx_frame_cnt), .dest_clk(init_clk), .dest_out_bin(rxc_i)
     );
+
+    //--------------------------------------------------------------------------
+    // link-down watchdog: run=1 & !channel_up for RETRY_TMO -> full restart.
+    // The RX simplex core's own retry waits for a PLL0 reset that only the TX
+    // core's gt_reset issues (shared PLL), so re-assert gt_reset+reset (hold_cnt)
+    // and rerun the whole PG046 power-on sequence.
+    //--------------------------------------------------------------------------
+    wire link_ok = lnk_i[0] & locked_i;
+    reg [22:0] wd_cnt = 23'd0;
+    always @(posedge init_clk) begin
+        if (RETRY_TMO == 0 || !run_e || au_reset || link_ok) wd_cnt <= 23'd0;
+        else if (wd_cnt != RETRY_TMO)                        wd_cnt <= wd_cnt + 1'b1;
+    end
+    always @(posedge init_clk) begin
+        if (RETRY_TMO != 0 && wd_cnt == RETRY_TMO) hold_cnt <= RETRY_HOLD;
+        else if (hold_cnt != 11'd0)                 hold_cnt <= hold_cnt - 1'b1;
+    end
 
     wire emu_bit = (EMULATED != 0);
     initial vio_status = 32'd0;

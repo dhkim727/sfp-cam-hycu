@@ -1,0 +1,69 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Nov  7 13:25:25 2026
+# Process ID         : 55277
+# Current directory  : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex
+# Command line       : vivado -notrace -source /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/ip/ibert_7series_gtp_0/ibert_7series_gtp_0_ex.tcl
+# Log file           : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/vivado.log
+# Journal file       : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/vivado.jou
+# Running On         : dhkim-home
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
+# CPU Frequency      : 5593.815 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 67058 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75648 MB
+# Available Virtual  : 65130 MB
+#-----------------------------------------------------------
+start_gui
+source /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/ip/ibert_7series_gtp_0/ibert_7series_gtp_0_ex.tcl -notrace
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.runs/impl_1/example_ibert_7series_gtp_0.bit} [get_hw_devices xc7z015_1]
+current_hw_device [get_hw_devices xc7z015_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z015_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property PROGRAM.FILE {/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.runs/impl_1/example_ibert_7series_gtp_0.bit} [get_hw_devices xc7z015_1]
+program_hw_devices [get_hw_devices xc7z015_1]
+refresh_hw_device [lindex [get_hw_devices xc7z015_1] 0]
+set xil_newLinks [list]
+set xil_newLink [create_hw_sio_link -description {Link 0} [lindex [get_hw_sio_txs localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX] 0] [lindex [get_hw_sio_rxs localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 0] ]
+lappend xil_newLinks $xil_newLink
+set xil_newLinkGroup [create_hw_sio_linkgroup -description {Link Group 0} [get_hw_sio_links $xil_newLinks]]
+unset xil_newLinks
+set_property LOGIC.MGT_ERRCNT_RESET_CTRL 1 [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+commit_hw_sio -non_blocking [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+set_property LOGIC.MGT_ERRCNT_RESET_CTRL 0 [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+commit_hw_sio -non_blocking [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+set_property LOGIC.MGT_ERRCNT_RESET_CTRL 1 [get_hw_sio_links {localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX}]
+commit_hw_sio -non_blocking [get_hw_sio_links {localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX}]
+set_property LOGIC.MGT_ERRCNT_RESET_CTRL 0 [get_hw_sio_links {localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX}]
+commit_hw_sio -non_blocking [get_hw_sio_links {localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX}]
+set_property RXOUT_DIV 4 [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX]
+commit_hw_sio [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 
+set_property RXOUT_DIV 8 [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX]
+commit_hw_sio [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 
+set_property RXOUT_DIV 1 [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX]
+commit_hw_sio [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 
+set_property RXOUT_DIV 2 [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX]
+commit_hw_sio [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 
+set_property RXOUT_DIV 8 [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX]
+commit_hw_sio [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 
+set_property LOGIC.MGT_ERRCNT_RESET_CTRL 1 [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+commit_hw_sio -non_blocking [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+set_property LOGIC.MGT_ERRCNT_RESET_CTRL 0 [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+commit_hw_sio -non_blocking [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]

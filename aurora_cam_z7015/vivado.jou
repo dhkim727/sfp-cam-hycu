@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Nov  1 12:01:47 2026
+# Process ID         : 24277
+# Current directory  : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015
+# Command line       : vivado
+# Log file           : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/vivado.log
+# Journal file       : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/vivado.jou
+# Running On         : dhkim-home
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
+# CPU Frequency      : 5540.862 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 67058 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75648 MB
+# Available Virtual  : 65785 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.xpr
+add_files -norecurse [glob rtl/*.v]; update_compile_order -fileset sources_1
+source bd_split/block_design_split.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse [make_wrapper -files [get_files aurora_cam.bd] -top]
+update_compile_order -fileset sources_1
+set_property top aurora_cam_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse bd_split/z7015_aurora_cam_split.xdc   ;
+set_property location {3 976 1555} [get_bd_cells link_ctrl_0]
+set_property location {2 293 888} [get_bd_cells aurora_rx]
+set_property location {2 496 1260} [get_bd_cells aurora_tx]
+set_property location {3 906 742} [get_bd_cells or_hard_err]
+set_property location {2 420 1168} [get_bd_cells aurora_tx]
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_wrapper.xsa
+set_property location {2 437 1172} [get_bd_cells aurora_tx]
+set_property location {-276 720} [get_bd_intf_ports GT_REFCLK]
+open_project /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_z7015/aurora_cam_z7015.xpr
+update_compile_order -fileset sources_1
+current_project aurora_cam_split
+write_hw_platform -fixed -include_bit -force -file /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_wrapper.xsa
+create_bd_port -dir O SFP1_TXDISABLE
+create_bd_port -dir O SFP2_TXDISABLE
+startgroup
+create_bd_cell -type inline_hdl -vlnv xilinx.com:inline_hdl:ilconstant:1.0 ilconstant_3
+endgroup
+set_property CONFIG.CONST_VAL {0} [get_bd_cells ilconstant_3]
+connect_bd_net [get_bd_ports SFP1_TXDISABLE] [get_bd_pins ilconstant_3/dout]
+connect_bd_net [get_bd_ports SFP2_TXDISABLE] [get_bd_pins ilconstant_3/dout]
+save_bd_design
+validate_bd_design
+reset_target all [get_files  /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.srcs/sources_1/bd/aurora_cam/aurora_cam.bd]
+export_ip_user_files -of_objects  [get_files  /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.srcs/sources_1/bd/aurora_cam/aurora_cam.bd] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset sources_1] /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.srcs/sources_1/bd/aurora_cam/aurora_cam.bd]
+save_bd_design
+current_project aurora_cam_z7015
+close_project

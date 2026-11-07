@@ -1,0 +1,512 @@
+--- block_design_current.tcl
++++ block_design_split.tcl
+@@ -8,16 +8,24 @@
+ ################################################################
+ #
+ # ---------------------------------------------------------------------------
+-# aurora_cam_z7015 : 현재 BD (GUI 수정본) 의 write_bd_tcl (Vivado 2025.2) 형식 재구성
+-#   원본   : build/aurora_cam_z7015/aurora_cam_z7015.srcs/sources_1/bd/aurora_cam/aurora_cam.bd
+-#            (tool_version 2025.2, validated=true)
+-#   구성   : Aurora 8B/10B Duplex 1-lane, GTPE2_CHANNEL_X0Y1 (= GTP1, TX W4/Y4, RX W8/Y8)
+-#            GT refclk 125 MHz (U5/V5 = MGTREFCLK1_112), clk_50m(Y14) -> clk_wiz_0 62.5 MHz init/drp clk
+-#   공식 export 로 다시 만들려면 (Vivado 2025.2 Tcl console):
+-#     open_project build/aurora_cam_z7015/aurora_cam_z7015.xpr
+-#     open_bd_design [get_files aurora_cam.bd]
+-#     write_bd_tcl -force bd_split/block_design_current.tcl
+-#   모듈 참조(RTL) 가 쓰이므로 source 전에 rtl/*.v 가 프로젝트에 추가되어 있어야 한다.
++# aurora_cam_z7015 : TX / RX GTP 분리 버전  (block_design_current.tcl 수정본)
++#
++#   현재  : aurora_0 Duplex 1-lane  -> TX,RX 모두 GTPE2_CHANNEL_X0Y1 (GTP1)
++#   변경  : TX -> GTPE2_CHANNEL_X0Y2 (GTP2, MGTPTXP2/N2_112 = AA5/AB5)  aurora_tx (TX-only Simplex)
++#           RX -> GTPE2_CHANNEL_X0Y1 (GTP1, MGTPRXP1/N1_112 = W8/Y8)  aurora_rx (RX-only Simplex)
++#
++#   - Quad 112 의 GTPE2_COMMON 은 하나뿐이라 aurora_tx 만 Shared Logic(SupportLevel 1) 을 갖고,
++#     aurora_rx(SupportLevel 0) 는 PLL0/1 clk, common lock, user_clk/sync_clk, 리셋(debounced)을 받는다.
++#   - Simplex 초기화는 sideband(rx_aligned/verify/reset -> tx_*) 로 같은 FPGA 안에서 핸드셰이크.
++#   - GTP 내부 loopback(PCS/PMA)은 같은 채널 안에서만 돈다 -> loopback 입력은 0 으로 고정하고
++#     GTP2 TX(AA5/AB5) -> GTP1 RX(W8/Y8) 를 외부(SFP 광/DAC, 케이블)로 연결해야 한다.
++#   - DMA/GPIO 주소, GPIO/VIO 비트맵, link_ctrl 상태 워드는 그대로 -> sw/loopback_test.c 수정 불필요.
++#       channel_up = tx & rx,  lane_up = tx & rx,  hard_err = tx | rx,  soft/frame/crc = rx
++#   - 짝이 되는 XDC : bd_split/z7015_aurora_cam_split.xdc  (GTPE2_CHANNEL LOC 를 코어별로 지정)
++#   - split_debug=1 (기본) : link_ctrl 상태 워드는 tx&rx 로 합쳐져 있어 어느 쪽이 막혔는지 안 보이므로
++#     코어별 상태 16비트를 vio_link/probe_in6 (net split_dbg) 와 ila_split(user_clk) 로 꺼낸다.
++#     판독 : vivado -mode batch -source bd_split/split_status.tcl   (끄려면 source 전에 set split_debug 0)
++#   변경 부분은 "[SPLIT]" 주석으로 표시.
+ # ---------------------------------------------------------------------------
+ 
+ namespace eval _tcl {
+@@ -70,6 +78,24 @@
+ variable design_name
+ set design_name aurora_cam
+ 
++##################################################################
++# [SPLIT] TX / RX GTP 채널 선택
++#   C_GT_LOC_n = 1  ->  GTPE2_CHANNEL_X0Y(n-1)   (Z-7015 Quad 112, n = 1..4)
++#     n=1 X0Y0 TX AA3/AB3 RX AA7/AB7   n=2 X0Y1 TX W4/Y4 RX W8/Y8
++#     n=3 X0Y2 TX AA5/AB5 RX AA9/AB9   n=4 X0Y3 TX W2/Y2 RX W6/Y6
++#   바꾸면 XDC 의 LOC (z7015_aurora_cam_split.xdc) 도 같이 바꿀 것.
++##################################################################
++variable split_tx_gt_loc
++variable split_rx_gt_loc
++if { ![info exists split_tx_gt_loc] } { set split_tx_gt_loc 3 }   ;# TX -> GTPE2_CHANNEL_X0Y2 (GTP2)
++if { ![info exists split_rx_gt_loc] } { set split_rx_gt_loc 2 }   ;# RX -> GTPE2_CHANNEL_X0Y1 (GTP1, 현재 위치)
++variable split_debug
++if { ![info exists split_debug] }     { set split_debug 1 }       ;# 1: 코어별 상태 디버그 (vio_link probe_in6 + ila_split)
++if { $split_tx_gt_loc == $split_rx_gt_loc } {
++   catch {common::send_gid_msg -ssname BD::TCL -id 2006 -severity "ERROR" "\[split\] TX and RX must use different GTP channels"}
++   return 1
++}
++
+ # If you do not already have an existing IP Integrator design open,
+ # you can create a design using the following command:
+ #    create_bd_design $design_name
+@@ -153,6 +179,8 @@
+ xilinx.com:ip:aurora_8b10b:11.1\
+ xilinx.com:inline_hdl:ilconstant:1.0\
+ xilinx.com:ip:clk_wiz:6.0\
++xilinx.com:inline_hdl:ilvector_logic:1.0\
++xilinx.com:ip:ila:6.2\
+ "
+ 
+    set list_ips_missing ""
+@@ -210,6 +238,59 @@
+ # DESIGN PROCs
+ ##################################################################
+ 
++# [SPLIT] C_GT_LOC_1..4 : 선택한 위치만 1, 나머지 X
++proc _split_gt_loc { n } {
++   if { $n < 1 || $n > 4 } { error "\[split\] C_GT_LOC index must be 1..4 (got $n)" }
++   set l {}
++   for {set i 1} {$i <= 4} {incr i} {
++      lappend l CONFIG.C_GT_LOC_$i [expr {$i == $n ? "1" : "X"}]
++   }
++   return $l
++}
++
++# [SPLIT] IP 가 설정을 받아들였는지와, 아래 연결에 쓰는 핀이 실제로 생겼는지 확인
++proc _split_check_aurora { cell dataflow support loc } {
++   set c [get_bd_cells $cell]
++   foreach {k v} [list Dataflow_Config $dataflow SupportLevel $support C_GT_LOC_$loc 1] {
++      set got [get_property CONFIG.$k $c]
++      if { $got ne $v } { error "\[split\] $cell : CONFIG.$k = '$got' (expected '$v')" }
++   }
++   if { $dataflow eq "TX-only_Simplex" } {
++      set need {tx_system_reset gt_reset power_down loopback init_clk_in drpclk_in
++                drpaddr_in drpen_in drpdi_in drpwe_in tx_aligned tx_verify tx_reset
++                tx_channel_up tx_lane_up tx_hard_err txp txn
++                user_clk_out sync_clk_out pll_not_locked_out sys_reset_out gt_reset_out gt_refclk1_out
++                gt0_pll0outclk_out gt0_pll1outclk_out gt0_pll0outrefclk_out gt0_pll1outrefclk_out
++                gt0_pll0refclklost_out quad1_common_lock_out}
++      set need_if {USER_DATA_S_AXI_TX GT_DIFF_REFCLK1}
++   } else {
++      set need {rx_system_reset gt_reset power_down loopback init_clk_in drpclk_in
++                drpaddr_in drpen_in drpdi_in drpwe_in rx_aligned rx_verify rx_reset
++                rx_channel_up rx_lane_up rx_hard_err soft_err frame_err crc_valid crc_pass_fail_n rxp rxn
++                user_clk sync_clk pll_not_locked gt_refclk1
++                gt0_pll0outclk_in gt0_pll1outclk_in gt0_pll0outrefclk_in gt0_pll1outrefclk_in
++                gt0_pll0refclklost_in quad1_common_lock_in}
++      set need_if {USER_DATA_M_AXI_RX}
++   }
++   set miss {}
++   foreach p $need    { if { [get_bd_pins -quiet $cell/$p] eq "" } { lappend miss $p } }
++   foreach p $need_if { if { [get_bd_intf_pins -quiet $cell/$p] eq "" } { lappend miss $p } }
++   if { [llength $miss] } {
++      set have {}
++      foreach p [get_bd_pins -quiet -of_objects $c] { lappend have [file tail $p] }
++      error "\[split\] $cell : pins not found: $miss\n  available: [lsort $have]"
++   }
++   common::send_gid_msg -ssname BD::TCL -id 2005 -severity "INFO" "\[split\] $cell : $dataflow, SupportLevel $support, GTPE2_CHANNEL_X0Y[expr {$loc - 1}]"
++}
++
++# [SPLIT] TX/RX 짝은 프레이밍/CRC/엔디안/레이트가 같아야 한다 (CRC 가 한쪽만 켜지면 프레임 길이가 어긋남)
++proc _split_check_pair { tx rx } {
++   foreach k {C_LINE_RATE C_REFCLK_FREQUENCY C_LANE_WIDTH Interface_Mode C_USE_CRC C_USE_BYTESWAP C_USE_SCRAMBLER Backchannel_mode} {
++      set a [get_property CONFIG.$k [get_bd_cells $tx]]
++      set b [get_property CONFIG.$k [get_bd_cells $rx]]
++      if { $a ne $b } { error "\[split\] CONFIG.$k differs : $tx = '$a', $rx = '$b'" }
++   }
++}
+ 
+ 
+ # Procedure to create entire design; Provide argument to make
+@@ -218,6 +299,9 @@
+ 
+   variable script_folder
+   variable design_name
++  variable split_tx_gt_loc
++  variable split_rx_gt_loc
++  variable split_debug
+ 
+   if { $parentCell eq "" } {
+      set parentCell [get_bd_cells /]
+@@ -850,12 +934,13 @@
+   ] $axi_dma_0
+ 
+ 
++  # [SPLIT] GPIO2 초기값 : run=1, loopback=0 (기존 0x5 = run|PMA)
+   # Create instance: axi_gpio_link, and set properties
+   set axi_gpio_link [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_link ]
+   set_property -dict [list \
+     CONFIG.C_ALL_INPUTS {1} \
+     CONFIG.C_ALL_OUTPUTS_2 {1} \
+-    CONFIG.C_DOUT_DEFAULT_2 {0x00000005} \
++    CONFIG.C_DOUT_DEFAULT_2 {0x00000001} \
+     CONFIG.C_GPIO2_WIDTH {32} \
+     CONFIG.C_GPIO_WIDTH {32} \
+     CONFIG.C_IS_DUAL {1} \
+@@ -973,6 +1058,7 @@
+     CONFIG.FRAME_WORDS {256} \
+   ] $prbs_check_0
+ 
++  # [SPLIT] vio_loopback 초기값 0 (기존 0x2 = PMA)
+   # Create instance: vio_link, and set properties
+   set vio_link [ create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_link ]
+   set_property -dict [list \
+@@ -989,7 +1075,7 @@
+     CONFIG.C_PROBE_OUT0_WIDTH {1} \
+     CONFIG.C_PROBE_OUT1_INIT_VAL {0x1} \
+     CONFIG.C_PROBE_OUT1_WIDTH {1} \
+-    CONFIG.C_PROBE_OUT2_INIT_VAL {0x2} \
++    CONFIG.C_PROBE_OUT2_INIT_VAL {0x0} \
+     CONFIG.C_PROBE_OUT2_WIDTH {3} \
+     CONFIG.C_PROBE_OUT3_INIT_VAL {0x0} \
+     CONFIG.C_PROBE_OUT3_WIDTH {1} \
+@@ -1002,16 +1088,25 @@
+   ] $vio_link
+ 
+ 
+-  # Create instance: aurora_0, and set properties
+-  set aurora_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:aurora_8b10b:11.1 aurora_0 ]
++  # [SPLIT] -------------------------------------------------------------
++  # aurora_0 (Duplex, X0Y1) 를 TX-only / RX-only Simplex 두 코어로 분리
++  #   aurora_tx : TX-only Simplex, Shared Logic in core  -> GTPE2_COMMON(PLL0)/user_clk/리셋 소유
++  #   aurora_rx : RX-only Simplex, Shared Logic in exdes -> aurora_tx 의 PLL/클럭/리셋 공유
++  #   초기화 핸드셰이크 : aurora_rx/rx_{aligned,verify,reset} -> aurora_tx/tx_{aligned,verify,reset}
++  # ---------------------------------------------------------------------
++  # Create instance: aurora_tx, and set properties
++  set aurora_tx [ create_bd_cell -type ip -vlnv xilinx.com:ip:aurora_8b10b:11.1 aurora_tx ]
++  # [SPLIT] 1) Dataflow / Shared Logic 먼저 (Backchannel_mode, 포트 구성이 이 값에 따라 바뀐다)
+   set_property -dict [list \
++    CONFIG.Dataflow_Config {TX-only_Simplex} \
++    CONFIG.SupportLevel {1} \
++  ] $aurora_tx
++  # [SPLIT] 2) 나머지 파라미터 (현재 aurora_0 와 동일) + 레인 위치 C_GT_LOC_n
++  set_property -dict [concat [list \
++    CONFIG.Backchannel_mode {Sidebands} \
+     CONFIG.C_AURORA_LANES {1} \
+     CONFIG.C_DRP_IF {true} \
+     CONFIG.C_GT_CLOCK_1 {GTPQ0} \
+-    CONFIG.C_GT_LOC_1 {X} \
+-    CONFIG.C_GT_LOC_2 {1} \
+-    CONFIG.C_GT_LOC_3 {X} \
+-    CONFIG.C_GT_LOC_4 {X} \
+     CONFIG.C_LANE_WIDTH {4} \
+     CONFIG.C_LINE_RATE {3.125} \
+     CONFIG.C_REFCLK_FREQUENCY {125.000} \
+@@ -1019,15 +1114,41 @@
+     CONFIG.C_USE_CRC {true} \
+     CONFIG.C_USE_SCRAMBLER {false} \
+     CONFIG.DRP_FREQ {62.5} \
+-    CONFIG.Dataflow_Config {Duplex} \
+     CONFIG.Flow_Mode {None} \
+     CONFIG.Interface_Mode {Framing} \
+     CONFIG.SINGLEEND_GTREFCLK {false} \
+     CONFIG.SINGLEEND_INITCLK {true} \
+-    CONFIG.SupportLevel {1} \
+     CONFIG.TransceiverControl {false} \
+-  ] $aurora_0
++  ] [_split_gt_loc $split_tx_gt_loc]] $aurora_tx
++  _split_check_aurora aurora_tx {TX-only_Simplex} {1} $split_tx_gt_loc
+ 
++  # Create instance: aurora_rx, and set properties
++  set aurora_rx [ create_bd_cell -type ip -vlnv xilinx.com:ip:aurora_8b10b:11.1 aurora_rx ]
++  # [SPLIT] 1) Dataflow / Shared Logic 먼저 (Backchannel_mode, 포트 구성이 이 값에 따라 바뀐다)
++  set_property -dict [list \
++    CONFIG.Dataflow_Config {RX-only_Simplex} \
++    CONFIG.SupportLevel {0} \
++  ] $aurora_rx
++  # [SPLIT] 2) 나머지 파라미터 (현재 aurora_0 와 동일) + 레인 위치 C_GT_LOC_n
++  set_property -dict [concat [list \
++    CONFIG.Backchannel_mode {Sidebands} \
++    CONFIG.C_AURORA_LANES {1} \
++    CONFIG.C_DRP_IF {true} \
++    CONFIG.C_GT_CLOCK_1 {GTPQ0} \
++    CONFIG.C_LANE_WIDTH {4} \
++    CONFIG.C_LINE_RATE {3.125} \
++    CONFIG.C_REFCLK_FREQUENCY {125.000} \
++    CONFIG.C_USE_BYTESWAP {true} \
++    CONFIG.C_USE_CRC {true} \
++    CONFIG.C_USE_SCRAMBLER {false} \
++    CONFIG.DRP_FREQ {62.5} \
++    CONFIG.Flow_Mode {None} \
++    CONFIG.Interface_Mode {Framing} \
++    CONFIG.TransceiverControl {false} \
++  ] [_split_gt_loc $split_rx_gt_loc]] $aurora_rx
++  _split_check_aurora aurora_rx {RX-only_Simplex} {0} $split_rx_gt_loc
++
++  _split_check_pair aurora_tx aurora_rx
+ 
+   # Create instance: ilconstant_0, and set properties
+   set ilconstant_0 [ create_bd_cell -type inline_hdl -vlnv xilinx.com:inline_hdl:ilconstant:1.0 ilconstant_0 ]
+@@ -1070,9 +1191,46 @@
+   ] $clk_wiz_0
+ 
+ 
++  # [SPLIT] GT loopback 고정 0 : TX(X0Y2)->RX(X0Y1) 는 채널 내부 루프백으로 만들 수 없음
++  #         (link_ctrl_0/au_loopback 은 미연결 -> GPIO/VIO loopback 비트는 무시된다)
++  # Create instance: lb_off, and set properties
++  set lb_off [ create_bd_cell -type inline_hdl -vlnv xilinx.com:inline_hdl:ilconstant:1.0 lb_off ]
++  set_property -dict [list \
++    CONFIG.CONST_VAL {0} \
++    CONFIG.CONST_WIDTH {3} \
++  ] $lb_off
++
++
++  # [SPLIT] link_ctrl 상태 결합 : channel_up = tx_channel_up & rx_channel_up
++  # Create instance: and_channel_up, and set properties
++  set and_channel_up [ create_bd_cell -type inline_hdl -vlnv xilinx.com:inline_hdl:ilvector_logic:1.0 and_channel_up ]
++  set_property -dict [list \
++    CONFIG.C_OPERATION {and} \
++    CONFIG.C_SIZE {1} \
++  ] $and_channel_up
++
++
++  # [SPLIT] link_ctrl 상태 결합 : lane_up    = tx_lane_up & rx_lane_up
++  # Create instance: and_lane_up, and set properties
++  set and_lane_up [ create_bd_cell -type inline_hdl -vlnv xilinx.com:inline_hdl:ilvector_logic:1.0 and_lane_up ]
++  set_property -dict [list \
++    CONFIG.C_OPERATION {and} \
++    CONFIG.C_SIZE {1} \
++  ] $and_lane_up
++
++
++  # [SPLIT] link_ctrl 상태 결합 : hard_err   = tx_hard_err | rx_hard_err
++  # Create instance: or_hard_err, and set properties
++  set or_hard_err [ create_bd_cell -type inline_hdl -vlnv xilinx.com:inline_hdl:ilvector_logic:1.0 or_hard_err ]
++  set_property -dict [list \
++    CONFIG.C_OPERATION {or} \
++    CONFIG.C_SIZE {1} \
++  ] $or_hard_err
++
++
+   # Create interface connections
+-  connect_bd_intf_net -intf_net GT_REFCLK_1 [get_bd_intf_ports GT_REFCLK] [get_bd_intf_pins aurora_0/GT_DIFF_REFCLK1]
+-  connect_bd_intf_net -intf_net aurora_0_USER_DATA_M_AXI_RX [get_bd_intf_pins aurora_0/USER_DATA_M_AXI_RX] [get_bd_intf_pins prbs_check_0/s_axis]
++  connect_bd_intf_net -intf_net GT_REFCLK_1 [get_bd_intf_ports GT_REFCLK] [get_bd_intf_pins aurora_tx/GT_DIFF_REFCLK1]
++  connect_bd_intf_net -intf_net aurora_rx_USER_DATA_M_AXI_RX [get_bd_intf_pins aurora_rx/USER_DATA_M_AXI_RX] [get_bd_intf_pins prbs_check_0/s_axis]
+   connect_bd_intf_net -intf_net axi_dma_0_M_AXIS_MM2S [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins fifo_tx/S_AXIS]
+   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_MM2S [get_bd_intf_pins axi_dma_0/M_AXI_MM2S] [get_bd_intf_pins sc_mem/S00_AXI]
+   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_S2MM [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] [get_bd_intf_pins sc_mem/S01_AXI]
+@@ -1081,7 +1239,7 @@
+   connect_bd_intf_net -intf_net fifo_tx_M_AXIS [get_bd_intf_pins fifo_tx/M_AXIS] [get_bd_intf_pins pkt_0/s_axis]
+   connect_bd_intf_net -intf_net pkt_0_m_axis [get_bd_intf_pins pkt_0/m_axis] [get_bd_intf_pins prbs_gen_0/s_axis]
+   connect_bd_intf_net -intf_net prbs_check_0_m_axis [get_bd_intf_pins prbs_check_0/m_axis] [get_bd_intf_pins depkt_0/s_axis]
+-  connect_bd_intf_net -intf_net prbs_gen_0_m_axis [get_bd_intf_pins prbs_gen_0/m_axis] [get_bd_intf_pins aurora_0/USER_DATA_S_AXI_TX]
++  connect_bd_intf_net -intf_net prbs_gen_0_m_axis [get_bd_intf_pins prbs_gen_0/m_axis] [get_bd_intf_pins aurora_tx/USER_DATA_S_AXI_TX]
+   connect_bd_intf_net -intf_net ps7_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins ps7/DDR]
+   connect_bd_intf_net -intf_net ps7_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins ps7/FIXED_IO]
+   connect_bd_intf_net -intf_net ps7_M_AXI_GP0 [get_bd_intf_pins ps7/M_AXI_GP0] [get_bd_intf_pins sc_ctrl/S00_AXI]
+@@ -1090,38 +1248,75 @@
+   connect_bd_intf_net -intf_net sc_mem_M00_AXI [get_bd_intf_pins sc_mem/M00_AXI] [get_bd_intf_pins ps7/S_AXI_HP0]
+ 
+   # Create port connections
+-  connect_bd_net -net aurora_0_channel_up  [get_bd_pins aurora_0/channel_up] \
++  connect_bd_net -net and_channel_up_Res  [get_bd_pins and_channel_up/Res] \
+   [get_bd_pins link_ctrl_0/channel_up] \
+   [get_bd_pins depkt_0/link_up]
+-  connect_bd_net -net aurora_0_crc_pass_fail_n  [get_bd_pins aurora_0/crc_pass_fail_n] \
++  connect_bd_net -net and_lane_up_Res  [get_bd_pins and_lane_up/Res] \
++  [get_bd_pins link_ctrl_0/lane_up]
++  connect_bd_net -net aurora_rx_crc_pass_fail_n  [get_bd_pins aurora_rx/crc_pass_fail_n] \
+   [get_bd_pins link_ctrl_0/crc_pass_fail_n]
+-  connect_bd_net -net aurora_0_crc_valid  [get_bd_pins aurora_0/crc_valid] \
++  connect_bd_net -net aurora_rx_crc_valid  [get_bd_pins aurora_rx/crc_valid] \
+   [get_bd_pins link_ctrl_0/crc_valid]
+-  connect_bd_net -net aurora_0_frame_err  [get_bd_pins aurora_0/frame_err] \
++  connect_bd_net -net aurora_rx_frame_err  [get_bd_pins aurora_rx/frame_err] \
+   [get_bd_pins link_ctrl_0/frame_err] \
+   [get_bd_pins depkt_0/rx_frame_err]
+-  connect_bd_net -net aurora_0_hard_err  [get_bd_pins aurora_0/hard_err] \
+-  [get_bd_pins link_ctrl_0/hard_err]
+-  connect_bd_net -net aurora_0_lane_up  [get_bd_pins aurora_0/lane_up] \
+-  [get_bd_pins link_ctrl_0/lane_up]
+-  connect_bd_net -net aurora_0_pll_not_locked_out  [get_bd_pins aurora_0/pll_not_locked_out] \
+-  [get_bd_pins link_ctrl_0/pll_not_locked]
+-  connect_bd_net -net aurora_0_soft_err  [get_bd_pins aurora_0/soft_err] \
++  connect_bd_net -net aurora_rx_rx_aligned  [get_bd_pins aurora_rx/rx_aligned] \
++  [get_bd_pins aurora_tx/tx_aligned]
++  connect_bd_net -net aurora_rx_rx_channel_up  [get_bd_pins aurora_rx/rx_channel_up] \
++  [get_bd_pins and_channel_up/Op2]
++  connect_bd_net -net aurora_rx_rx_hard_err  [get_bd_pins aurora_rx/rx_hard_err] \
++  [get_bd_pins or_hard_err/Op2]
++  connect_bd_net -net aurora_rx_rx_lane_up  [get_bd_pins aurora_rx/rx_lane_up] \
++  [get_bd_pins and_lane_up/Op2]
++  connect_bd_net -net aurora_rx_rx_reset  [get_bd_pins aurora_rx/rx_reset] \
++  [get_bd_pins aurora_tx/tx_reset]
++  connect_bd_net -net aurora_rx_rx_verify  [get_bd_pins aurora_rx/rx_verify] \
++  [get_bd_pins aurora_tx/tx_verify]
++  connect_bd_net -net aurora_rx_soft_err  [get_bd_pins aurora_rx/soft_err] \
+   [get_bd_pins link_ctrl_0/soft_err]
+-  connect_bd_net -net aurora_0_sys_reset_out  [get_bd_pins aurora_0/sys_reset_out] \
+-  [get_bd_pins link_ctrl_0/link_sys_reset]
+-  connect_bd_net -net aurora_0_txn  [get_bd_pins aurora_0/txn] \
++  connect_bd_net -net aurora_tx_gt0_pll0outclk_out  [get_bd_pins aurora_tx/gt0_pll0outclk_out] \
++  [get_bd_pins aurora_rx/gt0_pll0outclk_in]
++  connect_bd_net -net aurora_tx_gt0_pll0outrefclk_out  [get_bd_pins aurora_tx/gt0_pll0outrefclk_out] \
++  [get_bd_pins aurora_rx/gt0_pll0outrefclk_in]
++  connect_bd_net -net aurora_tx_gt0_pll0refclklost_out  [get_bd_pins aurora_tx/gt0_pll0refclklost_out] \
++  [get_bd_pins aurora_rx/gt0_pll0refclklost_in]
++  connect_bd_net -net aurora_tx_gt0_pll1outclk_out  [get_bd_pins aurora_tx/gt0_pll1outclk_out] \
++  [get_bd_pins aurora_rx/gt0_pll1outclk_in]
++  connect_bd_net -net aurora_tx_gt0_pll1outrefclk_out  [get_bd_pins aurora_tx/gt0_pll1outrefclk_out] \
++  [get_bd_pins aurora_rx/gt0_pll1outrefclk_in]
++  connect_bd_net -net aurora_tx_gt_refclk1_out  [get_bd_pins aurora_tx/gt_refclk1_out] \
++  [get_bd_pins aurora_rx/gt_refclk1]
++  connect_bd_net -net aurora_tx_gt_reset_out  [get_bd_pins aurora_tx/gt_reset_out] \
++  [get_bd_pins aurora_rx/gt_reset]
++  connect_bd_net -net aurora_tx_pll_not_locked_out  [get_bd_pins aurora_tx/pll_not_locked_out] \
++  [get_bd_pins link_ctrl_0/pll_not_locked] \
++  [get_bd_pins aurora_rx/pll_not_locked]
++  connect_bd_net -net aurora_tx_quad1_common_lock_out  [get_bd_pins aurora_tx/quad1_common_lock_out] \
++  [get_bd_pins aurora_rx/quad1_common_lock_in]
++  connect_bd_net -net aurora_tx_sync_clk_out  [get_bd_pins aurora_tx/sync_clk_out] \
++  [get_bd_pins aurora_rx/sync_clk]
++  connect_bd_net -net aurora_tx_sys_reset_out  [get_bd_pins aurora_tx/sys_reset_out] \
++  [get_bd_pins link_ctrl_0/link_sys_reset] \
++  [get_bd_pins aurora_rx/rx_system_reset]
++  connect_bd_net -net aurora_tx_tx_channel_up  [get_bd_pins aurora_tx/tx_channel_up] \
++  [get_bd_pins and_channel_up/Op1]
++  connect_bd_net -net aurora_tx_tx_hard_err  [get_bd_pins aurora_tx/tx_hard_err] \
++  [get_bd_pins or_hard_err/Op1]
++  connect_bd_net -net aurora_tx_tx_lane_up  [get_bd_pins aurora_tx/tx_lane_up] \
++  [get_bd_pins and_lane_up/Op1]
++  connect_bd_net -net aurora_tx_txn  [get_bd_pins aurora_tx/txn] \
+   [get_bd_ports gt_txn]
+-  connect_bd_net -net aurora_0_txp  [get_bd_pins aurora_0/txp] \
++  connect_bd_net -net aurora_tx_txp  [get_bd_pins aurora_tx/txp] \
+   [get_bd_ports gt_txp]
+-  connect_bd_net -net aurora_0_user_clk_out  [get_bd_pins aurora_0/user_clk_out] \
++  connect_bd_net -net aurora_tx_user_clk_out  [get_bd_pins aurora_tx/user_clk_out] \
+   [get_bd_pins pkt_0/aclk] \
+   [get_bd_pins depkt_0/aclk] \
+   [get_bd_pins prbs_gen_0/aclk] \
+   [get_bd_pins prbs_check_0/aclk] \
+   [get_bd_pins fifo_tx/m_axis_aclk] \
+   [get_bd_pins fifo_rx/s_axis_aclk] \
+-  [get_bd_pins link_ctrl_0/user_clk]
++  [get_bd_pins link_ctrl_0/user_clk] \
++  [get_bd_pins aurora_rx/user_clk]
+   connect_bd_net -net axi_dma_0_mm2s_introut  [get_bd_pins axi_dma_0/mm2s_introut] \
+   [get_bd_pins irq_concat/In0]
+   connect_bd_net -net axi_dma_0_s2mm_introut  [get_bd_pins axi_dma_0/s2mm_introut] \
+@@ -1131,8 +1326,10 @@
+   connect_bd_net -net clk_50m_1  [get_bd_ports clk_50m] \
+   [get_bd_pins clk_wiz_0/clk_in1]
+   connect_bd_net -net clk_wiz_0_clk_out1  [get_bd_pins clk_wiz_0/clk_out1] \
+-  [get_bd_pins aurora_0/drpclk_in] \
+-  [get_bd_pins aurora_0/init_clk_in] \
++  [get_bd_pins aurora_tx/drpclk_in] \
++  [get_bd_pins aurora_tx/init_clk_in] \
++  [get_bd_pins aurora_rx/drpclk_in] \
++  [get_bd_pins aurora_rx/init_clk_in] \
+   [get_bd_pins link_ctrl_0/init_clk] \
+   [get_bd_pins vio_link/clk] \
+   [get_bd_pins prbs_check_0/stat_clk]
+@@ -1145,26 +1342,32 @@
+   connect_bd_net -net depkt_0_frame_cnt  [get_bd_pins depkt_0/frame_cnt] \
+   [get_bd_pins link_ctrl_0/rx_frame_cnt]
+   connect_bd_net -net gt_rxn_1  [get_bd_ports gt_rxn] \
+-  [get_bd_pins aurora_0/rxn]
++  [get_bd_pins aurora_rx/rxn]
+   connect_bd_net -net gt_rxp_1  [get_bd_ports gt_rxp] \
+-  [get_bd_pins aurora_0/rxp]
++  [get_bd_pins aurora_rx/rxp]
+   connect_bd_net -net ilconstant_0_dout  [get_bd_pins ilconstant_0/dout] \
+-  [get_bd_pins aurora_0/drpaddr_in]
++  [get_bd_pins aurora_tx/drpaddr_in] \
++  [get_bd_pins aurora_rx/drpaddr_in]
+   connect_bd_net -net ilconstant_1_dout  [get_bd_pins ilconstant_1/dout] \
+-  [get_bd_pins aurora_0/drpen_in] \
+-  [get_bd_pins aurora_0/drpwe_in]
++  [get_bd_pins aurora_tx/drpen_in] \
++  [get_bd_pins aurora_tx/drpwe_in] \
++  [get_bd_pins aurora_rx/drpen_in] \
++  [get_bd_pins aurora_rx/drpwe_in]
+   connect_bd_net -net ilconstant_2_dout  [get_bd_pins ilconstant_2/dout] \
+-  [get_bd_pins aurora_0/drpdi_in]
++  [get_bd_pins aurora_tx/drpdi_in] \
++  [get_bd_pins aurora_rx/drpdi_in]
+   connect_bd_net -net irq_concat_dout  [get_bd_pins irq_concat/dout] \
+   [get_bd_pins ps7/IRQ_F2P]
++  connect_bd_net -net lb_off_dout  [get_bd_pins lb_off/dout] \
++  [get_bd_pins aurora_tx/loopback] \
++  [get_bd_pins aurora_rx/loopback]
+   connect_bd_net -net link_ctrl_0_au_gt_reset  [get_bd_pins link_ctrl_0/au_gt_reset] \
+-  [get_bd_pins aurora_0/gt_reset]
+-  connect_bd_net -net link_ctrl_0_au_loopback  [get_bd_pins link_ctrl_0/au_loopback] \
+-  [get_bd_pins aurora_0/loopback]
++  [get_bd_pins aurora_tx/gt_reset]
+   connect_bd_net -net link_ctrl_0_au_power_down  [get_bd_pins link_ctrl_0/au_power_down] \
+-  [get_bd_pins aurora_0/power_down]
++  [get_bd_pins aurora_tx/power_down] \
++  [get_bd_pins aurora_rx/power_down]
+   connect_bd_net -net link_ctrl_0_au_reset  [get_bd_pins link_ctrl_0/au_reset] \
+-  [get_bd_pins aurora_0/reset]
++  [get_bd_pins aurora_tx/tx_system_reset]
+   connect_bd_net -net link_ctrl_0_gpio_status  [get_bd_pins link_ctrl_0/gpio_status] \
+   [get_bd_pins axi_gpio_link/gpio_io_i]
+   connect_bd_net -net link_ctrl_0_tx_fifo_aresetn  [get_bd_pins link_ctrl_0/tx_fifo_aresetn] \
+@@ -1177,6 +1380,8 @@
+   [get_bd_pins fifo_rx/s_axis_aresetn]
+   connect_bd_net -net link_status  [get_bd_pins link_ctrl_0/vio_status] \
+   [get_bd_pins vio_link/probe_in0]
++  connect_bd_net -net or_hard_err_Res  [get_bd_pins or_hard_err/Res] \
++  [get_bd_pins link_ctrl_0/hard_err]
+   connect_bd_net -net pkt_0_err_pulse  [get_bd_pins pkt_0/err_pulse] \
+   [get_bd_pins link_ctrl_0/tx_err]
+   connect_bd_net -net pkt_0_frame_cnt  [get_bd_pins pkt_0/frame_cnt] \
+@@ -1236,6 +1441,38 @@
+   assign_bd_address -offset 0x00000000 -range 0x40000000 -target_address_space [get_bd_addr_spaces axi_dma_0/Data_MM2S] [get_bd_addr_segs ps7/S_AXI_HP0/HP0_DDR_LOWOCM] -force
+   assign_bd_address -offset 0x00000000 -range 0x40000000 -target_address_space [get_bd_addr_spaces axi_dma_0/Data_S2MM] [get_bd_addr_segs ps7/S_AXI_HP0/HP0_DDR_LOWOCM] -force
+ 
++  # [SPLIT][DEBUG] 코어별 상태 (link_ctrl 상태 워드는 tx&rx 로 합쳐져 있어 구분이 안 된다)
++  #   vio_link/probe_in6[15:0] (net split_dbg) + ila_split (aurora user_clk, 16 x 1-bit)
++  #   bit 0 tx_channel_up   1 tx_lane_up      2 tx_hard_err      3 rx_channel_up
++  #       4 rx_lane_up      5 rx_hard_err     6 soft_err         7 frame_err
++  #       8 rx_aligned      9 rx_verify      10 rx_reset        11 rx_resetdone_out
++  #      12 tx_resetdone_out 13 rx link_reset_out 14 quad1_common_lock 15 rx tx_lock
++  if { $split_debug } {
++     set_property CONFIG.C_NUM_PROBE_IN {7} $vio_link
++     set_property CONFIG.C_PROBE_IN6_WIDTH {16} $vio_link
++
++     set dbg_concat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 dbg_concat ]
++     set_property CONFIG.NUM_PORTS {16} $dbg_concat
++
++     set ila_split [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_split ]
++     set_property -dict [list \
++       CONFIG.C_MONITOR_TYPE {Native} \
++       CONFIG.C_NUM_OF_PROBES {16} \
++       CONFIG.C_DATA_DEPTH {16384} \
++     ] $ila_split
++
++     set i 0
++     foreach p {aurora_tx/tx_channel_up aurora_tx/tx_lane_up aurora_tx/tx_hard_err
++                aurora_rx/rx_channel_up aurora_rx/rx_lane_up aurora_rx/rx_hard_err
++                aurora_rx/soft_err aurora_rx/frame_err aurora_rx/rx_aligned aurora_rx/rx_verify
++                aurora_rx/rx_reset aurora_rx/rx_resetdone_out aurora_tx/tx_resetdone_out
++                aurora_rx/link_reset_out aurora_tx/quad1_common_lock_out aurora_rx/tx_lock} {
++        connect_bd_net [get_bd_pins $p] [get_bd_pins dbg_concat/In$i] [get_bd_pins ila_split/probe$i]
++        incr i
++     }
++     connect_bd_net -net split_dbg [get_bd_pins dbg_concat/dout] [get_bd_pins vio_link/probe_in6]
++     connect_bd_net [get_bd_pins aurora_tx/user_clk_out] [get_bd_pins ila_split/clk]
++  }
+ 
+   # Restore current instance
+   current_bd_instance $oldCurInst
+@@ -1252,4 +1489,5 @@
+ 
+ create_root_design ""
+ 
++common::send_gid_msg -ssname BD::TCL -id 2005 -severity "INFO" "\[split\] TX = aurora_tx @ GTPE2_CHANNEL_X0Y[expr {$split_tx_gt_loc - 1}], RX = aurora_rx @ GTPE2_CHANNEL_X0Y[expr {$split_rx_gt_loc - 1}]. Connect GTP TX -> GTP RX externally (internal loopback is tied to 0)."
+ 

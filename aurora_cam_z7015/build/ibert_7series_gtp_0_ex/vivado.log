@@ -1,0 +1,232 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Nov  7 13:25:25 2026
+# Process ID         : 55277
+# Current directory  : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex
+# Command line       : vivado -notrace -source /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/ip/ibert_7series_gtp_0/ibert_7series_gtp_0_ex.tcl
+# Log file           : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/vivado.log
+# Journal file       : /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/vivado.jou
+# Running On         : dhkim-home
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D2 16-Core Processor
+# CPU Frequency      : 5593.815 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 67058 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75648 MB
+# Available Virtual  : 65130 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/emb-plus-vpr-4616/1.0/board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/emb-plus-vpr-4616/1.1/board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.7/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/scu35/1.0/board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/v80/1.0/board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.5/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.3/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.4/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385/1.0/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385/1.1/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385_2/1.0/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.2/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.3/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vrk160/1.0/board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vrk160/1.1/board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/2025.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+source /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/aurora_cam_split/aurora_cam_split.gen/sources_1/ip/ibert_7series_gtp_0/ibert_7series_gtp_0_ex.tcl -notrace
+INFO: [open_example_project] Creating new example project...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.2/data/ip'.
+INFO: [open_example_project] Importing original IP ...
+INFO: [open_example_project] Generating the example project IP ...
+INFO: [IP_Flow 19-1706] Not generating 'Instantiation Template' target for IP 'ibert_7series_gtp_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'ibert_7series_gtp_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Implementation' target for IP 'ibert_7series_gtp_0'. Target already exists and is up to date.
+INFO: [open_example_project] Adding example synthesis HDL files ...
+INFO: [open_example_project] Adding example synthesis miscellaneous files ...
+INFO: [open_example_project] Adding example XDC files ...
+INFO: [open_example_project] Adding simulation HDL files ...
+INFO: [open_example_project] Adding simulation miscellaneous files ...
+INFO: [open_example_project] Sourcing example extension scripts ...
+INFO: [open_example_project] Sourcing extension script: tcl/gtp_example_script_extn.tcl
+INFO: [open_example_project] Rebuilding top IP...
+INFO: [Vivado 12-25919] Exporting simulation script for '' simulator
+INFO: [Project 1-5737] Running on host dhkim-home (64) - Ubuntu 24.04.5 LTS
+INFO: [exportsim-Tcl-40] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/2025.2/tps/boost_1_72_0'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (AMD Vivado Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/tools/Xilinx/2025.2/data/xsim'
+INFO: [exportsim-Tcl-29] Script generated: '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/xsim/ibert_7series_gtp_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/xsim/count_ones_zeros_pblock.tcl'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/xsim/GT_pblocks.tcl'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/xsim/ibert_7series_gtp_0_sv.sveo'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "MODELSIM" (Siemens ModelSim Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.cache/compile_simlib/modelsim'
+INFO: [exportsim-Tcl-29] Script generated: '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/modelsim/ibert_7series_gtp_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/modelsim/count_ones_zeros_pblock.tcl'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/modelsim/GT_pblocks.tcl'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/modelsim/ibert_7series_gtp_0_sv.sveo'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Siemens Questa Advanced Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.cache/compile_simlib/questa'
+INFO: [exportsim-Tcl-29] Script generated: '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/questa/ibert_7series_gtp_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/questa/count_ones_zeros_pblock.tcl'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/questa/GT_pblocks.tcl'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/questa/ibert_7series_gtp_0_sv.sveo'
+INFO: [exportsim-Tcl-5] Generating a 3-step script for 'xcelium'. To create a single-step script, use the -single_step switch. Please note that the single-step script generation is not supported currently for system design containing SystemC/cpp/C sources.
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XCELIUM" (Cadence Xcelium Parallel Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.cache/compile_simlib/xcelium'
+INFO: [exportsim-Tcl-29] Script generated: '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/xcelium/ibert_7series_gtp_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/xcelium/count_ones_zeros_pblock.tcl'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/xcelium/GT_pblocks.tcl'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/xcelium/ibert_7series_gtp_0_sv.sveo'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "VCS" (Synopsys Verilog Compiler Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.cache/compile_simlib/vcs'
+INFO: [exportsim-Tcl-29] Script generated: '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/vcs/ibert_7series_gtp_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/vcs/count_ones_zeros_pblock.tcl'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/vcs/GT_pblocks.tcl'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/vcs/ibert_7series_gtp_0_sv.sveo'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "RIVIERA" (Aldec Riviera-PRO Simulator)...
+INFO: [exportsim-Tcl-29] Pre-compiled simulation library path: '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.cache/compile_simlib/riviera'
+INFO: [exportsim-Tcl-29] Script generated: '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/riviera/ibert_7series_gtp_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/riviera/count_ones_zeros_pblock.tcl'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/riviera/GT_pblocks.tcl'
+INFO: [SIM-utils-43] Exported '/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.ip_user_files/sim_scripts/ibert_7series_gtp_0/riviera/ibert_7series_gtp_0_sv.sveo'
+INFO: [open_example_project] Open Example Project completed
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Sat Nov  7 13:27:04 2026] Launched synth_1...
+Run output will be captured here: /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.runs/synth_1/runme.log
+[Sat Nov  7 13:27:04 2026] Launched impl_1...
+Run output will be captured here: /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.runs/impl_1/runme.log
+reset_run synth_1
+INFO: [Project 1-1160] Copying file /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.runs/synth_1/example_ibert_7series_gtp_0.dcp to /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Sat Nov  7 13:29:25 2026] Launched synth_1...
+Run output will be captured here: /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.runs/synth_1/runme.log
+[Sat Nov  7 13:29:25 2026] Launched impl_1...
+Run output will be captured here: /home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2025.2
+  **** Build date : Oct 28 2025 at 16:07:00
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2025.2.0
+  ****** Build date   : Nov 14 2025-08:16:52
+    **** Build number : 2025.2.1763075812
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210241010550
+set_property PROGRAM.FILE {/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.runs/impl_1/example_ibert_7series_gtp_0.bit} [get_hw_devices xc7z015_1]
+current_hw_device [get_hw_devices xc7z015_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z015_1] 0]
+INFO: [Labtools 27-2302] Device xc7z015 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+set_property PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z015_1]
+set_property PROGRAM.FILE {/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/build/ibert_7series_gtp_0_ex/ibert_7series_gtp_0_ex.runs/impl_1/example_ibert_7series_gtp_0.bit} [get_hw_devices xc7z015_1]
+program_hw_devices [get_hw_devices xc7z015_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z015_1] 0]
+INFO: [Labtools 27-2302] Device xc7z015 (JTAG device index = 1) is programmed with a design that has 1 IBERT core(s).
+set xil_newLinks [list]
+set xil_newLink [create_hw_sio_link -description {Link 0} [lindex [get_hw_sio_txs localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX] 0] [lindex [get_hw_sio_rxs localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 0] ]
+lappend xil_newLinks $xil_newLink
+set xil_newLinkGroup [create_hw_sio_linkgroup -description {Link Group 0} [get_hw_sio_links $xil_newLinks]]
+unset xil_newLinks
+set_property LOGIC.MGT_ERRCNT_RESET_CTRL 1 [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+commit_hw_sio -non_blocking [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+set_property LOGIC.MGT_ERRCNT_RESET_CTRL 0 [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+commit_hw_sio -non_blocking [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+set_property LOGIC.MGT_ERRCNT_RESET_CTRL 1 [get_hw_sio_links {localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX}]
+commit_hw_sio -non_blocking [get_hw_sio_links {localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX}]
+set_property LOGIC.MGT_ERRCNT_RESET_CTRL 0 [get_hw_sio_links {localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX}]
+commit_hw_sio -non_blocking [get_hw_sio_links {localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX}]
+set_property RXOUT_DIV 4 [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX]
+commit_hw_sio [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 
+set_property RXOUT_DIV 8 [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX]
+commit_hw_sio [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 
+set_property RXOUT_DIV 1 [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX]
+commit_hw_sio [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 
+set_property RXOUT_DIV 2 [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX]
+commit_hw_sio [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 
+set_property RXOUT_DIV 8 [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX]
+commit_hw_sio [get_hw_sio_links localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y1/TX->localhost:3121/xilinx_tcf/Digilent/210241010550/1_1_0/IBERT/Quad_112/MGT_X0Y2/RX] 
+set_property LOGIC.MGT_ERRCNT_RESET_CTRL 1 [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+commit_hw_sio -non_blocking [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+set_property LOGIC.MGT_ERRCNT_RESET_CTRL 0 [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+commit_hw_sio -non_blocking [get_hw_sio_links -of_objects [get_hw_sio_linkgroups {Link_Group_0}]]
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  7 13:36:49 2026...

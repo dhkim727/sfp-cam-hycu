@@ -119,7 +119,7 @@ static int link_start(u32 lb)
     }
     if (ms == 1000) {
         show_status("[link] TIMEOUT");
-        xil_printf("[link] check GT refclk (pin/frequency) and loopback mode\r\n");
+        xil_printf("[link] HW keeps restarting the link (watchdog): check TX->RX path (cable/SFP)\r\n");
         return -1;
     }
     xil_printf("[link] channel_up after ~%d ms (loopback=%d)\r\n", ms, (int)lb);

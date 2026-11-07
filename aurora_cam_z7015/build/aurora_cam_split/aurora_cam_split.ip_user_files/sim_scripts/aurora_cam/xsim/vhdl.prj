@@ -1,0 +1,9 @@
+vhdl xil_defaultlib  \
+"../../../bd/aurora_cam/ip/aurora_cam_rst_axi_0/sim/aurora_cam_rst_axi_0.vhd" \
+"../../../bd/aurora_cam/ip/aurora_cam_axi_dma_0_0/sim/aurora_cam_axi_dma_0_0.vhd" \
+"../../../bd/aurora_cam/ip/aurora_cam_axi_gpio_link_0/sim/aurora_cam_axi_gpio_link_0.vhd" \
+"../../../bd/aurora_cam/ip/aurora_cam_sc_ctrl_0/bd_0/ip/ip_1/sim/bd_ed12_psr_aclk_0.vhd" \
+"../../../bd/aurora_cam/ip/aurora_cam_sc_mem_0/bd_0/ip/ip_1/sim/bd_3454_psr_aclk_0.vhd" \
+
+# Do not sort compile order
+nosort

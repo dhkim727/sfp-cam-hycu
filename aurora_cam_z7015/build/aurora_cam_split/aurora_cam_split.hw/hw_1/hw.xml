@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2025.2 (64-bit)                                     -->
+<!--                                                                              -->
+<!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                        -->
+<!-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.        -->
+
+<hwsession version="1" minor="2">
+  <device name="xc7z015_1" gui_info=""/>
+  <ObjectList object_type="hw_device" gui_info="">
+    <Object name="xc7z015_1" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/aurora_cam_wrapper.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/aurora_cam_wrapper.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/aurora_cam_wrapper.bit"/>
+      <Properties Property="SLR.COUNT" value="1"/>
+    </Object>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="INPUT_VALUE_RADIX" value="HEX"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/link_status[31]"/>
+        <net name="aurora_cam_i/link_status[30]"/>
+        <net name="aurora_cam_i/link_status[29]"/>
+        <net name="aurora_cam_i/link_status[28]"/>
+        <net name="aurora_cam_i/link_status[27]"/>
+        <net name="aurora_cam_i/link_status[26]"/>
+        <net name="aurora_cam_i/link_status[25]"/>
+        <net name="aurora_cam_i/link_status[24]"/>
+        <net name="aurora_cam_i/link_status[23]"/>
+        <net name="aurora_cam_i/link_status[22]"/>
+        <net name="aurora_cam_i/link_status[21]"/>
+        <net name="aurora_cam_i/link_status[20]"/>
+        <net name="aurora_cam_i/link_status[19]"/>
+        <net name="aurora_cam_i/link_status[18]"/>
+        <net name="aurora_cam_i/link_status[17]"/>
+        <net name="aurora_cam_i/link_status[16]"/>
+        <net name="aurora_cam_i/link_status[15]"/>
+        <net name="aurora_cam_i/link_status[14]"/>
+        <net name="aurora_cam_i/link_status[13]"/>
+        <net name="aurora_cam_i/link_status[12]"/>
+        <net name="aurora_cam_i/link_status[11]"/>
+        <net name="aurora_cam_i/link_status[10]"/>
+        <net name="aurora_cam_i/link_status[9]"/>
+        <net name="aurora_cam_i/link_status[8]"/>
+        <net name="aurora_cam_i/link_status[7]"/>
+        <net name="aurora_cam_i/link_status[6]"/>
+        <net name="aurora_cam_i/link_status[5]"/>
+        <net name="aurora_cam_i/link_status[4]"/>
+        <net name="aurora_cam_i/link_status[3]"/>
+        <net name="aurora_cam_i/link_status[2]"/>
+        <net name="aurora_cam_i/link_status[1]"/>
+        <net name="aurora_cam_i/link_status[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="INPUT_VALUE_RADIX" value="HEX"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/prbs_err_bits[31]"/>
+        <net name="aurora_cam_i/prbs_err_bits[30]"/>
+        <net name="aurora_cam_i/prbs_err_bits[29]"/>
+        <net name="aurora_cam_i/prbs_err_bits[28]"/>
+        <net name="aurora_cam_i/prbs_err_bits[27]"/>
+        <net name="aurora_cam_i/prbs_err_bits[26]"/>
+        <net name="aurora_cam_i/prbs_err_bits[25]"/>
+        <net name="aurora_cam_i/prbs_err_bits[24]"/>
+        <net name="aurora_cam_i/prbs_err_bits[23]"/>
+        <net name="aurora_cam_i/prbs_err_bits[22]"/>
+        <net name="aurora_cam_i/prbs_err_bits[21]"/>
+        <net name="aurora_cam_i/prbs_err_bits[20]"/>
+        <net name="aurora_cam_i/prbs_err_bits[19]"/>
+        <net name="aurora_cam_i/prbs_err_bits[18]"/>
+        <net name="aurora_cam_i/prbs_err_bits[17]"/>
+        <net name="aurora_cam_i/prbs_err_bits[16]"/>
+        <net name="aurora_cam_i/prbs_err_bits[15]"/>
+        <net name="aurora_cam_i/prbs_err_bits[14]"/>
+        <net name="aurora_cam_i/prbs_err_bits[13]"/>
+        <net name="aurora_cam_i/prbs_err_bits[12]"/>
+        <net name="aurora_cam_i/prbs_err_bits[11]"/>
+        <net name="aurora_cam_i/prbs_err_bits[10]"/>
+        <net name="aurora_cam_i/prbs_err_bits[9]"/>
+        <net name="aurora_cam_i/prbs_err_bits[8]"/>
+        <net name="aurora_cam_i/prbs_err_bits[7]"/>
+        <net name="aurora_cam_i/prbs_err_bits[6]"/>
+        <net name="aurora_cam_i/prbs_err_bits[5]"/>
+        <net name="aurora_cam_i/prbs_err_bits[4]"/>
+        <net name="aurora_cam_i/prbs_err_bits[3]"/>
+        <net name="aurora_cam_i/prbs_err_bits[2]"/>
+        <net name="aurora_cam_i/prbs_err_bits[1]"/>
+        <net name="aurora_cam_i/prbs_err_bits[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="INPUT_VALUE_RADIX" value="HEX"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/prbs_err_words[31]"/>
+        <net name="aurora_cam_i/prbs_err_words[30]"/>
+        <net name="aurora_cam_i/prbs_err_words[29]"/>
+        <net name="aurora_cam_i/prbs_err_words[28]"/>
+        <net name="aurora_cam_i/prbs_err_words[27]"/>
+        <net name="aurora_cam_i/prbs_err_words[26]"/>
+        <net name="aurora_cam_i/prbs_err_words[25]"/>
+        <net name="aurora_cam_i/prbs_err_words[24]"/>
+        <net name="aurora_cam_i/prbs_err_words[23]"/>
+        <net name="aurora_cam_i/prbs_err_words[22]"/>
+        <net name="aurora_cam_i/prbs_err_words[21]"/>
+        <net name="aurora_cam_i/prbs_err_words[20]"/>
+        <net name="aurora_cam_i/prbs_err_words[19]"/>
+        <net name="aurora_cam_i/prbs_err_words[18]"/>
+        <net name="aurora_cam_i/prbs_err_words[17]"/>
+        <net name="aurora_cam_i/prbs_err_words[16]"/>
+        <net name="aurora_cam_i/prbs_err_words[15]"/>
+        <net name="aurora_cam_i/prbs_err_words[14]"/>
+        <net name="aurora_cam_i/prbs_err_words[13]"/>
+        <net name="aurora_cam_i/prbs_err_words[12]"/>
+        <net name="aurora_cam_i/prbs_err_words[11]"/>
+        <net name="aurora_cam_i/prbs_err_words[10]"/>
+        <net name="aurora_cam_i/prbs_err_words[9]"/>
+        <net name="aurora_cam_i/prbs_err_words[8]"/>
+        <net name="aurora_cam_i/prbs_err_words[7]"/>
+        <net name="aurora_cam_i/prbs_err_words[6]"/>
+        <net name="aurora_cam_i/prbs_err_words[5]"/>
+        <net name="aurora_cam_i/prbs_err_words[4]"/>
+        <net name="aurora_cam_i/prbs_err_words[3]"/>
+        <net name="aurora_cam_i/prbs_err_words[2]"/>
+        <net name="aurora_cam_i/prbs_err_words[1]"/>
+        <net name="aurora_cam_i/prbs_err_words[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="INPUT_VALUE_RADIX" value="HEX"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/prbs_kwords[31]"/>
+        <net name="aurora_cam_i/prbs_kwords[30]"/>
+        <net name="aurora_cam_i/prbs_kwords[29]"/>
+        <net name="aurora_cam_i/prbs_kwords[28]"/>
+        <net name="aurora_cam_i/prbs_kwords[27]"/>
+        <net name="aurora_cam_i/prbs_kwords[26]"/>
+        <net name="aurora_cam_i/prbs_kwords[25]"/>
+        <net name="aurora_cam_i/prbs_kwords[24]"/>
+        <net name="aurora_cam_i/prbs_kwords[23]"/>
+        <net name="aurora_cam_i/prbs_kwords[22]"/>
+        <net name="aurora_cam_i/prbs_kwords[21]"/>
+        <net name="aurora_cam_i/prbs_kwords[20]"/>
+        <net name="aurora_cam_i/prbs_kwords[19]"/>
+        <net name="aurora_cam_i/prbs_kwords[18]"/>
+        <net name="aurora_cam_i/prbs_kwords[17]"/>
+        <net name="aurora_cam_i/prbs_kwords[16]"/>
+        <net name="aurora_cam_i/prbs_kwords[15]"/>
+        <net name="aurora_cam_i/prbs_kwords[14]"/>
+        <net name="aurora_cam_i/prbs_kwords[13]"/>
+        <net name="aurora_cam_i/prbs_kwords[12]"/>
+        <net name="aurora_cam_i/prbs_kwords[11]"/>
+        <net name="aurora_cam_i/prbs_kwords[10]"/>
+        <net name="aurora_cam_i/prbs_kwords[9]"/>
+        <net name="aurora_cam_i/prbs_kwords[8]"/>
+        <net name="aurora_cam_i/prbs_kwords[7]"/>
+        <net name="aurora_cam_i/prbs_kwords[6]"/>
+        <net name="aurora_cam_i/prbs_kwords[5]"/>
+        <net name="aurora_cam_i/prbs_kwords[4]"/>
+        <net name="aurora_cam_i/prbs_kwords[3]"/>
+        <net name="aurora_cam_i/prbs_kwords[2]"/>
+        <net name="aurora_cam_i/prbs_kwords[1]"/>
+        <net name="aurora_cam_i/prbs_kwords[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="INPUT_VALUE_RADIX" value="HEX"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/prbs_len_errs[15]"/>
+        <net name="aurora_cam_i/prbs_len_errs[14]"/>
+        <net name="aurora_cam_i/prbs_len_errs[13]"/>
+        <net name="aurora_cam_i/prbs_len_errs[12]"/>
+        <net name="aurora_cam_i/prbs_len_errs[11]"/>
+        <net name="aurora_cam_i/prbs_len_errs[10]"/>
+        <net name="aurora_cam_i/prbs_len_errs[9]"/>
+        <net name="aurora_cam_i/prbs_len_errs[8]"/>
+        <net name="aurora_cam_i/prbs_len_errs[7]"/>
+        <net name="aurora_cam_i/prbs_len_errs[6]"/>
+        <net name="aurora_cam_i/prbs_len_errs[5]"/>
+        <net name="aurora_cam_i/prbs_len_errs[4]"/>
+        <net name="aurora_cam_i/prbs_len_errs[3]"/>
+        <net name="aurora_cam_i/prbs_len_errs[2]"/>
+        <net name="aurora_cam_i/prbs_len_errs[1]"/>
+        <net name="aurora_cam_i/prbs_len_errs[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="INPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/prbs_locked"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value=""/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/vio_ctrl_sel[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value=""/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/vio_err_clear[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value=""/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="HEX"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/vio_loopback[2]"/>
+        <net name="aurora_cam_i/vio_loopback[1]"/>
+        <net name="aurora_cam_i/vio_loopback[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value=""/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/vio_prbs_clear[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value=""/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/vio_prbs_en[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value=""/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/vio_prbs_inject[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="aurora_cam_i/vio_link"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="OUTPUT_VALUE" value=""/>
+        <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="aurora_cam_i/vio_run[0]"/>
+      </nets>
+    </probe>
+  </probeset>
+</hwsession>

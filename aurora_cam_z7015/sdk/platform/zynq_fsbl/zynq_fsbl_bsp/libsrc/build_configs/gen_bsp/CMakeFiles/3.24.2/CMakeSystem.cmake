@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Linux-7.0.0-38-generic")
+set(CMAKE_HOST_SYSTEM "Linux-7.0.0-42-generic")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "7.0.0-38-generic")
+set(CMAKE_HOST_SYSTEM_VERSION "7.0.0-42-generic")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 include("/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/platform/zynq_fsbl/zynq_fsbl_bsp/cortexa9_toolchain.cmake")

@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/platform/export/platform/sw/boot/fsbl.elf
+	/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/app_component/_ide/bitstream/aurora_cam_wrapper.bit
+	/home/dhkim/work/sfp-cam-hycu/aurora_cam_z7015/sdk/app_component/build/app_component.elf
+}
